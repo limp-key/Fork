@@ -1,8 +1,16 @@
 <?php
 
-$path = "limpWork\\Controllers\\".$Controller;
+// third load all(?) model files in this framework ?????????
 
-$cont = new $path();
+require_once '../models/Model.php';
 
-$k = 'out';
-$cont->$k();
+// and load outher files
+// load Conrtoller (depending on the request)
+
+require_once '../controllers/'.$GLOBALS['response_class'].'.php';
+
+$Class = "limpWork\\Controllers\\".$GLOBALS['response_class'];
+$Method = $GLOBALS['response_method'];
+
+$AssemblyClass = new $Class();
+$AssemblyClass->$Method();

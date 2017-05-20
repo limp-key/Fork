@@ -1,5 +1,5 @@
 <?php
 
-class Routing{
-    
-}
+use limpWork\Bin\Route;
+
+Route::request('/','BaseController','out');

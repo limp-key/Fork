@@ -7,6 +7,8 @@ use \limpWork\Bin\Controller\SkeletonController;
 class BaseController extends SkeletonController{
 
     public function out(){
-	echo $this->input();
+	echo "<pre>";
+	var_dump($_SERVER);
+	echo "</pre>";
     }
 }

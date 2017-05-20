@@ -1,5 +1,4 @@
 <?php
-echo "<pre>";
+/*echo "<pre>";
 var_dump($_SERVER);
-echo "</pre>";
-$Controller = 'BaseController';
+echo "</pre>";*/
