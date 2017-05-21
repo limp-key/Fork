@@ -2,24 +2,33 @@
 
 // load Model and Conrtoller (depending on the request)
 
-if(isset($GLOBALS['response_class'])  &&
-   isset($GLOBALS['response_method']) &&
-   isset($GLOBALS['response_model'])){
-    
+if(isset($GLOBALS['response_model'])){
     require_once '../models/'.$GLOBALS['response_model'].'.php';
 
+    $Model = 'limpWork\\Models\\'.$GLOBALS['response_model'];
+
+    $AssemblyModel = new $Model();
+    //$AssemblyModel->$Method();
+}
+
+
+if(isset($GLOBALS['response_class'])  &&
+   isset($GLOBALS['response_method'])){
+    
     require_once '../controllers/'.$GLOBALS['response_class'].'.php';
     
-    $Class = "limpWork\\Controllers\\".$GLOBALS['response_class'];
+    $Controller = 'limpWork\\Controllers\\'.$GLOBALS['response_class'];
 
     if($GLOBALS['response_method'])
 	$Method = $GLOBALS['response_method'];
     else
 	$Method = 'index';
+
+    unset($GLOBALS);
     
-    $AssemblyClass = new $Class();
+    $AssemblyController = new $Controller();
     //$AssemblyClass->$Method();
-    if($AssemblyClass->$Method() == null){
+    if($AssemblyController->$Method() == null){
 	die(require_once '../bin/assistant/helper.html');
     }
 }else{

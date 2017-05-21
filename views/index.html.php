@@ -38,7 +38,7 @@
 	    <div class="wrap">
 		<h2>Hello <?php echo $parameters[0]; ?><br>This is test page in the limpWork</h2>
 		
-		<p>adfjadhgfadhfbadkhfjadb</p>
+		<p>If you saw this text, then everything works fine</p>
 	    </div>
 	</div>
     </body>

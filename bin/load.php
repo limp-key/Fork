@@ -12,6 +12,7 @@ require_once 'Route/Route.php';
 // second load all config in this framework
 
 require_once '../config/config.php';
+require_once 'DataBase/ConnectionToDataBase.php';
 
 // third load all bin files in this framework
 

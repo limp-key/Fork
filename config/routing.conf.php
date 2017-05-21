@@ -2,6 +2,6 @@
 
 use limpWork\Bin\Route;
 
-Route::request('/','BaseController','index','Model');
+Route::request('/','BaseController','index','BaseModel');
 
-Route::request('/test','BaseController','test','Model');
+Route::request('/test','BaseController','test','BaseModel');

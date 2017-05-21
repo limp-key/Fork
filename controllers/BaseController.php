@@ -10,6 +10,6 @@ class BaseController extends SkeletonController{
 /*	echo "<pre>";
 	var_dump($_SERVER);
 	echo "</pre>";*/
-	return $this->view('index.php',['cruel world']);
+	return $this->view('index.html.php',['cruel world']);
     }
 }

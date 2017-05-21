@@ -1,6 +1,6 @@
 <?php
 
-$host = null;
-$database = null;
-$user = null;
-$password = null;
+$Host = 'localhost';
+$Database = 'symfony';
+$User = 'root';
+$Password = '47085622';
