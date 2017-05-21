@@ -1,16 +1,27 @@
 <?php
 
-// third load all(?) model files in this framework ?????????
+// load Model and Conrtoller (depending on the request)
 
-require_once '../models/Model.php';
+if(isset($GLOBALS['response_class'])  &&
+   isset($GLOBALS['response_method']) &&
+   isset($GLOBALS['response_model'])){
+    
+    require_once '../models/'.$GLOBALS['response_model'].'.php';
 
-// and load outher files
-// load Conrtoller (depending on the request)
+    require_once '../controllers/'.$GLOBALS['response_class'].'.php';
+    
+    $Class = "limpWork\\Controllers\\".$GLOBALS['response_class'];
 
-require_once '../controllers/'.$GLOBALS['response_class'].'.php';
-
-$Class = "limpWork\\Controllers\\".$GLOBALS['response_class'];
-$Method = $GLOBALS['response_method'];
-
-$AssemblyClass = new $Class();
-$AssemblyClass->$Method();
+    if($GLOBALS['response_method'])
+	$Method = $GLOBALS['response_method'];
+    else
+	$Method = 'index';
+    
+    $AssemblyClass = new $Class();
+    //$AssemblyClass->$Method();
+    if($AssemblyClass->$Method() == null){
+	die(require_once '../bin/assistant/helper.html');
+    }
+}else{
+    die(require_once '../bin/assistant/helper.html');
+}

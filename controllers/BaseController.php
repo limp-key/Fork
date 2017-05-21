@@ -6,9 +6,10 @@ use \limpWork\Bin\Controller\SkeletonController;
 
 class BaseController extends SkeletonController{
 
-    public function out(){
-	echo "<pre>";
+    public function index(){
+/*	echo "<pre>";
 	var_dump($_SERVER);
-	echo "</pre>";
+	echo "</pre>";*/
+	return $this->view('index.php',['cruel world']);
     }
 }

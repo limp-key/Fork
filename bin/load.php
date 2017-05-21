@@ -4,16 +4,16 @@
 
 require_once 'FireWall/Assay.php';
 
+// first parse request
+
 require_once 'Parse/Parse.php';
-
-// first load all config in this framework
-
 require_once 'Route/Route.php';
+
+// second load all config in this framework
 
 require_once '../config/config.php';
 
-
-// second load all bin files in this framework
+// third load all bin files in this framework
 
 require_once 'Controller/SkeletonController.php';
 require_once 'Model/SkeletonModel.php';

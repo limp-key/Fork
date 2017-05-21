@@ -4,7 +4,9 @@ namespace limpWork\Bin\Controller;
 
 class SkeletonController{
 
-    public function input(){
-	return "Hello Cruel World";
+    public function view($path = '/',$parameters = array()){
+	include '../views/'.$path;
+	return true;
     }
+
 }
