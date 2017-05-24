@@ -18,6 +18,7 @@ require_once 'DataBase/ConnectionToDataBase.php';
 
 require_once 'Controller/SkeletonController.php';
 require_once 'Model/SkeletonModel.php';
+require_once 'Assay/Request.php';
 
 // load Model, Controller, View
 
