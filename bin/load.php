@@ -1,23 +1,25 @@
 <?php
 
-// zero firewall
+// Zero firewall
 
 require_once 'FireWall/Assay.php';
 
-// first parse request
+// First parse request
 
 require_once 'Parse/Parse.php';
 require_once 'Route/Route.php';
 
-// second load all config in this framework
+// Second load all config in this framework
 
 require_once '../config/config.php';
+
+// conect to Database
 require_once 'DataBase/ConnectionToDataBase.php';
 
-// third load all bin files in this framework
+// Third load Model and Controller in bin folder
 
-require_once 'Controller/SkeletonController.php';
-require_once 'Model/SkeletonModel.php';
+require_once 'Controller/Controller.php';
+require_once 'Model/Model.php';
 
 // load Model, Controller, View
 
