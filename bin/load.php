@@ -1,19 +1,23 @@
 <?php
 
-// zero firewall
+ini_set('error_reporting',E_ALL);
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+
+// Zero firewall
 
 require_once 'FireWall/Assay.php';
 
-// first parse request
+// First parse request
 
 require_once 'Parse/Parse.php';
 require_once 'Route/Route.php';
 
-// second load all config in this framework
+// Second load all config in this framework
 
 require_once '../config/config.php';
 
-// third load all bin files in this framework
+// Third load Model and Controller in bin folder
 
 require_once 'Controller/SkeletonController.php';
 require_once 'Model/SkeletonModel.php';

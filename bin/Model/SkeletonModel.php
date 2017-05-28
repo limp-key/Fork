@@ -8,10 +8,11 @@ class SkeletonModel{
 
     public $Query = "";
 
-  //  public $MySQLi;
+    public $MySQLi;
 
     public function __construct(){
-	$MySQLi = new \mysqli($GLOBALS['Host'],
+
+	$this->MySQLi = new \mysqli($GLOBALS['Host'],
 			      $GLOBALS['User'],
 			      $GLOBALS['Password'],
 			      $GLOBALS['Database']);
@@ -68,14 +69,16 @@ class SkeletonModel{
     }
 
     public function exec(){
-	$MySQLi->query($this->Query);
+	$this->MySQLi->query($this->Query);
     }
 
     public function create_database($TableName){
-//	echo 'adf';
-//	$TableName = $MySQLi->escape_string($TableName);
-
+  	$TableName = $this->MySQLi->escape_string($TableName);
 	$this->Query = "CREATE DATABASE $TableName";
-	
+    }
+
+    public function drop_database($TableName){
+	$TableName = $this->MySQLi->escape_string($TableName);
+	$this->Query = "DROP DATABASE $TableName";
     }
 }

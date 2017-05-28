@@ -12,8 +12,8 @@ class BaseController extends SkeletonController{
 	var_dump($_SERVER);
    echo "</pre>";*/
 	$db = new BaseModel();
-	$db->create_database('test');
-	echo 'test';
+	
+
 	$db->exec();
 	return $this->view('index.html.php',['cruel world']);
     }
