@@ -24,7 +24,7 @@ if(isset($GLOBALS['response_class'])  &&
     else
 	$Method = 'index';
 
-    unset($GLOBALS);
+    //unset($GLOBALS);
     
     $AssemblyController = new $Controller();
     //$AssemblyClass->$Method();

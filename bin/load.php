@@ -13,13 +13,11 @@ require_once 'Route/Route.php';
 
 require_once '../config/config.php';
 
-// conect to Database
-require_once 'DataBase/ConnectionToDataBase.php';
-
 // Third load Model and Controller in bin folder
 
-require_once 'Controller/Controller.php';
-require_once 'Model/Model.php';
+require_once 'Controller/SkeletonController.php';
+require_once 'Model/SkeletonModel.php';
+require_once 'Assay/Request.php';
 
 // load Model, Controller, View
 
