@@ -13,5 +13,5 @@ if apache2 base configurate:
 #ServerName name(default: localhost)<br>
 #<Directory '/path/to/framework/www/'><br>
 #AllowOverride all<br>
-#</Directory><br>
+#</Directory#><br>
 #</VirtualHost#>
