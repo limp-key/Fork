@@ -14,4 +14,4 @@ if apache2 base configurate:
 #<Directory '/path/to/framework/www/'><br>
 #AllowOverride all<br>
 #</Directory><br>
-#</VirtualHost>
+#</VirtualHost#>
