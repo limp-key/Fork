@@ -24,15 +24,7 @@ if(isset($GLOBALS['response_class'])  &&
     else
 	$Method = 'index';
 
-    $Host = $GLOBALS['Host'];
-    $User = $GLOBALS['User'];
-    $Password = $GLOBALS['Password'];
-    $Database = $GLOBALS['Database'];
     unset($GLOBALS);
-    $GLOBALS['Host'] = $Host;
-    $GLOBALS['User'] = $User;
-    $GLOBALS['Password'] = $Password;
-    $GLOBALS['Database'] = $Database;
     
     $AssemblyController = new $Controller();
     //$AssemblyClass->$Method();

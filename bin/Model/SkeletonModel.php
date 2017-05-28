@@ -8,6 +8,7 @@ require_once 'CRUD.php';
 use \limpWork\DataBase\Connection;
 use \limpWork\Bin\Model\CRUD;
 use \limpWork\Bin\Model\Other;
+use \limpWork\Config\Database;
 use \mysqli as MySQL;
 
 class SkeletonModel{
@@ -20,10 +21,12 @@ class SkeletonModel{
 
     public function __construct(){
 
-	$this->MySQLi = new MySQL($GLOBALS['Host'],
-				  $GLOBALS['User'],
-				  $GLOBALS['Password'],
-				  $GLOBALS['Database']);
+	$Setting = new Database();
+	
+	$this->MySQLi = new MySQL($Setting->Host,
+				  $Setting->User,
+				  $Setting->Password,
+				  $Setting->Database);
     }
 
    

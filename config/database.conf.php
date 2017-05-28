@@ -1,6 +1,16 @@
 <?php
 
-$GLOBALS['Host'] = 'localhost';
-$GLOBALS['Database'] = 'test';
-$GLOBALS['User'] = 'root';
-$GLOBALS['Password'] = '47085622';
+namespace limpWork\Config;
+
+class Database{
+
+    public $Host = 'localhost';
+    
+    public $Database = 'test';
+
+    public $User = 'root';
+
+    public $Password = '47085622';
+}
+
+
