@@ -1,6 +1,6 @@
 <?php
 
-$Host = 'localhost';
-$Database = 'symfony';
-$User = 'root';
-$Password = '47085622';
+$GLOBALS['Host'] = 'localhost';
+$GLOBALS['Database'] = 'valer';
+$GLOBALS['User'] = 'root';
+$GLOBALS['Password'] = '47085622';

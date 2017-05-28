@@ -11,10 +11,10 @@ class SkeletonModel{
   //  public $MySQLi;
 
     public function __construct(){
-//	$MySQLi = new \mysqli($GLOBALS['Host'],
-//			      $GLOBALS['User'],
-//			      $GLOBALS['Password'],
-//			      $GLOBALS['Database']);
+	$MySQLi = new \mysqli($GLOBALS['Host'],
+			      $GLOBALS['User'],
+			      $GLOBALS['Password'],
+			      $GLOBALS['Database']);
     }
 
     public function param($parameters = array()){
