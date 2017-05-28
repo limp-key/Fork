@@ -14,5 +14,4 @@ ServerName name(default: localhost)<br>
 <Directory '/path/to/framework/www/'><br>
 AllowOverride all<br>
 </Directory><br>
-</VirtualHost >
-##end config
+</VirtualHost ##end config>
