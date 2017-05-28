@@ -8,13 +8,11 @@ use \limpWork\Models\BaseModel;
 class BaseController extends SkeletonController{
 
     public function index(){
-/*	echo "<pre>";
-	var_dump($_SERVER);
-   echo "</pre>";*/
-	$db = new BaseModel();
-	
 
-	$db->exec();
+	//$db = new BaseModel();
+	//$db->insert('test',[null,'test text'])->exec();\
+//	$kill = $db->select('test',['id','test'])->where('id = 2')->show();
+//	var_dump($kill);
 	return $this->view('index.html.php',['cruel world']);
     }
 }
