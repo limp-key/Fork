@@ -4,13 +4,13 @@ namespace limpWork\Config;
 
 class Database{
 
-    public $Host = 'localhost';
+    public $Host = '';
     
-    public $Database = 'test';
+    public $Database = '';
 
-    public $User = 'root';
+    public $User = '';
 
-    public $Password = '47085622';
+    public $Password = '';
 }
 
 
