@@ -1,8 +1,8 @@
 <?php
 
-namespace limpWork\Models;
+namespace Fork\Models;
 
-use limpWork\Model\SkeletonModel;
+use Fork\Model\SkeletonModel;
 
 class BaseModel extends SkeletonModel{
     
