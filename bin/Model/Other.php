@@ -1,6 +1,6 @@
 <?php
 
-namespace limpWork\Bin\Model;
+namespace Fork\Bin\Model;
 
 trait Other{
 

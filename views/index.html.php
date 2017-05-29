@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-	<title>limpWork</title>
+	<title>Fork</title>
 	<style>
 	 html,body{
 	     height:100%;
@@ -36,8 +36,7 @@
     <body>
 	<div class="element">
 	    <div class="wrap">
-		<h2>Hello <?php echo $parameters[0]; ?><br>This is test page in the limpWork</h2>
-		
+		<h2>Hello <?php echo $parameters[0]; ?><br>This is test page in the Fork</h2>	
 		<p>If you saw this text, then everything works fine</p>
 	    </div>
 	</div>

@@ -1,14 +1,14 @@
 <?php
 
-namespace limpWork\Model;
+namespace Fork\Model;
 
 require_once 'Other.php';
 require_once 'CRUD.php';
 
-use \limpWork\DataBase\Connection;
-use \limpWork\Bin\Model\CRUD;
-use \limpWork\Bin\Model\Other;
-use \limpWork\Config\Database;
+use \Fork\DataBase\Connection;
+use \Fork\Bin\Model\CRUD;
+use \Fork\Bin\Model\Other;
+use \Fork\Config\Database;
 use \mysqli as MySQL;
 
 class SkeletonModel{

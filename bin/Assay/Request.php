@@ -1,6 +1,6 @@
 <?php
 
-namespace limpWork\Bin\Assay;
+namespace Fork\Bin\Assay;
 
 class Request{
 

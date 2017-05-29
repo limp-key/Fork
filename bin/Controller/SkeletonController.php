@@ -1,6 +1,6 @@
 <?php
 
-namespace limpWork\Bin\Controller;
+namespace Fork\Bin\Controller;
 
 class SkeletonController{
 

@@ -5,7 +5,7 @@
 if(isset($GLOBALS['response_model'])){
     require_once '../models/'.$GLOBALS['response_model'].'.php';
 
-    $Model = 'limpWork\\Models\\'.$GLOBALS['response_model'];
+    $Model = 'Fork\\Models\\'.$GLOBALS['response_model'];
 
     $AssemblyModel = new $Model();
     //$AssemblyModel->$Method();
@@ -17,7 +17,7 @@ if(isset($GLOBALS['response_class'])  &&
     
     require_once '../controllers/'.$GLOBALS['response_class'].'.php';
     
-    $Controller = 'limpWork\\Controllers\\'.$GLOBALS['response_class'];
+    $Controller = 'Fork\\Controllers\\'.$GLOBALS['response_class'];
 
     if($GLOBALS['response_method'])
 	$Method = $GLOBALS['response_method'];

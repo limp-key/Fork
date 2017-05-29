@@ -1,9 +1,9 @@
 <?php 
 
-namespace limpWork\Controllers;
+namespace Fork\Controllers;
 
-use \limpWork\Bin\Controller\SkeletonController;
-use \limpWork\Models\BaseModel;
+use \Fork\Bin\Controller\SkeletonController;
+use \Fork\Models\BaseModel;
 
 class BaseController extends SkeletonController{
 

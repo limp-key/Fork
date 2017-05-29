@@ -1,6 +1,6 @@
 <?php
 
-use limpWork\Bin\Route;
+use Fork\Bin\Route;
 
 Route::request('/','BaseController','index','BaseModel');
 

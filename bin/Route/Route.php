@@ -1,6 +1,6 @@
 <?php
 
-namespace limpWork\Bin;
+namespace Fork\Bin;
 
 class Route{
 
