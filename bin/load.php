@@ -22,6 +22,7 @@ require_once '../config/config.php';
 require_once 'Controller/SkeletonController.php';
 require_once 'Model/SkeletonModel.php';
 require_once 'Assay/Request.php';
+require_once 'Session/SessionCreate.php';
 
 // load Model, Controller, View
 
