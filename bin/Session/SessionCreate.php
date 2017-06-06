@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Bin;
+namespace Fork\Bin\Session;
 
-class Session{
+class SessionCreate{
     public function __construct($SessionName = null){
 
 	if(!is_null($SessionName))
