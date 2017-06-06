@@ -6,31 +6,30 @@ class Request{
 
     public function post(){
 	if(!empty($_POST)){
-	    foreach ($_POST as &$post) {
-		$post = strtoupper($post);
+	    $posts = $_POST;
+	    
+	    foreach($posts as $post){
+		$post = htmlspecialchars($post, ENT_QUOTES);
 	    }
-	} 
-	$posts = $POSTS = $_POST;
-	
-	foreach($posts as $post){
-	    echo $post;
+	    return $posts;
+	}else{
+	    return null;
 	}
     }
 
     public function get(){
 	if(!empty($_GET)){
-	    foreach ($_GET as &$get) {
-		$get = strtoupper($get);
-	    }
-	}
-	$gets = $GETS = $_GET;
+	    $gets = $_GET;
 
-	foreach($gets as $get){
-	    echo $get;
+	    foreach($gets as $get){
+		$get = htmlspecialchars($get, ENT_QUOTES);
+	    }
+	    return $gets;
+	}else{
+	    return null;
 	}
     }
 
-   
     public function files(){
 	if(!empty($_FILES)){
 	    // other time
@@ -42,6 +41,7 @@ class Request{
 	    unset($_ENV);
 	    //var_dump($_ENV);
 	}
+	return null;
     }
 
    
@@ -50,5 +50,6 @@ class Request{
 	    unset($_REQUEST);
 	    //var_dump($_REQUEST);
 	}
+	return null;
     }
 }
