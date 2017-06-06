@@ -34,7 +34,6 @@ trait Other{
     }
 
     public function show(){
-	var_dump($this->Query);
 	$returnQuery = $this->MySQLi->query($this->Query);
 	
 	return $returnQuery->fetch_all();
@@ -48,6 +47,12 @@ trait Other{
     public function drop_database($TableName){
 	$TableName = $this->MySQLi->escape_string($TableName);
 	$this->Query = "DROP DATABASE $TableName";
+    }
+
+    public function query($Request){
+	$this->Query = $Request;
+
+	return $this;
     }
     
 }

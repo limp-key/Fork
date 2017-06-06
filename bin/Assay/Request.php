@@ -8,8 +8,8 @@ class Request{
 	if(!empty($_POST)){
 	    $posts = $_POST;
 	    
-	    foreach($posts as $post){
-		$post = htmlspecialchars($post, ENT_QUOTES);
+	    foreach($posts as &$post){
+		$post = htmlentities($post, ENT_QUOTES);
 	    }
 	    return $posts;
 	}else{
@@ -21,8 +21,8 @@ class Request{
 	if(!empty($_GET)){
 	    $gets = $_GET;
 
-	    foreach($gets as $get){
-		$get = htmlspecialchars($get, ENT_QUOTES);
+	    foreach($gets as &$get){
+		$get = htmlentities($get, ENT_QUOTES);
 	    }
 	    return $gets;
 	}else{
