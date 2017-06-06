@@ -19,9 +19,11 @@ require_once '../config/config.php';
 
 // Third load Model and Controller in bin folder
 
+
 require_once 'Controller/SkeletonController.php';
 require_once 'Model/SkeletonModel.php';
 require_once 'Assay/Request.php';
+require_once 'Assay/Validation.php';
 require_once 'Session/SessionCreate.php';
 require_once 'Cookie/CookieCreate.php';
 
