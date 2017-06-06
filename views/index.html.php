@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
     <head>
+	<link rel="shortcut icon" href="picture/fork.png">
 	<title>Fork</title>
 	<style>
 	 html,body{
