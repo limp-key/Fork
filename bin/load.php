@@ -29,6 +29,9 @@ require_once 'Cookie/CookieCreate.php';
 require_once 'Assistant/Helper.php';
 require_once 'Assistant/Exception.php';
 
+
 // load Model, Controller, View
 
-require_once 'Assembly/assembly.php';
+require_once 'Assembly/AssemblyModels.php';
+require_once 'Assembly/AssemblyControllers.php';
+require_once 'Assembly/Main.php';
