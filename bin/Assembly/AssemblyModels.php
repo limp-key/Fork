@@ -3,18 +3,13 @@
 namespace Fork\Bin\Assembly;
 
 class AssemblyModels{
-    public static function search($Model = null){
+    public static function search(){
 	$SearchingParameters = 'find ../models/ | grep ".php"';
 	exec($SearchingParameters,$Models);
 
-	if(is_null($Model))
+	if(!empty($Models))
 	    return $Models;
-	else{
-	    foreach($Models as $search){
-		if($Model == $search)
-		    return $Model;
-	    }
+	else
 	    return false;
-	}
     }
 }
