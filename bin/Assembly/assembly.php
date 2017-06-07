@@ -29,8 +29,8 @@ if(isset($GLOBALS['response_class'])  &&
     $AssemblyController = new $Controller();
     //$AssemblyClass->$Method();
     if($AssemblyController->$Method() == null){
-	die(require_once '../bin/assistant/helper.html');
+	die(require_once '../bin/Assistant/helper.html');
     }
 }else{
-    die(require_once '../bin/assistant/helper.html');
+    die(require_once '../bin/Assistant/helper.html');
 }
