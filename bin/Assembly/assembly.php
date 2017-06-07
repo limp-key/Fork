@@ -12,25 +12,24 @@ if(isset($GLOBALS['response_model'])){
 }
 
 
-if(isset($GLOBALS['response_class'])  &&
-   isset($GLOBALS['response_method'])){
-    
-    require_once '../controllers/'.$GLOBALS['response_class'].'.php';
-    
-    $Controller = 'Fork\\Controllers\\'.$GLOBALS['response_class'];
+if(!isset($GLOBALS['response_class'])  &&
+   !isset($GLOBALS['response_method'])){
+    Fork\Bin\Assistant\ForkException::errorURL();
+}
 
-    if($GLOBALS['response_method'])
-	$Method = $GLOBALS['response_method'];
-    else
-	$Method = 'index';
+require_once '../controllers/'.$GLOBALS['response_class'].'.php';
 
-    unset($GLOBALS);
-    
-    $AssemblyController = new $Controller();
-    //$AssemblyClass->$Method();
-    if($AssemblyController->$Method() == null){
-	die(require_once '../bin/Assistant/helper.html');
-    }
-}else{
-    die(require_once '../bin/Assistant/helper.html');
+$Controller = 'Fork\\Controllers\\'.$GLOBALS['response_class'];
+
+if($GLOBALS['response_method'])
+    $Method = $GLOBALS['response_method'];
+else
+    $Method = 'index';
+
+unset($GLOBALS);
+
+$AssemblyController = new $Controller();
+
+if($AssemblyController->$Method() == null){
+    Fork\Bin\Assistant\ForkException::errorURL();
 }

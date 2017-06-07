@@ -27,6 +27,7 @@ require_once 'Assay/Validation.php';
 require_once 'Session/SessionCreate.php';
 require_once 'Cookie/CookieCreate.php';
 require_once 'Assistant/Helper.php';
+require_once 'Assistant/Exception.php';
 
 // load Model, Controller, View
 
