@@ -15,7 +15,7 @@ require_once 'Route/Route.php';
 
 // Second load all config in this framework
 
-require_once '../config/config.php';
+require_once 'Config/Load.php';
 
 // Third load Model and Controller in bin folder
 
