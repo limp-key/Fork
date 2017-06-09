@@ -35,8 +35,11 @@ trait Other{
 
     public function show(){
 	$returnQuery = $this->MySQLi->query($this->Query);
-	
-	return $returnQuery->fetch_all();
+
+	if(!empty($returnQuery))
+	    return $returnQuery->fetch_all();
+	else
+	    return false;
     }
 
     public function create_database($TableName){
