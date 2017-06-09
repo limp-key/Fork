@@ -1,1 +1,2 @@
-config/database.conf.php
+config/DataBase.conf.php
+config/Routing.conf.php

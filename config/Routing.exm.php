@@ -2,6 +2,5 @@
 
 use Fork\Bin\Route;
 
+//Example
 Route::request('/','BaseController','index','BaseModel');
-
-Route::request('/test','BaseController','index','BaseModel');
