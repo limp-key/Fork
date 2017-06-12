@@ -1,2 +1,4 @@
-config/DataBase.conf.php
-config/Routing.conf.php
+config/
+controllers/
+models/
+views/
