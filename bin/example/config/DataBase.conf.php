@@ -1,6 +1,6 @@
 <?php
 
-namespace limpWork\Config;
+namespace Fork\Config;
 
 class Database{
  
