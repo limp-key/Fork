@@ -37,8 +37,19 @@ trait Other{
 	$returnQuery = $this->MySQLi->query($this->Query);
 
 	if(!empty($returnQuery))
-	    return $returnQuery->fetch_all();
+	    return $returnQuery->fetch_all(1);
 	else
+	    return false;
+    }
+
+    public function first(){
+	$returnQuery = $this->MySQLi->query($this->Query);
+
+	if(!empty($returnQuery)){
+	    $returnQuery = $returnQuery->fetch_all(1);
+	    $returnQuery = $returnQuery[0];
+	    return $returnQuery;
+	}else
 	    return false;
     }
 

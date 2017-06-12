@@ -12,7 +12,7 @@ class SessionCreate{
     }
 
     public function __destruct(){
-	session_destroy();
+	session_write_close();
     }
 
     public function write($Session,$Parameter){
@@ -22,6 +22,10 @@ class SessionCreate{
 
     public function read($ParametersInSession){
 	return $_SESSION[$ParametersInSession];
+    }
+
+    public function destroy(){
+	session_destroy();
     }
 }
 

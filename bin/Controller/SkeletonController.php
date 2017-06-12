@@ -20,4 +20,9 @@ class SkeletonController{
 	include '../views/'.$Path;
 	return true;
     }
+
+    public function redirect($Path = '/'){
+	header('Location: '.$Path);
+	return true;
+    }
 }
