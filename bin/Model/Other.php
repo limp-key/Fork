@@ -53,6 +53,15 @@ trait Other{
 	    return false;
     }
 
+    public function bool(){
+	$returnQuery = $this->MySQLi->query($this->Query);
+	
+	if(!empty($returnQuery))
+	    return true;
+	else
+	    return false;
+    }
+
     public function create_database($TableName){
   	$TableName = $this->MySQLi->escape_string($TableName);
 	$this->Query = "CREATE DATABASE $TableName";
