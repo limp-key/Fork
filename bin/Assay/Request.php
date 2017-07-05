@@ -30,25 +30,63 @@ class Request{
 	}
     }
 
-    public function files(){
+    public function file($Parameter){
 	if(!empty($_FILES)){
-	    // other time
+	    $files = $_FILES;
+
+	    $_FILES['userfile']['name'];
+
+	    $_FILES['userfile']['type'];
+	    
+	    $_FILES['userfile']['size'];
+	    
+	    $_FILES['userfile']['tmp_name'];
+	    
+	    $_FILES['userfile']['error'];
+	    
+	    foreach($files as &$file){
+		$file = htmlentities($file, ENT_QUOTES);
+	    }
+	    return $file;
+	}else{
+	    return null;
+	}
+    }
+
+    public function files($Parameter){
+	if(!empty($_FILES)){
+	    $files = $_FILES;
+
+	    $_FILES['userfile']['name'];
+
+	    $_FILES['userfile']['type'];
+	    
+	    $_FILES['userfile']['size'];
+	    
+	    $_FILES['userfile']['tmp_name'];
+	    
+	    $_FILES['userfile']['error'];
+	    
+	    foreach($files as &$file){
+		$file = htmlentities($file, ENT_QUOTES);
+	    }
+	    return $file;
+	}else{
+	    return null;
 	}
     }
 
     public function env(){
 	if(!empty($_ENV)){
 	    unset($_ENV);
-	    //var_dump($_ENV);
 	}
 	return null;
     }
 
-   
+    
     public function request(){
 	if(!empty($_REQUEST)){
 	    unset($_REQUEST);
-	    //var_dump($_REQUEST);
 	}
 	return null;
     }
