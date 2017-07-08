@@ -8,6 +8,7 @@ require_once 'FireWall/Assay.php';
 
 require_once 'Parse/Request.php';
 require_once 'Route/Route.php';
+require_once 'Config/Config.php';
 
 // Second load all config in this framework
 

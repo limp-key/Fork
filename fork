@@ -24,18 +24,22 @@ then
 
 elif [ $1 == '--create' ] && [ $2 != '' ] && [ $3 != '' ]
 then
-    if  [ $2 == '-c' ] 
+    if  [ $2 == '-controller' ] 
     then
-	cp bin/Fork/Controller.php controllers/
+	cp bin/Routine/Controller.php controllers/
 	mv controllers/Controller.php controllers/$3.php 
-    elif [ $2 == '-m' ] 
+    elif [ $2 == '-model' ] 
     then
-	cp bin/Fork/Model.php models/
+	cp bin/Routine/Model.php models/
 	mv models/Model.php models/$3.php 
-    elif [ $2 == '-r' ] 
+    elif [ $2 == '-route' ] 
     then
-	cp bin/Fork/Route.php route/
-	mv route/Route.php route/$3.php 
+	cp bin/Routine/Route.php route/
+	mv route/Route.php route/$3.php
+    elif [ $2 == '-config' ] 
+    then
+	cp bin/Routine/Config.php config/
+	mv config/Config.php config/$3.php 
     else 
 	echo "Invalid create type"
     fi
@@ -49,5 +53,8 @@ then
 elif [ $1 == '--disable' ]
 then
     echo 'disable'
+
+else
+    echo 'Invalid command'
 fi
 

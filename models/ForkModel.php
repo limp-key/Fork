@@ -4,6 +4,6 @@ namespace Fork\Models;
 
 use Fork\Model\SkeletonModel;
 
-class BaseModel extends SkeletonModel{
+class ForkModel extends SkeletonModel{
     
 }
