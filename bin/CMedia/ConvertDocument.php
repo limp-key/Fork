@@ -2,6 +2,6 @@
 
 namespace Fork\Bin\CMedia;
 
-class ConvertVideo {
+class ConvertDocument {
     
 }
