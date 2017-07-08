@@ -1,16 +1,17 @@
 #!/bin/bash
 
-if [ $# == 0 ]:
+if [ $# == 0 ]
 then
-    echo '--load   - load example contoller,model,config,view,www';
-    echo "\n";
-    echo '--remove - remove folder example in fork/bin';
-    echo "\n";
-    echo '--module - view your module in fork';
-    echo "\n";
-    echo '--clear  - remove fork test files';
-    echo "\n";
-    
+    echo 'Base';
+    echo '--load    - load example contoller,model,config,view,www';
+    echo '--remove  - remove folder example in Fork/bin';
+    echo '--clear   - remove fork test files';
+    echo '--create {Type} {Name}  - create Controller or Model or Route file';
+
+    echo 'Module';
+    echo '--module  - show all module in Fork';    
+    echo '--include {Module} - include module in Fork';
+    echo '--disable {Module} - disable module in Fork';
 else
     #   if($argv[1] == '--load'){
     #    $LoadSuccesful = true;
@@ -82,5 +83,3 @@ else
     #    }
     #} 
 fi
-
-echo "\n";
