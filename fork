@@ -5,6 +5,7 @@ then
     echo 'Base'
     echo '--clear   - remove fork test files'
     echo '--create {Type} {Name}  - create Controller or Model or Route file'
+    echo '--install - install all packate and programme for Fork'
 
     echo 'Module'
     echo '--module  - show all module in Fork'
