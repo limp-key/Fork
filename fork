@@ -2,84 +2,52 @@
 
 if [ $# == 0 ]
 then
-    echo 'Base';
-    echo '--load    - load example contoller,model,config,view,www';
-    echo '--remove  - remove folder example in Fork/bin';
-    echo '--clear   - remove fork test files';
-    echo '--create {Type} {Name}  - create Controller or Model or Route file';
+    echo 'Base'
+    echo '--clear   - remove fork test files'
+    echo '--create {Type} {Name}  - create Controller or Model or Route file'
 
-    echo 'Module';
-    echo '--module  - show all module in Fork';    
-    echo '--include {Module} - include module in Fork';
-    echo '--disable {Module} - disable module in Fork';
-else
-    #   if($argv[1] == '--load'){
-    #    $LoadSuccesful = true;
-
-   
-    echo "Folder bin/example/config loading";
-    
-    #	exec('cp bin/example/config/* config/',$Output,$ReturnConfig);
-    #	if($ReturnConfig == 1){
-    echo "Error load config files";
-    
-    #	    $LoadSuccesful = false;
-    #	}else{
-    echo "Folder bin/example/config load";
-    
-    #	}
-
-    
-    echo "Folder bin/example/controllers loading";
-    
-    #	exec('cp bin/example/controllers/* controllers/',$Output,$ReturnController);
-    #	if($ReturnController == 1){
-    echo "Error load controllers files";
-    
-    #	    $LoadSuccesful = false;
-    #	}else{
-    echo "Folder bin/example/controllers load";
-    
-    #	}
-
-    
-    echo "Folder bin/example/models loading";
-    
-    #	exec('cp bin/example/models/* models/',$Output,$ReturnModel);
-    #	if($ReturnModel == 1){
-    echo "Error load models files";
-    
-    #	    $LoadSuccesful = false;
-    #	}else{
-    echo "Folder bin/example/models load";
-    
-    #	}
-
-    
-    echo "Folder bin/example/views loading";
-    
-    #	exec('cp bin/example/views/* views/',$Output,$ReturnView);
-    #	if($ReturnView == 1){
-    echo "Error load views files";
-    
-    #	    $LoadSuccesful = false;
-    #	}else{
-    echo "Folder bin/example/views load";
-    
-    #	}
-
-
-    
-    echo "Directory example load successful";
-    
-    #    }else if($argv[1] == '--remove'){
-    echo "Folder bin/example removing";
-    #	exec('rm -r ./bin/example');
-    #	exec();
-    
-    echo "Remove complete";
-    #    }else{
-    echo 'Error argument';
-    #    }
-    #} 
+    echo 'Module'
+    echo '--module  - show all module in Fork'
+    echo '--include {Module} - include module in Fork'
+    echo '--disable {Module} - disable module in Fork'
+    exit;
 fi
+
+if [ $1 == '--clear' ]
+then
+    rm README.md
+    rm fork.apache.conf
+    rm controllers/ForkController.php
+    rm models/ForkModel.php
+    rm route/ForkRoute.php
+    rm config/ForkConfig.conf.php
+
+elif [ $1 == '--create' ] && [ $2 != '' ] && [ $3 != '' ]
+then
+    if  [ $2 == '-c' ] 
+    then
+	cp bin/Fork/Controller.php controllers/
+	mv controllers/Controller.php controllers/$3.php 
+    elif [ $2 == '-m' ] 
+    then
+	cp bin/Fork/Model.php models/
+	mv models/Model.php models/$3.php 
+    elif [ $2 == '-r' ] 
+    then
+	cp bin/Fork/Route.php route/
+	mv route/Route.php route/$3.php 
+    else 
+	echo "Invalid create type"
+    fi
+elif [ $1 == '--module' ]
+then
+     find bin/ -mindepth 1 -maxdepth 1 -type d  \( ! -iname ".*" \) #| sed 's|^\./||g'
+     
+elif [ $1 == '--enable' ]
+then
+    echo 'enable'
+elif [ $1 == '--disable' ]
+then
+    echo 'disable'
+fi
+
