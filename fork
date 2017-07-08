@@ -20,7 +20,7 @@ then
     rm controllers/ForkController.php
     rm models/ForkModel.php
     rm route/ForkRoute.php
-    rm config/ForkConfig.conf.php
+    rm config/ForkConfig.php
 
 elif [ $1 == '--create' ] && [ $2 != '' ] && [ $3 != '' ]
 then
