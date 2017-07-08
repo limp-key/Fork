@@ -8,6 +8,9 @@ then
     echo "\n";
     echo '--module - view your module in fork';
     echo "\n";
+    echo '--clear  - remove fork test files';
+    echo "\n";
+    
 else
     #   if($argv[1] == '--load'){
     #    $LoadSuccesful = true;
