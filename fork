@@ -16,67 +16,67 @@ else
     #   if($argv[1] == '--load'){
     #    $LoadSuccesful = true;
 
-    echo "\n";
+   
     echo "Folder bin/example/config loading";
-    echo "\n";
+    
     #	exec('cp bin/example/config/* config/',$Output,$ReturnConfig);
     #	if($ReturnConfig == 1){
     echo "Error load config files";
-    echo "\n";
+    
     #	    $LoadSuccesful = false;
     #	}else{
     echo "Folder bin/example/config load";
-    echo "\n";
+    
     #	}
 
-    echo "\n";
+    
     echo "Folder bin/example/controllers loading";
-    echo "\n";
+    
     #	exec('cp bin/example/controllers/* controllers/',$Output,$ReturnController);
     #	if($ReturnController == 1){
     echo "Error load controllers files";
-    echo "\n";
+    
     #	    $LoadSuccesful = false;
     #	}else{
     echo "Folder bin/example/controllers load";
-    echo "\n";
+    
     #	}
 
-    echo "\n";
+    
     echo "Folder bin/example/models loading";
-    echo "\n";
+    
     #	exec('cp bin/example/models/* models/',$Output,$ReturnModel);
     #	if($ReturnModel == 1){
     echo "Error load models files";
-    echo "\n";
+    
     #	    $LoadSuccesful = false;
     #	}else{
     echo "Folder bin/example/models load";
-    echo "\n";
+    
     #	}
 
-    echo "\n";
+    
     echo "Folder bin/example/views loading";
-    echo "\n";
+    
     #	exec('cp bin/example/views/* views/',$Output,$ReturnView);
     #	if($ReturnView == 1){
     echo "Error load views files";
-    echo "\n";
+    
     #	    $LoadSuccesful = false;
     #	}else{
     echo "Folder bin/example/views load";
-    echo "\n";
+    
     #	}
 
 
-    echo "\n";
+    
     echo "Directory example load successful";
-    echo "\n";
+    
     #    }else if($argv[1] == '--remove'){
     echo "Folder bin/example removing";
     #	exec('rm -r ./bin/example');
     #	exec();
-    echo "\n";
+    
     echo "Remove complete";
     #    }else{
     echo 'Error argument';
