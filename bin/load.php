@@ -11,7 +11,8 @@ require_once 'Route/Route.php';
 
 // Second load all config in this framework
 
-require_once 'Config/Load.php';
+require_once 'Assembly/Config.php';
+require_once 'Assembly/Route.php';
 
 // Third load Model and Controller in bin folder
 
@@ -24,7 +25,6 @@ require_once 'Session/SessionCreate.php';
 require_once 'Cookie/CookieCreate.php';
 require_once 'Assistant/Helper.php';
 require_once 'Assistant/Exception.php';
-
 
 // load Model, Controller, View
 
