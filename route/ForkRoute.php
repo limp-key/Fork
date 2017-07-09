@@ -2,4 +2,4 @@
 
 use Fork\Bin\Route;
 
-#Route::request('/','TestController','index');
+Route::request('/','ForkController','index');

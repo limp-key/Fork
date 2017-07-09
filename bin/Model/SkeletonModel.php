@@ -5,7 +5,6 @@ namespace Fork\Model;
 require_once 'Other.php';
 require_once 'CRUD.php';
 
-use \Fork\DataBase\Connection;
 use \Fork\Bin\Model\CRUD;
 use \Fork\Bin\Model\Other;
 use \Fork\Config\Database;
