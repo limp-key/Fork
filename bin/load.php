@@ -17,7 +17,6 @@ require_once 'Assembly/Route.php';
 
 // Third load Model and Controller in bin folder
 
-
 require_once 'Controller/SkeletonController.php';
 require_once 'Model/SkeletonModel.php';
 require_once 'Assay/Request.php';

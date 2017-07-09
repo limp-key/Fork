@@ -23,6 +23,7 @@ then
     rm models/ForkModel.php
     rm route/ForkRoute.php
     rm config/ForkConfig.php
+    rm views/index.fork.html.php
 
 elif [ $1 == '--create' ] && [ $2 != '' ] && [ $3 != '' ]
 then
@@ -45,6 +46,9 @@ then
     else 
 	echo "Invalid create type"
     fi
+elif [ $1 == '--migration' ]
+then
+    echo 'php'
 elif [ $1 == '--module' ]
 then
      find bin/ -mindepth 1 -maxdepth 1 -type d  \( ! -iname ".*" \) #| sed 's|^\./||g'

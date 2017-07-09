@@ -2,9 +2,7 @@
 
 namespace Fork\Bin;
 
-class Config{
-
-    
+class Config{    
     
     // Parameter for framework
 
