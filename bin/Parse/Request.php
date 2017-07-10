@@ -1,9 +1,28 @@
 <?php
-/*echo '<pre>';
-var_dump($_SERVER);
-echo '</pre>';*/
-if(!empty($_SERVER)){
-    if(empty($_SERVER['REDIRECT_URL'])){
-	$_SERVER['REDIRECT_URL'] = substr_replace($_SERVER['REQUEST_URI'],'/',0);
+
+namespace Fork\Bin;
+
+class Request{
+
+    private $Request;
+
+    public function __construct(){
+
+	//echo '<pre>';
+	// var_dump($_SERVER);
+	// echo '</pre>';
+
+	$this->Request = $_SERVER;
+
+	return $this->Request;
     }
+
+    public function Parse(){
+
+	if(!empty($this->Request) &&
+	   empty($this->Request['REDIRECT_URL'])){
+
+	    $this->Request['REDIRECT_URL'] = substr_replace($this->Request['REQUEST_URI'],'/',0);
+	}	
+    }    
 }

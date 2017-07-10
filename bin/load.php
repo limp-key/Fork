@@ -8,10 +8,14 @@ require_once 'FireWall/Assay.php';
 
 require_once 'Parse/Request.php';
 require_once 'Route/Route.php';
-require_once 'Config/Config.php';
+
+require_once 'Config/Main.php';
+require_once 'Config/DataBase.php';
+require_once 'Config/Mail.php';
 
 // Second load all config in this framework
 
+require_once 'Assembly/Request.php';
 require_once 'Assembly/Config.php';
 require_once 'Assembly/Route.php';
 
@@ -28,6 +32,6 @@ require_once 'Assistant/Exception.php';
 
 // load Model, Controller, View
 
-require_once 'Assembly/AssemblyModels.php';
-require_once 'Assembly/AssemblyControllers.php';
+require_once 'Assembly/Models.php';
+require_once 'Assembly/Controllers.php';
 require_once 'Assembly/Main.php';
