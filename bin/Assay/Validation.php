@@ -36,4 +36,31 @@ class Validation{
 	    return false;
 	}
     }
+    
+    public function phone(){
+    	$RegularPhone = "##i";
+	if(preg_match_all($RegularPhone,$Parameter)){
+	    return true;
+	}else{
+	    return false;
+	}
+    }
+    
+    public function date(){
+    	$RegularDate = "##i";
+	if(preg_match_all($RegularDate,$Parameter)){
+	    return true;
+	}else{
+	    return false;
+	}
+    }
+    
+    public function file(){
+	    $RegularFile = "##i";
+	if(preg_match_all($RegularFile,$Parameter)){
+	    return true;
+	}else{
+	    return false;
+	}
+    }
 }
