@@ -2,7 +2,7 @@
 
 // Zero firewall
 
-require_once 'FireWall/Assay.php';
+//require_once 'FireWall/Assay.php';
 
 // First parse request
 
@@ -13,13 +13,13 @@ require_once 'Config/Main.php';
 require_once 'Config/DataBase.php';
 require_once 'Config/Mail.php';
 
-// Second load all config in this framework
+// Load all config in this framework
 
 require_once 'Assembly/Request.php';
 require_once 'Assembly/Config.php';
 require_once 'Assembly/Route.php';
 
-// Third load Model and Controller in bin folder
+// Second include framework modules
 
 require_once 'Controller/SkeletonController.php';
 require_once 'Model/SkeletonModel.php';

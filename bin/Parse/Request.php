@@ -2,7 +2,7 @@
 
 namespace Fork\Bin;
 
-class Request{
+class Request {
 
     private $Request;
 
@@ -18,6 +18,14 @@ class Request{
     }
 
     public function Parse(){
+
+	if(!empty($_ENV)){
+	    unset($_ENV);
+	}
+
+	if(!empty($_REQUEST)){
+	    unset($_REQUEST);
+	}
 
 	if(!empty($this->Request) &&
 	   empty($this->Request['REDIRECT_URL'])){

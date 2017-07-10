@@ -55,7 +55,7 @@ class Validation{
     public function File($Parameter){
 	$RegularFile = "#^([a-z0-9A-Z]).([a-z])$#i";
 
-	return preg_match($RegularFile,$Parameter)
+	return preg_match($RegularFile,$Parameter);
     }
 
     public function IPv4($Parameter){

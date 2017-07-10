@@ -2,7 +2,7 @@
 
 namespace Fork\Bin\Assembly;
 
-class AssemblyModels{
+class Models{
     public static function search(){
 	$SearchingParameters = 'find ../models/ | grep ".php"';
 	exec($SearchingParameters,$Models);

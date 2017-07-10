@@ -2,7 +2,7 @@
 
 namespace Fork\Bin\Assembly;
 
-class AssemblyControllers{
+class Controllers{
     public static function search(){
 	$SearchingParameters = 'find ../controllers/ | grep ".php"';
 	exec($SearchingParameters,$Controllers);

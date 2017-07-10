@@ -6,7 +6,7 @@ use \Fork\Bin\Assistant\Helper;
 <!doctype html>
 <html>
     <head>
-	<link rel="shortcut icon" href="picture/fork.png">
+	<link rel="shortcut icon" href="picture/Fork.png">
 	<title>Fork</title>
 	<style>
 	 html,body{

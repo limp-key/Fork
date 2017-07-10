@@ -4,35 +4,35 @@ namespace Fork\Bin\Assay;
 
 class Request{
 
-    public function post(){
+    public function Post(){
 	if(!empty($_POST)){
-	    $posts = $_POST;
+	    $Posts = $_POST;
 	    
-	    foreach($posts as &$post){
-		$post = htmlentities($post, ENT_QUOTES);
+	    foreach($Posts as &$Post){
+		$Post = htmlentities($Post, ENT_QUOTES);
 	    }
-	    return $posts;
+	    return $Posts;
 	}else{
 	    return null;
 	}
     }
 
-    public function get(){
+    public function Get(){
 	if(!empty($_GET)){
-	    $gets = $_GET;
+	    $Gets = $_GET;
 
-	    foreach($gets as &$get){
-		$get = htmlentities($get, ENT_QUOTES);
+	    foreach($Gets as &$Get){
+		$Get = htmlentities($Get, ENT_QUOTES);
 	    }
-	    return $gets;
+	    return $Gets;
 	}else{
 	    return null;
 	}
     }
 
-    public function file($Parameter){
+    public function File($Parameter){
 	if(!empty($_FILES)){
-	    $files = $_FILES;
+	    $Files = $_FILES;
 
 	    $_FILES['userfile']['name'];
 
@@ -53,9 +53,9 @@ class Request{
 	}
     }
 
-    public function files($Parameter){
+    public function Files($Parameter){
 	if(!empty($_FILES)){
-	    $files = $_FILES;
+	    $Files = $_FILES;
 
 	    $_FILES['userfile']['name'];
 
@@ -77,17 +77,11 @@ class Request{
     }
 
     public function env(){
-	if(!empty($_ENV)){
-	    unset($_ENV);
-	}
 	return null;
     }
 
     
     public function request(){
-	if(!empty($_REQUEST)){
-	    unset($_REQUEST);
-	}
 	return null;
     }
 }
