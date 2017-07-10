@@ -10,6 +10,6 @@ use \Fork\Bin\Assay\Request;
 class ForkController extends SkeletonController{
 
     public function index(){
-	return $this->view('index.html.php',['message' => 'World']);
+	return $this->view('index.fork.html.php',['message' => 'World']);
     }
 }
