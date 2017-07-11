@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Model;
+namespace Fork\Bin\Model;
 
 require_once 'Other.php';
 require_once 'CRUD.php';
@@ -27,6 +27,4 @@ class SkeletonModel{
 				  $Setting->Password,
 				  $Setting->Database);
     }
-
-   
 }

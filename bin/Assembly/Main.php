@@ -22,7 +22,7 @@ if(is_array($Controllers)){
 
 // if class is not write
 if(empty($GLOBALS['response_class'])){
-    Fork\Bin\Assistant\ForkException::errorURL();
+    Fork\Bin\Assistant\Exception::errorURL();
 }
 
 $Controller = 'Fork\\Controllers\\'.$GLOBALS['response_class'];
@@ -37,5 +37,5 @@ unset($GLOBALS);
 $AssemblyController = new $Controller();
 
 if($AssemblyController->$Method() == null){
-    Fork\Bin\Assistant\ForkException::errorURL();
+    Fork\Bin\Assistant\Exception::errorURL();
 }

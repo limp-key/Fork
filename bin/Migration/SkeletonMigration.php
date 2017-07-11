@@ -28,6 +28,4 @@ class SkeletonMigration{
 				  $Setting->Password,
 				  $Setting->Database);
     }
-
-    
 }

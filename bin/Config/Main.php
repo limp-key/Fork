@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin;
+namespace Fork\Bin\Config;
 
 class Config{    
     

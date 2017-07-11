@@ -2,7 +2,7 @@
 
 // Zero firewall
 
-//require_once 'FireWall/Assay.php';
+require_once 'FireWall/Assay.php';
 
 // Include Parse, Route, Config classes
 
@@ -32,7 +32,7 @@ require_once 'Assay/Validation.php';
 require_once 'Session/SessionCreate.php';
 require_once 'Cookie/CookieCreate.php';
 
-require_once 'Assistant/Helper.php';
+require_once 'Assistant/Help.php';
 require_once 'Assistant/Exception.php';
 
 require_once 'CMedia/ConvertMedia.php';

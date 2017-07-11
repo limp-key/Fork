@@ -31,57 +31,47 @@ class Request{
     }
 
     public function File($Parameter){
-	if(!empty($_FILES)){
-	    $Files = $_FILES;
-
-	    $_FILES['userfile']['name'];
-
-	    $_FILES['userfile']['type'];
-	    
-	    $_FILES['userfile']['size'];
-	    
-	    $_FILES['userfile']['tmp_name'];
-	    
-	    $_FILES['userfile']['error'];
-	    
-	    foreach($files as &$file){
-		$file = htmlentities($file, ENT_QUOTES);
-	    }
-	    return $file;
-	}else{
+	
+	if(empty($_FILES))
 	    return null;
-	}
+	
+	$Files = $_FILES;
+	
+	$File[$Parameter]['name']     = htmlentities($Files[$Parameter]['name'], ENT_QUOTES);
+	
+	$File[$Parameter]['type']     = htmlentities($Files[$Parameter]['type'], ENT_QUOTES);
+	
+	$File[$Parameter]['size']     = htmlentities($Files[$Parameter]['size'], ENT_QUOTES);
+	
+	$File[$Parameter]['tmp_name'] = htmlentities($Files[$Parameter]['tmp_name'], ENT_QUOTES);
+	
+	$File[$Parameter]['byte']     = htmlentities(file_get_contents($Files['userfile']['tmp_name']), ENT_QUOTES);
+
+	$File[$Parameter]['error']    = htmlentities($Files[$Parameter]['error'], ENT_QUOTES);
+	
+	return $File;
     }
 
     public function Files($Parameter){
-	if(!empty($_FILES)){
-	    $Files = $_FILES;
-
-	    $_FILES['userfile']['name'];
-
-	    $_FILES['userfile']['type'];
-	    
-	    $_FILES['userfile']['size'];
-	    
-	    $_FILES['userfile']['tmp_name'];
-	    
-	    $_FILES['userfile']['error'];
-	    
-	    foreach($files as &$file){
-		$file = htmlentities($file, ENT_QUOTES);
-	    }
-	    return $file;
-	}else{
+	
+	if(empty($_FILES))
 	    return null;
+	    	
+	$Files = $_FILES;
+	
+	foreach($Files as &$File){
+	    $File = htmlentities($File, ENT_QUOTES);
 	}
+	
+	return $file;
     }
 
-    public function env(){
+    public function Env(){
 	return null;
     }
 
     
-    public function request(){
+    public function Request(){
 	return null;
     }
 }
