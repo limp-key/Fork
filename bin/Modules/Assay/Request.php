@@ -65,13 +65,4 @@ class Request{
 	
 	return $file;
     }
-
-    public function Env(){
-	return null;
-    }
-
-    
-    public function Request(){
-	return null;
-    }
 }
