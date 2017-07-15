@@ -1,9 +1,8 @@
 <?php
 
-use \Fork\Bin\Assistant\Helper;
+use \Fork\Bin\Modules\Assistant\Help;
 
-?>
-<!doctype html>
+?><!doctype html>
 <html>
     <head>
 	<link rel="shortcut icon" href="picture/Fork.png">
@@ -42,7 +41,7 @@ use \Fork\Bin\Assistant\Helper;
     <body>
 	<div class="element">
 	    <div class="wrap">
-		<h2>Hello <?php Helper::see($message); ?><br>This is test page in the Fork</h2>	
+		<h2>Hello <?php Help::See($message); ?><br>This is test page in the Fork</h2>	
 		<p>If you saw this text, then everything works fine</p>
 	    </div>
 	</div>

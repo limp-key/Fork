@@ -1,595 +1,595 @@
-precision = 14
+<?php
 
-output_buffering = 4096
+class Config extends SkeletConfig{
 
 
-;output_handler =
+    public $precision = 14;
+    
+    
+    public $output_buffering = 4096;
 
-;url_rewriter.tags
 
-;url_rewriter.hosts
+    #public $output_handler =
 
-zlib.output_compression = Off
+    #public $url_rewriter.tags =
 
-;zlib.output_compression_level = -1
+    #public $url_rewriter.hosts =
+    
 
-;zlib.output_handler =
+    public $zlib_output_compression = 'Off';
 
-implicit_flush = Off
+    public $zlib_output_compression_level = -1;
 
-unserialize_callback_func =
+    #public $zlib.output_handler =
 
-serialize_precision = -1
 
-;open_basedir =
+    
+    public $implicit_flush = 'Off';
 
-disable_functions = pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wifcontinued,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_get_handler,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,pcntl_async_signals,
+    #public $unserialize_callback_func = '';
+    
+    public $serialize_precision = -1;
 
-disable_classes =
+    #public $open_basedir = '';
 
-;highlight.string  = #DD0000
-;highlight.comment = #FF9900
-;highlight.keyword = #007700
-;highlight.default = #0000BB
-;highlight.html    = #000000
+    #disable_functions = pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wifcontinued,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_get_handler,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,pcntl_async_signals,
 
-;ignore_user_abort = On
+    #public $disable_classes = '';
 
-;realpath_cache_size = 4096k
+    #public $highlight_string  = #DD0000
+    #public $highlight_comment = #FF9900
+    #public $highlight_keyword = #007700
+    #public $highlight_default = #0000BB
+    #public $highlight_html    = #000000
 
-;realpath_cache_ttl = 120
+    #public $ignore_user_abort = On
 
-zend.enable_gc = On
+    #public $realpath_cache_size = 4096k
 
-;zend.multibyte = Off
+    #public $realpath_cache_ttl = 120
 
-;zend.script_encoding =
+    public $zend_enable_gc = 'On';
 
-expose_php = Off
+    #public $zend_multibyte = Off
 
-max_execution_time = 30
+    #public $zend_script_encoding =
 
+    public $expose_php = 'Off';
 
-max_input_time = 60
+    public $max_execution_time = 30;
 
-;max_input_nesting_level = 64
 
-; max_input_vars = 1000
+    public $max_input_time = 60;
 
-memory_limit = 128M
+    #public $max_input_nesting_level = 64
 
+    #public $ max_input_vars = 1000
 
-error_reporting = E_ALL
+    public $memory_limit = 128M;
 
-display_errors = On
 
-display_startup_errors = On
+    public $error_reporting = 'E_ALL';
 
-log_errors = On
+    public $display_errors = 'On';
 
+    public $display_startup_errors = 'On';
 
-log_errors_max_len = 1024
+    public $log_errors = 'On';
 
-ignore_repeated_errors = Off
 
-ignore_repeated_source = Off
+    public $log_errors_max_len = 1024;
 
-report_memleaks = On
+    public $ignore_repeated_errors = 'Off';
 
-track_errors = On
+    public $ignore_repeated_source = 'Off';
 
-;xmlrpc_errors = 0
+    public $report_memleaks = 'On';
 
-;xmlrpc_error_number = 0
+    public $track_errors = 'On';
 
-html_errors = On
+    #public $xmlrpc_errors = 0
 
+    #public $xmlrpc_error_number = 0
 
-;docref_root = "/phpmanual/"
+    public $html_errors = 'On';
 
-;docref_ext = .html
+    #public $docref_root = "/phpmanual/"
 
-;error_prepend_string = "<span style='color: #ff0000'>"
+    #public $docref_ext = _html
 
-;error_append_string = "</span>"
+    #public $error_prepend_string = "<span style='color: #public $ff0000'>"
 
-;error_log = php_errors.log
+    #public $error_append_string = "</span>"
 
-;error_log = syslog
+    #public $error_log = php_errors_log
 
-;arg_separator.output = "&amp;"
+    #public $error_log = syslog
 
-;arg_separator.input = ";&"
+    #public $arg_separator_output = "&amp#public $"
 
-variables_order = "GPCS"
+    #public $arg_separator_input = "#public $&"
 
-request_order = "GP"
+    public $variables_order = "GPCS";
 
-register_argc_argv = Off
+    public $request_order = "GP";
 
-auto_globals_jit = On
+    public $register_argc_argv = 'Off';
 
-;enable_post_data_reading = Off
+    public $auto_globals_jit = 'On';
 
-post_max_size = 50M
+    #public $enable_post_data_reading = Off
 
-auto_prepend_file =
+    public $post_max_size = '50M';
 
-auto_append_file =
+    public $auto_prepend_file = '';
 
-default_mimetype = "text/html"
+    public $auto_append_file = '';
+    
+    public $default_mimetype = "text/html";
 
-default_charset = "UTF-8"
+    public $default_charset = "UTF-8";
 
-;internal_encoding =
+    #public $internal_encoding =
 
-;input_encoding =
+    #public $input_encoding =
 
-;output_encoding =
+    #public $output_encoding =
 
-;include_path = ".:/usr/share/php"
+    #public $include_path = "_:/usr/share/php";
 
-doc_root =
+    public $doc_root = '';
+    
+    public $user_dir = '';
 
-user_dir =
+    #public $ extension_dir = "_/";
+    
+    #public $ sys_temp_dir = "/tmp";
 
-; extension_dir = "./"
+    public $enable_dl = 'Off';
 
+    #public $cgi_force_redirect = 1;
 
-; sys_temp_dir = "/tmp"
+    #public $cgi_nph = 1;
 
-enable_dl = Off
+    #public $cgi_redirect_status_env =
 
+    #public $cgi_fix_pathinfo = 1;
 
-;cgi.force_redirect = 1
+    #public $cgi_discard_path = 1;
 
-;cgi.nph = 1
+    #public $fastcgi_impersonate = 1;
 
-;cgi.redirect_status_env =
+    #public $fastcgi_logging = 0;
 
-;cgi.fix_pathinfo=1
+    #public $cgi_rfc2616_headers = 0;
 
-;cgi.discard_path=1
+    #public $cgi_check_shebang_line = 1;
 
-;fastcgi.impersonate = 1
+    public $file_uploads = 'On';
 
-;fastcgi.logging = 0
+    #public $upload_tmp_dir = '';
 
-;cgi.rfc2616_headers = 0
+    public $upload_max_filesize = '50M';
 
-;cgi.check_shebang_line=1
+    public $max_file_uploads = 20;
 
-file_uploads = On
+    public $allow_url_fopen = 'On';
 
-;upload_tmp_dir =
+    public $allow_url_include = 'Off';
 
+    #public $from = "john@doe_com";
 
-upload_max_filesize = 50M
+    #public $user_agent = "PHP";
 
-max_file_uploads = 20
+    public $default_socket_timeout = 60;
 
-allow_url_fopen = On
 
+    #public $auto_detect_line_endings = Off
 
-allow_url_include = Off
 
 
-;from="john@doe.com"
+    #public $extension=php_bz2_dll
+    #public $extension=php_curl_dll
+    #public $extension=php_fileinfo_dll
+    #public $extension=php_ftp_dll
+    #public $extension=php_gd2_dll
+    #public $extension=php_gettext_dll
+    #public $extension=php_gmp_dll
+    #public $extension=php_intl_dll
+    #public $extension=php_imap_dll
+    #public $extension=php_interbase_dll
+    #public $extension=php_ldap_dll
+    #public $extension=php_mbstring_dll
+    #public $extension=php_exif_dll      #public $ Must be after mbstring as it depends on it
+    #public $extension=php_mysqli_dll
+    #public $extension=php_oci8_12c_dll  #public $ Use with Oracle Database 12c Instant Client
+    #public $extension=php_openssl_dll
+    #public $extension=php_pdo_firebird_dll
+    #public $extension=php_pdo_mysql_dll
+    #public $extension=php_pdo_oci_dll
+    #public $extension=php_pdo_odbc_dll
+    #public $extension=php_pdo_pgsql_dll
+    #public $extension=php_pdo_sqlite_dll
+    #public $extension=php_pgsql_dll
+    #public $extension=php_shmop_dll
 
-;user_agent="PHP"
+    #public $extension=php_snmp_dll
 
+    #public $extension=php_soap_dll
+    #public $extension=php_sockets_dll
+    #public $extension=php_sqlite3_dll
+    #public $extension=php_tidy_dll
+    #public $extension=php_xmlrpc_dll
+    #public $extension=php_xsl_dll
 
-default_socket_timeout = 60
 
+    public $cli_server_color = 'On';
 
-;auto_detect_line_endings = Off
 
+    #public $date_timezone =
 
+    #public $date_default_latitude = 31_7667
 
-;extension=php_bz2.dll
-;extension=php_curl.dll
-;extension=php_fileinfo.dll
-;extension=php_ftp.dll
-;extension=php_gd2.dll
-;extension=php_gettext.dll
-;extension=php_gmp.dll
-;extension=php_intl.dll
-;extension=php_imap.dll
-;extension=php_interbase.dll
-;extension=php_ldap.dll
-;extension=php_mbstring.dll
-;extension=php_exif.dll      ; Must be after mbstring as it depends on it
-;extension=php_mysqli.dll
-;extension=php_oci8_12c.dll  ; Use with Oracle Database 12c Instant Client
-;extension=php_openssl.dll
-;extension=php_pdo_firebird.dll
-;extension=php_pdo_mysql.dll
-;extension=php_pdo_oci.dll
-;extension=php_pdo_odbc.dll
-;extension=php_pdo_pgsql.dll
-;extension=php_pdo_sqlite.dll
-;extension=php_pgsql.dll
-;extension=php_shmop.dll
+    #public $date_default_longitude = 35_2333
 
-;extension=php_snmp.dll
+    #public $date_sunrise_zenith = 90_583333
 
-;extension=php_soap.dll
-;extension=php_sockets.dll
-;extension=php_sqlite3.dll
-;extension=php_tidy.dll
-;extension=php_xmlrpc.dll
-;extension=php_xsl.dll
+    #public $date_sunset_zenith = 90_583333
 
+    #public $filter_default = unsafe_raw
 
-cli_server.color = On
+    #public $filter_default_flags =
 
 
-;date.timezone =
+    #public $iconv_input_encoding =
 
-;date.default_latitude = 31.7667
 
-;date.default_longitude = 35.2333
+    #public $iconv_internal_encoding =
 
-;date.sunrise_zenith = 90.583333
 
-;date.sunset_zenith = 90.583333
+    #public $iconv_output_encoding =
 
-;filter.default = unsafe_raw
+    #public $intl_default_locale =
+    #public $intl_error_level = E_WARNING
+    #public $intl_use_exceptions = 0
 
-;filter.default_flags =
+    #public $sqlite3_extension_dir =
 
 
-;iconv.input_encoding =
+    #public $pcre_backtrack_limit=100000
 
 
-;iconv.internal_encoding =
+    #public $pcre_recursion_limit=100000
 
 
-;iconv.output_encoding =
+    #public $pcre_jit=1
 
-;intl.default_locale =
-;intl.error_level = E_WARNING
-;intl.use_exceptions = 0
 
-;sqlite3.extension_dir =
+    #public $pdo_odbc_connection_pooling=strict
 
+    #public $pdo_odbc_db2_instance_name
 
-;pcre.backtrack_limit=100000
+    public $pdo_mysql_cache_size = 2000;
 
 
-;pcre.recursion_limit=100000
+    public $pdo_mysql_default_socket = '';
 
+    #public $phar_readonly = On
+    
+    #public $phar_require_hash = On
 
-;pcre.jit=1
+    #public $phar_cache_list =
+    
 
+    public $SMTP = 'localhost';
 
-;pdo_odbc.connection_pooling=strict
+    public $smtp_port = 25;
 
-;pdo_odbc.db2_instance_name
+    #public $sendmail_path =
 
-pdo_mysql.cache_size = 2000
+    #public $mail_force_extra_parameters =
 
+    public $mail_add_x_header = 'On';
 
-pdo_mysql.default_socket=
+    #public $mail_log =
 
-;phar.readonly = On
+    #public $mail_log = syslog
 
-;phar.require_hash = On
+    public $sql_safe_mode = 'Off';
 
-;phar.cache_list =
+    #public $odbc_default_db    =  Not yet implemented
 
+    #public $odbc_default_user  =  Not yet implemented
 
-SMTP = localhost
+    #public $odbc_default_pw    =  Not yet implemented
 
-smtp_port = 25
+    #public $odbc_default_cursortype
 
-;sendmail_path =
+    public $odbc_allow_persistent = 'On';
 
-;mail.force_extra_parameters =
+    public $odbc_check_persistent = 'On';
 
-mail.add_x_header = On
+    public $odbc_max_persistent = -1;
 
-;mail.log =
+    public $odbc_max_links = -1;
 
-;mail.log = syslog
+    public $odbc_defaultlrl = 4096;
 
-sql.safe_mode = Off
+    public $odbc_defaultbinmode = 1;
 
+    #public $birdstep_max_links = -1;
 
-;odbc.default_db    =  Not yet implemented
+    public $ibase_allow_persistent = 1;
 
-;odbc.default_user  =  Not yet implemented
+    public $ibase_max_persistent = -1;
 
-;odbc.default_pw    =  Not yet implemented
+    public $ibase_max_links = -1;
 
-;odbc.default_cursortype
+    #public $ibase_default_db = '';
 
-odbc.allow_persistent = On
+    #public $ibase_default_user = '';
 
-odbc.check_persistent = On
+    #public $ibase_default_password = '';
 
-odbc.max_persistent = -1
+    #public $ibase_default_charset = '';
 
-odbc.max_links = -1
+    public $ibase_timestampformat = "%Y-%m-%d %H:%M:%S";
 
+    public $ibase_dateformat = "%Y-%m-%d";
 
-odbc.defaultlrl = 4096
+    public $ibase_timeformat = "%H:%M:%S";
 
-odbc.defaultbinmode = 1
+    public $mysqli_max_persistent = -1;
 
-;birdstep.max_links = -1
+    #public $mysqli_allow_local_infile = 'On';
 
+    public $mysqli_allow_persistent = 'On';
 
-ibase.allow_persistent = 1
+    public $mysqli_max_links = -1;
 
-ibase.max_persistent = -1
+    public $mysqli_cache_size = 2000;
 
-ibase.max_links = -1
+    public $mysqli_default_port = 3306;
 
-;ibase.default_db =
+    public $mysqli_default_socket = '';
 
-;ibase.default_user =
+    public $mysqli_default_host = '';
 
-;ibase.default_password =
+    public $mysqli_default_user = '';
 
-;ibase.default_charset =
+    public $mysqli_default_pw = '';
 
-ibase.timestampformat = "%Y-%m-%d %H:%M:%S"
+    public $mysqli_reconnect = 'Off';
 
-ibase.dateformat = "%Y-%m-%d"
+    public $mysqlnd_collect_statistics = 'On';
 
-ibase.timeformat = "%H:%M:%S"
+    public $mysqlnd_collect_memory_statistics = 'Off';
 
-mysqli.max_persistent = -1
+    #public $mysqlnd_debug = '';
 
-;mysqli.allow_local_infile = On
+    #public $mysqlnd_log_mask = 0;
 
-mysqli.allow_persistent = On
+    #public $mysqlnd_mempool_default_size = 16000;
 
-mysqli.max_links = -1
+    #public $mysqlnd_net_cmd_buffer_size = 2048;
 
-mysqli.cache_size = 2000
+    #public $mysqlnd_net_read_buffer_size = 32768;
 
-mysqli.default_port = 3306
+    #public $mysqlnd_net_read_timeout = 31536000;
 
-mysqli.default_socket =
+    #public $mysqlnd_sha256_server_public_key = '';
 
-mysqli.default_host =
+    #public $oci8_privileged_connect = 'Off';
 
-mysqli.default_user =
+    #public $oci8_max_persistent = -1;
 
-mysqli.default_pw =
+    #public $oci8_persistent_timeout = -1;
 
-mysqli.reconnect = Off
+    #public $oci8_ping_interval = 60;
 
-mysqlnd.collect_statistics = On
+    #public $oci8_connection_class = '';
 
-mysqlnd.collect_memory_statistics = Off
+    #public $oci8_events = 'Off';
 
-;mysqlnd.debug =
+    #public $oci8_statement_cache_size = 20;
 
-;mysqlnd.log_mask = 0
+    #public $oci8_default_prefetch = 100;
 
-;mysqlnd.mempool_default_size = 16000
+    #public $oci8_old_oci_close_semantics = 'Off';
 
-;mysqlnd.net_cmd_buffer_size = 2048
+    public $pgsql_allow_persistent = 'On';
 
-;mysqlnd.net_read_buffer_size = 32768
+    public $pgsql_auto_reset_persistent = 'Off';
 
-;mysqlnd.net_read_timeout = 31536000
+    public $pgsql_max_persistent = -1;
 
-;mysqlnd.sha256_server_public_key =
+    public $pgsql_max_links = -1;
 
-;oci8.privileged_connect = Off
+    public $pgsql_ignore_notice = 0;
 
-;oci8.max_persistent = -1
+    public $pgsql_log_notice = 0;
 
-;oci8.persistent_timeout = -1
+    public $bcmath_scale = 0;
 
-;oci8.ping_interval = 60
+    public $session_save_handler = files;
 
-;oci8.connection_class =
+    #public $session_save_path = "/var/lib/php/sessions"
 
-;oci8.events = Off
+    public $session_use_strict_mode = 0;
 
-;oci8.statement_cache_size = 20
+    public $session_use_cookies = 1;
 
-;oci8.default_prefetch = 100
+    #public $session_cookie_secure =
 
-;oci8.old_oci_close_semantics = Off
+    public $session_use_only_cookies = 1;
 
-pgsql.allow_persistent = On
+    public $session_name = 'PHPSESSID';
 
-pgsql.auto_reset_persistent = Off
+    public $session_auto_start = 0;
 
-pgsql.max_persistent = -1
+    public $session_cookie_lifetime = 0;
 
-pgsql.max_links = -1
+    public $session_cookie_path = '/';
 
-pgsql.ignore_notice = 0
+    public $session_cookie_domain = '';
+    
+    public $session_cookie_httponly = '';
+    
+    public $session_serialize_handler = 'php';
 
-pgsql.log_notice = 0
+    public $session_gc_probability = 0;
 
-bcmath.scale = 0
+    public $session_gc_divisor = 1000;
 
-session.save_handler = files
+    public $session_gc_maxlifetime = 2592000;
 
-;session.save_path = "/var/lib/php/sessions"
+    public $session_referer_check = '';
 
-session.use_strict_mode = 0
+	public $session_cache_limiter = nocache;
 
-session.use_cookies = 1
+    public $session_cache_expire = 180;
 
-;session.cookie_secure =
+    public $session_use_trans_sid = 0;
 
-session.use_only_cookies = 1
+    public $session_sid_length = 26;
 
-session.name = PHPSESSID
+    public $session_trans_sid_tags = "a=href,area=href,frame=src,form=";
 
-session.auto_start = 0
+    #public $session_trans_sid_hosts=""
 
-session.cookie_lifetime = 0
+    public $session_sid_bits_per_character = 5;
 
-session.cookie_path = /
+    #public $session_upload_progress_enabled = On
 
-session.cookie_domain =
+    #public $session_upload_progress_cleanup = On
 
-session.cookie_httponly =
+    #public $session_upload_progress_prefix = "upload_progress_"
 
-session.serialize_handler = php
+    #public $session_upload_progress_name = "PHP_SESSION_UPLOAD_PROGRESS"
 
-session.gc_probability = 0
+    #public $session_upload_progress_freq =  "1%"
 
-session.gc_divisor = 1000
+    #public $session_upload_progress_min_freq = "1"
 
-session.gc_maxlifetime = 2592000
+    #public $session_lazy_write = On
 
-session.referer_check =
+    public $zend_assertions = -1;
 
-session.cache_limiter = nocache
+    #public $assert_active = On
 
-session.cache_expire = 180
+    #public $assert_exception = On
 
-session.use_trans_sid = 0
+    #public $assert_warning = On
 
-session.sid_length = 26
+    #public $assert_bail = Off
 
-session.trans_sid_tags = "a=href,area=href,frame=src,form="
+    #public $assert_callback = 0
 
-;session.trans_sid_hosts=""
+    #public $assert_quiet_eval = 0
 
-session.sid_bits_per_character = 5
+    #public $mbstring_language = Japanese
 
-;session.upload_progress.enabled = On
+    #public $mbstring_internal_encoding =
 
-;session.upload_progress.cleanup = On
+    #public $mbstring_http_input =
 
-;session.upload_progress.prefix = "upload_progress_"
+    #public $mbstring_http_output =
 
-;session.upload_progress.name = "PHP_SESSION_UPLOAD_PROGRESS"
+    #public $mbstring_encoding_translation = Off
 
-;session.upload_progress.freq =  "1%"
+    #public $mbstring_detect_order = auto
 
-;session.upload_progress.min_freq = "1"
+    #public $mbstring_substitute_character = none
 
-;session.lazy_write = On
+    #public $mbstring_func_overload = 0
 
-zend.assertions = -1
+    #public $mbstring_strict_detection = On
 
-;assert.active = On
+    #public $mbstring_http_output_conv_mimetype=
 
-;assert.exception = On
+    #public $tidy_default_config = /usr/local/lib/php/default_tcfg
 
-;assert.warning = On
+    public $tidy_clean_output = 'Off';
 
-;assert.bail = Off
+    public $soap_wsdl_cache_enabled = 1;
 
-;assert.callback = 0
+    public $soap_wsdl_cache_dir = "/tmp";
 
-;assert.quiet_eval = 0
+    public $soap_wsdl_cache_ttl = 86400;
 
-;mbstring.language = Japanese
+    public $soap_wsdl_cache_limit = 5;
 
-;mbstring.internal_encoding =
+    #public $sysvshm_init_mem = 10000;
 
-;mbstring.http_input =
+    public $ldap_max_links = -1;
 
-;mbstring.http_output =
+    #public $mcrypt_algorithms_dir=
 
-;mbstring.encoding_translation = Off
+    #public $mcrypt_modes_dir=
 
-;mbstring.detect_order = auto
+    #public $opcache_enable=1
 
-;mbstring.substitute_character = none
+    #public $opcache_enable_cli=1
 
-;mbstring.func_overload = 0
+    #public $opcache_memory_consumption=128
 
-;mbstring.strict_detection = On
+    #public $opcache_interned_strings_buffer=8
 
-;mbstring.http_output_conv_mimetype=
+    #public $opcache_max_accelerated_files=10000
 
-;tidy.default_config = /usr/local/lib/php/default.tcfg
+    #public $opcache_max_wasted_percentage=5
 
-tidy.clean_output = Off
+    #public $opcache_use_cwd=1
 
-soap.wsdl_cache_enabled=1
+    #public $opcache_validate_timestamps=1
 
-soap.wsdl_cache_dir="/tmp"
+    #public $opcache_revalidate_freq=2
 
-soap.wsdl_cache_ttl=86400
+    #public $opcache_revalidate_path=0
 
-soap.wsdl_cache_limit = 5
+    #public $opcache_save_comments=1
 
-;sysvshm.init_mem = 10000
+    #public $opcache_fast_shutdown=0
 
-ldap.max_links = -1
+    #public $opcache_enable_file_override=0
 
-;mcrypt.algorithms_dir=
+    #public $opcache_optimization_level=0xffffffff
 
-;mcrypt.modes_dir=
+    #public $opcache_inherited_hack=1
 
-;opcache.enable=1
+    #public $opcache_dups_fix=0
 
-;opcache.enable_cli=1
+    #public $opcache_blacklist_filename=
 
-;opcache.memory_consumption=128
+    #public $opcache_max_file_size=0
 
-;opcache.interned_strings_buffer=8
+    #public $opcache_consistency_checks=0
 
-;opcache.max_accelerated_files=10000
+    #public $opcache_force_restart_timeout=180
 
-;opcache.max_wasted_percentage=5
+    #public $opcache_error_log=
 
-;opcache.use_cwd=1
+    #public $opcache_log_verbosity_level=1
 
-;opcache.validate_timestamps=1
+    #public $opcache_preferred_memory_model=
 
-;opcache.revalidate_freq=2
+    #public $opcache_protect_memory=0
 
-;opcache.revalidate_path=0
+    #public $opcache_restrict_api=
 
-;opcache.save_comments=1
+    #public $opcache_mmap_base=
 
-;opcache.fast_shutdown=0
+    #public $opcache_file_cache=
 
-;opcache.enable_file_override=0
+    #public $opcache_file_cache_only=0
 
-;opcache.optimization_level=0xffffffff
+    #public $opcache_file_cache_consistency_checks=1
 
-;opcache.inherited_hack=1
+    #public $opcache_file_cache_fallback=1
 
-;opcache.dups_fix=0
+    #public $opcache_huge_code_pages=1
 
-;opcache.blacklist_filename=
+    #public $opcache_validate_permission=0
 
-;opcache.max_file_size=0
-
-;opcache.consistency_checks=0
-
-;opcache.force_restart_timeout=180
-
-;opcache.error_log=
-
-;opcache.log_verbosity_level=1
-
-;opcache.preferred_memory_model=
-
-;opcache.protect_memory=0
-
-;opcache.restrict_api=
-
-;opcache.mmap_base=
-
-;opcache.file_cache=
-
-;opcache.file_cache_only=0
-
-;opcache.file_cache_consistency_checks=1
-
-;opcache.file_cache_fallback=1
-
-;opcache.huge_code_pages=1
-
-;opcache.validate_permission=0
-
-;opcache.validate_root=0
+    #public $opcache_validate_root=0
+}

@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Cookie;
+namespace Fork\Bin\Modules\Cookie;
 
 class CookieCreate{
 

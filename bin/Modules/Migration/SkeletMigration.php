@@ -1,18 +1,19 @@
 <?php
 
-namespace Fork\Bin\Model;
+namespace Fork\Bin\Modules\Migration;
 
 require_once 'Other.php';
-require_once 'CRUD.php';
+require_once 'Base.php';
 
+use \Fork\DataBase\Connection;
 use \Fork\Bin\Model\CRUD;
 use \Fork\Bin\Model\Other;
 use \Fork\Config\Database;
 use \mysqli as MySQL;
 
-class SkeletonModel{
+class SkeletMigration{
 
-    use CRUD, Other;
+    use Base, Other;
 
     public $Query = "";
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Assay;
+namespace Fork\Bin\Modules\Assay;
 
 class Validation{
     

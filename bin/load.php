@@ -43,8 +43,8 @@ require_once 'Modules/CMedia/ConvertMedia.php';
 #          User's Models      in models/
 #          User's Controllers in controllers/
 
-require_once 'Controller/SkeletonController.php';
-require_once 'Model/SkeletonModel.php';
+require_once 'Controller/SkeletController.php';
+require_once 'Model/SkeletModel.php';
 
 require_once 'Assembly/Models.php';
 require_once 'Assembly/Controllers.php';

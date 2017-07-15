@@ -2,7 +2,7 @@
 
 namespace Fork\Bin\Controller;
 
-class SkeletonController{
+class SkeletController{
 
     public function json($Parameters = array()){
 	

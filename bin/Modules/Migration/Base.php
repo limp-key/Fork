@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Migration;
+namespace Fork\Bin\Modules\Migration;
 
 trait Base{
     

@@ -2,8 +2,8 @@
 
 namespace Fork\Models;
 
-use Fork\Model\SkeletonModel;
+use Fork\Bin\Model\SkeletModel;
 
-class ForkModel extends SkeletonModel{
+class ForkModel extends SkeletModel{
     
 }

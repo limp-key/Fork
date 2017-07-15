@@ -2,12 +2,13 @@
 
 namespace Fork\Controllers;
 
-use \Fork\Bin\Controller\SkeletonController;
-use \Fork\Models\BaseModel;
-use \Fork\Bin\Session;
-use \Fork\Bin\Assay\Request;
+use \Fork\Bin\Controller\SkeletController;
+use \Fork\Bin\Modules\Session;
+use \Fork\Bin\Modules\Assay\Request;
 
-class ForkController extends SkeletonController{
+use \Fork\Models\BaseModel;
+
+class ForkController extends SkeletController{
 
     public function index(){
 	return $this->view('index.fork.html.php',['message' => 'World']);
