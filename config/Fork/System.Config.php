@@ -2,7 +2,9 @@
 
 namespace Fork\Config;
 
-class System extends SkeletSystemConfig{
+use \Fork\Bin\Config\SkeletSystemConfig;
+
+class SystemConfig extends SkeletSystemConfig{
 
     public $precision = 14;
     

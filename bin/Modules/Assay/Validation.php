@@ -29,19 +29,19 @@ class Validation{
     }
     
     public function Phone($Parameter){
-    	$RegularPhone = "##i";
+    	$RegularPhone = "##i"; #
 
 	return preg_match($RegularPhone,$Parameter);
     }
     
     public function Date($Parameter){
-    	$RegularDate = "#()#i"; // 2222.22.22 22.22.2222
+    	$RegularDate = "#()#i"; # 2222.22.22 22.22.2222
 
 	return preg_match($RegularDate,$Parameter);
     }
 
     public function Time($Parameter){
-    	$RegularDate = "##i";
+    	$RegularDate = "##i"; # 22:09 10:09:03 09:32:04 
 
 	return preg_match($RegularDate,$Parameter);
     }

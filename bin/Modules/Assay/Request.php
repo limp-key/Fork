@@ -5,6 +5,7 @@ namespace Fork\Bin\Modules\Assay;
 class Request{
 
     public function Post(){
+
 	if(!empty($_POST)){
 	    $Posts = $_POST;
 	    
@@ -18,6 +19,7 @@ class Request{
     }
 
     public function Get(){
+
 	if(!empty($_GET)){
 	    $Gets = $_GET;
 
@@ -52,17 +54,19 @@ class Request{
 	return $File;
     }
 
-    public function Files($Parameter){
+    public function Files(){
 	
 	if(empty($_FILES))
 	    return null;
 	    	
 	$Files = $_FILES;
 	
-	foreach($Files as &$File){
-	    $File = htmlentities($File, ENT_QUOTES);
+	foreach($Files as &$FileProperties){
+	    foreach($FileProperties as &$Property){
+		$Property = htmlentities($Property, ENT_QUOTES);
+	    }
 	}
 	
-	return $file;
+	return $Files;
     }
 }
