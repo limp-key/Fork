@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Bin\Config;
+namespace Fork\Config;
 
-class Mail {
+class MailConfig {
 
     // Connect to mail server
 

@@ -82,6 +82,5 @@ trait Other{
 	$this->Query = $Request;
 
 	return $this;
-    }
-    
+    }    
 }

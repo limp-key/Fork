@@ -2,33 +2,7 @@
 
 namespace Fork\Bin\Config;
 
-class Config{    
-    
-    // Parameter for framework
-
-    public $ProjectPath = '/path/to/project';
-
-    public $URL = 'http://localhost';
-
-    public $TypeKey = '256';
-
-    public $Key = 'key';
-
-    public $TypeProject = 'production';
-
-    public $Debug = 'false';
-
-    // Time zone UTC+2
-    
-    public $TimeZone = 'UTC+2';
-
-    public $Locale = 'EN';
-
-    public $Modules = array(
-	'Bin' => [
-	    'Assembly'
-	]
-    );
+class SkeletSystemConfig{
 
     public function __construct(){
 	
@@ -303,14 +277,5 @@ class Config{
 	#$this->$opcache_validate_permission=0
 	#$this->$opcache_validate_root=0
     }
-    
-    public function Config(){
-	
-    }
-
-    public function System(){
-	
-    }
-    
     
 }

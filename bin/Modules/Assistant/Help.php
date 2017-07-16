@@ -18,4 +18,16 @@ class Help{
 	
 	echo '</pre>';
     }
+
+    public static function Route(){
+	
+    }
+
+    public static function URL(){
+	
+    }
+
+    public static function Token(){
+	
+    }
 }

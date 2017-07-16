@@ -13,7 +13,7 @@ use \mysqli as MySQL;
 
 class SkeletMigration{
 
-    use Base, Other;
+    use Table, Database;
 
     public $Query = "";
 
@@ -27,5 +27,11 @@ class SkeletMigration{
 				  $Setting->User,
 				  $Setting->Password,
 				  $Setting->Database);
+    }
+
+    public function Migrate(){
+	$this->MySQLi->query($this->Query);
+
+	return true;
     }
 }

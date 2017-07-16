@@ -1,9 +1,17 @@
 <?php
 
-namespace Fork\config;
+namespace Fork\Config;
 
-use Fork\Bin\Config;
+class DataBase {
 
-class __Name__ extends Config{
+    // Connect to main database
+    
+    public $Host = 'localhost';
+
+    public $UserName = 'User';
+
+    public $Password = 'Password';
+    
+    public $DataBase = 'Database';
     
 }

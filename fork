@@ -2,14 +2,15 @@
 
 if [ $# == 0 ]
 then
+    echo
     echo 'Base'
-    echo '--clear   - remove fork test files'
+    echo '--clear                 - remove fork test files'
     echo '--create {Type} {Name}  - create Controller or Model or Route file'
-    echo '--install - install all packate and programme for Fork'
-    echo '--migration - Migration in database'
-
+    echo '--install               - install all packate and programme for Fork'
+    echo '--migration             - migration in database'
+    echo
     echo 'Module'
-    echo '--module  - show all module in Fork'
+    echo '--module           - show all module in Fork'
     echo '--include {Module} - include module in Fork'
     echo '--disable {Module} - disable module in Fork'
     exit;
@@ -29,20 +30,23 @@ elif [ $1 == '--create' ] && [ $2 != '' ] && [ $3 != '' ]
 then
     if  [ $2 == '-controller' ] 
     then
-	cp bin/Routine/Controller.php controllers/
+	cp bin/Modules/Routine/Controller/Controller.php controllers/
 	mv controllers/Controller.php controllers/$3.php 
     elif [ $2 == '-model' ] 
     then
-	cp bin/Routine/Model.php models/
-	mv models/Model.php models/$3.php 
-    elif [ $2 == '-route' ] 
+	cp bin/Modules/Routine/Model/Model.php models/
+	mv models/Model.php models/$3.php
+    elif [ $2 == '-route' ]
     then
-	cp bin/Routine/Route.php route/
+	cp bin/Modules/Routine/Route/Route.php route/
 	mv route/Route.php route/$3.php
-    elif [ $2 == '-config' ] 
+    elif [ $2 == '-config' ]
     then
-	cp bin/Routine/Config.php config/
-	mv config/Config.php config/$3.php 
+	mkdir config/$3
+	cp bin/Modules/Routine/Config/DataBase.Config.php config/$3
+	cp bin/Modules/Routine/Config/Mail.Config.php config/$3
+	cp bin/Modules/Routine/Config/Main.Config.php config/$3
+	cp bin/Modules/Routine/Config/System.Config.php config/$3
     else 
 	echo "Invalid create type"
     fi

@@ -34,3 +34,8 @@ class Request {
 	}	
     }    
 }
+
+
+$DataRequest = new Request();
+
+$DataRequest->Parse();

@@ -23,6 +23,10 @@ class SessionHandler extends SessionHandlerInterface{
     public function __construct(){
 	
     }
+
+    public function ID(){
+	
+    }
     
     public function Close(){
 	

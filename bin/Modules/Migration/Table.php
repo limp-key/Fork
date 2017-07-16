@@ -2,23 +2,10 @@
 
 namespace Fork\Bin\Modules\Migration;
 
-trait Base{
+trait Table{
     
     public function Table($Name){
 	$this->Query = "CREATE TABLE {$Name}";
-
-	return true;
-    }
-
-    public function DataBase($Name,$Charset = 'DEFAULT CHARSET UTF8'){
-	$Name = $this->MySQLi->param($Name);
-	$this->Query = "CREATE DATABASE {$Name} {$Charset}";
-
-	return true;
-    }
-
-    public function Migrate(){
-	$this->MySQLi->query($this->Query);
 
 	return true;
     }

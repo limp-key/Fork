@@ -4,22 +4,22 @@
 # Include Parse, Route, Config classes
 
 require_once 'Parse/Request.php';
-require_once 'Route/Route.php';
 
 # First parse client Request
 # and Include user's Config in this project
-# and assay Request to Route
+# and assay Route
 
-require_once 'Assembly/Request.php';
+require_once 'Route/Route.php';
 require_once 'Assembly/Route.php';
 
 require_once 'FireWall/Assay.php';
 
 # Load config files depending on the request
 
-require_once 'Config/Main.php';
-require_once 'Config/DataBase.php';
-require_once 'Config/Mail.php';
+require_once 'Config/SkeletMainConfig.php';
+require_once 'Config/SkeletDataBaseConfig.php';
+require_once 'Config/SkeletMailConfig.php';
+require_once 'Config/SkeletSystemConfig.php';
 
 require_once 'Assembly/Config.php';
 
