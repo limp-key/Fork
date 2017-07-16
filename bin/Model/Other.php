@@ -43,6 +43,9 @@ trait Other{
     }
 
     public function first(){
+	
+	$this->Query .= "LIMIT 1";
+	
 	$returnQuery = $this->MySQLi->query($this->Query);
 
 	if(!empty($returnQuery)){
@@ -54,6 +57,9 @@ trait Other{
     }
 
     public function bool(){
+
+	$this->Query .= "LIMIT 1";
+	
 	$returnQuery = $this->MySQLi->query($this->Query);
 	
 	if(!empty($returnQuery))

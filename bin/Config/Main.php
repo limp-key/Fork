@@ -62,7 +62,7 @@ class Config{
 	$this->$max_input_time = 60;
 	#$this->$max_input_nesting_level = 64
 	#$this->$ max_input_vars = 1000
-	$this->$memory_limit = 128M;
+	$this->$memory_limit = '128M';
 	$this->$error_reporting = 'E_ALL';
 	$this->$display_errors = 'On';
 	$this->$display_startup_errors = 'On';
