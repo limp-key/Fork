@@ -3,6 +3,12 @@
 namespace Fork\Bin\Modules\Assistant;
 
 class Help{
+
+    public $URL;
+
+    public $URI;
+
+    public $Token;
     
     public static function See($Parameter){
 	echo htmlentities($Parameter);
@@ -17,17 +23,5 @@ class Help{
 	    print_r($Parameter);
 	
 	echo '</pre>';
-    }
-
-    public static function Route(){
-	
-    }
-
-    public static function URL(){
-	
-    }
-
-    public static function Token(){
-	
     }
 }
