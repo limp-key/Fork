@@ -15,7 +15,17 @@ trait Table{
 	return true;
     }
 
-    
+    public function CreateTable(){
+	
+    }
+
+    public function UpdateTable(){
+	
+    }
+
+    public function DropTable(){
+	
+    }
     /*$this->Table("Name",function Column(){
        
        $Column->Int()->Unsigned()->PrimaryKey();
