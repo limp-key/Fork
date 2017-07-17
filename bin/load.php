@@ -1,6 +1,6 @@
 <?php
 
-# Level 0 (Parse level)
+# LEVEL 0 (FrameWork level)
 # Include Parse, Route, Config classes
 
 require_once 'Parse/Request.php';
@@ -12,8 +12,6 @@ require_once 'Parse/Request.php';
 require_once 'Route/Route.php';
 require_once 'Assembly/Route.php';
 
-require_once 'FireWall/Assay.php';
-
 # Load config files depending on the request
 
 require_once 'Config/SkeletMainConfig.php';
@@ -23,22 +21,10 @@ require_once 'Config/SkeletSystemConfig.php';
 
 require_once 'Assembly/Config.php';
 
-# Level 1 (Load modules level)
-# Include framework modules
+# Load modules on framework
+require_once 'Assembly/Modules.php';
 
-require_once 'Modules/Assay/Request.php';
-require_once 'Modules/Assay/Validation.php';
-
-require_once 'Modules/Session/SessionCreate.php';
-require_once 'Modules/Cookie/CookieCreate.php';
-
-require_once 'Modules/Assistant/Help.php';
-require_once 'Modules/Assistant/Exception.php';
-
-require_once 'Modules/CMedia/ConvertMedia.php';
-
-# Level 2 (Assembly level)
-
+# LEVEL 1 (Client level)
 # Include:
 #          User's Models      in models/
 #          User's Controllers in controllers/

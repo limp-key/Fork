@@ -53,20 +53,33 @@ then
     else 
 	echo "Invalid create type"
     fi
+elif [ $1 == '--install' ]
+then
+    echo 'php'
 elif [ $1 == '--migration' ]
 then
     echo 'php'
-elif [ $1 == '--module' ]
-then 
-    find bin/Modules -mindepth 1 -maxdepth 1 -type d  \( ! -iname ".*" \) | sed 's/bin\/Modules\//[Enable] /'
+elif [ $1 == '--modules' ]
+then
+    echo
+    find bin/Modules -mindepth 1 -maxdepth 1 -type d  \( ! -iname ".*" \) | sed 's/bin\/Modules\/#/[Disable] /' | sed 's/bin\/Modules\//[Enable]  /'
      
 elif [ $1 == '--enable' ]
 then
-    echo 'enable'
+    if [ $2 != '' ]
+    then
+	mv bin/Modules/#$2 bin/Modules/$2
+    else
+	echo 'Invalid module name'
+    fi
 elif [ $1 == '--disable' ]
 then
-    echo 'disable'
-
+    if [ $2 != '' ]
+    then
+	mv bin/Modules/$2 bin/Modules/#$2
+    else
+	echo 'Invalid module name'
+    fi
 else
     echo 'Invalid command'
 fi
