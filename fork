@@ -32,14 +32,17 @@ then
     then
 	cp bin/Modules/Routine/Controller/Controller.php controllers/
 	mv controllers/Controller.php controllers/$3.php 
+	sed -i "s/__Name__/$3/" controllers/$3.php
     elif [ $2 == '-model' ] 
     then
 	cp bin/Modules/Routine/Model/Model.php models/
 	mv models/Model.php models/$3.php
+	sed -i "s/__Name__/$3/" models/$3.php
     elif [ $2 == '-route' ]
     then
 	cp bin/Modules/Routine/Route/Route.php route/
 	mv route/Route.php route/$3.php
+	sed -i "s/__Name__/$3/" route/$3.php
     elif [ $2 == '-config' ]
     then
 	mkdir config/$3
