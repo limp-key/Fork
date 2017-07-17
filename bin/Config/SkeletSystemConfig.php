@@ -938,275 +938,736 @@ class SkeletSystemConfig{
     }
 
 
+    ; The number of significant digits displayed in floating point numbers.
+      ; http://php.net/precision
+					    precision = 14
+
+    ; Output buffering is a mechanism for controlling how much output data
+    ; (excluding headers and cookies) PHP should keep internally before pushing that
+    ; data to the client. If your application's output exceeds this setting, PHP
+; will send that data in chunks of roughly the size you specify.
+; Turning on this setting and managing its maximum buffer size can yield some
+; interesting side-effects depending on your application and web server.
+; You may be able to send headers and cookies after you've already sent output
+    ; through print or echo. You also may see performance benefits if your server is
+    ; emitting less packets due to buffered output versus PHP streaming the output
+    ; as it gets it. On production servers, 4096 bytes is a good setting for performance
+    ; reasons.
+      ; Note: Output buffering can also be controlled via Output Buffering Control
+    ;   functions.
+	; Possible Values:
+			   ;   On = Enabled and buffer is unlimited. (Use with caution)
+    ;   Off = Disabled
+    ;   Integer = Enables the buffer and sets its maximum size in bytes.
+		  ; Note: This directive is hardcoded to Off for the CLI SAPI
+    ; Default Value: Off
+    ; Development Value: 4096
+    ; Production Value: 4096
+    ; http://php.net/output-buffering
+		  output_buffering = 4096
+
+    ; You can redirect all of the output of your scripts to a function.  For
+    ; example, if you set output_handler to "mb_output_handler", character
+    ; encoding will be transparently converted to the specified encoding.
+      ; Setting any output handler automatically turns on output buffering.
+	; Note: People who wrote portable scripts should not depend on this ini
+    ;   directive. Instead, explicitly set the output handler using ob_start().
+			    ;   Using this ini directive may cause problems unless you know what script
+    ;   is doing.
+	; Note: You cannot use both "mb_output_handler" with "ob_iconv_handler"
+    ;   and you cannot use both "ob_gzhandler" and "zlib.output_compression".
+	; Note: output_handler must be empty if this is set 'On' !!!!
+    ;   Instead you must use zlib.output_handler.
+	; http://php.net/output-handler
+				     ;output_handler =
+
+					 ; URL rewriter function rewrites URL on the fly by using
+    ; output buffer. You can set target tags by this configuration.
+      ; "form" tag is special tag. It will add hidden input tag to pass values.
+	; Refer to session.trans_sid_tags for usage.
+	  ; Default Value: "form="
+    ; Development Value: "form="
+    ; Production Value: "form="
+    ;url_rewriter.tags
+
+    ; URL rewriter will not rewrites absolute URL nor form by default. To enable
+    ; absolute URL rewrite, allowed hosts must be defined at RUNTIME.
+			    ; Refer to session.trans_sid_hosts for more details.
+			      ; Default Value: ""
+    ; Development Value: ""
+    ; Production Value: ""
+    ;url_rewriter.hosts
+
+    ; Transparent output compression using the zlib library
+    ; Valid values for this option are 'off', 'on', or a specific buffer size
+    ; to be used for compression (default is 4KB)
+    ; Note: Resulting chunk size may vary due to nature of compression. PHP
+    ;   outputs chunks that are few hundreds bytes each as a result of
+    ;   compression. If you prefer a larger chunk size for better
+    ;   performance, enable output_buffering in addition.
+		     ; Note: You need to use zlib.output_handler instead of the standard
+    ;   output_handler, or otherwise the output will be corrupted.
+			; http://php.net/zlib.output-compression
+					 zlib.output_compression = Off
+
+    ; http://php.net/zlib.output-compression-level
+								   ;zlib.output_compression_level = -1
+
+    ; You cannot specify additional output handlers if zlib.output_compression
+    ; is activated here. This setting does the same as output_handler but in
+    ; a different order.
+      ; http://php.net/zlib.output-handler
+												    ;zlib.output_handler =
+
+													; Implicit flush tells PHP to tell the output layer to flush itself
+    ; automatically after every output block.  This is equivalent to calling the
+    ; PHP function flush() after each and every call to print() or echo() and each
+    ; and every HTML block.  Turning this option on has serious performance
+    ; implications and is generally recommended for debugging purposes only.
+      ; http://php.net/implicit-flush
+													; Note: This directive is hardcoded to On for the CLI SAPI
+    implicit_flush = Off
+
+    ; The unserialize callback function will be called (with the undefined class'
+; name as parameter), if the unserializer finds an undefined class
+; which should be instantiated. A warning appears if the specified function is
+; not defined, or if the function doesn't include/implement the missing class.
+						 ; So only set this entry, if you really want to implement such a
+	; callback-function.
+	  unserialize_callback_func =
+
+	      ; When floats & doubles are serialized store serialize_precision significant
+	; digits after the floating point. The default value ensures that when floats
+	; are decoded with unserialize, the data will remain the same.
+					; The value is also used for json_encode when encoding double values.
+					  ; If -1 is used, then dtoa mode 0 is used which automatically select the best
+	; precision.
+	  serialize_precision = -1
+
+	; open_basedir, if set, limits all file operations to the defined directory
+	; and below.  This directive makes most sense if used in a per-directory
+	; or per-virtualhost web server configuration file.
+	  ; http://php.net/open-basedir
+				;open_basedir =
+
+				    ; This directive allows you to disable certain functions for security reasons.
+				      ; It receives a comma-delimited list of function names.
+					; http://php.net/disable-functions
+				    disable_functions =
+
+					; This directive allows you to disable certain classes for security reasons.
+					  ; It receives a comma-delimited list of class names.
+					    ; http://php.net/disable-classes
+					disable_classes =
+
+					    ; Colors for Syntax Highlighting mode.  Anything that's acceptable in
+; <span style="color: ???????"> would work.
+; http://php.net/syntax-highlighting
+;highlight.string  = #DD0000
+;highlight.comment = #FF9900
+;highlight.keyword = #007700
+;highlight.default = #0000BB
+;highlight.html    = #000000
+
+; If enabled, the request will be allowed to complete even if the user aborts
+; the request. Consider enabling it if executing long requests, which may end up
+; being interrupted by the user or a browser timing out. PHP's default behavior
+	; is to disable this feature.
+	  ; http://php.net/ignore-user-abort
+					    ;ignore_user_abort = On
+
+	; Determines the size of the realpath cache to be used by PHP. This value should
+	; be increased on systems where PHP opens many files to reflect the quantity of
+	; the file operations performed.
+	  ; http://php.net/realpath-cache-size
+								 ;realpath_cache_size = 16k
+
+	; Duration of time, in seconds for which to cache realpath information for a given
+	; file or directory. For systems with rarely changing files, consider increasing this
+	; value.
+	  ; http://php.net/realpath-cache-ttl
+											;realpath_cache_ttl = 120
+
+	; Enables or disables the circular reference collector.
+	  ; http://php.net/zend.enable-gc
+													      zend.enable_gc = On
+
+	; If enabled, scripts may be written in encodings that are incompatible with
+	; the scanner.  CP936, Big5, CP949 and Shift_JIS are the examples of such
+	; encodings.  To use this feature, mbstring extension must be enabled.
+					   ; Default: Off
+	;zend.multibyte = Off
+
+	; Allows to set the default encoding for the scripts.  This value will be used
+	; unless "declare(encoding=...)" directive appears at the top of the script.
+	  ; Only affects if zend.multibyte is set.
+	    ; Default: ""
+	;zend.script_encoding =
+
+	    ;;;;;;;;;;;;;;;;;
+	; Miscellaneous ;
+	;;;;;;;;;;;;;;;;;
+
+	; Decides whether PHP may expose the fact that it is installed on the server
+	; (e.g. by adding its signature to the Web server header).  It is no security
+	; threat in any way, but it makes it possible to determine whether you use PHP
+	; on your server or not.
+	  ; http://php.net/expose-php
+	    expose_php = On
+
+	;;;;;;;;;;;;;;;;;;;
+	; Resource Limits ;
+	;;;;;;;;;;;;;;;;;;;
+
+	; Maximum execution time of each script, in seconds
+	; http://php.net/max-execution-time
+			 ; Note: This directive is hardcoded to 0 for the CLI SAPI
+	max_execution_time = 30
+
+	; Maximum amount of time each script may spend parsing request data. It's a good
+; idea to limit this time on productions servers in order to eliminate unexpectedly
+; long running scripts.
+; Note: This directive is hardcoded to -1 for the CLI SAPI
+; Default Value: -1 (Unlimited)
+; Development Value: 60 (60 seconds)
+; Production Value: 60 (60 seconds)
+; http://php.net/max-input-time
+max_input_time = 60
+
+; Maximum input variable nesting level
+; http://php.net/max-input-nesting-level
+;max_input_nesting_level = 64
+
+; How many GET/POST/COOKIE input variables may be accepted
+; max_input_vars = 1000
+
+; Maximum amount of memory a script may consume (128MB)
+; http://php.net/memory-limit
+memory_limit = 128M
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Error handling and logging ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; This directive informs PHP of which errors, warnings and notices you would like
+; it to take action for. The recommended way of setting values for this
+; directive is through the use of the error level constants and bitwise
+; operators. The error level constants are below here for convenience as well as
+; some common settings and their meanings.
+; By default, PHP is set to take action on all errors, notices and warnings EXCEPT
+; those related to E_NOTICE and E_STRICT, which together cover best practices and
+; recommended coding standards in PHP. For performance reasons, this is the
+; recommend error reporting setting. Your production server shouldn't be wasting
+	; resources complaining about best practices and coding standards. That's what
+; development servers and development settings are for.
+; Note: The php.ini-development file has this setting as E_ALL. This
+; means it pretty much reports everything which is exactly what you want during
+; development and early testing.
+;
+; Error Level Constants:
+; E_ALL             - All errors and warnings (includes E_STRICT as of PHP 5.4.0)
+; E_ERROR           - fatal run-time errors
+; E_RECOVERABLE_ERROR  - almost fatal run-time errors
+; E_WARNING         - run-time warnings (non-fatal errors)
+; E_PARSE           - compile-time parse errors
+; E_NOTICE          - run-time notices (these are warnings which often result
+;                     from a bug in your code, but it's possible that it was
+	;                     intentional (e.g., using an uninitialized variable and
+	    ;                     relying on the fact it is automatically initialized to an
+	    ;                     empty string)
+	; E_STRICT          - run-time notices, enable to have PHP suggest changes
+	;                     to your code which will ensure the best interoperability
+	;                     and forward compatibility of your code
+	; E_CORE_ERROR      - fatal errors that occur during PHP's initial startup
+; E_CORE_WARNING    - warnings (non-fatal errors) that occur during PHP's
+	;                     initial startup
+	; E_COMPILE_ERROR   - fatal compile-time errors
+	; E_COMPILE_WARNING - compile-time warnings (non-fatal errors)
+	; E_USER_ERROR      - user-generated error message
+	; E_USER_WARNING    - user-generated warning message
+	; E_USER_NOTICE     - user-generated notice message
+	; E_DEPRECATED      - warn about code that will not work in future versions
+	;                     of PHP
+	; E_USER_DEPRECATED - user-generated deprecation warnings
+	;
+	; Common Values:
+			     ;   E_ALL (Show all errors, warnings and notices including coding standards.)
+	;   E_ALL & ~E_NOTICE  (Show all errors, except for notices)
+	;   E_ALL & ~E_NOTICE & ~E_STRICT  (Show all errors, except for notices and coding standards warnings.)
+	;   E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR  (Show only errors)
+	; Default Value: E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED
+	; Development Value: E_ALL
+	; Production Value: E_ALL & ~E_DEPRECATED & ~E_STRICT
+	; http://php.net/error-reporting
+			     error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
+
+	; This directive controls whether or not and where PHP will output errors,
+							; notices and warnings too. Error output is very useful during development, but
+	; it could be very dangerous in production environments. Depending on the code
+	; which is triggering the error, sensitive information could potentially leak
+	; out of your application such as database usernames and passwords or worse.
+	  ; For production environments, we recommend logging errors rather than
+	; sending them to STDOUT.
+	  ; Possible Values:
+					       ;   Off = Do not display any errors
+	;   stderr = Display errors to STDERR (affects only CGI/CLI binaries!)
+	;   On or stdout = Display errors to STDOUT
+	; Default Value: On
+	; Development Value: On
+	; Production Value: Off
+	; http://php.net/display-errors
+			   display_errors = Off
+
+	; The display of errors which occur during PHP's startup sequence are handled
+; separately from display_errors. PHP's default behavior is to suppress those
+	; errors from clients. Turning the display of startup errors on can be useful in
+	; debugging configuration problems. We strongly recommend you
+	; set this to 'off' for production servers.
+	  ; Default Value: Off
+	; Development Value: On
+	; Production Value: Off
+	; http://php.net/display-startup-errors
+					    display_startup_errors = Off
+
+	; Besides displaying errors, PHP can also log errors to locations such as a
+	; server-specific log, STDERR, or a location specified by the error_log
+	; directive found below. While errors should not be displayed on productions
+	; servers they should still be monitored and logging is a great way to do that.
+	  ; Default Value: Off
+	; Development Value: On
+	; Production Value: On
+	; http://php.net/log-errors
+								     log_errors = On
+
+	; Set maximum length of log_errors. In error_log information about the source is
+	; added. The default is 1024 and 0 allows to not apply any maximum length at all.
+	  ; http://php.net/log-errors-max-len
+										  log_errors_max_len = 1024
+
+	; Do not log repeated messages. Repeated errors must occur in same file on same
+	; line unless ignore_repeated_source is set true.
+	  ; http://php.net/ignore-repeated-errors
+												       ignore_repeated_errors = Off
+
+	; Ignore source of message when ignoring repeated messages. When this setting
+	; is On you will not log errors with repeated messages from different files or
+	; source lines.
+	  ; http://php.net/ignore-repeated-source
+																ignore_repeated_source = Off
+
+	; If this parameter is set to Off, then memory leaks will not be shown (on
+	    ; stdout or in the log). This has only effect in a debug compile, and if
+	; error reporting includes E_WARNING in the allowed list
+	; http://php.net/report-memleaks
+				 report_memleaks = On
+
+	; This setting is on by default.
+	  ;report_zend_debug = 0
+
+	; Store the last error/warning message in $php_errormsg (boolean). Setting this value
+	; to On can assist in debugging and is appropriate for development servers. It should
+	; however be disabled on production servers.
+	  ; Default Value: Off
+	; Development Value: On
+	; Production Value: Off
+	; http://php.net/track-errors
+			       track_errors = Off
+
+	; Turn off normal error reporting and emit XML-RPC error XML
+	; http://php.net/xmlrpc-errors
+					      ;xmlrpc_errors = 0
+
+	; An XML-RPC faultCode
+	;xmlrpc_error_number = 0
+
+	; When PHP displays or logs an error, it has the capability of formatting the
+	; error message as HTML for easier reading. This directive controls whether
+	; the error message is formatted as HTML or not.
+	  ; Note: This directive is hardcoded to Off for the CLI SAPI
+	; Default Value: On
+	; Development Value: On
+	; Production value: On
+	; http://php.net/html-errors
+			       html_errors = On
+
+	; If html_errors is set to On *and* docref_root is not empty, then PHP
+	; produces clickable error messages that direct to a page describing the error
+	; or function causing the error in detail.
+	  ; You can download a copy of the PHP manual from http://php.net/docs
+					     ; and change docref_root to the base URL of your local copy including the
+	; leading '/'. You must also specify the file extension being used including
+	; the dot. PHP's default behavior is to leave these settings empty, in which
+; case no links to documentation are generated.
+; Note: Never use this feature for production boxes.
+; http://php.net/docref-root
+; Examples
+;docref_root = "/phpmanual/"
+
+; http://php.net/docref-ext
+;docref_ext = .html
+
+; String to output before an error message. PHP's default behavior is to leave
+	; this setting blank.
+	  ; http://php.net/error-prepend-string
+					     ; Example:
+					     ;error_prepend_string = "<span style='color: #ff0000'>"
+
+	; String to output after an error message. PHP's default behavior is to leave
+; this setting blank.
+; http://php.net/error-append-string
+; Example:
+;error_append_string = "</span>"
+
+; Log errors to specified file. PHP's default behavior is to leave this value
+	; empty.
+	  ; http://php.net/error-log
+								     ; Example:
+								     ;error_log = php_errors.log
+	; Log errors to syslog.
+	  ;error_log = syslog
+
+	;windows.show_crt_warning
+	; Default value: 0
+	; Development value: 0
+	; Production value: 0
+
+	;;;;;;;;;;;;;;;;;
+	; Data Handling ;
+	;;;;;;;;;;;;;;;;;
+
+	; The separator used in PHP generated URLs to separate arguments.
+	  ; PHP's default setting is "&".
+; http://php.net/arg-separator.output
+; Example:
+;arg_separator.output = "&amp;"
+
+; List of separator(s) used by PHP to parse input URLs into variables.
+; PHP's default setting is "&".
+	    ; NOTE: Every character in this directive is considered as separator!
+	; http://php.net/arg-separator.input
+		       ; Example:
+		       ;arg_separator.input = ";&"
+
+	; This directive determines which super global arrays are registered when PHP
+	; starts up. G,P,C,E & S are abbreviations for the following respective super
+	; globals: GET, POST, COOKIE, ENV and SERVER. There is a performance penalty
+	; paid for the registration of these arrays and because ENV is not as commonly
+	; used as the others, ENV is not recommended on productions servers. You
+	; can still get access to the environment variables through getenv() should you
+	; need to.
+	  ; Default Value: "EGPCS"
+	; Development Value: "GPCS"
+	; Production Value: "GPCS";
+	; http://php.net/variables-order
+					      variables_order = "GPCS"
+
+	; This directive determines which super global data (G,P & C) should be
+	; registered into the super global array REQUEST. If so, it also determines
+	; the order in which that data is registered. The values for this directive
+	; are specified in the same manner as the variables_order directive,
+							; EXCEPT one. Leaving this value empty will cause PHP to use the value set
+	; in the variables_order directive. It does not mean it will leave the super
+	; globals array REQUEST empty.
+	  ; Default Value: None
+	; Development Value: "GP"
+	; Production Value: "GP"
+	; http://php.net/request-order
+								request_order = "GP"
+
+	; This directive determines whether PHP registers $argv & $argc each time it
+	; runs. $argv contains an array of all the arguments passed to PHP when a script
+	; is invoked. $argc contains an integer representing the number of arguments
+	; that were passed when the script was invoked. These arrays are extremely
+	; useful when running scripts from the command line. When this directive is
+	; enabled, registering these variables consumes CPU cycles and memory each time
+	; a script is executed. For performance reasons, this feature should be disabled
+	; on production servers.
+	  ; Note: This directive is hardcoded to On for the CLI SAPI
+	; Default Value: On
+	; Development Value: Off
+	; Production Value: Off
+	; http://php.net/register-argc-argv
+										register_argc_argv = Off
+
+	; When enabled, the ENV, REQUEST and SERVER variables are created when they're
+; first used (Just In Time) instead of when the script starts. If these
+; variables are not used within a script, having this directive on will result
+; in a performance gain. The PHP directive register_argc_argv must be disabled
+; for this directive to have any affect.
+; http://php.net/auto-globals-jit
+auto_globals_jit = On
+
+; Whether PHP will read the POST data.
+; This option is enabled by default.
+; Most likely, you won't want to disable this option globally. It causes $_POST
+	; and $_FILES to always be empty; the only way you will be able to read the
+	; POST data will be through the php://input stream wrapper. This can be useful
+												     ; to proxy requests or to process the POST data in a memory efficient fashion.
+												       ; http://php.net/enable-post-data-reading
+												     ;enable_post_data_reading = Off
+
+	; Maximum size of POST data that PHP will accept.
+	  ; Its value may be 0 to disable the limit. It is ignored if POST data reading
+	; is disabled through enable_post_data_reading.
+	  ; http://php.net/post-max-size
+																 post_max_size = 8M
+
+	; Automatically add files before PHP document.
+	  ; http://php.net/auto-prepend-file
+																		 auto_prepend_file =
+
+																		     ; Automatically add files after PHP document.
+																		       ; http://php.net/auto-append-file
+																		     auto_append_file =
+
+																			 ; By default, PHP will output a media type using the Content-Type header. To
+	; disable this, simply set it to be empty.
+			;
+	; PHP's built-in default media type is set to text/html.
+; http://php.net/default-mimetype
+default_mimetype = "text/html"
+
+; PHP's default character set is set to UTF-8.
+	  ; http://php.net/default-charset
+																			 default_charset = "UTF-8"
+
+	; PHP internal character encoding is set to empty.
+	  ; If empty, default_charset is used.
+		      ; http://php.net/internal-encoding
+																					   ;internal_encoding =
+
+																					       ; PHP input character encoding is set to empty.
+																						 ; If empty, default_charset is used.
+																							     ; http://php.net/input-encoding
+																					       ;input_encoding =
+
+																						   ; PHP output character encoding is set to empty.
+																						     ; If empty, default_charset is used.
+																								 ; See also output_buffer.
+																								   ; http://php.net/output-encoding
+																						   ;output_encoding =
+
+																						       ;;;;;;;;;;;;;;;;;;;;;;;;;
+	; Paths and Directories ;
+	;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	; UNIX: "/path1:/path2"
+	;include_path = ".:/php/includes"
+	;
+	; Windows: "\path1;\path2"
+	;include_path = ".;c:\php\includes"
+	;
+	; PHP's default setting for include_path is ".;/path/to/php/pear"
+; http://php.net/include-path
+
+; The root of the PHP pages, used only if nonempty.
+; if PHP was not compiled with FORCE_REDIRECT, you SHOULD set doc_root
+; if you are running php as a CGI under any web server (other than IIS)
+; see documentation for security issues.  The alternate is to use the
+; cgi.force_redirect configuration below
+; http://php.net/doc-root
+doc_root =
+
+; The directory under which PHP opens the script using /~username used only
+; if nonempty.
+; http://php.net/user-dir
+user_dir =
+
+; Directory in which the loadable extensions (modules) reside.
+; http://php.net/extension-dir
+; extension_dir = "./"
+; On windows:
+; extension_dir = "ext"
+
+; Directory where the temporary files should be placed.
+; Defaults to the system default (see sys_get_temp_dir)
+; sys_temp_dir = "/tmp"
+
+; Whether or not to enable the dl() function.  The dl() function does NOT work
+; properly in multithreaded servers, such as IIS or Zeus, and is automatically
+; disabled on them.
+; http://php.net/enable-dl
+enable_dl = Off
+
+; cgi.force_redirect is necessary to provide security running PHP as a CGI under
+; most web servers.  Left undefined, PHP turns this on by default.  You can
+; turn it off here AT YOUR OWN RISK
+; **You CAN safely turn this off for IIS, in fact, you MUST.**
+; http://php.net/cgi.force-redirect
+;cgi.force_redirect = 1
+
+; if cgi.nph is enabled it will force cgi to always sent Status: 200 with
+; every request. PHP's default behavior is to disable this feature.
+	  ;cgi.nph = 1
+
+	; if cgi.force_redirect is turned on, and you are not running under Apache or Netscape
+	; (iPlanet) web servers, you MAY need to set an environment variable name that PHP
+	; will look for to know it is OK to continue execution.  Setting this variable MAY
+	; cause security issues, KNOW WHAT YOU ARE DOING FIRST.
+				 ; http://php.net/cgi.redirect-status-env
+		     ;cgi.redirect_status_env =
 
 
+;cgi.fix_pathinfo=1
 
+;cgi.discard_path=1
+
+;fastcgi.impersonate = 1
+
+	  ;fastcgi.logging = 0
+			     ;cgi.rfc2616_headers = 0
+						    ;cgi.check_shebang_line=1
+									    file_uploads = On
+
+											   ;upload_tmp_dir =
+
+											       upload_max_filesize = 2M
+
+	max_file_uploads = 20
 
     
-    
-    short_open_tag=On
-    
-    asp_tags=Off
 
-    precision=14
+    #[Session]
 
-    y2k_compliance=Off
+    public function SessionSaveHandler($Parameter = 'files'){
 
-    output_buffering=Off
-
-    implicit_flush=Off
-
-    allow_call_time_pass_reference=On
-    
-    safe_mode=Off
-    
-    safe_mode_exec_dir=
+	ini_set('session.save_handler',$Parameter);
 	
-	safe_mode_allowed_env_vars=PHP_
+	return true;
+    }
 
-    safe_mode_protected_env_vars=LD_LIBRARY_PATH
+    public function SessionSavePath($Parameter = ''){
 
-    disable_functions=
+	ini_set('session.save_path',$Parameter);
+	
+	return true;
+    }
 
-				
-				expose_php=On
-    
-    max_execution_time=30
-    memory_limit=8M
+    public function SessionUseCookies($Parameter = '1'){
 
-
-    error_reporting= E_ALL
-
-    display_errors=On
-
-    display_startup_errors=On
-
-    log_errors=Off
-
-    track_errors=On
-
-    #error_prepend_string="<font color=ff0000>"
-
-    #error_append_string="</font>"
-
-    #error_log=filename#
-
-    #error_log=syslog
-
-    warn_plus_overloading=Off
-
-    variables_order="EGPCS"
-
-    register_globals=On
-
-    register_argc_argv=On
-
-    post_max_size=8M
-
-    gpc_order="GPC"
-
-    magic_quotes_gpc=Off
-
-    magic_quotes_runtime=Off
-
-    magic_quotes_sybase=Off
-
-    auto_prepend_file= '';
-
-    auto_append_file= '';
-    
-    default_mimetype="text/html"
-
-    default_charset="iso-8859-1"
-
-    
-    include_path= '';
-
-    doc_root= '';
-    user_dir= '';
-
-    enable_dl=On
-
-    
-
-    file_uploads=On
-
-    #upload_tmp_dir=
-
-    upload_max_filesize=2M
-
-    
-    
-    define_syslog_variables=Off
-
-    #sendmail_path=
-
-    #debugger.host=localhost
-    #debugger.port=7869
-    #debugger.enabled=False
-
-    #logging.method=db
-    #logging.directory=/path/to/log/directory
+	ini_set('session.use_cookies',$Parameter);
+	
+	return true;
+    }
 
 
-    [SQL]
+    public function SessionName($Parameter = 'PHPSESSID'){
 
-    sql.safe_mode=Off
+	ini_set('session.save_path',$Parameter);
+	
+	return true;
+    }
 
-    [ODBC]
+    public function SessionAutoStart($Parameter = '0'){
 
-    #uodbc.default_db=Not yet implemented
-    #uodbc.default_user=Not yet implemented
-    #uodbc.default_pw=Not yet implemented
-    # Разрешает или запрещает устойчивые соединения
-    uodbc.allow_persistent=On
-    # Проверка доступности соединения перед его использованием.
-    uodbc.check_persistent=On
-    # Макс. число устойчивых соединений. -1 означает, что ограничений нет.
-    uodbc.max_persistent=-1
-    # Макс. число соединений (устойчивых + неустойчивых).
-    uodbc.max_links=-1
-    # Установки для LONG-полей.
-    uodbc.defaultlrl=4096
-    # Установки для бинарных данных. 0 означает режим passthru, 1 – режим
-    # as is, 2 – преобразование в символы.
-    uodbc.defaultbinmode=1
-    # См. документацию по odbc_binmode и odbc_longreadlen для более
-    # детального разъяснения смысла директив uodbc.defaultlrl и
-    # uodbc.defaultbinmode.
+	ini_set('session.auto_start',$Parameter);
+	
+	return true;
+    }
 
-    [MySQL]
+    public function SessionCookieLifeTime($Parameter = '0'){
 
-    mysql.allow_persistent=On
-    mysql.max_persistent=-1
-    mysql.max_links=-1
-    # Порт по умолчанию для функции mysql_connect(). Если не задан, функция
-    # попытается использовать переменную $MYSQL_TCP_PORT или запись mysql-tcp
-    # в /etc/services, а также заданную во время компиляции PHP константу
-    # MYSQL_PORT (именно в таком порядке). К PHP для Win32 применимо только
-    # последнее.
-    mysql.default_port= '';
-	# Определяет имя сокета для локальных соединений MySQL. Если он не задан,
-	# использует встроенное значение по умолчанию.
-    mysql.default_socket= '';
+	ini_set('session.cookie_lifetime',$Parameter);
+	
+	return true;
+    }
 
-    [PostgresSQL]
+	public function SessionCookiePath($Parameter = '/var/'){
 
-    pgsql.allow_persistent=On
-    pgsql.max_persistent=-1
-    pgsql.max_links=-1
+	    ini_set('session.cookie_path',$Parameter);
+	    
+	    return true;
+	}
 
-    [Sybase]
+	public function SessionCookieDomain($Parameter = ''){
 
-    sybase.allow_persistent=On
-    sybase.max_persistent=-1
-    sybase.max_links=-1
-    #sybase.interface_file="/usr/sybase/interfaces"
-    # Максимальный уровень серьезности отображаемых ошибок.
-    sybase.min_error_severity=10
-    # Минимальный уровень серьезности отображаемых ошибок.
-    sybase.min_message_severity=10
-    # Режим совместимости со старыми версиями PHP 3.0.
-    # Если следующая директива установлена в On, PHP будет автоматически
-    # присваивать тип результату на основе его типа в Sybase, вместо того,
-    # чтобы преобразовывать полученные значения в строки. Этот режим
-    # совместимости, возможно, в будущем не будет поддерживаться, так что
-    # лучше исправьте свои сценарии, если вам он нужен.
-    sybase.compatability_mode=Off
+	    ini_set('session.cookie_domain',$Parameter);
+	    
+	    return true;
+	}
 
-    [Sybase-CT]
+	public function SessionSerializeHandler($Parameter = 'php'){
 
-    sybct.allow_persistent=On
-    sybct.max_persistent=-1
-    sybct.max_links=-1
-    sybct.min_server_severity=10
-    sybct.min_client_severity=10
+	    ini_set('session.serialize_handler',$Parameter);
+	    
+	    return true;
+	}
 
-    [Informix]
+	public function SessionGCProbability($Parameter = '1'){
 
-    ifx.default_host= '';
-    ifx.default_user= '';
-    ifx.default_password= '';
-    ifx.allow_persistent='On';
-    ifx.max_persistent=-1
-    ifx.max_links=-1
-    # Если следующая директива установлена в On, выражение select возвращает
-    # содержимое поля типа text blob вместо его идентификатора.
-    ifx.textasvarchar=0
-    # Заставляет команду select возвращать значение поля типа byte blob
-    # вместо его идентификатора.
-    ifx.byteasvarchar=0
-    # Принуждает PHP удалять завершающие пробелы из колонок с типом char
-    # фиксированного размера. Может помочь пользователям Informix SE.
-    ifx.charasvarchar=0
-    # Если установлена, содержимое полей text и byte сохраняется в файле,
-    # вместо того, чтобы храниться в памяти.
-    ifx.blobinfile=0
-    # Если установлена в 0, значения NULL возвращаются как пустые строки,
-    # иначе они возвращаются как строки 'NULL'.
-    ifx.nullformat=0
+	    ini_set('session.gc_probability',$Parameter);
+	    
+	    return true;
+	}
 
-    [Session]
+	public function SessionGCMaxlifetime($Parameter = '1440'){
 
-    # Определяет режим хранения данных сессий.
-    session.save_handler=files
-    # Следующая директива задает аргумент, передаваемый save_handler-у.
-    # В случае режима сохранения в файлах здесь должен указываться каталог,
-    # в который будут помещены файлы сессий.
-    session.save_path=C:\Program Files\PHP4\sessiondata
-    # Должен ли PHP использовать Cookies.
-    session.use_cookies=1
-    session.name=PHPSESSID
-    # Инициализировать ли сессии при старте.
-    session.auto_start=0
-    # Время жизни Cookie для сессии. Если до закрытия браузера, то 0.
-    session.cookie_lifetime=0
-    # Путь для Cookie с идентификатором сессии.
-    session.cookie_path=/
-    # Домен для Cookie с идентификатором сессии.
-    session.cookie_domain=
-	# Функция, используемая для сериализации данных. Значение php задает
-	# стандартную функцию.
-	session.serialize_handler=php
-    # Вероятность того, что при очередном запуске сценария, работающего с
-    # сессиями, будет вызвана функция "сборки мусора" для очистки сессий,
-    # которые пользователь уже покинул.
-    session.gc_probability=1
-    # После указанного здесь промежутка времени сохраненные
-    # данные будут удалены автоматически сборщиком мусора.
-    session.gc_maxlifetime=1440
-    # Проверять ли HTTP Referer на предмет того, не является ли ID сессии
-    # "фальшивым".
-    session.referer_check=
-	# Указывает, сколько байтов читать из файла.
-	session.entropy_length=0
-    #session.entropy_length=16
-    # Файл, используемый для генерации идентификаторов сессии.
-    session.entropy_file=
-	#session.entropy_file=/dev/urandom
-	# Установите одно из значений nocache, private, public для определения
-	# аспектов кэширования HTTP.
-	session.cache_limiter=nocache
-    # Документ будет считаться устаревшим по истечении заданного
-    # здесь количества минут
-    session.cache_expire=180
-    # Использовать ли поддержку "переходящих" SID. Действует, если PHP был
-    # скомпилирован с включенной опцией --enable-trans-sid.
-    session.use_trans_sid=1
+	    ini_set('session.co',$Parameter);
+	    
+	    return true;
+	}
 
-    [Assertion]
+	
+	session.save_handler = files
+	
+	;session.save_path = "/tmp"
 
-    #assert.active=On
-    # Генерирует предупреждения PHP для каждых неудавшихся проверок
-    # выражений.
-    #assert.warning=On
-    # По умолчанию не завершать программу в случае неудачи.
-    #assert.bail=Off
-    # Пользовательская функция, которая будет вызвана при неудаче проверки.
-    #assert.callback=0
-    # Вычислять выражения в eval с использованием текущих установок
-    # error_reporting. Установите в true, если вы хотите, чтобы действие
-    # режима error_reporting(0) было сохранено и при переходе через
-    # границу eval().
-    #assert.quiet_eval=0
+			     session.use_strict_mode = 0
+
+						       session.use_cookies = 1
+
+									     ;session.cookie_secure =
+
+										 session.use_only_cookies = 1
+
+													    session.name = PHPSESSID
+
+															   session.auto_start = 0
+																		session.cookie_lifetime = 0
+																					  session.cookie_path = /
+																								session.cookie_domain =
+																								    session.cookie_httponly =
+																									session.serialize_handler = php
+							    session.gc_probability = 1
+
+																															     session.gc_divisor = 1000
+																	  session.gc_maxlifetime = 1440
+
+
+																																					   session.referer_check =
+
+																																					       
+																																					       session.cache_limiter = nocache
+	
+																																		       session.cache_expire = 180
+
+																																				      session.use_trans_sid = 0
+
+																																								
+	session.sid_length = 26
+
+
+session.trans_sid_tags = "a=href,area=href,frame=src,form="
+
+
+	;session.trans_sid_hosts=""
+
+
+				 session.sid_bits_per_character = 5
+
+
+								  ;session.upload_progress.enabled = On
+
+												     ;session.upload_progress.cleanup = On
+
+
+																	;session.upload_progress.prefix = "upload_progress_"
+
+														  ;session.upload_progress.name = "PHP_SESSION_UPLOAD_PROGRESS"
+
+
+																									  ;session.upload_progress.freq =  "1%"
+
+																													   ;session.upload_progress.min_freq = "1"
+																											       ;session.lazy_write = On
 }
