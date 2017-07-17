@@ -27,17 +27,5 @@ class MainConfig extends SkeletMainConfig{
     public $Locale;
 
     public $Modules;
-
-    public function __construct(){
-	
-    }
-    
-    public function Config(){
-	
-    }
-
-    public function System(){
-	
-    }
     
 }
