@@ -57,8 +57,8 @@ elif [ $1 == '--migration' ]
 then
     echo 'php'
 elif [ $1 == '--module' ]
-then
-     find bin/ -mindepth 1 -maxdepth 1 -type d  \( ! -iname ".*" \) #| sed 's|^\./||g'
+then 
+    find bin/Modules -mindepth 1 -maxdepth 1 -type d  \( ! -iname ".*" \) | sed 's/bin\/Modules\//[Enable] /'
      
 elif [ $1 == '--enable' ]
 then
