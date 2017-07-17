@@ -3,8 +3,13 @@
 namespace Fork\Bin\Modules\Migration;
 
 trait Table{
+
+    $TableName;
     
     public function Table($Name){
+
+	$this->TableName = $Name;
+	
 	$this->Query = "CREATE TABLE {$Name}";
 
 	return true;
@@ -19,119 +24,15 @@ trait Table{
        
        }); */
 
-    public function PrimaryKey(){
-	
+    public function AddColumn($Name){
+	$this->Query = "ALTER TABLE {$this->TableName} ADD {$Name}";
     }
 
-    public function NotNull(){
-	
+    public function DropColumn($Name){
+	$this->Query = "ALTER TABLE {$this->TableName} DROP COLUMN {$Name}";
     }
 
-    public function Unsigned(){
-	
-    }
-
-    // Type for Number
-    
-    public function Tiny(){
-	
-    }
-
-    public function Small(){
-	
-    }
-
-    public function Medium(){
-	
-    }
-
-    public function Int(){
-	
-    }
-
-    public function BigInt(){
-	
-    }
-    
-    public function Float(){
-	
-    }
-
-    public function Double(){
-	
-    }
-
-    // Type for Date
-
-    public function Date(){
-	
-    }
-
-    public function DateTime(){
-	
-    }
-
-    public function TimeStamp(){
-	
-    }
-
-    public function Time(){
-	
-    }
-
-    public function Year(){
-	
-    }
-
-    // Type for Text
-
-    public function Char(){
-	
-    }
-
-    public function VarChar(){
-	
-    }
-
-    public function TinyBlob(){
-	
-    }
-
-    public function TinyText(){
-	
-    }
-
-    public function Blob(){
-	
-    }
-
-    public function Text(){
-	
-    }
-
-    public function MediumBlob(){
-	
-    }
-
-    public function MediumText(){
-	
-    }
-
-    public function LongBlob(){
-	
-    }
-
-    public function LongText(){
-	
-    }
-    
-    // Other Type
-
-    public function Enum(){
-	
-    }
-
-    public function Set(){
-	
+    public function ModifyColumn($Name){
+	$this->Query = "ALTER TABLE {$this->TableName} MODIFY COLUMN {$Name}";
     }
 }
