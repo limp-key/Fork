@@ -1,13 +1,18 @@
 <?php
 
-function SearchControllers(){
+namespace Fork\Bin\Assembly;
 
-    $SearchingParameters = 'find ../controllers/ | grep ".php"';
+class Controllers{
 
-    exec($SearchingParameters,$Controllers);
-    
-    if(!empty($Controllers))
-	return $Controllers;
-    else
-	return false;	
+    public static function Include(){
+	
+	$SearchingParameters = 'find ../controllers/ | grep ".php"';
+	
+	exec($SearchingParameters,$Controllers);
+	
+	if(!empty($Controllers))
+	    return $Controllers;
+	else
+	    return false;	
+    }
 }

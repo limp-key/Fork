@@ -1,11 +1,20 @@
 <?php
 
-$SearchingParameters = 'find ../route/ | grep ".php"';
+namespace Fork\Bin\Assembly;
 
-exec($SearchingParameters,$Route);
+class Routes{
 
-if(is_array($Route)){
-    foreach($Route as $IncludeRoute){
-	require_once $IncludeRoute;
+    public static function Include(){
+	$SearchingParameters = 'find ../route/ | grep ".php"';
+	
+	exec($SearchingParameters,$Route);
+	
+	if(is_array($Route)){
+	    foreach($Route as $IncludeRoute){
+		require_once $IncludeRoute;
+	    }
+	}
     }
 }
+
+Routes::Include();

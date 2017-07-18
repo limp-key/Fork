@@ -1,17 +1,26 @@
 <?php
 
-$SearchingParameters = 'find ../config/'.$GLOBALS['REQUEST_CONFIG'].' | grep ".Config.php"';
+namespace Fork\Bin\Assembly;
 
-exec($SearchingParameters,$Config);
+class Config{
 
-if(is_array($Config)){
-    foreach($Config as $IncludeConfig){
-	require_once $IncludeConfig;
+    public static function Include(){
+	$SearchingParameters = 'find ../config/'.$GLOBALS['REQUEST_CONFIG'].' | grep ".Config.php"';
+
+	exec($SearchingParameters,$Config);
+
+	if(is_array($Config)){
+	    foreach($Config as $IncludeConfig){
+		require_once $IncludeConfig;
+	    }
+	}
+
     }
 }
 
-/*
+Config::Include();
 
+/*
 Fork\Config\SystemConfig::Precision($Parameter);
 
 Fork\Config\SystemConfig::OutputBuffering($Parameter);

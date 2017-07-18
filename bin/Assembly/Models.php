@@ -1,13 +1,18 @@
 <?php
 
-function SearchModels(){
+namespace Fork\Bin\Assembly;
 
-    $SearchingParameters = 'find ../models/ | grep ".php"';
+class Models{
 
-    exec($SearchingParameters,$Models);
+    public static function Include(){
+	
+	$SearchingParameters = 'find ../models/ | grep ".php"';
 
-    if(!empty($Models))
-	return $Models;
-    else
-	return false;
+	exec($SearchingParameters,$Models);
+	
+	if(!empty($Models))
+	    return $Models;
+	else
+	    return false;
+    }
 }
