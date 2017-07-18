@@ -2,4 +2,4 @@
 
 use Fork\Bin\Route;
 
-Route::request('/','ForkController','index','Fork');
+Route::request('/','ForkController','index','ForkConfig');

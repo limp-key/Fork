@@ -37,7 +37,7 @@
     <body>
 	<div class="element">
 	    <div class="wrap">
-		<h2>Hello <?php Helper::See($message); ?><br>This is test page in the Fork</h2>	
+		<h2>Hello <?php echo $message; ?><br>This is test page in the Fork</h2>	
 		<p>If you saw this text, then everything works fine</p>
 	    </div>
 	</div>

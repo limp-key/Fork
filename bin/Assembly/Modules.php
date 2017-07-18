@@ -1,15 +1,19 @@
 <?php
 
-require_once 'Modules/Assay/Request.php';
-require_once 'Modules/Assay/Validation.php';
+use \Fork\Config\MainConfig;
 
-require_once 'Modules/Session/SessionCreate.php';
-require_once 'Modules/Cookie/CookieCreate.php';
+$Config = new MainConfig();
 
-require_once 'Modules/Assistant/Help.php';
-require_once 'Modules/Assistant/Exception.php';
+require_once $Config->ProjectPath.'bin/Modules/Assay/Request.php';
+require_once $Config->ProjectPath.'bin/Modules/Assay/Validation.php';
 
-require_once 'Modules/CMedia/ConvertMedia.php';
+require_once $Config->ProjectPath.'bin/Modules/Session/SessionCreate.php';
+require_once $Config->ProjectPath.'bin/Modules/Cookie/CookieCreate.php';
+
+require_once $Config->ProjectPath.'bin/Modules/Assistant/Help.php';
+require_once $Config->ProjectPath.'bin/Modules/Assistant/Exception.php';
+
+require_once $Config->ProjectPath.'bin/Modules/CMedia/ConvertMedia.php';
 
 /*
 

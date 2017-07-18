@@ -8,7 +8,7 @@ class MainConfig extends SkeletMainConfig{
 
     // Parameter for framework
 
-    public $ProjectPath;
+    public $ProjectPath = '/var/www/limp-key/fork/';
 
     public $URL;
 

@@ -89,8 +89,6 @@ class SkeletSystemConfig{
     public $error_append_string;
 
     public $error_log;
-
-    public $error_log;
     
     public $arg_separator_output;
 
@@ -242,7 +240,7 @@ class SkeletSystemConfig{
     public $session_lazy_write;
 
     
-    public $function __construct(){
+/*    public $function __construct(){
 	
 	$this->Precision($this->precision);
 
@@ -480,7 +478,7 @@ class SkeletSystemConfig{
 
 	$this->session_lazy_write($this->session_lazy_write);
 
-    }
+    }*/
     
     public function Precision($Parameter){
 
@@ -776,13 +774,6 @@ class SkeletSystemConfig{
 	return true;
     }
 
-    public function ErrorLog($Parameter){
-
-	ini_set();
-	
-	return true;
-    }
-    
     public function ArgSeparatorOutput($Parameter){
 
 	ini_set();
@@ -986,7 +977,7 @@ class SkeletSystemConfig{
 	return true;
     }
 
-    public function MaxFileUploads()($Parameter){
+    public function MaxFileUploads($Parameter){
 
 	ini_set();
 	
@@ -1021,7 +1012,7 @@ class SkeletSystemConfig{
 	return true;
     }
 
-    public function AutoDetectLineEndings()($Parameter){
+    public function AutoDetectLineEndings($Parameter){
 
 	ini_set();
 	

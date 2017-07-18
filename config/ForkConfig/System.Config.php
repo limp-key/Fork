@@ -6,9 +6,9 @@ use \Fork\Bin\Config\SkeletSystemConfig;
 
 class SystemConfig extends SkeletSystemConfig{
 
-    public $Precision = '14'
+    public $Precision = '14';
 
-    public $OutputBuffering = '4096'
+    public $OutputBuffering = '4096';
 
     public $OutputHandler = '';
 
@@ -88,8 +88,6 @@ class SystemConfig extends SkeletSystemConfig{
 
     public $ErrorAppendString = "</span>";
 
-    public $ErrorLog = 'php_errors_log';
-
     public $ErrorLog = 'syslog';
     
     public $ArgSeparatorOutput = "&amp";
@@ -150,7 +148,7 @@ class SystemConfig extends SkeletSystemConfig{
 
     public $UploadMaxFilesize = '2M';
 
-    public $MaxFileUploads = '20'
+    public $MaxFileUploads = '20';
 
     public $AllowUrlFopen = 'On';
 
@@ -160,7 +158,7 @@ class SystemConfig extends SkeletSystemConfig{
 
     public $DefaultSocketTimeout = '60';
 
-    public $AutoDetectLineEndings = 'Off'
+    public $AutoDetectLineEndings = 'Off';
 
     public $DateTimezone = '';
 
