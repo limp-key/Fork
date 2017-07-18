@@ -8,24 +8,24 @@ class MainConfig extends SkeletMainConfig{
 
     // Parameter for framework
 
-    public $ProjectPath = '/var/www/limp-key/fork/';
+    public static $ProjectPath = '/var/www/limp-key/fork/';
 
-    public $URL;
+    public static $URL;
 
-    public $TypeKey;
+    public static $TypeKey;
 
-    public $Key;
+    public static $Key;
 
-    public $TypeProject;
+    public static $TypeProject;
 
-    public $Debug;
+    public static $Debug;
 
     // Time zone UTC+2
     
-    public $TimeZone;
+    public static $TimeZone;
 
-    public $Locale;
+    public static $Locale;
 
-    public $Modules;
+    public static $Modules;
     
 }

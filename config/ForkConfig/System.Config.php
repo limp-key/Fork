@@ -6,236 +6,236 @@ use \Fork\Bin\Config\SkeletSystemConfig;
 
 class SystemConfig extends SkeletSystemConfig{
 
-    public $Precision = '14';
+    public static $Precision = '14';
 
-    public $OutputBuffering = '4096';
+    public static $OutputBuffering = '4096';
 
-    public $OutputHandler = '';
+    public static $OutputHandler = '';
 
-    public $UrlRewriterTags = '';
+    public static $UrlRewriterTags = '';
 
-    public $UrlRewriterHosts = '';
+    public static $UrlRewriterHosts = '';
 
-    public $ZlibOutputCompression = 'Off';
+    public static $ZlibOutputCompression = 'Off';
 
-    public $ZlibOutputCompressionLevel = '-1';
+    public static $ZlibOutputCompressionLevel = '-1';
 
-    public $ZlibOutputHandler = '';
+    public static $ZlibOutputHandler = '';
 
-    public $ImplicitFlush = 'Off';
+    public static $ImplicitFlush = 'Off';
 
-    public $UnserializeCallbackFunc = '';
+    public static $UnserializeCallbackFunc = '';
 
-    public $SerializePrecision = '-1';
+    public static $SerializePrecision = '-1';
 
-    public $OpenBasedir = '';
+    public static $OpenBasedir = '';
 
-    public $DisableFunctions = [];
+    public static $DisableFunctions = [];
 
-    public $DisableClasses = [];
+    public static $DisableClasses = [];
 
-    public $IgnoreUserAbort = 'On';
+    public static $IgnoreUserAbort = 'On';
 
-    public $RealPathCacheSize = '16k';
+    public static $RealPathCacheSize = '16k';
 
-    public $RealPathCacheTTL = '120';
+    public static $RealPathCacheTTL = '120';
 
-    public $ZendEnableGC = 'On';
+    public static $ZendEnableGC = 'On';
 
-    public $ZendMultibyte = 'Off';
+    public static $ZendMultibyte = 'Off';
 
-    public $ZendScriptEncoding = '';
+    public static $ZendScriptEncoding = '';
 
-    public $ExposePHP = 'On';
+    public static $ExposePHP = 'On';
 
-    public $MaxExecutionTime = '30';
+    public static $MaxExecutionTime = '30';
 
-    public $MaxInputTime = '60';
+    public static $MaxInputTime = '60';
 
-    public $MaxInputNestingLevel = '64';
+    public static $MaxInputNestingLevel = '64';
 
-    public $MaxInputVars = '1000';
+    public static $MaxInputVars = '1000';
 
-    public $MemoryLimit = '128M';
+    public static $MemoryLimit = '128M';
 
-    public $ErrorReporting = 'E_ALL & ~E_DEPRECATED & ~E_STRICT';
+    public static $ErrorReporting = 'E_ALL & ~E_DEPRECATED & ~E_STRICT';
 
-    public $DisplayErrors = 'Off';
+    public static $DisplayErrors = 'Off';
 
-    public $DisplayStartupErrors = 'Off';
+    public static $DisplayStartupErrors = 'Off';
 
-    public $LogErrors = 'On';
+    public static $LogErrors = 'On';
 
-    public $LogErrorsMaxLen = '1024';
+    public static $LogErrorsMaxLen = '1024';
 
-    public $IgnoreRepeatedErrors = 'Off';
+    public static $IgnoreRepeatedErrors = 'Off';
     
-    public $IgnoreRepeatedSource = 'Off';
+    public static $IgnoreRepeatedSource = 'Off';
 
-    public $ReportMemleaks = 'On';
+    public static $ReportMemleaks = 'On';
 
-    public $ReportZendDebug = '0';
+    public static $ReportZendDebug = '0';
 
-    public $TrackErrors = 'Off';
+    public static $TrackErrors = 'Off';
 
-    public $XMLrpcErrors = '0';
+    public static $XMLrpcErrors = '0';
 
-    public $XMLrpcErrorNumber = '0';
+    public static $XMLrpcErrorNumber = '0';
 
-    public $HtmlErrors = 'On';
+    public static $HtmlErrors = 'On';
 
-    public $ErrorPrependString = "<span style='color: ff0000'>";
+    public static $ErrorPrependString = "<span style='color: ff0000'>";
 
-    public $ErrorAppendString = "</span>";
+    public static $ErrorAppendString = "</span>";
 
-    public $ErrorLog = 'syslog';
+    public static $ErrorLog = 'syslog';
     
-    public $ArgSeparatorOutput = "&amp";
+    public static $ArgSeparatorOutput = "&amp";
 
-    public $ArgSeparatorInput = "&";
+    public static $ArgSeparatorInput = "&";
 
-    public $VariablesOrder = "GPCS";
+    public static $VariablesOrder = "GPCS";
 
-    public $RequestOrder = "GP";
+    public static $RequestOrder = "GP";
 
-    public $RegisterArgcArgv = 'Off';
+    public static $RegisterArgcArgv = 'Off';
     
-    public $AutoGlobalsJit = 'On';
+    public static $AutoGlobalsJit = 'On';
 
-    public $EnablePostDataReading = 'Off';
+    public static $EnablePostDataReading = 'Off';
 
-    public $PostMaxSize = '8M';
+    public static $PostMaxSize = '8M';
 
-    public $AutoPrependFile = '';
+    public static $AutoPrependFile = '';
     
-    public $AutoAppendFile = '';
+    public static $AutoAppendFile = '';
     
-    public $DefaultMimetype = "text/html";
+    public static $DefaultMimetype = "text/html";
 
-    public $DefaultCharset = "UTF-8";
+    public static $DefaultCharset = "UTF-8";
 
-    public $InternalEncoding = '';
+    public static $InternalEncoding = '';
 
-    public $InputEncoding = '';
+    public static $InputEncoding = '';
 
-    public $OutputEncoding = '';
+    public static $OutputEncoding = '';
 
-    public $ExtensionDir = "ext";
+    public static $ExtensionDir = "ext";
 
-    public $SysTempDir = "/tmp";
+    public static $SysTempDir = "/tmp";
 
-    public $CgiForceRedirect = '1';
+    public static $CgiForceRedirect = '1';
 
-    public $CgiNph = '1';
+    public static $CgiNph = '1';
 
-    public $CgiRedirectStatusEnv = '';
+    public static $CgiRedirectStatusEnv = '';
 
-    public $CgiFixPathinfo= '1';
+    public static $CgiFixPathinfo= '1';
 
-    public $CgiDiscardPath= '1';
+    public static $CgiDiscardPath= '1';
 
-    public $FastcgiImpersonate = '1';
+    public static $FastcgiImpersonate = '1';
 
-    public $FastcgiLogging = '0';
+    public static $FastcgiLogging = '0';
 
-    public $CgiRfc2616Headers = '0';
+    public static $CgiRfc2616Headers = '0';
 
-    public $CgiCheckShebangLine= '1';
+    public static $CgiCheckShebangLine= '1';
 
-    public $FileUploads = 'On';
+    public static $FileUploads = 'On';
 
-    public $UploadTmpDir = '';
+    public static $UploadTmpDir = '';
 
-    public $UploadMaxFilesize = '2M';
+    public static $UploadMaxFilesize = '2M';
 
-    public $MaxFileUploads = '20';
+    public static $MaxFileUploads = '20';
 
-    public $AllowUrlFopen = 'On';
+    public static $AllowUrlFopen = 'On';
 
-    public $AllowUrlInclude = 'Off';
+    public static $AllowUrlInclude = 'Off';
 
-    public $UserAgent="PHP";
+    public static $UserAgent="PHP";
 
-    public $DefaultSocketTimeout = '60';
+    public static $DefaultSocketTimeout = '60';
 
-    public $AutoDetectLineEndings = 'Off';
+    public static $AutoDetectLineEndings = 'Off';
 
-    public $DateTimezone = '';
+    public static $DateTimezone = '';
 
-    public $DateDefaultLatitude = '31_7667';
+    public static $DateDefaultLatitude = '31_7667';
 
-    public $DateDefaultLongitude = '35_2333';
+    public static $DateDefaultLongitude = '35_2333';
 
-    public $DateSunriseZenith = '90_583333';
+    public static $DateSunriseZenith = '90_583333';
 
-    public $DateSunsetZenith = '90_583333';
+    public static $DateSunsetZenith = '90_583333';
 
-    public $PcreBacktrackLimit='100000';
+    public static $PcreBacktrackLimit='100000';
 
-    public $PcreRecursionLimit='100000';
+    public static $PcreRecursionLimit='100000';
 
-    public $PcreJit='0';
+    public static $PcreJit='0';
 
-    public $SessionSaveHandler = 'files';
+    public static $SessionSaveHandler = 'files';
 
-    public $SessionSavePath = "/tmp";
+    public static $SessionSavePath = "/tmp";
 
-    public $SessionUseStrictMode = '0';
+    public static $SessionUseStrictMode = '0';
 
-    public $SessionUseCookies = '1';
+    public static $SessionUseCookies = '1';
 
-    public $SessionCookieSecure = '';
+    public static $SessionCookieSecure = '';
 
-    public $SessionUseOnlyCookies = '1';
+    public static $SessionUseOnlyCookies = '1';
 
-    public $SessionName = 'PHPSESSID';
+    public static $SessionName = 'PHPSESSID';
 
-    public $SessionAutoStart = '0';
+    public static $SessionAutoStart = '0';
 
-    public $SessionCookieLifetime = '0';
+    public static $SessionCookieLifetime = '0';
 
-    public $SessionCookiePath = '/';
+    public static $SessionCookiePath = '/';
 
-    public $SessionCookieDomain = '';
+    public static $SessionCookieDomain = '';
 
-    public $SessionCookieHttponly = '';
+    public static $SessionCookieHttponly = '';
 
-    public $SessionSerializeHandler = 'php';
+    public static $SessionSerializeHandler = 'php';
 
-    public $SessionGCProbability = '1';
+    public static $SessionGCProbability = '1';
 
-    public $SessionGCDivisor = '1000';
+    public static $SessionGCDivisor = '1000';
 
-    public $SessionGCMaxlifetime = '1440';
+    public static $SessionGCMaxlifetime = '1440';
 
-    public $SessionRefererCheck = '';
+    public static $SessionRefererCheck = '';
 
-    public $SessionCacheLimiter = 'nocache';
+    public static $SessionCacheLimiter = 'nocache';
 
-    public $SessionCacheExpire = '180';
+    public static $SessionCacheExpire = '180';
 
-    public $SessionUseTransSid = '0';
+    public static $SessionUseTransSid = '0';
 
-    public $SessionSidLength = '26';
+    public static $SessionSidLength = '26';
 
-    public $SessionTransSidTags = "a=href,area=href,frame=src,form=";
+    public static $SessionTransSidTags = "a=href,area=href,frame=src,form=";
 
-    public $SessionTransSidHosts="";
+    public static $SessionTransSidHosts="";
 
-    public $SessionSidBitsPerCharacter = '5';
+    public static $SessionSidBitsPerCharacter = '5';
 
-    public $SessionUploadProgressEnabled = 'On';
+    public static $SessionUploadProgressEnabled = 'On';
 
-    public $SessionUploadProgressCleanup = 'On';
+    public static $SessionUploadProgressCleanup = 'On';
 
-    public $SessionUploadProgressPrefix = "upload_progress_";
+    public static $SessionUploadProgressPrefix = "upload_progress_";
 
-    public $SessionUploadProgressName = "PHP_SESSION_UPLOAD_PROGRESS";
+    public static $SessionUploadProgressName = "PHP_SESSION_UPLOAD_PROGRESS";
 
-    public $SessionUploadProgressFreq =  "1%";
+    public static $SessionUploadProgressFreq =  "1%";
 
-    public $SessionUploadProgressMinFreq = "1";
+    public static $SessionUploadProgressMinFreq = "1";
 
-    public $SessionLazyWrite = 'On';
+    public static $SessionLazyWrite = 'On';
 
 }

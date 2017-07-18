@@ -1,19 +1,15 @@
 <?php
 
-use \Fork\Config\MainConfig;
+require_once Fork\Config\MainConfig::$ProjectPath.'bin/Modules/Assay/Request.php';
+require_once Fork\Config\MainConfig::$ProjectPath.'bin/Modules/Assay/Validation.php';
 
-$Config = new MainConfig();
+require_once Fork\Config\MainConfig::$ProjectPath.'bin/Modules/Session/SessionCreate.php';
+require_once Fork\Config\MainConfig::$ProjectPath.'bin/Modules/Cookie/CookieCreate.php';
 
-require_once $Config->ProjectPath.'bin/Modules/Assay/Request.php';
-require_once $Config->ProjectPath.'bin/Modules/Assay/Validation.php';
+require_once Fork\Config\MainConfig::$ProjectPath.'bin/Modules/Assistant/Help.php';
+require_once Fork\Config\MainConfig::$ProjectPath.'bin/Modules/Assistant/Exception.php';
 
-require_once $Config->ProjectPath.'bin/Modules/Session/SessionCreate.php';
-require_once $Config->ProjectPath.'bin/Modules/Cookie/CookieCreate.php';
-
-require_once $Config->ProjectPath.'bin/Modules/Assistant/Help.php';
-require_once $Config->ProjectPath.'bin/Modules/Assistant/Exception.php';
-
-require_once $Config->ProjectPath.'bin/Modules/CMedia/ConvertMedia.php';
+require_once Fork\Config\MainConfig::$ProjectPath.'bin/Modules/CMedia/ConvertMedia.php';
 
 /*
 

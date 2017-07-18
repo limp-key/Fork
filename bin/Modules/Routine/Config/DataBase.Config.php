@@ -6,12 +6,12 @@ class DataBaseConfig {
 
     // Connect to main database
     
-    public $Host = 'LocalHost';
+    public static $Host = 'LocalHost';
 
-    public $UserName = 'User';
+    public static $UserName = 'User';
 
-    public $Password = 'Password';
+    public static $Password = 'Password';
     
-    public $DataBase = 'Database';
+    public static $DataBase = 'Database';
     
 }

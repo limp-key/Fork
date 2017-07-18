@@ -3,6 +3,7 @@
 $ConfigDIR = $GLOBALS['response_config'];
 
 $SearchingParameters = 'find ../config/'.$ConfigDIR.' | grep ".Config.php"';
+
 exec($SearchingParameters,$Config);
 
 if(is_array($Config)){
@@ -10,3 +11,5 @@ if(is_array($Config)){
 	require_once $IncludeConfig;
     }
 }
+
+

@@ -6,25 +6,25 @@ class SkeletMainConfig{
     
     // Parameter for framework
 
-    public $ProjectPath;
+    public static $ProjectPath;
 
-    public $URL;
+    public static $URL;
 
-    public $TypeKey;
+    public static $TypeKey;
 
-    public $Key;
+    public static $Key;
 
-    public $TypeProject;
+    public static $TypeProject;
 
-    public $Debug;
+    public static $Debug;
 
     // Time zone UTC+2
     
-    public $TimeZone;
+    public static $TimeZone;
 
-    public $Locale;
+    public static $Locale;
 
-    public $Modules;
+    public static $Modules;
 
     public function __construct(){
 	

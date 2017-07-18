@@ -4,1071 +4,829 @@ namespace Fork\Bin\Config;
 
 class SkeletSystemConfig{
 
-    public $precision;
+    public static $Precision;
 
-    public $output_buffering;
+    public static $OutputBuffering;
 
-    public $output_handler;
+    public static $OutputHandler;
 
-    public $url_rewriter_tags;
+    public static $UrlRewriterTags;
 
-    public $url_rewriter_hosts;
+    public static $UrlRewriterHosts;
 
-    public $zlib_output_compression;
+    public static $ZlibOutputCompression;
 
-    public $zlib_output_compression_level;
+    public static $ZlibOutputCompressionLevel;
 
-    public $zlib_output_handler;
+    public static $ZlibOutputHandler;
 
-    public $implicit_flush;
+    public static $ImplicitFlush;
 
-    public $unserialize_callback_func;
+    public static $UnserializeCallbackFunc;
 
-    public $serialize_precision;
+    public static $SerializePrecision;
 
-    public $open_basedir;
+    public static $OpenBasedir;
 
-    public $disable_functions;
+    public static $DisableFunctions;
 
-    public $disable_classes;
+    public static $DisableClasses;
 
-    public $ignore_user_abort;
+    public static $IgnoreUserAbort;
 
-    public $realpath_cache_size;
+    public static $RealPathCacheSize;
 
-    public $realpath_cache_ttl;
+    public static $RealPathCacheTTL;
 
-    public $zend_enable_gc;
+    public static $ZendEnableGC;
 
-    public $zend_multibyte;
+    public static $ZendMultibyte;
 
-    public $zend_script_encoding;
+    public static $ZendScriptEncoding;
 
-    public $expose_php;
+    public static $ExposePHP;
 
-    public $max_execution_time;
+    public static $MaxExecutionTime;
 
-    public $max_input_time;
+    public static $MaxInputTime;
 
-    public $max_input_nesting_level;
+    public static $MaxInputNestingLevel;
 
-    public $max_input_vars;
+    public static $MaxInputVars;
 
-    public $memory_limit;
+    public static $MemoryLimit;
 
-    public $error_reporting;
+    public static $ErrorReporting;
 
-    public $display_errors;
+    public static $DisplayErrors;
 
-    public $display_startup_errors;
+    public static $DisplayStartupErrors;
 
-    public $log_errors;
+    public static $LogErrors;
 
-    public $log_errors_max_len;
+    public static $LogErrorsMaxLen;
 
-    public $ignore_repeated_errors;
+    public static $IgnoreRepeatedErrors;
     
-    public $ignore_repeated_source;
+    public static $IgnoreRepeatedSource;
 
-    public $report_memleaks;
+    public static $ReportMemleaks;
 
-    public $report_zend_debug;
+    public static $ReportZendDebug;
 
-    public $track_errors;
+    public static $TrackErrors;
 
-    public $xmlrpc_errors;
+    public static $XMLrpcErrors;
 
-    public $xmlrpc_error_number;
+    public static $XMLrpcErrorNumber;
 
-    public $html_errors;
+    public static $HtmlErrors;
 
-    public $docref_ext;
+    public static $ErrorPrependString;
 
-    public $error_prepend_string;
+    public static $ErrorAppendString;
 
-    public $error_append_string;
-
-    public $error_log;
+    public static $ErrorLog;
     
-    public $arg_separator_output;
+    public static $ArgSeparatorOutput;
 
-    public $arg_separator_input;
+    public static $ArgSeparatorInput;
 
-    public $variables_order;
+    public static $VariablesOrder;
 
-    public $request_order;
+    public static $RequestOrder;
 
-    public $register_argc_argv;
+    public static $RegisterArgcArgv;
     
-    public $auto_globals_jit;
+    public static $AutoGlobalsJit;
 
-    public $enable_post_data_reading;
+    public static $EnablePostDataReading;
 
-    public $post_max_size;
+    public static $PostMaxSize;
 
-    public $auto_prepend_file;
+    public static $AutoPrependFile;
     
-    public $auto_append_file;
+    public static $AutoAppendFile;
     
-    public $default_mimetype;
+    public static $DefaultMimetype;
 
-    public $default_charset;
+    public static $DefaultCharset;
 
-    public $internal_encoding;
+    public static $InternalEncoding;
 
-    public $input_encoding;
+    public static $InputEncoding;
 
-    public $output_encoding;
+    public static $OutputEncoding;
 
-    public $extension_dir;
+    public static $ExtensionDir;
 
-    public $sys_temp_dir;
+    public static $SysTempDir;
 
-    public $cgi_force_redirect;
+    public static $CgiForceRedirect;
 
-    public $cgi_nph;
+    public static $CgiNph;
 
-    public $cgi_redirect_status_env;
+    public static $CgiRedirectStatusEnv;
 
-    public $cgi_fix_pathinfo;
+    public static $CgiFixPathinfo;
 
-    public $cgi_discard_path;
+    public static $CgiDiscardPath;
 
-    public $fastcgi_impersonate;
+    public static $FastcgiImpersonate;
 
-    public $fastcgi_logging;
+    public static $FastcgiLogging;
 
-    public $cgi_rfc2616_headers;
+    public static $CgiRfc2616Headers;
 
-    public $cgi_check_shebang_line;
+    public static $CgiCheckShebangLine;
 
-    public $file_uploads;
+    public static $FileUploads;
 
-    public $upload_tmp_dir;
+    public static $UploadTmpDir;
 
-    public $upload_max_filesize;
+    public static $UploadMaxFilesize;
 
-    public $max_file_uploads;
+    public static $MaxFileUploads;
 
-    public $allow_url_fopen;
+    public static $AllowUrlFopen;
 
-    public $allow_url_include;
+    public static $AllowUrlInclude;
 
-    public $user_agent;
+    public static $UserAgent;
 
-    public $default_socket_timeout;
+    public static $DefaultSocketTimeout;
 
-    public $auto_detect_line_endings;
+    public static $AutoDetectLineEndings;
 
+    public static $DateTimezone;
 
-    public $date_timezone;
+    public static $DateDefaultLatitude;
 
-    public $date_default_latitude;
+    public static $DateDefaultLongitude;
 
-    public $date_default_longitude;
+    public static $DateSunriseZenith;
 
-    public $date_sunrise_zenith;
+    public static $DateSunsetZenith;
 
-    public $date_sunset_zenith;
+    public static $PcreBacktrackLimit;
 
-    public $pcre_backtrack_limit;
+    public static $PcreRecursionLimit;
 
-    public $pcre_recursion_limit;
+    public static $PcreJit;
 
-    public $pcre_jit;
+    public static $SessionSaveHandler;
 
-    public $session_save_handler;
+    public static $SessionSavePath;
 
-    public $session_save_path;
+    public static $SessionUseStrictMode;
 
-    public $session_use_strict_mode;
+    public static $SessionUseCookies;
 
-    public $session_use_cookies;
+    public static $SessionCookieSecure;
 
-    public $session_cookie_secure;
+    public static $SessionUseOnlyCookies;
 
-    public $session_use_only_cookies;
+    public static $SessionName;
 
-    public $session_name;
+    public static $SessionAutoStart;
 
-    public $session_auto_start;
+    public static $SessionCookieLifetime;
 
-    public $session_cookie_lifetime;
+    public static $SessionCookiePath;
 
-    public $session_cookie_path;
+    public static $SessionCookieDomain;
 
-    public $session_cookie_domain;
+    public static $SessionCookieHttponly;
 
-    public $session_cookie_httponly;
+    public static $SessionSerializeHandler;
 
-    public $session_serialize_handler;
+    public static $SessionGCProbability;
 
-    public $session_gc_probability;
+    public static $SessionGCDivisor;
 
-    public $session_gc_divisor;
+    public static $SessionGCMaxlifetime;
 
-    public $session_gc_maxlifetime;
+    public static $SessionRefererCheck;
 
-    public $session_referer_check;
+    public static $SessionCacheLimiter;
 
-    public $session_cache_limiter;
+    public static $SessionCacheExpire;
 
-    public $session_cache_expire;
+    public static $SessionUseTransSid;
 
-    public $session_use_trans_sid;
+    public static $SessionSidLength;
 
-    public $session_sid_length;
+    public static $SessionTransSidTags;
 
-    public $session_trans_sid_tags;
+    public static $SessionTransSidHosts;
 
-    public $session_trans_sid_hosts;
+    public static $SessionSidBitsPerCharacter;
 
-    public $session_sid_bits_per_character;
+    public static $SessionUploadProgressEnabled;
 
-    public $session_upload_progress_enabled;
+    public static $SessionUploadProgressCleanup;
 
-    public $session_upload_progress_cleanup;
+    public static $SessionUploadProgressPrefix;
 
-    public $session_upload_progress_prefix;
+    public static $SessionUploadProgressName;
 
-    public $session_upload_progress_name;
+    public static $SessionUploadProgressFreq;
 
-    public $session_upload_progress_freq;
+    public static $SessionUploadProgressMinFreq;
 
-    public $session_upload_progress_min_freq;
+    public static $SessionLazyWrite;
 
-    public $session_lazy_write;
 
     
-/*    public $function __construct(){
-	
-	$this->Precision($this->precision);
-
-	$this->output_buffering($this->output_buffering);
-
-	$this->output_handler($this->output_handler);
-
-	$this->url_rewriter_tags($this->url_rewriter_tags);
-
-	$this->url_rewriter_hosts($this->url_rewriter_hosts);
-
-	$this->zlib_output_compression($this->zlib_output_compression);
-
-	$this->zlib_output_compression_level($this->zlib_output_compression_level);
-
-	$this->zlib_output_handler($this->zlib_output_handler);
-
-	$this->implicit_flush($this->implicit_flush);
-
-	$this->unserialize_callback_func($this->unserialize_callback_func);
-
-	$this->serialize_precision($this->serialize_precision);
-
-	$this->open_basedir($this->open_basedir);
-
-	$this->disable_functions($this->disable_functions);
-
-	$this->disable_classes($this->disable_classes);
-
-	$this->ignore_user_abort($this->ignore_user_abort);
-
-	$this->realpath_cache_size($this->realpath_cache_size);
-
-	$this->realpath_cache_ttl($this->realpath_cache_ttl);
-
-	$this->zend_enable_gc($this->zend_enable_gc);
-
-	$this->zend_multibyte($this->zend_multibyte);
-
-	$this->zend_script_encoding($this->zend_script_encoding);
-
-	$this->expose_php($this->expose_php);
-
-	$this->max_execution_time($this->max_execution_time);
-
-	$this->max_input_time($this->max_input_time);
-
-	$this->max_input_nesting_level($this->max_input_nesting_level);
-
-	$this->max_input_vars($this->max_input_vars);
-
-	$this->memory_limit($this->memory_limit);
-
-	$this->error_reporting($this->error_reporting);
-
-	$this->display_errors($this->display_errors);
-
-	$this->display_startup_errors($this->display_startup_errors);
-
-	$this->log_errors($this->log_errors);
-
-	$this->log_errors_max_len($this->log_errors_max_len);
-
-	$this->ignore_repeated_errors($this->ignore_repeated_errors);
-
-	$this->ignore_repeated_source($this->ignore_repeated_source);
-
-	$this->report_memleaks($this->report_memleaks);
-
-	$this->report_zend_debug($this->report_zend_debug);
-
-	$this->track_errors($this->track_errors);
-
-	$this->xmlrpc_errors($this->xmlrpc_errors);
-
-	$this->xmlrpc_error_number($this->xmlrpc_error_number);
-
-	$this->html_errors($this->html_errors);
-
-	$this->docref_ext($this->docref_ext);
-
-	$this->error_prepend_string($this->error_prepend_string);
-
-	$this->error_append_string($this->error_append_string);
-
-	$this->error_log($this->error_log);
-
-	$this->error_log($this->error_log);
-	
-	$this->arg_separator_output($this->arg_separator_output);
-
-	$this->arg_separator_input($this->arg_separator_input);
-
-	$this->variables_order($this->variables_order);
-
-	$this->request_order($this->request_order);
-
-	$this->register_argc_argv($this->register_argc_argv);
-	
-	$this->auto_globals_jit($this->auto_globals_jit);
-
-	$this->enable_post_data_reading($this->enable_post_data_reading);
-
-	$this->post_max_size($this->post_max_size);
-
-	$this->auto_prepend_file($this->auto_prepend_file);
-	
-	$this->auto_append_file($this->auto_append_file);
-	
-	$this->default_mimetype($this->default_mimetype);
-
-	$this->default_charset($this->default_charset);
-
-	$this->internal_encoding($this->internal_encoding);
-
-	$this->input_encoding($this->input_encoding);
-
-	$this->output_encoding($this->output_encoding);
-
-	$this->extension_dir($this->extension_dir);
-
-	$this->sys_temp_dir($this->sys_temp_dir);
-
-	$this->cgi_force_redirect($this->cgi_force_redirect);
-
-	$this->cgi_nph($this->cgi_nph);
-
-	$this->cgi_redirect_status_env($this->cgi_redirect_status_env);
-
-	$this->cgi_fix_pathinfo($this->cgi_fix_pathinfo);
-
-	$this->cgi_discard_path($this->cgi_discard_path);
-
-	$this->fastcgi_impersonate($this->fastcgi_impersonate);
-
-	$this->fastcgi_logging($this->fastcgi_logging);
-
-	$this->cgi_rfc2616_headers($this->cgi_rfc2616_headers);
-
-	$this->cgi_check_shebang_line($this->cgi_check_shebang_line);
-
-	$this->file_uploads($this->file_uploads);
-
-	$this->upload_tmp_dir($this->upload_tmp_dir);
-
-	$this->upload_max_filesize($this->upload_max_filesize);
-
-	$this->max_file_uploads($this->max_file_uploads);
-
-	$this->allow_url_fopen($this->allow_url_fopen);
-
-	$this->allow_url_include($this->allow_url_include);
-
-	$this->user_agent($this->user_agent);
-
-	$this->default_socket_timeout($this->default_socket_timeout);
-
-	$this->auto_detect_line_endings($this->auto_detect_line_endings);
-
-	$this->date_timezone($this->date_timezone);
-
-	$this->date_default_latitude($this->date_default_latitude);
-
-	$this->date_default_longitude($this->date_default_longitude);
-
-	$this->date_sunrise_zenith($this->date_sunrise_zenith);
-
-	$this->date_sunset_zenith($this->date_sunset_zenith);
-
-	$this->pcre_backtrack_limit($this->pcre_backtrack_limit);
-
-	$this->pcre_recursion_limit($this->pcre_recursion_limit);
-
-	$this->pcre_jit($this->pcre_jit);
-
-	$this->session_save_handler($this->session_save_handler);
-
-	$this->session_save_path($this->session_save_path);
-
-	$this->session_use_strict_mode($this->session_use_strict_mode);
-
-	$this->session_use_cookies($this->session_use_cookies);
-
-	$this->session_cookie_secure($this->session_cookie_secure);
-
-	$this->session_use_only_cookies($this->session_use_only_cookies);
-
-	$this->session_name($this->session_name);
-
-	$this->session_auto_start($this->session_auto_start);
-
-	$this->session_cookie_lifetime($this->session_cookie_lifetime);
-
-	$this->session_cookie_path($this->session_cookie_path);
-
-	$this->session_cookie_domain($this->session_cookie_domain);
-
-	$this->session_cookie_httponly($this->session_cookie_httponly);
-
-	$this->session_serialize_handler($this->session_serialize_handler);
-
-	$this->session_gc_probability($this->session_gc_probability);
-
-	$this->session_gc_divisor($this->session_gc_divisor);
-
-	$this->session_gc_maxlifetime($this->session_gc_maxlifetime);
-
-	$this->session_referer_check($this->session_referer_check);
-
-	$this->session_cache_limiter($this->session_cache_limiter);
-
-	$this->session_cache_expire($this->session_cache_expire);
-
-	$this->session_use_trans_sid($this->session_use_trans_sid);
-
-	$this->session_sid_length($this->session_sid_length);
-
-	$this->session_trans_sid_tags($this->session_trans_sid_tags);
-
-	$this->session_trans_sid_hosts($this->session_trans_sid_hosts);
-
-	$this->session_sid_bits_per_character($this->session_sid_bits_per_character);
-
-	$this->session_upload_progress_enabled($this->session_upload_progress_enabled);
-
-	$this->session_upload_progress_cleanup($this->session_upload_progress_cleanup);
-
-	$this->session_upload_progress_prefix($this->session_upload_progress_prefix);
-
-	$this->session_upload_progress_name($this->session_upload_progress_name);
-
-	$this->session_upload_progress_freq($this->session_upload_progress_freq);
-
-	$this->session_upload_progress_min_freq($this->session_upload_progress_min_freq);
-
-	$this->session_lazy_write($this->session_lazy_write);
-
-    }*/
-    
-    public function Precision($Parameter){
+    public static function Precision($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function OutputBuffering($Parameter){
+    public static function OutputBuffering($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function OutputHandler($Parameter){
+    public static function OutputHandler($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function UrlRewriterTags($Parameter){
+    public static function UrlRewriterTags($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function UrlRewriterHosts($Parameter){
+    public static function UrlRewriterHosts($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ZlibOutputCompression($Parameter){
+    public static function ZlibOutputCompression($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ZlibOutputCompressionLevel($Parameter){
+    public static function ZlibOutputCompressionLevel($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ZlibOutputHandler($Parameter){
+    public static function ZlibOutputHandler($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ImplicitFlush($Parameter){
+    public static function ImplicitFlush($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function UnserializeCallbackFunc($Parameter){
+    public static function UnserializeCallbackFunc($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SerializePrecision($Parameter){
+    public static function SerializePrecision($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function OpenBasedir($Parameter){
+    public static function OpenBasedir($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function DisableFunctions($Parameter){
+    public static function DisableFunctions($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function DisableClasses($Parameter){
+    public static function DisableClasses($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function IgnoreUserAbort($Parameter){
+    public static function IgnoreUserAbort($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function RealPathCacheSize($Parameter){
+    public static function RealPathCacheSize($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function RealPathCacheTTL($Parameter){
+    public static function RealPathCacheTTL($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ZendEnableGC($Parameter){
+    public static function ZendEnableGC($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ZendMultibyte($Parameter){
+    public static function ZendMultibyte($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ZendScriptEncoding($Parameter){
+    public static function ZendScriptEncoding($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ExposePHP($Parameter){
+    public static function ExposePHP($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function MaxExecutionTime($Parameter){
+    public static function MaxExecutionTime($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function MaxInputTime($Parameter){
+    public static function MaxInputTime($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function MaxInputNestingLevel($Parameter){
+    public static function MaxInputNestingLevel($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function MaxInputVars($Parameter){
+    public static function MaxInputVars($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function MemoryLimit($Parameter){
+    public static function MemoryLimit($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ErrorReporting($Parameter){
+    public static function ErrorReporting($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function DisplayErrors($Parameter){
+    public static function DisplayErrors($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function DisplayStartupErrors($Parameter){
+    public static function DisplayStartupErrors($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function LogErrors($Parameter){
+    public static function LogErrors($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function LogErrorsMaxLen($Parameter){
+    public static function LogErrorsMaxLen($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function IgnoreRepeatedErrors($Parameter){
+    public static function IgnoreRepeatedErrors($Parameter){
 
 	ini_set();
 	
 	return true;
     }
     
-    public function IgnoreRepeatedSource($Parameter){
+    public static function IgnoreRepeatedSource($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ReportMemleaks($Parameter){
+    public static function ReportMemleaks($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ReportZendDebug($Parameter){
+    public static function ReportZendDebug($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function TrackErrors($Parameter){
+    public static function TrackErrors($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function XMLrpcErrors($Parameter){
+    public static function XMLrpcErrors($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function XMLrpcErrorNumber($Parameter){
+    public static function XMLrpcErrorNumber($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function HtmlErrors($Parameter){
+    public static function HtmlErrors($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ErrorPrependString($Parameter){
+    public static function ErrorPrependString($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ErrorAppendString($Parameter){
+    public static function ErrorAppendString($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ErrorLog($Parameter){
+    public static function ErrorLog($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ArgSeparatorOutput($Parameter){
+    public static function ArgSeparatorOutput($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ArgSeparatorInput($Parameter){
+    public static function ArgSeparatorInput($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function VariablesOrder($Parameter){
+    public static function VariablesOrder($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function RequestOrder($Parameter){
+    public static function RequestOrder($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function RegisterArgcArgv($Parameter){
-
-	ini_set();
-	
-	return true;
-    }
-    
-    public function AutoGlobalsJit($Parameter){
-
-	ini_set();
-	
-	return true;
-    }
-
-    public function EnablePostDataReading($Parameter){
-
-	ini_set();
-	
-	return true;
-    }
-
-    public function PostMaxSize($Parameter){
-
-	ini_set();
-	
-	return true;
-    }
-
-    public function AutoPrependFile($Parameter){
+    public static function RegisterArgcArgv($Parameter){
 
 	ini_set();
 	
 	return true;
     }
     
-    public function AutoAppendFile($Parameter){
+    public static function AutoGlobalsJit($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function EnablePostDataReading($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function PostMaxSize($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function AutoPrependFile($Parameter){
 
 	ini_set();
 	
 	return true;
     }
     
-    public function DefaultMimetype($Parameter){
+    public static function AutoAppendFile($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+    
+    public static function DefaultMimetype($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function DefaultCharset($Parameter){
+    public static function DefaultCharset($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function InternalEncoding($Parameter){
+    public static function InternalEncoding($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function InputEncoding($Parameter){
+    public static function InputEncoding($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function OutputEncoding($Parameter){
+    public static function OutputEncoding($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function ExtensionDir($Parameter){
+    public static function ExtensionDir($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SysTempDir($Parameter){
+    public static function SysTempDir($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function CgiForceRedirect($Parameter){
+    public static function CgiForceRedirect($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function CgiNPH($Parameter){
+    public static function CgiNPH($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function CgiRedirectStatusEnv($Parameter){
+    public static function CgiRedirectStatusEnv($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function CgiFixPathinfo($Parameter){
+    public static function CgiFixPathinfo($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function CgiDiscardPath($Parameter){
+    public static function CgiDiscardPath($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function FastcgiImpersonate($Parameter){
+    public static function FastcgiImpersonate($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function FastcgiLogging($Parameter){
+    public static function FastcgiLogging($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function Cgirfc2616Headers($Parameter){
+    public static function Cgirfc2616Headers($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function CgiCheckShebangLine($Parameter){
+    public static function CgiCheckShebangLine($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function FileUploads($Parameter){
+    public static function FileUploads($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function UploadTmpDir($Parameter){
+    public static function UploadTmpDir($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function UploadMaxFilesize($Parameter){
+    public static function UploadMaxFilesize($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function MaxFileUploads($Parameter){
+    public static function MaxFileUploads($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function AllowURLFopen($Parameter){
+    public static function AllowURLFopen($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function AllowURLInclude($Parameter){
+    public static function AllowURLInclude($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function UserAgent($Parameter){
+    public static function UserAgent($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function DefaultSocketTimeout($Parameter){
+    public static function DefaultSocketTimeout($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function AutoDetectLineEndings($Parameter){
+    public static function AutoDetectLineEndings($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function DateTimezone($Parameter){
+    public static function DateTimezone($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function DateDefaultLatitude($Parameter){
+    public static function DateDefaultLatitude($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function DateDefaultLongitude($Parameter){
+    public static function DateDefaultLongitude($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function DateSunriseZenith($Parameter){
+    public static function DateSunriseZenith($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function DateSunsetZenith($Parameter){
+    public static function DateSunsetZenith($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function PcreBacktrackLimit($Parameter){
+    public static function PcreBacktrackLimit($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function PcreRecursionLimit($Parameter){
+    public static function PcreRecursionLimit($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function PcreJit($Parameter){
+    public static function PcreJit($Parameter){
 
 	ini_set();
 	
@@ -1077,217 +835,217 @@ class SkeletSystemConfig{
 
     # Session
     
-    public function SessionSaveHandler($Parameter){
+    public static function SessionSaveHandler($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionSavePath($Parameter){
+    public static function SessionSavePath($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionUseStrictMode($Parameter){
+    public static function SessionUseStrictMode($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionUseCookies($Parameter){
+    public static function SessionUseCookies($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionCookieSecure($Parameter){
+    public static function SessionCookieSecure($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionUseOnlyCookies($Parameter){
+    public static function SessionUseOnlyCookies($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionName($Parameter){
+    public static function SessionName($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionAutoStart($Parameter){
+    public static function SessionAutoStart($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionCookieLifetime($Parameter){
+    public static function SessionCookieLifetime($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionCookiePath($Parameter){
+    public static function SessionCookiePath($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionCookieDomain($Parameter){
+    public static function SessionCookieDomain($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionCookieHttponly($Parameter){
+    public static function SessionCookieHttponly($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionSerializeHandler($Parameter){
+    public static function SessionSerializeHandler($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionGCProbability($Parameter){
+    public static function SessionGCProbability($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionGCDivisor($Parameter){
+    public static function SessionGCDivisor($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionGCMaxlifetime($Parameter){
+    public static function SessionGCMaxlifetime($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionRefererCheck($Parameter){
+    public static function SessionRefererCheck($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionCacheLimiter($Parameter){
+    public static function SessionCacheLimiter($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionCacheExpire($Parameter){
+    public static function SessionCacheExpire($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionUseTransSid($Parameter){
+    public static function SessionUseTransSid($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionSidLength($Parameter){
+    public static function SessionSidLength($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionTransSidTags($Parameter){
+    public static function SessionTransSidTags($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionTransSidHosts($Parameter){
+    public static function SessionTransSidHosts($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionSidBitsPerCharacter($Parameter){
+    public static function SessionSidBitsPerCharacter($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionUploadProgressEnabled($Parameter){
+    public static function SessionUploadProgressEnabled($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionUploadProgressCleanup($Parameter){
+    public static function SessionUploadProgressCleanup($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionUploadProgressPrefix($Parameter){
+    public static function SessionUploadProgressPrefix($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionUploadProgressName($Parameter){
+    public static function SessionUploadProgressName($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionUploadProgressFreq($Parameter){
+    public static function SessionUploadProgressFreq($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionUploadProgressMinFreq($Parameter){
+    public static function SessionUploadProgressMinFreq($Parameter){
 
 	ini_set();
 	
 	return true;
     }
 
-    public function SessionLazyWrite($Parameter){
+    public static function SessionLazyWrite($Parameter){
 
 	ini_set();
 	

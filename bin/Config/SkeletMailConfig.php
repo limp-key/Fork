@@ -4,15 +4,15 @@ namespace Fork\Bin\Config;
 
 class SkeletMailConfig {
 
-    public $Driver;
+    public static $Driver;
 
-    public $Port;
+    public static $Port;
     
-    public $Host;
+    public static $Host;
 
-    public $UserName;
+    public static $UserName;
 
-    public $Password;
+    public static $Password;
 
     public function __construct(){
 	

@@ -6,14 +6,14 @@ class MailConfig {
 
     // Connect to mail server
 
-    public $Driver = 'smtp';
+    public static $Driver = 'smtp';
 
-    public $Port = '25';
+    public static $Port = '25';
     
-    public $Host = 'localhost';
+    public static $Host = 'localhost';
 
-    public $UserName = 'User';
+    public static $UserName = 'User';
 
-    public $Password = 'Password';
+    public static $Password = 'Password';
     
 }
