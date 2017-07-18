@@ -21,11 +21,14 @@ class SkeletController{
 	    extract($Parameters);
 	
 	include '../views/'.$Path;
+	
 	return true;
     }
 
     public function redirect($Path = '/'){
+	
 	header('Location: '.$Path);
+	
 	return true;
     }
 }
