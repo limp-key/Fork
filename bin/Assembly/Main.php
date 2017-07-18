@@ -21,14 +21,14 @@ if(is_array($Controllers)){
 //Create object Controller (depending on the request)
 
 // if class is not write
-if(empty($GLOBALS['response_class'])){
+if(empty($GLOBALS['REQUEST_CLASS'])){
     Fork\Bin\Assistant\Exception::errorURL();
 }
 
-$Controller = 'Fork\\Controllers\\'.$GLOBALS['response_class'];
+$Controller = 'Fork\\Controllers\\'.$GLOBALS['REQUEST_CLASS'];
 
-if($GLOBALS['response_method'])
-    $Method = $GLOBALS['response_method'];
+if($GLOBALS['REQUEST_METHOD'])
+    $Method = $GLOBALS['REQUEST_METHOD'];
 else
     $Method = 'index';
 

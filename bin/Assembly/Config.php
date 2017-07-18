@@ -1,8 +1,6 @@
 <?php
 
-$ConfigDIR = $GLOBALS['response_config'];
-
-$SearchingParameters = 'find ../config/'.$ConfigDIR.' | grep ".Config.php"';
+$SearchingParameters = 'find ../config/'.$GLOBALS['REQUEST_CONFIG'].' | grep ".Config.php"';
 
 exec($SearchingParameters,$Config);
 
