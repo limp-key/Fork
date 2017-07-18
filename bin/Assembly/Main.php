@@ -1,7 +1,7 @@
 <?php
 
 // Load recurcive all Models in folder /models
-$Models = Fork\Bin\Assembly\Models::search();
+$Models = SearchModels();
 
 if(is_array($Models)){
     foreach($Models as $IncludeModel){
@@ -10,7 +10,7 @@ if(is_array($Models)){
 }
 
 // Load recurcive all Controllers in folder /controllers
-$Controllers = Fork\Bin\Assembly\Controllers::search();
+$Controllers = SearchControllers();
 
 if(is_array($Controllers)){
     foreach($Controllers as $IncludeController){

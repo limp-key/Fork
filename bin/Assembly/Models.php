@@ -1,15 +1,13 @@
 <?php
 
-namespace Fork\Bin\Assembly;
+function SearchModels(){
 
-class Models{
-    public static function search(){
-	$SearchingParameters = 'find ../models/ | grep ".php"';
-	exec($SearchingParameters,$Models);
+    $SearchingParameters = 'find ../models/ | grep ".php"';
 
-	if(!empty($Models))
-	    return $Models;
-	else
-	    return false;
-    }
+    exec($SearchingParameters,$Models);
+
+    if(!empty($Models))
+	return $Models;
+    else
+	return false;
 }
