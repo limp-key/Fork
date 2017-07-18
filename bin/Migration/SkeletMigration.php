@@ -30,8 +30,38 @@ class SkeletMigration{
     }
 
     public function Migrate(){
+	
 	$this->MySQLi->query($this->Query);
 
 	return true;
+    }
+    
+    # Example
+    
+    public function Create($Migrate Migrate){
+
+	$Column->
+	$this->Int('ID')->Unsigned()->PrimaryKey()->NotNull();
+	$this->Date('DateMessage');
+	Migrate::exec('test');
+    }
+
+    public function Drop(){
+	
+	Migrate::drop('test');
+    }
+
+    public function Clear(){
+	
+	Migrate::clear('test');
+    }
+
+    public function Content(){
+	
+	Migrate::content('test',function(){
+	    $this->Column('ID','1');
+	    $this->Column('Message','hello');
+	    $this->Column('TimeWrite','12:30:12');
+	});
     }
 }

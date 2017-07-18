@@ -2,11 +2,11 @@
 
 namespace Fork\Config;
 
-class DataBase {
+class DataBaseConfig {
 
     // Connect to main database
     
-    public $Host = 'localhost';
+    public $Host = 'LocalHost';
 
     public $UserName = 'User';
 
