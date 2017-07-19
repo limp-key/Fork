@@ -4,11 +4,11 @@ namespace Fork\Bin\Config;
 
 class SkeletZlibConfig{
 
-    public static $ZlibOutputCompression = 'Off';
+    public static $ZlibOutputCompression;
 
-    public static $ZlibOutputCompressionLevel = '-1';
+    public static $ZlibOutputCompressionLevel;
 
-    public static $ZlibOutputHandler = '';
+    public static $ZlibOutputHandler;
 
     # Transparent output compression using the zlib library
     # Valid values for this option are 'off', 'on', or a specific buffer size

@@ -4,59 +4,59 @@ namespace Fork\Bin\Config;
 
 class SkeletOtherConfig{
 
-    public static $Precision = '14';
+    public static $Precision;
 
-    public static $OutputBuffering = '4096';
+    public static $OutputBuffering;
 
-    public static $OutputHandler = '';
+    public static $OutputHandler;
 
-    public static $UrlRewriterTags = '';
+    public static $UrlRewriterTags;
 
-    public static $UrlRewriterHosts = '';
+    public static $UrlRewriterHosts;
     
-    public static $ImplicitFlush = 'Off';
+    public static $ImplicitFlush;
 
-    public static $UnserializeCallbackFunc = '';
+    public static $UnserializeCallbackFunc;
 
-    public static $SerializePrecision = '-1';
+    public static $SerializePrecision;
 
-    public static $OpenBasedir = '';
+    public static $OpenBasedir;
 
-    public static $DisableFunctions = '';
+    public static $DisableFunctions;
 
-    public static $DisableClasses = '';
+    public static $DisableClasses;
 
-    public static $IgnoreUserAbort = 'On';
+    public static $IgnoreUserAbort;
 
-    public static $RealPathCacheSize = '16k';
+    public static $RealPathCacheSize;
 
-    public static $RealPathCacheTTL = '120';
+    public static $RealPathCacheTTL;
 
-    public static $ExposePHP = 'Off';
+    public static $ExposePHP;
 
-    public static $ArgSeparatorOutput = "&amp";
+    public static $ArgSeparatorOutput;
 
-    public static $ArgSeparatorInput = "&";
+    public static $ArgSeparatorInput;
 
-    public static $VariablesOrder = "GPCS";
+    public static $VariablesOrder;
 
-    public static $RequestOrder = "GP";
+    public static $RequestOrder;
 
-    public static $RegisterArgcArgv = 'Off';
+    public static $RegisterArgcArgv;
     
-    public static $AutoGlobalsJit = 'On';
+    public static $AutoGlobalsJit;
 
-    public static $ExtensionDir = "ext";
+    public static $ExtensionDir;
 
-    public static $SysTempDir = "/tmp";
+    public static $SysTempDir;
 
-    public static $AllowUrlFopen = 'On';
+    public static $AllowUrlFopen;
 
-    public static $AllowUrlInclude = 'Off';
+    public static $AllowUrlInclude;
 
-    public static $DefaultSocketTimeout = '60';
+    public static $DefaultSocketTimeout;
 
-    public static $AutoDetectLineEndings = 'Off';
+    public static $AutoDetectLineEndings;
 
     # The number of significant digits displayed in floating point numbers.
     # http://php.net/precision

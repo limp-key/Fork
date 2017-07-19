@@ -4,15 +4,15 @@ namespace Fork\Bin\Config;
 
 class SkeletDateConfig{
 
-    public static $DateTimezone = '';
+    public static $DateTimezone;
     
-    public static $DateDefaultLatitude = '31_7667';
+    public static $DateDefaultLatitude;
     
-    public static $DateDefaultLongitude = '35_2333';
+    public static $DateDefaultLongitude;
     
-    public static $DateSunriseZenith = '90_583333';
+    public static $DateSunriseZenith;
     
-    public static $DateSunsetZenith = '90_583333';
+    public static $DateSunsetZenith;
 
     
     # Defines the default timezone used by the date functions

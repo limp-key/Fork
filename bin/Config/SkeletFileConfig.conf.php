@@ -4,17 +4,17 @@ namespace Fork\Bin\Config;
 
 class SkeletFileConfig{
 
-    public static $FileUploads = 'On';
+    public static $FileUploads;
 
-    public static $UploadTmpDir = '';
+    public static $UploadTmpDir;
 
-    public static $UploadMaxFilesize = '2M';
+    public static $UploadMaxFilesize;
 
-    public static $MaxFileUploads = '20';
+    public static $MaxFileUploads;
 
-    public static $AutoPrependFile = '';
+    public static $AutoPrependFile;
     
-    public static $AutoAppendFile = '';
+    public static $AutoAppendFile;
 
     # Whether to allow HTTP file uploads.
     # http://php.net/file-uploads

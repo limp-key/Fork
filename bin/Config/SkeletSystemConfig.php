@@ -4,29 +4,29 @@ namespace Fork\Bin\Config;
 
 class SkeletSystemConfig{
 
-    public static $MaxExecutionTime = '30';
+    public static $MaxExecutionTime;
 
-    public static $MaxInputTime = '60';
+    public static $MaxInputTime;
 
-    public static $MaxInputNestingLevel = '64';
+    public static $MaxInputNestingLevel;
 
-    public static $MaxInputVars = '1000';
+    public static $MaxInputVars;
 
-    public static $MemoryLimit = '128M';
+    public static $MemoryLimit;
     
-    public static $DefaultMimetype = "text/html";
+    public static $DefaultMimetype;
 
-    public static $DefaultCharset = "UTF-8";
+    public static $DefaultCharset;
 
-    public static $PostMaxSize = '8M';
+    public static $PostMaxSize;
 
-    public static $EnablePostDataReading = 'Off';
+    public static $EnablePostDataReading;
 
-    public static $InternalEncoding = '';
+    public static $InternalEncoding;
 
-    public static $InputEncoding = '';
+    public static $InputEncoding;
 
-    public static $OutputEncoding = '';
+    public static $OutputEncoding;
 
     
     # Maximum execution time of each script, in seconds

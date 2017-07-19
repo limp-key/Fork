@@ -4,11 +4,11 @@ namespace Fork\Bin\Config;
 
 class SkeletPCREConfig{
 
-    public static $PcreBacktrackLimit='100000';
+    public static $PcreBacktrackLimit;
 
-    public static $PcreRecursionLimit='100000';
+    public static $PcreRecursionLimit;
 
-    public static $PcreJit='0';
+    public static $PcreJit;
 
     
     public static function PcreBacktrackLimit($Parameter){
