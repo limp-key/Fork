@@ -4,38 +4,89 @@ namespace Fork\Bin\Config;
 
 class SkeletErrorConfig{
 
-    public static $ErrorReporting = 'E_ALL & ~E_DEPRECATED & ~E_STRICT';
+    public static $ErrorReporting;
 
-    public static $DisplayErrors = 'Off';
+    public static $DisplayErrors;
 
-    public static $DisplayStartupErrors = 'Off';
+    public static $DisplayStartupErrors;
 
-    public static $LogErrors = 'On';
+    public static $LogErrors;
 
-    public static $LogErrorsMaxLen = '1024';
+    public static $LogErrorsMaxLen;
 
-    public static $IgnoreRepeatedErrors = 'Off';
+    public static $IgnoreRepeatedErrors;
     
-    public static $IgnoreRepeatedSource = 'Off';
+    public static $IgnoreRepeatedSource;
 
-    public static $ReportMemleaks = 'On';
+    public static $ReportMemleaks;
 
-    public static $ReportZendDebug = '0';
+    public static $ReportZendDebug;
 
-    public static $TrackErrors = 'Off';
+    public static $TrackErrors;
 
-    public static $XMLrpcErrors = '0';
+    public static $XMLrpcErrors;
 
-    public static $XMLrpcErrorNumber = '0';
+    public static $XMLrpcErrorNumber;
 
-    public static $HtmlErrors = 'On';
+    public static $HtmlErrors;
 
-    public static $ErrorPrependString = "<span style='color: ff0000'>";
+    public static $ErrorPrependString;
 
-    public static $ErrorAppendString = "</span>";
+    public static $ErrorAppendString;
 
-    public static $ErrorLog = 'syslog';
-    
+    public static $ErrorLog;
+
+    # This directive informs PHP of which errors, warnings and notices you would like
+    # it to take action for. The recommended way of setting values for this
+    # directive is through the use of the error level constants and bitwise
+    # operators. The error level constants are below here for convenience as well as
+    # some common settings and their meanings.
+    # By default, PHP is set to take action on all errors, notices and warnings EXCEPT
+    # those related to E_NOTICE and E_STRICT, which together cover best practices and
+    # recommended coding standards in PHP. For performance reasons, this is the
+    # recommend error reporting setting. Your production server shouldn't be wasting
+    # resources complaining about best practices and coding standards. That's what
+    # development servers and development settings are for.
+    # Note: The php.ini-development file has this setting as E_ALL. This
+    # means it pretty much reports everything which is exactly what you want during
+    # development and early testing.
+    #
+    # Error Level Constants:
+    # E_ALL             - All errors and warnings (includes E_STRICT as of PHP 5.4.0)
+    # E_ERROR           - fatal run-time errors
+    # E_RECOVERABLE_ERROR  - almost fatal run-time errors
+    # E_WARNING         - run-time warnings (non-fatal errors)
+    # E_PARSE           - compile-time parse errors
+    # E_NOTICE          - run-time notices (these are warnings which often result
+    #                     from a bug in your code, but it's possible that it was
+    #                     intentional (e.g., using an uninitialized variable and
+    #                     relying on the fact it is automatically initialized to an
+    #                     empty string)
+    # E_STRICT          - run-time notices, enable to have PHP suggest changes
+    #                     to your code which will ensure the best interoperability
+    #                     and forward compatibility of your code
+    # E_CORE_ERROR      - fatal errors that occur during PHP's initial startup
+    # E_CORE_WARNING    - warnings (non-fatal errors) that occur during PHP's
+    #                     initial startup
+    # E_COMPILE_ERROR   - fatal compile-time errors
+    # E_COMPILE_WARNING - compile-time warnings (non-fatal errors)
+    # E_USER_ERROR      - user-generated error message
+    # E_USER_WARNING    - user-generated warning message
+    # E_USER_NOTICE     - user-generated notice message
+    # E_DEPRECATED      - warn about code that will not work in future versions
+    #                     of PHP
+    # E_USER_DEPRECATED - user-generated deprecation warnings
+    #
+    # Common Values:
+    #   E_ALL (Show all errors, warnings and notices including coding standards.)
+    #   E_ALL & ~E_NOTICE  (Show all errors, except for notices)
+    #   E_ALL & ~E_NOTICE & ~E_STRICT  (Show all errors, except for notices and coding standards warnings.)
+    #   E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR  (Show only errors)
+    # Default Value: E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED
+    # Development Value: E_ALL
+    # Production Value: E_ALL & ~E_DEPRECATED & ~E_STRICT
+    # http://php.net/error-reporting
+    #error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
     public static function ErrorReporting($Parameter){
 
 	ini_set();
@@ -43,6 +94,22 @@ class SkeletErrorConfig{
 	return true;
     }
 
+    # This directive controls whether or not and where PHP will output errors,
+    # notices and warnings too. Error output is very useful during development, but
+    # it could be very dangerous in production environments. Depending on the code
+    # which is triggering the error, sensitive information could potentially leak
+    # out of your application such as database usernames and passwords or worse.
+    # For production environments, we recommend logging errors rather than
+    # sending them to STDOUT.
+    # Possible Values:
+    #   Off = Do not display any errors
+    #   stderr = Display errors to STDERR (affects only CGI/CLI binaries!)
+    #   On or stdout = Display errors to STDOUT
+    # Default Value: On
+    # Development Value: On
+    # Production Value: Off
+    # http://php.net/display-errors
+    #display_errors = Off
     public static function DisplayErrors($Parameter){
 
 	ini_set();
@@ -50,6 +117,16 @@ class SkeletErrorConfig{
 	return true;
     }
 
+    # The display of errors which occur during PHP's startup sequence are handled
+    # separately from display_errors. PHP's default behavior is to suppress those
+    # errors from clients. Turning the display of startup errors on can be useful in
+    # debugging configuration problems. We strongly recommend you
+    # set this to 'off' for production servers.
+    # Default Value: Off
+    # Development Value: On
+    # Production Value: Off
+    # http://php.net/display-startup-errors
+    #display_startup_errors = Off
     public static function DisplayStartupErrors($Parameter){
 
 	ini_set();
@@ -57,6 +134,15 @@ class SkeletErrorConfig{
 	return true;
     }
 
+    # Besides displaying errors, PHP can also log errors to locations such as a
+    # server-specific log, STDERR, or a location specified by the error_log
+    # directive found below. While errors should not be displayed on productions
+    # servers they should still be monitored and logging is a great way to do that.
+    # Default Value: Off
+    # Development Value: On
+    # Production Value: On
+    # http://php.net/log-errors
+    #log_errors = On
     public static function LogErrors($Parameter){
 
 	ini_set();
@@ -64,6 +150,10 @@ class SkeletErrorConfig{
 	return true;
     }
 
+    # Set maximum length of log_errors. In error_log information about the source is
+    # added. The default is 1024 and 0 allows to not apply any maximum length at all.
+    # http://php.net/log-errors-max-len
+    #log_errors_max_len = 1024
     public static function LogErrorsMaxLen($Parameter){
 
 	ini_set();
@@ -71,13 +161,22 @@ class SkeletErrorConfig{
 	return true;
     }
 
+    # Do not log repeated messages. Repeated errors must occur in same file on same
+    # line unless ignore_repeated_source is set true.
+    # http://php.net/ignore-repeated-errors
+    #ignore_repeated_errors = Off
     public static function IgnoreRepeatedErrors($Parameter){
 
 	ini_set();
 	
 	return true;
     }
-    
+
+    # Ignore source of message when ignoring repeated messages. When this setting
+    # is On you will not log errors with repeated messages from different files or
+    # source lines.
+    # http://php.net/ignore-repeated-source
+    #ignore_repeated_source = Off
     public static function IgnoreRepeatedSource($Parameter){
 
 	ini_set();
@@ -85,6 +184,11 @@ class SkeletErrorConfig{
 	return true;
     }
 
+    # If this parameter is set to Off, then memory leaks will not be shown (on
+    # stdout or in the log). This has only effect in a debug compile, and if
+    # error reporting includes E_WARNING in the allowed list
+    # http://php.net/report-memleaks
+    #report_memleaks = On
     public static function ReportMemleaks($Parameter){
 
 	ini_set();
@@ -92,6 +196,8 @@ class SkeletErrorConfig{
 	return true;
     }
 
+    # This setting is on by default.
+    #report_zend_debug = 0 
     public static function ReportZendDebug($Parameter){
 
 	ini_set();
@@ -99,6 +205,14 @@ class SkeletErrorConfig{
 	return true;
     }
 
+    # Store the last error/warning message in $php_errormsg (boolean). Setting this value
+    # to On can assist in debugging and is appropriate for development servers. It should
+    # however be disabled on production servers.
+    # Default Value: Off
+    # Development Value: On
+    # Production Value: Off
+    # http://php.net/track-errors
+    #track_errors = Off
     public static function TrackErrors($Parameter){
 
 	ini_set();
@@ -106,6 +220,9 @@ class SkeletErrorConfig{
 	return true;
     }
 
+    # Turn off normal error reporting and emit XML-RPC error XML
+    # http://php.net/xmlrpc-errors
+    #xmlrpc_errors = 0
     public static function XMLrpcErrors($Parameter){
 
 	ini_set();
@@ -113,6 +230,8 @@ class SkeletErrorConfig{
 	return true;
     }
 
+    # An XML-RPC faultCode
+    #xmlrpc_error_number = 0
     public static function XMLrpcErrorNumber($Parameter){
 
 	ini_set();
@@ -120,6 +239,15 @@ class SkeletErrorConfig{
 	return true;
     }
 
+    # When PHP displays or logs an error, it has the capability of formatting the
+    # error message as HTML for easier reading. This directive controls whether
+    # the error message is formatted as HTML or not.
+    # Note: This directive is hardcoded to Off for the CLI SAPI
+    # Default Value: On
+    # Development Value: On
+    # Production value: On
+    # http://php.net/html-errors
+    #html_errors = On
     public static function HtmlErrors($Parameter){
 
 	ini_set();
@@ -127,13 +255,23 @@ class SkeletErrorConfig{
 	return true;
     }
 
+    # String to output before an error message. PHP's default behavior is to leave
+    # this setting blank.
+    # http://php.net/error-prepend-string
+    # Example:
+    #error_prepend_string = "<span style='color: #ff0000'>"
     public static function ErrorPrependString($Parameter){
 
 	ini_set();
 	
 	return true;
     }
-
+    
+    # String to output after an error message. PHP's default behavior is to leave
+    # this setting blank.
+    # http://php.net/error-append-string
+    # Example:
+    #error_append_string = "</span>"
     public static function ErrorAppendString($Parameter){
 
 	ini_set();
@@ -141,6 +279,13 @@ class SkeletErrorConfig{
 	return true;
     }
 
+    # Log errors to specified file. PHP's default behavior is to leave this value
+    # empty.
+    # http://php.net/error-log
+    # Example:
+    #error_log = php_errors.log
+    # Log errors to syslog.
+    #error_log = syslog
     public static function ErrorLog($Parameter){
 
 	ini_set();
