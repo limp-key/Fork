@@ -1,9 +1,6 @@
 <?php
 
-ini_set('error_reporting',E_ALL);
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
+# This file load all files in Fork framework
+# and all client Controllers/Models/View/Route/Config
 
-// This file, first file request 
-
-include "../bin/load.php";
+require_once "../bin/load.php";

@@ -8,9 +8,9 @@ class Route{
 	
 	if($path === '/' && $path === $_SERVER['REQUEST_URI']){
 
-	    $GLOBALS['REQUEST_CLASS']  = $class;
-	    $GLOBALS['REQUEST_METHOD'] = $method;
-	    $GLOBALS['REQUEST_CONFIG'] = $config;
+	    $_SERVER['REQUEST_CLASS']  = $class;
+	    $_SERVER['REQUEST_METHOD'] = $method;
+	    $_SERVER['REQUEST_CONFIG'] = $config;
 
 	    return true;
 	}
@@ -18,9 +18,9 @@ class Route{
 	if(isset($_SERVER['REDIRECT_URL']) &&
 		 $path === $_SERVER['REDIRECT_URL']){
 	    
-	    $GLOBALS['REQUEST_CLASS']  = $class;
-	    $GLOBALS['REQUEST_METHOD'] = $method;
-	    $GLOBALS['REQUEST_CONFIG'] = $config;
+	    $_SERVER['REQUEST_CLASS']  = $class;
+	    $_SERVER['REQUEST_METHOD'] = $method;
+	    $_SERVER['REQUEST_CONFIG'] = $config;
 	    
 	    return true;
 	}

@@ -5,7 +5,7 @@ namespace Fork\Bin\Assembly;
 class Config{
 
     public static function Include(){
-	$SearchingParameters = 'find ../config/'.$GLOBALS['REQUEST_CONFIG'].' | grep ".Config.php"';
+	$SearchingParameters = 'find ../config/'.$_SERVER['REQUEST_CONFIG'].' | grep ".Config.php"';
 
 	exec($SearchingParameters,$Config);
 

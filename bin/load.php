@@ -1,7 +1,5 @@
 <?php
 
-$Begin = microtime(true);
-
 # LEVEL 0 (FrameWork level)
 # Include Parse, Route, Config classes
 
@@ -37,8 +35,3 @@ require_once 'Model/SkeletModel.php';
 require_once 'Assembly/Models.php';
 require_once 'Assembly/Controllers.php';
 require_once 'Assembly/Main.php';
-
-$End = microtime(true);
-
-$Time = $End - $Begin; 
-var_dump($Time);

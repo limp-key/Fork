@@ -8,6 +8,10 @@ if(!empty($_REQUEST)){
     unset($_REQUEST);
 }
 
+if(!empty($_GLOBALS)){
+    unset($_GLOBALS);
+}
+
 if(!empty($_SERVER) &&
    empty($_SERVER['REDIRECT_URL'])){
 
