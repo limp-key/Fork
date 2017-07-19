@@ -30,12 +30,10 @@ class SkeletSystemConfig{
 
     
     # Maximum execution time of each script, in seconds
-    # http://php.net/max-execution-time
     # Note: This directive is hardcoded to 0 for the CLI SAPI
-    #max_execution_time = 30
-    public static function MaxExecutionTime($Parameter){
+    public static function MaxExecutionTime($Parameter = '30'){
 
-	ini_set();
+	ini_set('max_execution_time',$Parameter);
 	
 	return true;
     }
@@ -47,40 +45,33 @@ class SkeletSystemConfig{
     # Default Value: -1 (Unlimited)
     # Development Value: 60 (60 seconds)
     # Production Value: 60 (60 seconds)
-    # http://php.net/max-input-time
-    #max_input_time = 60
-    public static function MaxInputTime($Parameter){
+    public static function MaxInputTime($Parameter = '60'){
 
-	ini_set();
+	ini_set('max_input_time',$Parameter);
 	
 	return true;
     }
 
     # Maximum input variable nesting level
-    # http://php.net/max-input-nesting-level
-    #max_input_nesting_level = 64
-    public static function MaxInputNestingLevel($Parameter){
+    public static function MaxInputNestingLevel($Parameter = '64'){
 
-	ini_set();
+	ini_set('max_input_nesting_level',$Parameter);
 	
 	return true;
     }
 
     # How many GET/POST/COOKIE input variables may be accepted
-    #max_input_vars = 1000
-    public static function MaxInputVars($Parameter){
+    public static function MaxInputVars($Parameter = '1000'){
 
-	ini_set();
+	ini_set('max_input_vars',$Parameter);
 	
 	return true;
     }
     
     # Maximum amount of memory a script may consume (128MB)
-    # http://php.net/memory-limit
-    #memory_limit = 128M
-    public static function MemoryLimit($Parameter){
+    public static function MemoryLimit($Parameter = '128M'){
 
-	ini_set();
+	ini_set('memory_limit',$Parameter);
 	
 	return true;
     }
@@ -91,11 +82,9 @@ class SkeletSystemConfig{
     # and $_FILES to always be empty# the only way you will be able to read the
     # POST data will be through the php://input stream wrapper. This can be useful
     # to proxy requests or to process the POST data in a memory efficient fashion.
-    # http://php.net/enable-post-data-reading
-    #enable_post_data_reading = Off
-    public static function EnablePostDataReading($Parameter){
+    public static function EnablePostDataReading($Parameter = 'Off'){
 
-	ini_set();
+	ini_set('enable_post_data_reading',$Parameter);
 	
 	return true;
     }
@@ -103,11 +92,9 @@ class SkeletSystemConfig{
     # Maximum size of POST data that PHP will accept.
     # Its value may be 0 to disable the limit. It is ignored if POST data reading
     # is disabled through enable_post_data_reading.
-    # http://php.net/post-max-size
-    #post_max_size = 8M
-    public static function PostMaxSize($Parameter){
+    public static function PostMaxSize($Parameter = '8M'){
 
-	ini_set();
+	ini_set('post_max_size',$Parameter);
 	
 	return true;
     }
@@ -116,43 +103,35 @@ class SkeletSystemConfig{
     # disable this, simply set it to be empty.
     #
     # PHP's built-in default media type is set to text/html.
-    # http://php.net/default-mimetype
-    #default_mimetype = "text/html"
-    public static function DefaultMimetype($Parameter){
+    public static function DefaultMimetype($Parameter = 'text/html'){
 
-	ini_set();
+	ini_set('default_mimetype',$Parameter);
 	
 	return true;
     }
 
     # PHP's default character set is set to UTF-8.
-    # http://php.net/default-charset
-    #default_charset = "UTF-8"
-    public static function DefaultCharset($Parameter){
+    public static function DefaultCharset($Parameter = 'UTF-8'){
 
-	ini_set();
+	ini_set('default_charset',$Parameter);
 	
 	return true;
     }
 
     # PHP internal character encoding is set to empty.
     # If empty, default_charset is used.
-    # http://php.net/internal-encoding
-    #internal_encoding =
-    public static function InternalEncoding($Parameter){
+    public static function InternalEncoding($Parameter = ''){
 
-	ini_set();
+	ini_set('internal_encoding',$Parameter);
 	
 	return true;
     }
 
     # PHP input character encoding is set to empty.
     # If empty, default_charset is used.
-    # http://php.net/input-encoding
-    #input_encoding =
-    public static function InputEncoding($Parameter){
+    public static function InputEncoding($Parameter = ''){
 
-	ini_set();
+	ini_set('input_encoding',$Parameter);
 	
 	return true;
     }
@@ -160,11 +139,9 @@ class SkeletSystemConfig{
     # PHP output character encoding is set to empty.
     # If empty, default_charset is used.
     # See also output_buffer.
-    # http://php.net/output-encoding
-    #output_encoding =
-    public static function OutputEncoding($Parameter){
+    public static function OutputEncoding($Parameter = ''){
 
-	ini_set();
+	ini_set('output_encoding',$Parameter);
 	
 	return true;
     }

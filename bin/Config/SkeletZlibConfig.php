@@ -19,20 +19,16 @@ class SkeletZlibConfig{
     #   performance, enable output_buffering in addition.
     # Note: You need to use zlib.output_handler instead of the standard
     #   output_handler, or otherwise the output will be corrupted.
-    # http://php.net/zlib.output-compression
-    #zlib.output_compression = Off
-    public static function ZlibOutputCompression($Parameter){
+    public static function ZlibOutputCompression($Parameter = 'Off'){
 
-	ini_set();
+	ini_set('zlib.output_compression',$Parameter);
 	
 	return true;
     }
     
-    # http://php.net/zlib.output-compression-level
-    #zlib.output_compression_level = -1
-    public static function ZlibOutputCompressionLevel($Parameter){
+    public static function ZlibOutputCompressionLevel($Parameter = '-1'){
 
-	ini_set();
+	ini_set('zlib.output_compression_level',$Parameter);
 	
 	return true;
     }
@@ -40,11 +36,9 @@ class SkeletZlibConfig{
     # You cannot specify additional output handlers if zlib.output_compression
     # is activated here. This setting does the same as output_handler but in
     # a different order.
-    # http://php.net/zlib.output-handler
-    #zlib.output_handler =
-    public static function ZlibOutputHandler($Parameter){
+    public static function ZlibOutputHandler($Parameter = ''){
 
-	ini_set();
+	ini_set('zlib.output_handler',$Parameter);
 	
 	return true;
     }
