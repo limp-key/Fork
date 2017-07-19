@@ -7,7 +7,7 @@ require_once 'CRUD.php';
 
 use \Fork\Bin\Model\CRUD;
 use \Fork\Bin\Model\Other;
-use \Fork\Config\DataBase;
+use \Fork\Config\DataBaseConfig;
 use \mysqli as MySQL;
 
 class SkeletModel{
@@ -20,9 +20,9 @@ class SkeletModel{
 
     public function __construct(){
 	
-	$this->MySQLi = new MySQL(DataBase::$Host,
-				  DataBase::$User,
-				  DataBase::$Password,
-				  DataBase::$Database);
+	$this->MySQLi = new MySQL(DataBaseConfig::$Host,
+				  DataBaseConfig::$User,
+				  DataBaseConfig::$Password,
+				  DataBaseConfig::$Database);
     }
 }

@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # The number of significant digits displayed in floating point numbers.
 # http://php.net/precision
 precision = 14
@@ -39,7 +41,7 @@ output_buffering = 4096
 # Note: output_handler must be empty if this is set 'On' !!!!
 #   Instead you must use zlib.output_handler.
 # http://php.net/output-handler
-#output_handler =
+output_handler =
 
 # URL rewriter function rewrites URL on the fly by using
 # output buffer. You can set target tags by this configuration.
@@ -48,15 +50,8 @@ output_buffering = 4096
 # Default Value: "form="
 # Development Value: "form="
 # Production Value: "form="
-#url_rewriter.tags
+url_rewriter.tags
 
-# URL rewriter will not rewrites absolute URL nor form by default. To enable
-# absolute URL rewrite, allowed hosts must be defined at RUNTIME.
-# Refer to session.trans_sid_hosts for more details.
-# Default Value: ""
-# Development Value: ""
-# Production Value: ""
-#url_rewriter.hosts
 
 # Transparent output compression using the zlib library
 # Valid values for this option are 'off', 'on', or a specific buffer size
@@ -71,13 +66,13 @@ output_buffering = 4096
 zlib.output_compression = Off
 
 # http://php.net/zlib.output-compression-level
-#zlib.output_compression_level = -1
+zlib.output_compression_level = -1
 
 # You cannot specify additional output handlers if zlib.output_compression
 # is activated here. This setting does the same as output_handler but in
 # a different order.
 # http://php.net/zlib.output-handler
-#zlib.output_handler =
+zlib.output_handler =
 
 # Implicit flush tells PHP to tell the output layer to flush itself
 # automatically after every output block.  This is equivalent to calling the
@@ -108,7 +103,7 @@ serialize_precision = -1
 # and below.  This directive makes most sense if used in a per-directory
 # or per-virtualhost web server configuration file.
 # http://php.net/open-basedir
-#open_basedir =
+open_basedir =
 
 # This directive allows you to disable certain functions for security reasons.
 # It receives a comma-delimited list of function names.
@@ -126,42 +121,26 @@ disable_classes =
 # being interrupted by the user or a browser timing out. PHP's default behavior
 # is to disable this feature.
 # http://php.net/ignore-user-abort
-#ignore_user_abort = On
+ignore_user_abort = On
 
 # Determines the size of the realpath cache to be used by PHP. This value should
 # be increased on systems where PHP opens many files to reflect the quantity of
 # the file operations performed.
 # http://php.net/realpath-cache-size
-#realpath_cache_size = 16k
+realpath_cache_size = 16k
 
 # Duration of time, in seconds for which to cache realpath information for a given
 # file or directory. For systems with rarely changing files, consider increasing this
 # value.
 # http://php.net/realpath-cache-ttl
-#realpath_cache_ttl = 120
-
-# Enables or disables the circular reference collector.
-# http://php.net/zend.enable-gc
-zend.enable_gc = On
-
-# If enabled, scripts may be written in encodings that are incompatible with
-# the scanner.  CP936, Big5, CP949 and Shift_JIS are the examples of such
-# encodings.  To use this feature, mbstring extension must be enabled.
-# Default: Off
-#zend.multibyte = Off
-
-# Allows to set the default encoding for the scripts.  This value will be used
-# unless "declare(encoding=...)" directive appears at the top of the script.
-# Only affects if zend.multibyte is set.
-# Default: ""
-#zend.script_encoding =
+realpath_cache_ttl = 120
 
 # Decides whether PHP may expose the fact that it is installed on the server
 # (e.g. by adding its signature to the Web server header).  It is no security
 # threat in any way, but it makes it possible to determine whether you use PHP
 # on your server or not.
 # http://php.net/expose-php
-expose_php = On
+expose_php = Off
 
 # Maximum execution time of each script, in seconds
 # http://php.net/max-execution-time
@@ -180,10 +159,10 @@ max_input_time = 60
 
 # Maximum input variable nesting level
 # http://php.net/max-input-nesting-level
-#max_input_nesting_level = 64
+max_input_nesting_level = 64
 
 # How many GET/POST/COOKIE input variables may be accepted
-# max_input_vars = 1000
+max_input_vars = 1000
 
 # Maximum amount of memory a script may consume (128MB)
 # http://php.net/memory-limit
@@ -302,7 +281,7 @@ ignore_repeated_source = Off
 report_memleaks = On
 
 # This setting is on by default.
-#report_zend_debug = 0
+report_zend_debug = 0
 
 # Store the last error/warning message in $php_errormsg (boolean). Setting this value
 # to On can assist in debugging and is appropriate for development servers. It should
@@ -315,10 +294,10 @@ track_errors = Off
 
 # Turn off normal error reporting and emit XML-RPC error XML
 # http://php.net/xmlrpc-errors
-#xmlrpc_errors = 0
+xmlrpc_errors = 0
 
 # An XML-RPC faultCode
-#xmlrpc_error_number = 0
+xmlrpc_error_number = 0
 
 # When PHP displays or logs an error, it has the capability of formatting the
 # error message as HTML for easier reading. This directive controls whether
@@ -330,21 +309,17 @@ track_errors = Off
 # http://php.net/html-errors
 html_errors = On
 
-
-# http://php.net/docref-ext
-#docref_ext = .html
-
 # String to output before an error message. PHP's default behavior is to leave
 # this setting blank.
 # http://php.net/error-prepend-string
 # Example:
-#error_prepend_string = "<span style='color: #ff0000'>"
+error_prepend_string = "<span style='color: #ff0000'>"
 
 # String to output after an error message. PHP's default behavior is to leave
 # this setting blank.
 # http://php.net/error-append-string
 # Example:
-#error_append_string = "</span>"
+error_append_string = "</span>"
 
 # Log errors to specified file. PHP's default behavior is to leave this value
 # empty.
@@ -352,21 +327,20 @@ html_errors = On
 # Example:
 #error_log = php_errors.log
 # Log errors to syslog.
-#error_log = syslog
-
+error_log = syslog
 
 # The separator used in PHP generated URLs to separate arguments.
 # PHP's default setting is "&".
 # http://php.net/arg-separator.output
 # Example:
-#arg_separator.output = "&amp#"
+arg_separator.output = "&amp#"
 
 # List of separator(s) used by PHP to parse input URLs into variables.
 # PHP's default setting is "&".
 # NOTE: Every character in this directive is considered as separator!
 # http://php.net/arg-separator.input
 # Example:
-#arg_separator.input = "#&"
+arg_separator.input = "#&"
 
 # This directive determines which super global arrays are registered when PHP
 # starts up. G,P,C,E & S are abbreviations for the following respective super
@@ -424,7 +398,7 @@ auto_globals_jit = On
 # POST data will be through the php://input stream wrapper. This can be useful
 # to proxy requests or to process the POST data in a memory efficient fashion.
 # http://php.net/enable-post-data-reading
-#enable_post_data_reading = Off
+enable_post_data_reading = Off
 
 # Maximum size of POST data that PHP will accept.
 # Its value may be 0 to disable the limit. It is ignored if POST data reading
@@ -545,7 +519,7 @@ file_uploads = On
 # Temporary directory for HTTP uploaded files (will use system default if not
 # specified).
 # http://php.net/upload-tmp-dir
-#upload_tmp_dir =
+upload_tmp_dir =
 
 # Maximum allowed size for uploaded files.
 # http://php.net/upload-max-filesize
@@ -562,39 +536,23 @@ allow_url_fopen = On
 # http://php.net/allow-url-include
 allow_url_include = Off
 
-# Define the User-Agent string. PHP's default setting for this is empty.
-# http://php.net/user-agent
-#user_agent="PHP"
-
-# Default timeout for socket based streams (seconds)
-# http://php.net/default-socket-timeout
-default_socket_timeout = 60
-
-# If your scripts have to deal with files from Macintosh systems,
-# or you are running on a Mac and need to deal with files from
-# unix or win32 systems, setting this flag will cause PHP to
-# automatically detect the EOL character in those files so that
-# fgets() and file() will work regardless of the source of the file.
-# http://php.net/auto-detect-line-endings
-#auto_detect_line_endings = Off
-
 
 [Date]
 # Defines the default timezone used by the date functions
 # http://php.net/date.timezone
-#date.timezone =
+date.timezone =
 
 # http://php.net/date.default-latitude
-#date.default_latitude = 31.7667
+date.default_latitude = 31.7667
 
 # http://php.net/date.default-longitude
-#date.default_longitude = 35.2333
+date.default_longitude = 35.2333
 
 # http://php.net/date.sunrise-zenith
-#date.sunrise_zenith = 90.583333
+date.sunrise_zenith = 90.583333
 
 # http://php.net/date.sunset-zenith
-#date.sunset_zenith = 90.583333
+date.sunset_zenith = 90.583333
 
 
 
@@ -634,7 +592,7 @@ session.save_handler = files
 # RPM note : session directory must be owned by process owner
 # for mod_php, see /etc/httpd/conf.d/php.conf
 # for php-fpm, see /etc/php-fpm.d/*conf
-#session.save_path = "/tmp"
+session.save_path = "/tmp"
 
 # Whether to use strict session mode.
 # Strict session mode does not accept uninitialized session ID and regenerate
@@ -649,7 +607,7 @@ session.use_strict_mode = 0
 session.use_cookies = 1
 
 # http://php.net/session.cookie-secure
-#session.cookie_secure =
+session.cookie_secure =
 
 # This option forces PHP to fetch and use a cookie for storing and maintaining
 # the session id. We encourage this operation as it's very helpful in combating
@@ -784,7 +742,7 @@ session.trans_sid_tags = "a=href,area=href,frame=src,form="
 # Default Value: ""
 # Development Value: ""
 # Production Value: ""
-#session.trans_sid_hosts=""
+session.trans_sid_hosts=""
 
 # Define how many bits are stored in each character when converting
 # the binary hash data to something readable.
@@ -803,7 +761,7 @@ session.sid_bits_per_character = 5
 # Development Value: On
 # Production Value: On
 # http://php.net/session.upload-progress.enabled
-#session.upload_progress.enabled = On
+session.upload_progress.enabled = On
 
 # Cleanup the progress information as soon as all POST data has been read
 # (i.e. upload completed).
@@ -811,14 +769,14 @@ session.sid_bits_per_character = 5
 # Development Value: On
 # Production Value: On
 # http://php.net/session.upload-progress.cleanup
-#session.upload_progress.cleanup = On
+session.upload_progress.cleanup = On
 
 # A prefix used for the upload progress key in $_SESSION
 # Default Value: "upload_progress_"
 # Development Value: "upload_progress_"
 # Production Value: "upload_progress_"
 # http://php.net/session.upload-progress.prefix
-#session.upload_progress.prefix = "upload_progress_"
+session.upload_progress.prefix = "upload_progress_"
 
 # The index name (concatenated with the prefix) in $_SESSION
 # containing the upload progress information
@@ -826,7 +784,7 @@ session.sid_bits_per_character = 5
 # Development Value: "PHP_SESSION_UPLOAD_PROGRESS"
 # Production Value: "PHP_SESSION_UPLOAD_PROGRESS"
 # http://php.net/session.upload-progress.name
-#session.upload_progress.name = "PHP_SESSION_UPLOAD_PROGRESS"
+session.upload_progress.name = "PHP_SESSION_UPLOAD_PROGRESS"
 
 # How frequently the upload progress should be updated.
 # Given either in percentages (per-file), or in bytes
@@ -834,15 +792,15 @@ session.sid_bits_per_character = 5
 # Development Value: "1%"
 # Production Value: "1%"
 # http://php.net/session.upload-progress.freq
-#session.upload_progress.freq =  "1%"
+session.upload_progress.freq =  "1%"
 
 # The minimum delay between updates, in seconds
 # Default Value: 1
 # Development Value: 1
 # Production Value: 1
 # http://php.net/session.upload-progress.min-freq
-#session.upload_progress.min_freq = "1"
+session.upload_progress.min_freq = "1"
 
 # Only write session data when session data is changed. Enabled by default.
 # http://php.net/session.lazy-write
-#session.lazy_write = On
+session.lazy_write = On
