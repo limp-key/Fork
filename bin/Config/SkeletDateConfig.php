@@ -1,10 +1,8 @@
 <?php
 
-namespace Fork\Config;
+namespace Fork\Bin\Config;
 
-use \Fork\Bin\Config\SkeletDateConfig;
-
-class DateConfig extends SkeletDateConfig{
+class SkeletDateConfig{
 
     public static $DateTimezone = '';
     
@@ -15,5 +13,40 @@ class DateConfig extends SkeletDateConfig{
     public static $DateSunriseZenith = '90_583333';
     
     public static $DateSunsetZenith = '90_583333';
-    
+
+
+    public static function DateTimezone($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function DateDefaultLatitude($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function DateDefaultLongitude($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function DateSunriseZenith($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function DateSunsetZenith($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
 }

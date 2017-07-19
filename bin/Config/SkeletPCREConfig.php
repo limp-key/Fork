@@ -1,10 +1,8 @@
 <?php
 
-namespace Fork\Config;
+namespace Fork\Bin\Config;
 
-use \Fork\Bin\Config\SkeletPCREConfig;
-
-class PCREConfig extends SkeletPCREConfig{
+class SkeletPCREConfig{
 
     public static $PcreBacktrackLimit='100000';
 
@@ -12,4 +10,25 @@ class PCREConfig extends SkeletPCREConfig{
 
     public static $PcreJit='0';
 
+    
+    public static function PcreBacktrackLimit($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function PcreRecursionLimit($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function PcreJit($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
 }

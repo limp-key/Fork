@@ -1,10 +1,8 @@
 <?php
 
-namespace Fork\Config;
+namespace Fork\Bin\Config;
 
-use \Fork\Bin\Config\SkeletOtherConfig;
-
-class OtherConfig extends SkeletOtherConfig{
+class SkeletOtherConfig{
 
     public static $Precision = '14';
 
@@ -59,4 +57,201 @@ class OtherConfig extends SkeletOtherConfig{
     public static $DefaultSocketTimeout = '60';
 
     public static $AutoDetectLineEndings = 'Off';
+
+    public static function Precision($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function OutputBuffering($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function OutputHandler($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function UrlRewriterTags($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function UrlRewriterHosts($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+
+    public static function ImplicitFlush($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function UnserializeCallbackFunc($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function SerializePrecision($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function OpenBasedir($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function DisableFunctions($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function DisableClasses($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function IgnoreUserAbort($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function RealPathCacheSize($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function RealPathCacheTTL($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function ExposePHP($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function ArgSeparatorOutput($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function ArgSeparatorInput($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function VariablesOrder($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function RequestOrder($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function RegisterArgcArgv($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+    
+    public static function AutoGlobalsJit($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function ExtensionDir($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function SysTempDir($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function AllowURLFopen($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function AllowURLInclude($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function UserAgent($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function DefaultSocketTimeout($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function AutoDetectLineEndings($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
 }

@@ -1,10 +1,8 @@
 <?php
 
-namespace Fork\Config;
+namespace Fork\Bin\Config;
 
-use \Fork\Bin\Config\SkeletFileConfig;
-
-class FileConfig extends SkeletFileConfig{
+class SkeletFileConfig{
 
     public static $FileUploads = 'On';
 
@@ -18,4 +16,45 @@ class FileConfig extends SkeletFileConfig{
     
     public static $AutoAppendFile = '';
 
+    public static function FileUploads($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function UploadTmpDir($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function UploadMaxFilesize($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function MaxFileUploads($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function AutoPrependFile($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+    
+    public static function AutoAppendFile($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
 }

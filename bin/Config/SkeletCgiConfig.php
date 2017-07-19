@@ -1,11 +1,8 @@
 <?php
 
-namespace Fork\Config;
+namespace Fork\Bin\Config;
 
-use \Fork\Bin\Config\SkeletCgiConfig;
-
-class CgiConfig extends SkeletCgiConfig{
-
+class SkeletCgiConfig{
     
     public static $CgiForceRedirect = '1';
 
@@ -24,4 +21,68 @@ class CgiConfig extends SkeletCgiConfig{
     public static $CgiRfc2616Headers = '0';
 
     public static $CgiCheckShebangLine= '1';
+
+    
+    public static function CgiForceRedirect($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function CgiNPH($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function CgiRedirectStatusEnv($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function CgiFixPathinfo($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function CgiDiscardPath($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function FastcgiImpersonate($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function FastcgiLogging($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function Cgirfc2616Headers($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function CgiCheckShebangLine($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
 }

@@ -1,14 +1,33 @@
 <?php
 
-namespace Fork\Config;
+namespace Fork\Bin\Config;
 
-use \Fork\Bin\Config\SkeletZlibConfig;
-
-class ZlibConfig extends SkeletZlibConfig{
+class SkeletZlibConfig{
 
     public static $ZlibOutputCompression = 'Off';
 
     public static $ZlibOutputCompressionLevel = '-1';
 
     public static $ZlibOutputHandler = '';
+
+    public static function ZlibOutputCompression($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function ZlibOutputCompressionLevel($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function ZlibOutputHandler($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
 }

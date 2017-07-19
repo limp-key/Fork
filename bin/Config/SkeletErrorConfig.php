@@ -1,10 +1,8 @@
 <?php
 
-namespace Fork\Config;
+namespace Fork\Bin\Config;
 
-use \Fork\Bin\Config\SkeletErrorConfig;
-
-class ErrorConfig extends SkeletErrorConfig{
+class SkeletErrorConfig{
 
     public static $ErrorReporting = 'E_ALL & ~E_DEPRECATED & ~E_STRICT';
 
@@ -38,5 +36,115 @@ class ErrorConfig extends SkeletErrorConfig{
 
     public static $ErrorLog = 'syslog';
     
+    public static function ErrorReporting($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function DisplayErrors($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function DisplayStartupErrors($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function LogErrors($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function LogErrorsMaxLen($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function IgnoreRepeatedErrors($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
     
+    public static function IgnoreRepeatedSource($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function ReportMemleaks($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function ReportZendDebug($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function TrackErrors($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function XMLrpcErrors($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function XMLrpcErrorNumber($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function HtmlErrors($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function ErrorPrependString($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function ErrorAppendString($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
+
+    public static function ErrorLog($Parameter){
+
+	ini_set();
+	
+	return true;
+    }
 }
