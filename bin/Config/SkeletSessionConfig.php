@@ -67,11 +67,9 @@ class SkeletSessionConfig{
     public static $SessionLazyWrite;
 
     # Handler used to store/retrieve data.
-    # http://php.net/session.save-handler
-    #session.save_handler = files
-    public static function SessionSaveHandler($Parameter){
+    public static function SessionSaveHandler($Parameter = 'files'){
 
-	ini_set();
+	ini_set('session.save_handler',$Parameter);
 	
 	return true;
     }
@@ -102,15 +100,13 @@ class SkeletSessionConfig{
     #
     # where MODE is the octal representation of the mode. Note that this
     # does not overwrite the process's umask.
-    # http://php.net/session.save-path
 
     # RPM note : session directory must be owned by process owner
     # for mod_php, see /etc/httpd/conf.d/php.conf
     # for php-fpm, see /etc/php-fpm.d/*conf
-    #session.save_path = "/tmp"
-    public static function SessionSavePath($Parameter){
+    public static function SessionSavePath($Parameter = '/tmp'){
 
-	ini_set();
+	ini_set('session.save_path',$Parameter);
 	
 	return true;
     }
@@ -120,30 +116,25 @@ class SkeletSessionConfig{
     # session ID if browser sends uninitialized session ID. Strict mode protects
     # applications from session fixation via session adoption vulnerability. It is
     # disabled by default for maximum compatibility, but enabling it is encouraged.
-    # https://wiki.php.net/rfc/strict_sessions
-    #session.use_strict_mode = 0
-    public static function SessionUseStrictMode($Parameter){
+    public static function SessionUseStrictMode($Parameter = '0'){
 
-	ini_set();
+	ini_set('session.use_strict_mode',$Parameter);
 	
 	return true;
     }
 
     # Whether to use cookies.
-    # http://php.net/session.use-cookies
-    #session.use_cookies = 1
-    public static function SessionUseCookies($Parameter){
+    public static function SessionUseCookies($Parameter = '1'){
 
-	ini_set();
+	ini_set('session.use_cookies',$Parameter);
 	
 	return true;
     }
 
-    # http://php.net/session.cookie-secure
-    #session.cookie_secure =
-    public static function SessionCookieSecure($Parameter){
+    #
+    public static function SessionCookieSecure($Parameter = ''){
 
-	ini_set();
+	ini_set('session.cookie_secure',$Parameter);
 	
 	return true;
     }
@@ -152,81 +143,66 @@ class SkeletSessionConfig{
     # the session id. We encourage this operation as it's very helpful in combating
     # session hijacking when not specifying and managing your own session id. It is
     # not the be-all and end-all of session hijacking defense, but it's a good start.
-    # http://php.net/session.use-only-cookies
-    #session.use_only_cookies = 1
-    public static function SessionUseOnlyCookies($Parameter){
+    public static function SessionUseOnlyCookies($Parameter = '1'){
 
-	ini_set();
+	ini_set('session.use_only_cookies',$Parameter);
 	
 	return true;
     }
 
     # Name of the session (used as cookie name).
-    # http://php.net/session.name
-    #session.name = PHPSESSID
-    public static function SessionName($Parameter){
+    public static function SessionName($Parameter = 'PHPSESSID'){
 
-	ini_set();
+	ini_set('session.name',$Parameter);
 	
 	return true;
     }
 
     # Initialize session on request startup.
-    # http://php.net/session.auto-start
-    #session.auto_start = 0
-    public static function SessionAutoStart($Parameter){
+    public static function SessionAutoStart($Parameter = '0'){
 
-	ini_set();
+	ini_set('session.auto_start',$Parameter);
 	
 	return true;
     }
 
     # Lifetime in seconds of cookie or, if 0, until browser is restarted.
-    # http://php.net/session.cookie-lifetime
-    #session.cookie_lifetime = 0
-    public static function SessionCookieLifetime($Parameter){
+    public static function SessionCookieLifetime($Parameter = '0'){
 
-	ini_set();
+	ini_set('session.cookie_lifetime',$Parameter);
 	
 	return true;
     }
 
     # The path for which the cookie is valid.
-    # http://php.net/session.cookie-path
-    #session.cookie_path = /
-    public static function SessionCookiePath($Parameter){
+    public static function SessionCookiePath($Parameter = '/'){
 
-	ini_set();
+	ini_set('session.cookie_path',$Parameter);
 	
 	return true;
     }
 
     # The domain for which the cookie is valid.
-    # http://php.net/session.cookie-domain
-    #session.cookie_domain =
-    public static function SessionCookieDomain($Parameter){
+    public static function SessionCookieDomain($Parameter = ''){
 
-	ini_set();
+	ini_set('session.cookie_domain',$Parameter);
 	
 	return true;
     }
 
-    # Whether or not to add the httpOnly flag to the cookie, which makes it inaccessible to browser scripting languages such as JavaScript.
-    # http://php.net/session.cookie-httponly
-    #session.cookie_httponly =
-    public static function SessionCookieHttponly($Parameter){
+    # Whether or not to add the httpOnly flag to the cookie, which makes
+    # it inaccessible to browser scripting languages such as JavaScript.
+    public static function SessionCookieHttponly($Parameter = ''){
 
-	ini_set();
+	ini_set('session.cookie_httponly',$Parameter);
 	
 	return true;
     }
 
     # Handler used to serialize data.  php is the standard serializer of PHP.
-    # http://php.net/session.serialize-handler
-    #session.serialize_handler = php
-    public static function SessionSerializeHandler($Parameter){
+    public static function SessionSerializeHandler($Parameter = 'php'){
 
-	ini_set();
+	ini_set('session.serialize_handler',$Parameter);
 	
 	return true;
     }
@@ -240,11 +216,9 @@ class SkeletSessionConfig{
     # Default Value: 1
     # Development Value: 1
     # Production Value: 1
-    # http://php.net/session.gc-probability
-    #session.gc_probability = 1
-    public static function SessionGCProbability($Parameter){
+    public static function SessionGCProbability($Parameter = '1'){
 
-	ini_set();
+	ini_set('session.gc_probability',$Parameter);
 	
 	return true;
     }
@@ -260,22 +234,18 @@ class SkeletSessionConfig{
     # Default Value: 100
     # Development Value: 1000
     # Production Value: 1000
-    # http://php.net/session.gc-divisor
-    #session.gc_divisor = 1000
-    public static function SessionGCDivisor($Parameter){
+    public static function SessionGCDivisor($Parameter = '1000'){
 
-	ini_set();
+	ini_set('session.gc_divisor',$Parameter);
 	
 	return true;
     }
 
     # After this number of seconds, stored data will be seen as 'garbage' and
     # cleaned up by the garbage collection process.
-    # http://php.net/session.gc-maxlifetime
-    #session.gc_maxlifetime = 1440
-    public static function SessionGCMaxlifetime($Parameter){
+    public static function SessionGCMaxlifetime($Parameter = '1440'){
 
-	ini_set();
+	ini_set('session.gc_maxlifetime',$Parameter);
 	
 	return true;
     }
@@ -290,32 +260,26 @@ class SkeletSessionConfig{
     # Check HTTP Referer to invalidate externally stored URLs containing ids.
     # HTTP_REFERER has to contain this substring for the session to be
     # considered as valid.
-    # http://php.net/session.referer-check
-    #session.referer_check =
-    public static function SessionRefererCheck($Parameter){
+    public static function SessionRefererCheck($Parameter = ''){
 
-	ini_set();
+	ini_set('session.referer_check',$Parameter);
 	
 	return true;
     }
 
     # Set to {nocache,private,public,} to determine HTTP caching aspects
     # or leave this empty to avoid sending anti-caching headers.
-    # http://php.net/session.cache-limiter
-    #session.cache_limiter = nocache
-    public static function SessionCacheLimiter($Parameter){
+    public static function SessionCacheLimiter($Parameter = 'nochache'){
 
-	ini_set();
+	ini_set('session.cache_limiter',$Parameter);
 	
 	return true;
     }
 
     # Document expires after n minutes.
-    # http://php.net/session.cache-expire
-    #session.cache_expire = 180
-    public static function SessionCacheExpire($Parameter){
+    public static function SessionCacheExpire($Parameter = '180'){
 
-	ini_set();
+	ini_set('session.cache_expire',$Parameter);
 	
 	return true;
     }
@@ -329,11 +293,9 @@ class SkeletSessionConfig{
     #   in publicly accessible computer.
     # - User may access your site with the same session ID
     #   always using URL stored in browser's history or bookmarks.
-    # http://php.net/session.use-trans-sid
-    #session.use_trans_sid = 0
-    public static function SessionUseTransSid($Parameter){
+    public static function SessionUseTransSid($Parameter = '0'){
 
-	ini_set();
+	ini_set('session.use_trans_sid',$Parameter);
 	
 	return true;
     }
@@ -345,10 +307,9 @@ class SkeletSessionConfig{
     # Default Value: 32
     # Development Value: 26
     # Production Value: 26
-    #session.sid_length = 26
-    public static function SessionSidLength($Parameter){
+    public static function SessionSidLength($Parameter = '26'){
 
-	ini_set();
+	ini_set('session.sid_length',$Parameter);
 	
 	return true;
     }
@@ -362,11 +323,9 @@ class SkeletSessionConfig{
     # Default Value: "a=href,area=href,frame=src,form="
     # Development Value: "a=href,area=href,frame=src,form="
     # Production Value: "a=href,area=href,frame=src,form="
-    # http://php.net/url-rewriter.tags
-    #session.trans_sid_tags = "a=href,area=href,frame=src,form="
-    public static function SessionTransSidTags($Parameter){
+    public static function SessionTransSidTags($Parameter = "a=href,area=href,frame=src,form="){
 
-	ini_set();
+	ini_set('session.trans_sid_tags',$Parameter);
 	
 	return true;
     }
@@ -382,10 +341,9 @@ class SkeletSessionConfig{
     # Default Value: ""
     # Development Value: ""
     # Production Value: ""
-    #session.trans_sid_hosts=""
-    public static function SessionTransSidHosts($Parameter){
+    public static function SessionTransSidHosts($Parameter = ''){
 
-	ini_set();
+	ini_set('session.trans_sid_hosts',$Parameter);
 	
 	return true;
     }
@@ -399,11 +357,9 @@ class SkeletSessionConfig{
     # Default Value: 4
     # Development Value: 5
     # Production Value: 5
-    # http://php.net/session.hash-bits-per-character
-    #session.sid_bits_per_character = 5
-    public static function SessionSidBitsPerCharacter($Parameter){
+    public static function SessionSidBitsPerCharacter($Parameter = '5'){
 
-	ini_set();
+	ini_set('session.sid_bits_per_characret',$Parameter);
 	
 	return true;
     }
@@ -412,11 +368,9 @@ class SkeletSessionConfig{
     # Default Value: On
     # Development Value: On
     # Production Value: On
-    # http://php.net/session.upload-progress.enabled
-    #session.upload_progress.enabled = On
-    public static function SessionUploadProgressEnabled($Parameter){
+    public static function SessionUploadProgressEnabled($Parameter = 'On'){
 
-	ini_set();
+	ini_set('session.upload_progress.enabled',$Parameter);
 	
 	return true;
     }
@@ -426,11 +380,9 @@ class SkeletSessionConfig{
     # Default Value: On
     # Development Value: On
     # Production Value: On
-    # http://php.net/session.upload-progress.cleanup
-    #session.upload_progress.cleanup = On
-    public static function SessionUploadProgressCleanup($Parameter){
+    public static function SessionUploadProgressCleanup($Parameter = 'On'){
 
-	ini_set();
+	ini_set('session.upload_progress.cleanup',$Parameter);
 	
 	return true;
     }
@@ -439,11 +391,9 @@ class SkeletSessionConfig{
     # Default Value: "upload_progress_"
     # Development Value: "upload_progress_"
     # Production Value: "upload_progress_"
-    # http://php.net/session.upload-progress.prefix
-    #session.upload_progress.prefix = "upload_progress_"
-    public static function SessionUploadProgressPrefix($Parameter){
+    public static function SessionUploadProgressPrefix($Parameter = 'upload_progress_'){
 
-	ini_set();
+	ini_set('session.upload_progress.prefix',$Parameter);
 	
 	return true;
     }
@@ -453,11 +403,9 @@ class SkeletSessionConfig{
     # Default Value: "PHP_SESSION_UPLOAD_PROGRESS"
     # Development Value: "PHP_SESSION_UPLOAD_PROGRESS"
     # Production Value: "PHP_SESSION_UPLOAD_PROGRESS"
-    # http://php.net/session.upload-progress.name
-    #session.upload_progress.name = "PHP_SESSION_UPLOAD_PROGRESS"
-    public static function SessionUploadProgressName($Parameter){
+    public static function SessionUploadProgressName($Parameter = 'PHP_SESSION_UPLOAD_PROGRESS'){
 
-	ini_set();
+	ini_set('session.upload_progress.name',$Parameter);
 	
 	return true;
     }
@@ -467,11 +415,9 @@ class SkeletSessionConfig{
     # Default Value: "1%"
     # Development Value: "1%"
     # Production Value: "1%"
-    # http://php.net/session.upload-progress.freq
-    #session.upload_progress.freq =  "1%"
-    public static function SessionUploadProgressFreq($Parameter){
+    public static function SessionUploadProgressFreq($Parameter = '1%'){
 
-	ini_set();
+	ini_set('session.upload_progress.freq',$Parameter);
 	
 	return true;
     }
@@ -480,21 +426,17 @@ class SkeletSessionConfig{
     # Default Value: 1
     # Development Value: 1
     # Production Value: 1
-    # http://php.net/session.upload-progress.min-freq
-    #session.upload_progress.min_freq = "1"
-    public static function SessionUploadProgressMinFreq($Parameter){
+    public static function SessionUploadProgressMinFreq($Parameter = '1'){
 
-	ini_set();
+	ini_set('session.upload_progress.min_freq',$Parameter);
 	
 	return true;
     }
 
     # Only write session data when session data is changed. Enabled by default.
-    # http://php.net/session.lazy-write
-    #session.lazy_write = On
-    public static function SessionLazyWrite($Parameter){
+    public static function SessionLazyWrite($Parameter = 'On'){
 
-	ini_set();
+	ini_set('session.lazy_write',$Parameter);
 	
 	return true;
     }

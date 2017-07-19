@@ -8,7 +8,7 @@ class Config{
 
 	if($Path === $_SERVER['REQUEST_URI'] ){
 
-	    include 
+	    include '';
 	}
     }
 }

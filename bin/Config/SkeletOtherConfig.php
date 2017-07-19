@@ -59,11 +59,9 @@ class SkeletOtherConfig{
     public static $AutoDetectLineEndings;
 
     # The number of significant digits displayed in floating point numbers.
-    # http://php.net/precision
-    #precision = 14
-    public static function Precision($Parameter){
+    public static function Precision($Parameter = '14'){
 
-	ini_set();
+	ini_set('precision',$Parameter);
 	
 	return true;
     }
@@ -89,32 +87,9 @@ class SkeletOtherConfig{
     # Default Value: Off
     # Development Value: 4096
     # Production Value: 4096
-    # http://php.net/output-buffering
-    # output_buffering = 4096
-    public static function OutputBuffering($Parameter){
+    public static function OutputBuffering($Parameter = '4096'){
 
-	ini_set();
-	
-	return true;
-    }
-
-    public static function OutputHandler($Parameter){
-
-	ini_set();
-	
-	return true;
-    }
-
-    public static function UrlRewriterTags($Parameter){
-
-	ini_set();
-	
-	return true;
-    }
-
-    public static function UrlRewriterHosts($Parameter){
-
-	ini_set();
+	ini_set('output_buffering',$Presicion);
 	
 	return true;
     }
@@ -124,12 +99,10 @@ class SkeletOtherConfig{
     # PHP function flush() after each and every call to print() or echo() and each
     # and every HTML block.  Turning this option on has serious performance
     # implications and is generally recommended for debugging purposes only.
-    # http://php.net/implicit-flush
     # Note: This directive is hardcoded to On for the CLI SAPI
-    #implicit_flush = Off
-    public static function ImplicitFlush($Parameter){
+    public static function ImplicitFlush($Parameter = 'Off'){
 
-	ini_set();
+	ini_set('implicit_flush',$Parameter);
 	
 	return true;
     }
@@ -140,10 +113,9 @@ class SkeletOtherConfig{
     # not defined, or if the function doesn't include/implement the missing class.
     # So only set this entry, if you really want to implement such a
     # callback-function.
-    #unserialize_callback_func =
-    public static function UnserializeCallbackFunc($Parameter){
+    public static function UnserializeCallbackFunc($Parameter = ''){
 
-	ini_set();
+	ini_set('unserialize_callback_func',$Parameter);
 	
 	return true;
     }
@@ -154,10 +126,9 @@ class SkeletOtherConfig{
     # The value is also used for json_encode when encoding double values.
     # If -1 is used, then dtoa mode 0 is used which automatically select the best
     # precision.
-    #serialize_precision = -1
-    public static function SerializePrecision($Parameter){
+    public static function SerializePrecision($Parameter = '-1'){
 
-	ini_set();
+	ini_set('serialize_precision',$Parameter);
 	
 	return true;
     }
@@ -165,33 +136,27 @@ class SkeletOtherConfig{
     # open_basedir, if set, limits all file operations to the defined directory
     # and below.  This directive makes most sense if used in a per-directory
     # or per-virtualhost web server configuration file.
-    # http://php.net/open-basedir
-    #open_basedir =
-    public static function OpenBasedir($Parameter){
+    public static function OpenBasedir($Parameter = ''){
 
-	ini_set();
+	ini_set('open_basedir',$Parameter);
 	
 	return true;
     }
     
     # This directive allows you to disable certain functions for security reasons.
     # It receives a comma-delimited list of function names.
-    # http://php.net/disable-functions
-    #disable_functions =
-    public static function DisableFunctions($Parameter){
+    public static function DisableFunctions($Parameter = ''){
 
-	ini_set();
+	ini_set('disable_functions',$Parameter);
 	
 	return true;
     }
     
     # This directive allows you to disable certain classes for security reasons.
     # It receives a comma-delimited list of class names.
-    # http://php.net/disable-classes
-    #disable_classes =
-    public static function DisableClasses($Parameter){
+    public static function DisableClasses($Parameter = ''){
 
-	ini_set();
+	ini_set('disables_classes',$Parameter);
 	
 	return true;
     }
@@ -201,11 +166,9 @@ class SkeletOtherConfig{
     # the request. Consider enabling it if executing long requests, which may end up
     # being interrupted by the user or a browser timing out. PHP's default behavior
     # is to disable this feature.
-    # http://php.net/ignore-user-abort
-    #ignore_user_abort = On
-    public static function IgnoreUserAbort($Parameter){
+    public static function IgnoreUserAbort($Parameter = 'On'){
 
-	ini_set();
+	ini_set('ignore_user_abort',$Parameter);
 	
 	return true;
     }
@@ -213,11 +176,9 @@ class SkeletOtherConfig{
     # Determines the size of the realpath cache to be used by PHP. This value should
     # be increased on systems where PHP opens many files to reflect the quantity of
     # the file operations performed.
-    # http://php.net/realpath-cache-size
-    #realpath_cache_size = 16k
-    public static function RealPathCacheSize($Parameter){
+    public static function RealPathCacheSize($Parameter = '16k'){
 
-	ini_set();
+	ini_set('realpath_cache_size',$Parameter);
 	
 	return true;
     }
@@ -225,11 +186,9 @@ class SkeletOtherConfig{
     # Duration of time, in seconds for which to cache realpath information for a given
     # file or directory. For systems with rarely changing files, consider increasing this
     # value.
-    # http://php.net/realpath-cache-ttl
-    #realpath_cache_ttl = 120
-    public static function RealPathCacheTTL($Parameter){
+    public static function RealPathCacheTTL($Parameter = '120'){
 
-	ini_set();
+	ini_set('realpath_cache_ttl',$Parameter);
 	
 	return true;
     }
@@ -238,23 +197,18 @@ class SkeletOtherConfig{
     # (e.g. by adding its signature to the Web server header).  It is no security
     # threat in any way, but it makes it possible to determine whether you use PHP
     # on your server or not.
-    # http://php.net/expose-php
-    #expose_php = Off
-    public static function ExposePHP($Parameter){
+    public static function ExposePHP($Parameter = 'Off'){
 
-	ini_set();
+	ini_set('expose_php',$Parameter);
 	
 	return true;
     }
 
     # The separator used in PHP generated URLs to separate arguments.
     # PHP's default setting is "&".
-    # http://php.net/arg-separator.output
-    # Example:
-    #arg_separator.output = "&amp#"
-    public static function ArgSeparatorOutput($Parameter){
+    public static function ArgSeparatorOutput($Parameter = '&amp#'){
 
-	ini_set();
+	ini_set('arg_separator.output',$Parameter);
 	
 	return true;
     }
@@ -262,12 +216,9 @@ class SkeletOtherConfig{
     # List of separator(s) used by PHP to parse input URLs into variables.
     # PHP's default setting is "&".
     # NOTE: Every character in this directive is considered as separator!
-    # http://php.net/arg-separator.input
-    # Example:
-    #arg_separator.input = "#&"
-    public static function ArgSeparatorInput($Parameter){
+    public static function ArgSeparatorInput($Parameter = "#&"){
 
-	ini_set();
+	ini_set('arg_separator.input',$Parameter);
 	
 	return true;
     }
@@ -282,11 +233,9 @@ class SkeletOtherConfig{
     # Default Value: "EGPCS"
     # Development Value: "GPCS"
     # Production Value: "GPCS"#
-    # http://php.net/variables-order
-    #variables_order = "GPCS"
-    public static function VariablesOrder($Parameter){
+    public static function VariablesOrder($Parameter = 'GPCS'){
 
-	ini_set();
+	ini_set('variables_order',$Parameter);
 	
 	return true;
     }
@@ -301,11 +250,9 @@ class SkeletOtherConfig{
     # Default Value: None
     # Development Value: "GP"
     # Production Value: "GP"
-    # http://php.net/request-order
-    #request_order = "GP"
-    public static function RequestOrder($Parameter){
+    public static function RequestOrder($Parameter = 'GP'){
 
-	ini_set();
+	ini_set('request_order',$Parameter);
 	
 	return true;
     }
@@ -322,11 +269,9 @@ class SkeletOtherConfig{
     # Default Value: On
     # Development Value: Off
     # Production Value: Off
-    # http://php.net/register-argc-argv
-    #register_argc_argv = Off
-    public static function RegisterArgcArgv($Parameter){
+    public static function RegisterArgcArgv($Parameter = 'Off'){
 
-	ini_set();
+	ini_set('register_argc_argv',$Parameter);
 	
 	return true;
     }
@@ -337,64 +282,34 @@ class SkeletOtherConfig{
     # variables are not used within a script, having this directive on will result
     # in a performance gain. The PHP directive register_argc_argv must be disabled
     # for this directive to have any affect.
-    # http://php.net/auto-globals-jit
-    #auto_globals_jit = On
-    public static function AutoGlobalsJit($Parameter){
+    public static function AutoGlobalsJit($Parameter = 'On'){
 
-	ini_set();
+	ini_set('auto_globals_jit',$Parameter);
 	
 	return true;
     }
     
     # Directory in which the loadable extensions (modules) reside.
-    # http://php.net/extension-dir
-    # extension_dir = "./"
-    # On windows:
-    # extension_dir = "ext"
-    public static function ExtensionDir($Parameter){
+    public static function ExtensionDir($Parameter = './'){
 
-	ini_set();
+	ini_set('extension_dir',$Parameter);
 	
 	return true;
     }
     
     # Directory where the temporary files should be placed.
     # Defaults to the system default (see sys_get_temp_dir)
-    # sys_temp_dir = "/tmp"
-    public static function SysTempDir($Parameter){
+    public static function SysTempDir($Parameter = '/tmp'){
 
-	ini_set();
+	ini_set('sys_temp_dir',$Parameter);
 	
 	return true;
     }
     
     # Whether to allow the treatment of URLs (like http:// or ftp://) as files.
-    # http://php.net/allow-url-fopen
-    #allow_url_fopen = On
-    public static function AllowURLFopen($Parameter){
+    public static function AllowURLFopen($Parameter = 'On'){
 
-	ini_set();
-	
-	return true;
-    }
-
-    public static function AllowURLInclude($Parameter){
-
-	ini_set();
-	
-	return true;
-    }
-
-    public static function UserAgent($Parameter){
-
-	ini_set();
-	
-	return true;
-    }
-
-    public static function DefaultSocketTimeout($Parameter){
-
-	ini_set();
+	ini_set('allpw_url_fopen',$Parameter);
 	
 	return true;
     }
@@ -402,9 +317,9 @@ class SkeletOtherConfig{
     # Whether to allow include/require to open URLs (like http:// or ftp://) as files.
     # http://php.net/allow-url-include
     #allow_url_include = Off
-    public static function AutoDetectLineEndings($Parameter){
+    public static function AllowURLInclude($Parameter = 'Off'){
 
-	ini_set();
+	ini_set('allow_url_include',$Parameter);
 	
 	return true;
     }
