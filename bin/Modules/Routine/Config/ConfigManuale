@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # The number of significant digits displayed in floating point numbers.
 # http://php.net/precision
 precision = 14

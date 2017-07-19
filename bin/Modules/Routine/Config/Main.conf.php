@@ -20,10 +20,6 @@ class MainConfig extends SkeletMainConfig{
 
     public static $Debug;
 
-    // Time zone UTC+2
-    
-    public static $TimeZone;
-
     public static $Locale;
 
     public static $Modules;
