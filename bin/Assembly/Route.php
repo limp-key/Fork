@@ -2,9 +2,9 @@
 
 namespace Fork\Bin\Assembly;
 
-class Routes{
+class Juxtaposition{
 
-    public static function Include(){
+    public static function Start(){
 	$SearchingParameters = 'find ../route/ | grep ".php"';
 	
 	exec($SearchingParameters,$Route);
@@ -16,5 +16,3 @@ class Routes{
 	}
     }
 }
-
-Routes::Include();

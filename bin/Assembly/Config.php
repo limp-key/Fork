@@ -4,9 +4,9 @@ namespace Fork\Bin\Assembly;
 
 class Config{
 
-    public static function Include($ConfigDIR){
+    public static function Main($ConfigDIR){
 	
-	$SearchingParameters = 'find ../config/'.$ConfigDIR.' | grep ".Config.php"';
+	$SearchingParameters = 'find ../config/'.$ConfigDIR.' | grep ".config.php"';
 
 	exec($SearchingParameters,$Config);
 
@@ -15,7 +15,14 @@ class Config{
 		require_once $IncludeConfig;
 	    }
 	}
+    }
 
+    public static function Define(){
+	
+    }
+    
+    public static function Client(){
+	
 	/*
 	   Fork\Config\SystemConfig::Precision($Parameter);
 

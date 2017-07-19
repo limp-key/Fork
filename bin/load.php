@@ -1,6 +1,6 @@
 <?php
 
-# LEVEL 0 (FrameWork level)
+# LEVEL 0 (Parse level)
 # Include Parse, Route, Config classes
 
 require_once 'Parse/Request.php';
@@ -9,27 +9,29 @@ require_once 'Parse/Request.php';
 # and Include user's Config in this project
 # and assay Route
 
+# LEVEL 1 (Skelet level)
+
 require_once 'Config/SkeletMainConfig.php';
 require_once 'Config/SkeletDataBaseConfig.php';
 require_once 'Config/SkeletMailConfig.php';
 require_once 'Config/SkeletSystemConfig.php';
 
-require_once 'Route/Config.php';
-require_once 'Assembly/Config.php';
+require_once 'Controller/SkeletController.php';
+require_once 'Model/SkeletModel.php';
 
-# Load modules on framework
-require_once 'Assembly/Modules.php';
+require_once 'Route/SkeletRoute.php';
 
-# LEVEL 1 (Client level)
+# LEVEL 2 (Assembly level)
 # Include:
 #          User's Models      in models/
 #          User's Controllers in controllers/
 
-require_once 'Controller/SkeletController.php';
-require_once 'Model/SkeletModel.php';
-
-require_once 'Route/Utilizer.php';
-
+require_once 'Assembly/Config.php';
 require_once 'Assembly/Models.php';
 require_once 'Assembly/Controllers.php';
 require_once 'Assembly/Main.php';
+require_once 'Assembly/Modules.php';
+require_once 'Assembly/Route.php';
+
+# LEVEL 3 (Juxtaposition Level)
+\Fork\Bin\Assembly\Juxtaposition::Start();

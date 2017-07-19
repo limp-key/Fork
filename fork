@@ -45,11 +45,16 @@ then
 	sed -i "s/__Name__/$3/" route/$3.php
     elif [ $2 == '-config' ]
     then
-	mkdir config/$3
-	cp bin/Modules/Routine/Config/DataBase.Config.php config/$3
-	cp bin/Modules/Routine/Config/Mail.Config.php config/$3
-	cp bin/Modules/Routine/Config/Main.Config.php config/$3
-	cp bin/Modules/Routine/Config/System.Config.php config/$3
+	if [ $3 != '' ]
+	then
+	    mkdir config/$3
+	    cp bin/Modules/Routine/Config/DataBase.Config.php config/$3
+	    cp bin/Modules/Routine/Config/Mail.Config.php config/$3
+	    cp bin/Modules/Routine/Config/Main.Config.php config/$3
+	    cp bin/Modules/Routine/Config/System.Config.php config/$3
+	else
+	    cp bin/Modules/Routine/Config/System.Config.php config/
+	fi
     else 
 	echo "Invalid create type"
     fi
