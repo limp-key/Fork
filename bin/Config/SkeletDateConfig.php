@@ -16,47 +16,41 @@ class SkeletDateConfig{
 
     
     # Defines the default timezone used by the date functions
-    # http://php.net/date.timezone
-    #date.timezone =
-    public static function DateTimezone($Parameter){
+    public static function DateTimezone($Parameter = ''){
 
-	ini_set();
-	
-	return true;
-    }
-    
-    # http://php.net/date.default-latitude
-    #date.default_latitude = 31.7667
-    public static function DateDefaultLatitude($Parameter){
-
-	ini_set();
+	ini_set('date.timezone',$Parameter);
 	
 	return true;
     }
 
-    # http://php.net/date.default-longitude
-    #date.default_longitude = 35.2333
-    public static function DateDefaultLongitude($Parameter){
+    #
+    public static function DateDefaultLatitude($Parameter = '31.7667'){
 
-	ini_set();
+	ini_set('date.default_latitude',$Parameter);
 	
 	return true;
     }
-    
-    # http://php.net/date.sunrise-zenith
-    #date.sunrise_zenith = 90.583333
-    public static function DateSunriseZenith($Parameter){
 
-	ini_set();
+    #
+    public static function DateDefaultLongitude($Parameter = '35.2333'){
+
+	ini_set('date.default_longitude',$Parameter);
 	
 	return true;
     }
-    
-    # http://php.net/date.sunset-zenith
-    #date.sunset_zenith = 90.583333
-    public static function DateSunsetZenith($Parameter){
 
-	ini_set();
+    #
+    public static function DateSunriseZenith($Parameter = '90.58333'){
+
+	ini_set('date.sunrise_zenith',$Parameter);
+	
+	return true;
+    }
+
+    #
+    public static function DateSunsetZenith($Parameter = '90.583333'){
+
+	ini_set('date.sunset_zenith',$Parameter);
 	
 	return true;
     }

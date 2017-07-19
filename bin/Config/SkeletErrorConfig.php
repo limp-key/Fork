@@ -85,11 +85,9 @@ class SkeletErrorConfig{
     # Default Value: E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED
     # Development Value: E_ALL
     # Production Value: E_ALL & ~E_DEPRECATED & ~E_STRICT
-    # http://php.net/error-reporting
-    #error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
-    public static function ErrorReporting($Parameter){
+    public static function ErrorReporting($Parameter = 'E_ALL & ~E_DEPRECATED & ~E_STRICT'){
 
-	ini_set();
+	ini_set('error_reporting',$Parameter);
 	
 	return true;
     }
@@ -108,11 +106,9 @@ class SkeletErrorConfig{
     # Default Value: On
     # Development Value: On
     # Production Value: Off
-    # http://php.net/display-errors
-    #display_errors = Off
-    public static function DisplayErrors($Parameter){
+    public static function DisplayErrors($Parameter = 'Off'){
 
-	ini_set();
+	ini_set('display_errors',$Parameter);
 	
 	return true;
     }
@@ -127,9 +123,9 @@ class SkeletErrorConfig{
     # Production Value: Off
     # http://php.net/display-startup-errors
     #display_startup_errors = Off
-    public static function DisplayStartupErrors($Parameter){
+    public static function DisplayStartupErrors($Parameter = 'Off'){
 
-	ini_set();
+	ini_set('display_startup_errors',$Parameter);
 	
 	return true;
     }
@@ -141,33 +137,27 @@ class SkeletErrorConfig{
     # Default Value: Off
     # Development Value: On
     # Production Value: On
-    # http://php.net/log-errors
-    #log_errors = On
-    public static function LogErrors($Parameter){
+    public static function LogErrors($Parameter = 'On'){
 
-	ini_set();
+	ini_set('log_errors',$Parameter);
 	
 	return true;
     }
 
     # Set maximum length of log_errors. In error_log information about the source is
     # added. The default is 1024 and 0 allows to not apply any maximum length at all.
-    # http://php.net/log-errors-max-len
-    #log_errors_max_len = 1024
-    public static function LogErrorsMaxLen($Parameter){
+    public static function LogErrorsMaxLen($Parameter = '1024'){
 
-	ini_set();
+	ini_set('log_errors_max_len',$Parameter);
 	
 	return true;
     }
 
     # Do not log repeated messages. Repeated errors must occur in same file on same
     # line unless ignore_repeated_source is set true.
-    # http://php.net/ignore-repeated-errors
-    #ignore_repeated_errors = Off
-    public static function IgnoreRepeatedErrors($Parameter){
+    public static function IgnoreRepeatedErrors($Parameter = 'Off'){
 
-	ini_set();
+	ini_set('ignore_repeated_errors',$Parameter);
 	
 	return true;
     }
@@ -175,11 +165,9 @@ class SkeletErrorConfig{
     # Ignore source of message when ignoring repeated messages. When this setting
     # is On you will not log errors with repeated messages from different files or
     # source lines.
-    # http://php.net/ignore-repeated-source
-    #ignore_repeated_source = Off
-    public static function IgnoreRepeatedSource($Parameter){
+    public static function IgnoreRepeatedSource($Parameter = 'Off'){
 
-	ini_set();
+	ini_set('ignore_repeated_sourse',$Parameter);
 	
 	return true;
     }
@@ -187,20 +175,17 @@ class SkeletErrorConfig{
     # If this parameter is set to Off, then memory leaks will not be shown (on
     # stdout or in the log). This has only effect in a debug compile, and if
     # error reporting includes E_WARNING in the allowed list
-    # http://php.net/report-memleaks
-    #report_memleaks = On
-    public static function ReportMemleaks($Parameter){
+    public static function ReportMemleaks($Parameter = 'On'){
 
-	ini_set();
+	ini_set('report_memleaks',$Parameter);
 	
 	return true;
     }
 
     # This setting is on by default.
-    #report_zend_debug = 0 
-    public static function ReportZendDebug($Parameter){
+    public static function ReportZendDebug($Parameter = '0'){
 
-	ini_set();
+	ini_set('report_zend_debug',$Parameter);
 	
 	return true;
     }
@@ -211,30 +196,25 @@ class SkeletErrorConfig{
     # Default Value: Off
     # Development Value: On
     # Production Value: Off
-    # http://php.net/track-errors
-    #track_errors = Off
-    public static function TrackErrors($Parameter){
+    public static function TrackErrors($Parameter = 'Off'){
 
-	ini_set();
+	ini_set('track_errors',$Parameter);
 	
 	return true;
     }
 
     # Turn off normal error reporting and emit XML-RPC error XML
-    # http://php.net/xmlrpc-errors
-    #xmlrpc_errors = 0
-    public static function XMLrpcErrors($Parameter){
+    public static function XMLrpcErrors($Parameter = '0'){
 
-	ini_set();
+	ini_set('xmlrpc_errors',$Parameter);
 	
 	return true;
     }
 
     # An XML-RPC faultCode
-    #xmlrpc_error_number = 0
-    public static function XMLrpcErrorNumber($Parameter){
+    public static function XMLrpcErrorNumber($Parameter = '0'){
 
-	ini_set();
+	ini_set('xmlrpc_error_number',$Parameter);
 	
 	return true;
     }
@@ -246,49 +226,36 @@ class SkeletErrorConfig{
     # Default Value: On
     # Development Value: On
     # Production value: On
-    # http://php.net/html-errors
-    #html_errors = On
-    public static function HtmlErrors($Parameter){
+    public static function HtmlErrors($Parameter = 'On'){
 
-	ini_set();
+	ini_set('html_errors',$Parameter);
 	
 	return true;
     }
 
     # String to output before an error message. PHP's default behavior is to leave
     # this setting blank.
-    # http://php.net/error-prepend-string
-    # Example:
-    #error_prepend_string = "<span style='color: #ff0000'>"
-    public static function ErrorPrependString($Parameter){
+    public static function ErrorPrependString($Parameter = "<span style='color: #ff0000'>"){
 
-	ini_set();
+	ini_set('error_prepend_string',$Parameter);
 	
 	return true;
     }
     
     # String to output after an error message. PHP's default behavior is to leave
     # this setting blank.
-    # http://php.net/error-append-string
-    # Example:
-    #error_append_string = "</span>"
-    public static function ErrorAppendString($Parameter){
+    public static function ErrorAppendString($Parameter = "</span>"){
 
-	ini_set();
+	ini_set('error_append_string',$Parameter);
 	
 	return true;
     }
 
     # Log errors to specified file. PHP's default behavior is to leave this value
     # empty.
-    # http://php.net/error-log
-    # Example:
-    #error_log = php_errors.log
-    # Log errors to syslog.
-    #error_log = syslog
-    public static function ErrorLog($Parameter){
+    public static function ErrorLog($Parameter = 'syslog'){
 
-	ini_set();
+	ini_set('error_log',$Parameter);
 	
 	return true;
     }

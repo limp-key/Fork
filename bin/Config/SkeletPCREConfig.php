@@ -10,7 +10,7 @@ class SkeletPCREConfig{
 
     public static $PcreJit;
 
-    
+    #
     public static function PcreBacktrackLimit($Parameter){
 
 	ini_set();
@@ -18,6 +18,7 @@ class SkeletPCREConfig{
 	return true;
     }
 
+    #
     public static function PcreRecursionLimit($Parameter){
 
 	ini_set();
@@ -25,6 +26,7 @@ class SkeletPCREConfig{
 	return true;
     }
 
+    #
     public static function PcreJit($Parameter){
 
 	ini_set();
