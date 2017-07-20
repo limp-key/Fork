@@ -5,7 +5,7 @@ namespace Fork\Bin\Assembly;
 class Main{
 
     public static function Start($Class, $Method, $Config){
-
+	
 	# Load config
 	\Fork\Bin\Assembly\Config::Main($Config);
 

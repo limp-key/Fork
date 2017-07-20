@@ -2,7 +2,7 @@
 
 namespace Fork\Bin\Route;
 
-use \Fork\Bin\Assembly\Main;
+use \Fork\Bin\Assembly\Main as AssemblyMain;
 
 class SkeletRoute{
     
@@ -15,6 +15,6 @@ class SkeletRoute{
 	    return false;
 	}
 	
-	\Fork\Bin\Assembly\Main::Start($Class, $Method, $Config);
+	AssemblyMain::Start($Class, $Method, $Config);
     }
 }

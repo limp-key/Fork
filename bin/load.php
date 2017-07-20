@@ -3,7 +3,8 @@
 # LEVEL 0 (Parse level)
 # Include Parse, Route, Config classes
 
-require_once 'Parse/Request.php';
+require_once 'Request/Parse.php';
+\Fork\Bin\Request\Parse::Start();
 
 # First parse client Request
 # and Include user's Config in this project
@@ -31,7 +32,7 @@ require_once 'Assembly/Models.php';
 require_once 'Assembly/Controllers.php';
 require_once 'Assembly/Main.php';
 require_once 'Assembly/Modules.php';
-require_once 'Assembly/Route.php';
+require_once 'Assembly/Juxtaposition.php';
 
 # LEVEL 3 (Juxtaposition Level)
 \Fork\Bin\Assembly\Juxtaposition::Start();
