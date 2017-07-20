@@ -4,7 +4,6 @@
 # Include Parse, Route, Config classes
 
 require_once 'Request/Parse.php';
-\Fork\Bin\Request\Parse::Start();
 
 # First parse client Request
 # and Include user's Config in this project
@@ -12,10 +11,18 @@ require_once 'Request/Parse.php';
 
 # LEVEL 1 (Skelet level)
 
-require_once 'Config/SkeletMainConfig.php';
+require_once 'Config/SkeletCgiConfig.php';
 require_once 'Config/SkeletDataBaseConfig.php';
+require_once 'Config/SkeletDateConfig.php';
+require_once 'Config/SkeletErrorConfig.php';
+require_once 'Config/SkeletFileConfig.conf.php';
 require_once 'Config/SkeletMailConfig.php';
+require_once 'Config/SkeletMainConfig.php';
+require_once 'Config/SkeletOtherConfig.php';
+require_once 'Config/SkeletPCREConfig.php';
+require_once 'Config/SkeletSessionConfig.php';
 require_once 'Config/SkeletSystemConfig.php';
+require_once 'Config/SkeletZlibConfig.php';
 
 require_once 'Controller/SkeletController.php';
 require_once 'Model/SkeletModel.php';
