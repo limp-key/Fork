@@ -87,8 +87,21 @@ class SkeletErrorConfig{
     # Production Value: E_ALL & ~E_DEPRECATED & ~E_STRICT
     public static function ErrorReporting($Parameter = 'E_ALL & ~E_DEPRECATED & ~E_STRICT'){
 
-	ini_set('error_reporting',$Parameter);
-	
+	switch ($Parameter){
+		
+	    case 'E_ALL':
+		error_reporting(E_ALL);
+		break;
+		
+	    case 'E_ALL & ~E_NOTICE':
+		error_reporting(E_ALL & ~E_NOTICE);
+		break;
+		
+	    case 'E_ALL & ~E_DEPRECATED & ~E_STRICT':
+		error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
+		break;
+		
+	}
 	return true;
     }
 
