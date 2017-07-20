@@ -48,12 +48,9 @@ then
 	if [ $3 != '' ]
 	then
 	    mkdir config/$3
-	    cp bin/Modules/Routine/Config/DataBase.Config.php config/$3
-	    cp bin/Modules/Routine/Config/Mail.Config.php config/$3
-	    cp bin/Modules/Routine/Config/Main.Config.php config/$3
-	    cp bin/Modules/Routine/Config/System.Config.php config/$3
+	    cp bin/Modules/Routine/Config/* config/$3
 	else
-	    cp bin/Modules/Routine/Config/System.Config.php config/
+	    cp bin/Modules/Routine/Config/* config/
 	fi
     else 
 	echo "Invalid create type"
