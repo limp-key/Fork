@@ -4,10 +4,15 @@ namespace Fork\Bin\Assembly;
 
 class Config{
 
-    public static function Main($ConfigDIR){
-	
-	$SearchingParameters = 'find ../config/'.$ConfigDIR.' | grep ".config.php"';
+    public static function Main($Config){
 
+	if($Config){
+	    $SearchingParameters = 'find ../config/'.$Config.' | grep ".config.php"';
+	}
+	else{
+	    $SearchingParameters = 'find ../config/ -maxdepth 1 | grep ".config.php"';
+	}
+	
 	exec($SearchingParameters,$Config);
 
 	if(is_array($Config)){
