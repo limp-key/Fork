@@ -36,10 +36,12 @@ require_once 'Route/SkeletRoute.php';
 #          User's Controllers in controllers/
 
 require_once 'Assembly/Config.php';
+require_once 'Assembly/Modules.php';
+
 require_once 'Assembly/Models.php';
 require_once 'Assembly/Controllers.php';
+
 require_once 'Assembly/Main.php';
-require_once 'Assembly/Modules.php';
 require_once 'Assembly/Juxtaposition.php';
 
 # LEVEL 3 (Juxtaposition Level)
