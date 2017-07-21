@@ -4,6 +4,7 @@
 # Include Parse, Route, Config classes
 
 require_once 'Request/Parse.php';
+\Fork\Bin\Request\Parse::Start();
 
 # First parse client Request
 # and Include user's Config in this project
