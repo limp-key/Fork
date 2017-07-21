@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $# == 0 ]
+if [ $# == 0 ] || [ $1 == '--help' ]
 then
     echo
     echo 'Base'
@@ -30,19 +30,34 @@ elif [ $1 == '--create' ] && [ $2 != '' ] && [ $3 != '' ]
 then
     if  [ $2 == '-controller' ] 
     then
-	cp bin/Modules/Routine/Controller/Controller.php controllers/
-	mv controllers/Controller.php controllers/$3.php 
-	sed -i "s/__Name__/$3/" controllers/$3.php
+	if [ $3 != '' ]
+	then
+	    cp bin/Modules/Routine/Controller/Controller.php controllers/
+	    mv controllers/Controller.php controllers/$3.php 
+	    sed -i "s/__Name__/$3/" controllers/$3.php
+	else
+	    echo "Invalid name"
+	fi
     elif [ $2 == '-model' ] 
     then
-	cp bin/Modules/Routine/Model/Model.php models/
-	mv models/Model.php models/$3.php
-	sed -i "s/__Name__/$3/" models/$3.php
+	if [ $3 != '' ]
+	then
+	    cp bin/Modules/Routine/Model/Model.php models/
+	    mv models/Model.php models/$3.php
+	    sed -i "s/__Name__/$3/" models/$3.php
+	else
+	    echo "Invalid name"
+	fi
     elif [ $2 == '-route' ]
     then
-	cp bin/Modules/Routine/Route/Route.php route/
-	mv route/Route.php route/$3.php
-	sed -i "s/__Name__/$3/" route/$3.php
+	if [ $3 != '' ]
+	then
+	    cp bin/Modules/Routine/Route/Route.php route/
+	    mv route/Route.php route/$3.php
+	    sed -i "s/__Name__/$3/" route/$3.php
+	else
+	    echo "Invalid name"
+	fi
     elif [ $2 == '-config' ]
     then
 	if [ $3 != '' ]
