@@ -10,10 +10,10 @@ class Main{
 	\Fork\Bin\Assembly\Config::Main($Config);
 
 	# Load all enable modules
-	\Fork\Bin\Assembly\Modules::Include();
+	\Fork\Bin\Assembly\Modules::Includes();
 	
 	# Load recurcive all Models in folder /models
-	$Models = \Fork\Bin\Assembly\Models::Include();
+	$Models = \Fork\Bin\Assembly\Models::Includes();
 	
 	if(is_array($Models)){
 	    foreach($Models as $IncludeModel){
@@ -22,7 +22,7 @@ class Main{
 	}
 	
 	# Load recurcive all Controllers in folder /controllers
-	$Controllers = \Fork\Bin\Assembly\Controllers::Include();
+	$Controllers = \Fork\Bin\Assembly\Controllers::Includes();
 	
 	if(is_array($Controllers)){
 	    foreach($Controllers as $IncludeController){

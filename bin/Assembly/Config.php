@@ -4,14 +4,9 @@ namespace Fork\Bin\Assembly;
 
 class Config{
 
-    public static function Main($Config){
+    public static function Main($ConfigDIR){
 
-	if($Config){
-	    $SearchingParameters = 'find ../config/'.$Config.' | grep ".config.php"';
-	}
-	else{
-	    $SearchingParameters = 'find ../config/ -maxdepth 1 | grep ".config.php"';
-	}
+	$SearchingParameters = 'find ../config/ -maxdepth 1 | grep ".config.php"';
 	
 	exec($SearchingParameters,$Config);
 
@@ -20,6 +15,18 @@ class Config{
 		require_once $IncludeConfig;
 	    }
 	}
+	
+	if($ConfigDIR){
+	    $SearchingParameters = 'find ../config/'.$ConfigDIR.' | grep ".config.php"';
+
+	    exec($SearchingParameters,$Config);
+
+	    if(is_array($Config)){
+		foreach($Config as $IncludeConfig){
+		    require_once $IncludeConfig;
+		}
+	    }
+	}		
     }
 
     public static function Define(){

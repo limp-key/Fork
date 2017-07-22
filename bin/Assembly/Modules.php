@@ -4,7 +4,7 @@ namespace Fork\Bin\Assembly;
 
 class Modules{
 
-    public static function Include(){
+    public static function Includes(){
 	
 	require_once \Fork\Config\MainConfig::$ProjectPath.'bin/Modules/Assay/Request.php';
 	require_once \Fork\Config\MainConfig::$ProjectPath.'bin/Modules/Assay/Validation.php';
