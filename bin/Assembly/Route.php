@@ -2,7 +2,7 @@
 
 namespace Fork\Bin\Assembly;
 
-class Juxtaposition{
+class Route{
 
     public static function Start(){
 	$SearchingParameters = 'find ../route/ | grep ".php"';
