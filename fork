@@ -26,7 +26,7 @@ then
     rm config/ForkConfig.php
     rm views/index.fork.html.php
 
-elif [ $1 == '--create' ] && [ $2 != '' ] && [ $3 != '' ]
+elif [ $1 == '--create' ] && [ $2 != '' ]
 then
     if  [ $2 == '-controller' ] 
     then
@@ -60,12 +60,13 @@ then
 	fi
     elif [ $2 == '-config' ]
     then
-	if [ $3 != '' ]
+	if [ $3 ] && [ $3 != '' ]
 	then
 	    mkdir config/$3
-	    cp bin/Modules/Routine/Config/* config/$3
+	    cp bin/Modules/Routine/Config/Other/* config/$3
+	    sed -i "s/__NAME__/$3/" config/$3/*.php
 	else
-	    cp bin/Modules/Routine/Config/* config/
+	    cp bin/Modules/Routine/Config/Main/* config/
 	fi
     else 
 	echo "Invalid create type"

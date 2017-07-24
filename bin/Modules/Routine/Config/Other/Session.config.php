@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Config\ForkConfig;
+namespace Fork\Config\__NAME__;
 
 use \Fork\Config\SessionConfig;
 
