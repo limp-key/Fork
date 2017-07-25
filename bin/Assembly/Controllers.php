@@ -4,7 +4,7 @@ namespace Fork\Bin\Assembly;
 
 class Controllers{
 
-    public static function Includes(){
+    public static function Start(){
 	
 	$SearchingParameters = 'find ../controllers/ | grep ".php"';
 	

@@ -4,7 +4,7 @@ namespace Fork\Bin\Assembly;
 
 class Modules{
 
-    public static function Includes(){
+    public static function Start(){
 	
 	require_once \Fork\Config\MainConfig::$ProjectPath.'bin/Modules/Assay/Request.php';
 	require_once \Fork\Config\MainConfig::$ProjectPath.'bin/Modules/Assay/Validation.php';
@@ -18,7 +18,7 @@ class Modules{
 	require_once \Fork\Config\MainConfig::$ProjectPath.'bin/Modules/CMedia/ConvertMedia.php';
 	
 	/*
-	   $SearchingParameters = "find Modules/ | grep '^./[^#].*Chief\.php$'";
+	   $SearchingParameters = sprintf('find Modules/ | grep "^./[^#].*Chief\.php$"');
 	   exec($SearchingParameters,$Config);
 	   
 	   if(is_array($Config)){

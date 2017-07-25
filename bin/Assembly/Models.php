@@ -4,7 +4,7 @@ namespace Fork\Bin\Assembly;
 
 class Models{
 
-    public static function Includes(){
+    public static function Start(){
 	
 	$SearchingParameters = 'find ../models/ | grep ".php"';
 
