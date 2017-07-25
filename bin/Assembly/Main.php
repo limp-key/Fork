@@ -4,10 +4,17 @@ namespace Fork\Bin\Assembly;
 
 class Main{
 
-    public static function Start($Class, $Method, $Config){
+    public static function Start($Class, $Method, $Config = ''){
 	
 	# Load config
 	\Fork\Bin\Assembly\Config::Start($Config);
+
+	\Fork\Bin\Assembly\Config::Default();
+
+	\Fork\Bin\Assembly\Config::Main();
+
+	if (!empty($Config))
+	    \Fork\Bin\Assembly\Config::Additional($Config);
 
 	# Load all enable modules
 	\Fork\Bin\Assembly\Modules::Start();

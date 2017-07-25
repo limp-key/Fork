@@ -55,13 +55,17 @@ class Config{
 
 	\Fork\Bin\Config\DefaultConfig::AutoDetectLineEndings(\Fork\Bin\Config\DefaultConfig::$Parameter);
 
+	\Fork\Bin\Config\DefaultConfig::ExposePHP(\Fork\Bin\Config\DefaultConfig::$Parameter);
+
+	\Fork\Bin\Config\DefaultConfig::ArgSeparatorOutput(\Fork\Bin\Config\DefaultConfig::$Parameter);
+
+	\Fork\Bin\Config\DefaultConfig::ImplicitFlush(\Fork\Bin\Config\DefaultConfig::$Parameter);
+
     }
 
     public static function Main(){
 
 	# Other
-	
-	\Fork\Config\OtherConfig::ArgSeparatorOutput(\Fork\Config\OtherConfig::$Parameter);
 
 	\Fork\Config\OtherConfig::ArgSeparatorInput(\Fork\Config\OtherConfig::$Parameter);
 
@@ -77,8 +81,6 @@ class Config{
 
 	\Fork\Config\OtherConfig::OutputHandler(\Fork\Config\OtherConfig::$Parameter);
 
-	\Fork\Config\OtherConfig::ImplicitFlush(\Fork\Config\OtherConfig::$Parameter);
-
 	\Fork\Config\OtherConfig::UnserializeCallbackFunc(\Fork\Config\OtherConfig::$Parameter);
 
 	\Fork\Config\OtherConfig::SerializePrecision(\Fork\Config\OtherConfig::$Parameter);
@@ -86,8 +88,6 @@ class Config{
 	\Fork\Config\OtherConfig::RealPathCacheSize(\Fork\Config\OtherConfig::$Parameter);
 
 	\Fork\Config\OtherConfig::RealPathCacheTTL(\Fork\Config\OtherConfig::$Parameter);
-
-	\Fork\Config\OtherConfig::ExposePHP(\Fork\Config\OtherConfig::$Parameter);
 
 	# System
 
@@ -291,8 +291,6 @@ class Config{
 
 	# Other
 	
-	\Fork\Config\OtherConfig::ArgSeparatorOutput(\Fork\Config\OtherConfig::$Parameter);
-
 	\Fork\Config\OtherConfig::ArgSeparatorInput(\Fork\Config\OtherConfig::$Parameter);
 
 	\Fork\Config\OtherConfig::VariablesOrder(\Fork\Config\OtherConfig::$Parameter);
@@ -307,8 +305,6 @@ class Config{
 
 	\Fork\Config\OtherConfig::OutputHandler(\Fork\Config\OtherConfig::$Parameter);
 
-	\Fork\Config\OtherConfig::ImplicitFlush(\Fork\Config\OtherConfig::$Parameter);
-
 	\Fork\Config\OtherConfig::UnserializeCallbackFunc(\Fork\Config\OtherConfig::$Parameter);
 
 	\Fork\Config\OtherConfig::SerializePrecision(\Fork\Config\OtherConfig::$Parameter);
@@ -316,8 +312,6 @@ class Config{
 	\Fork\Config\OtherConfig::RealPathCacheSize(\Fork\Config\OtherConfig::$Parameter);
 
 	\Fork\Config\OtherConfig::RealPathCacheTTL(\Fork\Config\OtherConfig::$Parameter);
-
-	\Fork\Config\OtherConfig::ExposePHP(\Fork\Config\OtherConfig::$Parameter);
 
 	# System
 
