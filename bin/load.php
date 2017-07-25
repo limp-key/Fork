@@ -15,6 +15,7 @@ require_once 'Request/Parse.php';
 require_once 'Config/SkeletCgiConfig.php';
 require_once 'Config/SkeletDataBaseConfig.php';
 require_once 'Config/SkeletDateConfig.php';
+require_once 'Config/SkeletDefaultConfig.php';
 require_once 'Config/SkeletErrorConfig.php';
 require_once 'Config/SkeletFileConfig.conf.php';
 require_once 'Config/SkeletMailConfig.php';

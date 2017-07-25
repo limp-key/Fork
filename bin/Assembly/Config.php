@@ -31,36 +31,36 @@ class Config{
 
     public static function Default(){
 	
-	\Fork\Bin\Config\DefaultConfig::Precision(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::UrlRewriterTags(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::UrlRewriterHosts(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::ZendEnableGC(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::ZendMultibyte(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::ZendScriptEncoding(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::OpenBasedir(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::DisableFunctions(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::DisableClasses(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::UserAgent(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::DefaultSocketTimeout(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::AutoDetectLineEndings(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::ExposePHP(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::ArgSeparatorOutput(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
-	\Fork\Bin\Config\DefaultConfig::ImplicitFlush(\Fork\Bin\Config\DefaultConfig::$Parameter);
-
+	\Fork\Bin\Config\DefaultConfig::ArgSeparatorOutput('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::AutoDetectLineEndings('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::DefaultSocketTimeout('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::DisableClasses('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::DisableFunctions('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::ExposePHP('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::ImplicitFlush('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::OpenBasedir('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::Precision('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::UrlRewriterHosts('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::UrlRewriterTags('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::UserAgent('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::ZendEnableGC('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::ZendMultibyte('parameter');
+	
+	\Fork\Bin\Config\DefaultConfig::ZendScriptEncoding('parameter');
+	
     }
 
     public static function Main(){

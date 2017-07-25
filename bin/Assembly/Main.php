@@ -16,6 +16,8 @@ class Main{
 	if (!empty($Config))
 	    \Fork\Bin\Assembly\Config::Additional($Config);
 
+	phpinfo();
+	
 	# Load all enable modules
 	\Fork\Bin\Assembly\Modules::Start();
 	
