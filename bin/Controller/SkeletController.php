@@ -10,24 +10,28 @@ class SkeletController{
     public function json($Parameters = array()){
 	
 	if(!empty($Parameters))
-	    json_encode($Parameters);
-	
-	return true;
+	    return json_encode($Parameters);
+	else
+	    return false;
     }
     
-    public function view($Path = '/',$Parameters = array()){
+    public function view($Path, $Parameters = array()){
 	
 	if(!empty($Parameters))
 	    extract($Parameters);
+
+	$View = spritf('%s/views/%s', $ProjectPath, $Path);
 	
-	include '../views/'.$Path;
+	include $View;
 	
 	return true;
     }
 
     public function redirect($Path = '/'){
+
+	$Redirect = sprintf('Location: %s', $Path);
 	
-	header('Location: '.$Path);
+	header($Redirect);
 	
 	return true;
     }

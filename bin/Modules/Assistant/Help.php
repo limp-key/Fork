@@ -24,4 +24,9 @@ class Help{
 	
 	echo '</pre>';
     }
+
+    public static function Token(){
+
+	
+    }
 }
