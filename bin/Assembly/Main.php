@@ -7,7 +7,7 @@ class Main{
     public static function Start($Class, $Method, $Config){
 	
 	# Load config
-	\Fork\Bin\Assembly\Config::Main($Config);
+	\Fork\Bin\Assembly\Config::Start($Config);
 
 	# Load all enable modules
 	\Fork\Bin\Assembly\Modules::Includes();
