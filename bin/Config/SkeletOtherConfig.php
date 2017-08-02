@@ -89,7 +89,7 @@ class SkeletOtherConfig{
     # Production Value: 4096
     public static function OutputBuffering($Parameter = '4096'){
 
-	ini_set('output_buffering',$Presicion);
+	ini_set('output_buffering',$Parameter);
 	
 	return true;
     }

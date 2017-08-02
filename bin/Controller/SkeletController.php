@@ -17,17 +17,17 @@ class SkeletController{
     
     public function view($Path, $Parameters = array()){
 
-	$Variables = array_keys(get_defined_vars());
+	/*$Variables = array_keys(get_defined_vars());
 	for ($Interation = 0; $Interation < sizeOf($Variables); $Interation++){
 	    
 	    unset($$Variables[$Interation]);
 	}
-	unset($Variables,$Interation);
+	   unset($Variables,$Interation);*/
 	
 	if(!empty($Parameters))
 	    extract($Parameters);
-
-	$View = spritf('%s/views/%s', $ProjectPath, $Path);
+	
+	$View = sprintf('%s/views/%s', \Fork\Config\MainConfig::$ProjectPath, $Path);
 	
 	include $View;
 	

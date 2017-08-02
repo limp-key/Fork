@@ -13,11 +13,11 @@ class Main{
 
 	\Fork\Bin\Assembly\Config::Mains();
 
-	if (!empty($Config))
-	    \Fork\Bin\Assembly\Config::Additionals($Config);
+	#if (!empty($Config))
+	 #   \Fork\Bin\Assembly\Config::Additionals($Config);
 
-	phpinfo();
-	
+	#phpinfo();
+
 	# Load all enable modules
 	\Fork\Bin\Assembly\Modules::Start();
 	
