@@ -9,12 +9,12 @@ class Main{
 	# Load config
 	\Fork\Bin\Assembly\Config::Start($Config);
 
-	\Fork\Bin\Assembly\Config::Default();
+	\Fork\Bin\Assembly\Config::Defaults();
 
-	\Fork\Bin\Assembly\Config::Main();
+	\Fork\Bin\Assembly\Config::Mains();
 
 	if (!empty($Config))
-	    \Fork\Bin\Assembly\Config::Additional($Config);
+	    \Fork\Bin\Assembly\Config::Additionals($Config);
 
 	phpinfo();
 	

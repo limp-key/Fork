@@ -1,44 +1,54 @@
 <!doctype html>
 <html>
     <head>
-	<link rel="shortcut icon" href="picture/Fork.png">
 	<title>Fork</title>
 	<style>
-	 html,body{
-	     height:100%;
+	 h1{
+	     font-size:54pt;
+	     font-family:Helvetica;
 	     padding:0;
 	     margin:0;
-	     background: #F1F1F1;
+	     text-align:right;
+	     padding-right:100px;
+	     opacity:.8;
+	     margin-bottom:100px;
 	 }
-	 .element{
-	     padding-top:20px;
-	 }
-	 .wrap{
-	     width: 600px;
+	 .center{
 	     margin-left:auto;
 	     margin-right:auto;
-
+	     overflow:hidden;
+	     width:678px;
+	     position:relative;
+	     margin-top:10%;
+	     color:#010019;
+	     background-image: url(picture/fork_opacity.png);
+	     background-repeat:no-repeat;
+	     height:400px;
+	     text-align:right;
 	 }
-	 .wrap > *{
-	     padding:20px;
-	     background: #fff;
-	     box-shadow: 0 0 15px #d3d3d3;
-	     margin-bottom:20px;
+	 .center a{
+	     font-size:20px;
+	     color:#010019;
+	     font-family:Helvetica;
+	     opacity:.8;
 	 }
-	 h2{
-	     margin:0;
-	     color: grey;
+	 .link{
+	     padding-right:100px;
 	 }
-	 p{
-	     color: grey;
+	 .link a{
+	     margin-left:15px;
+	     margin-right:15px;
 	 }
 	</style>
     </head>
     <body>
-	<div class="element">
-	    <div class="wrap">
-		<h2>Hello <?php echo $message; ?><br>This is test page in the Fork</h2>	
-		<p>If you saw this text, then everything works fine</p>
+	<div class="center">
+	    <h1>Fork</h1>
+	   
+	    <div class="link">
+		<a href="https://github.com/limp-key/Fork">GitHub</a>
+		<a href="https://github.com/limp-key/Fork">Documentation</a>
+		<a href="https://github.com/limp-key/Fork">Site</a>
 	    </div>
 	</div>
     </body>

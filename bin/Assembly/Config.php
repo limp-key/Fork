@@ -29,7 +29,7 @@ class Config{
 	}		
     }
 
-    public static function Default(){
+    public static function Defaults(){
 	
 	\Fork\Bin\Config\DefaultConfig::ArgSeparatorOutput('parameter');
 	
@@ -41,19 +41,19 @@ class Config{
 	
 	\Fork\Bin\Config\DefaultConfig::DisableFunctions('parameter');
 	
-	\Fork\Bin\Config\DefaultConfig::ExposePHP('parameter');
+	\Fork\Bin\Config\DefaultConfig::ExposePHP('Off');
 	
 	\Fork\Bin\Config\DefaultConfig::ImplicitFlush('parameter');
 	
 	\Fork\Bin\Config\DefaultConfig::OpenBasedir('parameter');
 	
-	\Fork\Bin\Config\DefaultConfig::Precision('parameter');
+	\Fork\Bin\Config\DefaultConfig::Precision('15');
 	
 	\Fork\Bin\Config\DefaultConfig::UrlRewriterHosts('parameter');
 	
 	\Fork\Bin\Config\DefaultConfig::UrlRewriterTags('parameter');
 	
-	\Fork\Bin\Config\DefaultConfig::UserAgent('parameter');
+	\Fork\Bin\Config\DefaultConfig::UserAgent('');
 	
 	\Fork\Bin\Config\DefaultConfig::ZendEnableGC('parameter');
 	
@@ -63,7 +63,7 @@ class Config{
 	
     }
 
-    public static function Main(){
+    public static function Mains(){
 
 	# Other
 
@@ -287,7 +287,7 @@ class Config{
 	
     }
     
-    public static function Additional($Config){
+    public static function Additionals($Config){
 
 	# Other
 	
