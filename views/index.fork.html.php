@@ -3,7 +3,14 @@
     <head>
 	<title>Fork</title>
 	<style>
-	 h1{
+	 html,body{
+	     width:100%;
+	     height:100%;
+	     padding:0;
+	     margin:0;
+	     box-sizing:border-box;
+	 }
+	 .wrap h1{
 	     font-size:54pt;
 	     font-family:Helvetica;
 	     padding:0;
@@ -13,24 +20,36 @@
 	     opacity:.8;
 	     margin-bottom:100px;
 	 }
-	 .center{
+	 .wrap h1:hover{
+	     opacity:.5;
+	     transition:.4s;
+	     cursor:pointer;
+	 }
+	 .wrap{
+	     padding-top:10%;
+	 }
+	 .wrap .center{
 	     margin-left:auto;
 	     margin-right:auto;
 	     overflow:hidden;
 	     width:678px;
 	     position:relative;
-	     margin-top:10%;
 	     color:#010019;
 	     background-image: url(picture/fork_opacity.png);
 	     background-repeat:no-repeat;
 	     height:400px;
 	     text-align:right;
 	 }
-	 .center a{
+	 .wrap .center a{
 	     font-size:20px;
 	     color:#010019;
 	     font-family:Helvetica;
 	     opacity:.8;
+	 }
+	 .wrap .center a:hover{
+	     opacity:.5;
+	     transition:.4s;
+	     cursor:pointer;
 	 }
 	 .link{
 	     padding-right:100px;
@@ -42,13 +61,15 @@
 	</style>
     </head>
     <body>
-	<div class="center">
-	    <h1>Fork</h1>
-	   
-	    <div class="link">
-		<a href="https://github.com/limp-key/Fork">GitHub</a>
-		<a href="https://github.com/limp-key/Fork">Documentation</a>
-		<a href="https://github.com/limp-key/Fork">Site</a>
+	<div class="wrap">
+	    <div class="center">
+		<h1>Fork</h1>
+		
+		<div class="link">
+		    <a href="https://github.com/limp-key/Fork">GitHub</a>
+		    <a href="https://github.com/limp-key/Fork">Documentation</a>
+		    <a href="https://github.com/limp-key/Fork">Site</a>
+		</div>
 	    </div>
 	</div>
     </body>
