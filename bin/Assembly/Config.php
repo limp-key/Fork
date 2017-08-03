@@ -193,10 +193,6 @@ class Config{
 
 	\Fork\Config\FileConfig::MaxFileUploads(\Fork\Config\FileConfig::$MaxFileUploads);
 
-	#\Fork\Config\FileConfig::AllowURLFopen(\Fork\Config\FileConfig::$AllowURLFopen);
-
-	#\Fork\Config\FileConfig::AllowURLInclude(\Fork\Config\FileConfig::$AllowURLInclude);
-
 	\Fork\Config\FileConfig::AutoPrependFile(\Fork\Config\FileConfig::$AutoPrependFile);
 
 	\Fork\Config\FileConfig::AutoAppendFile(\Fork\Config\FileConfig::$AutoAppendFile);

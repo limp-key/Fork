@@ -6,16 +6,16 @@ use \Fork\Bin\Config\SkeletFileConfig;
 
 class FileConfig extends SkeletFileConfig{
 
-    public static $FileUploads = 'On';
+    public static $FileUploads = 0;
 
-    public static $UploadTmpDir = '';
+    public static $UploadTmpDir = '/var/www/';
 
-    public static $UploadMaxFilesize = '2M';
+    public static $UploadMaxFilesize = '4M';
 
     public static $MaxFileUploads = '20';
 
-    public static $AutoPrependFile = '';
+    public static $AutoPrependFile = 'adf';
     
-    public static $AutoAppendFile = '';
+    public static $AutoAppendFile = 'adf';
 
 }

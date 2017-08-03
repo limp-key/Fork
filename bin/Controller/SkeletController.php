@@ -16,7 +16,7 @@ class SkeletController{
     }
     
     public function view($Path, $Parameters = array()){
-
+	
 	/*$Variables = array_keys(get_defined_vars());
 	for ($Interation = 0; $Interation < sizeOf($Variables); $Interation++){
 	    
@@ -29,7 +29,7 @@ class SkeletController{
 	
 	$View = sprintf('%s/views/%s', \Fork\Config\MainConfig::$ProjectPath, $Path);
 	
-	include $View;
+	require_once $View;
 	
 	return true;
     }
