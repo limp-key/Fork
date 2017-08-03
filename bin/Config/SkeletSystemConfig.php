@@ -31,7 +31,7 @@ class SkeletSystemConfig{
     
     # Maximum execution time of each script, in seconds
     # Note: This directive is hardcoded to 0 for the CLI SAPI
-    public static function MaxExecutionTime($Parameter = '30'){
+    public static function MaxExecutionTime($Parameter = 30){
 
 	ini_set('max_execution_time',$Parameter);
 	
@@ -45,7 +45,7 @@ class SkeletSystemConfig{
     # Default Value: -1 (Unlimited)
     # Development Value: 60 (60 seconds)
     # Production Value: 60 (60 seconds)
-    public static function MaxInputTime($Parameter = '60'){
+    public static function MaxInputTime($Parameter = 60){
 
 	ini_set('max_input_time',$Parameter);
 	
@@ -53,7 +53,7 @@ class SkeletSystemConfig{
     }
 
     # Maximum input variable nesting level
-    public static function MaxInputNestingLevel($Parameter = '64'){
+    public static function MaxInputNestingLevel($Parameter = 64){
 
 	ini_set('max_input_nesting_level',$Parameter);
 	
@@ -61,7 +61,7 @@ class SkeletSystemConfig{
     }
 
     # How many GET/POST/COOKIE input variables may be accepted
-    public static function MaxInputVars($Parameter = '1000'){
+    public static function MaxInputVars($Parameter = 1000){
 
 	ini_set('max_input_vars',$Parameter);
 	
@@ -145,5 +145,4 @@ class SkeletSystemConfig{
 	
 	return true;
     }
-
 }

@@ -116,7 +116,7 @@ class SkeletSessionConfig{
     # session ID if browser sends uninitialized session ID. Strict mode protects
     # applications from session fixation via session adoption vulnerability. It is
     # disabled by default for maximum compatibility, but enabling it is encouraged.
-    public static function SessionUseStrictMode($Parameter = '0'){
+    public static function SessionUseStrictMode($Parameter = 0){
 
 	ini_set('session.use_strict_mode',$Parameter);
 	
@@ -124,7 +124,7 @@ class SkeletSessionConfig{
     }
 
     # Whether to use cookies.
-    public static function SessionUseCookies($Parameter = '1'){
+    public static function SessionUseCookies($Parameter = 1){
 
 	ini_set('session.use_cookies',$Parameter);
 	
@@ -143,7 +143,7 @@ class SkeletSessionConfig{
     # the session id. We encourage this operation as it's very helpful in combating
     # session hijacking when not specifying and managing your own session id. It is
     # not the be-all and end-all of session hijacking defense, but it's a good start.
-    public static function SessionUseOnlyCookies($Parameter = '1'){
+    public static function SessionUseOnlyCookies($Parameter = 1){
 
 	ini_set('session.use_only_cookies',$Parameter);
 	
@@ -159,7 +159,7 @@ class SkeletSessionConfig{
     }
 
     # Initialize session on request startup.
-    public static function SessionAutoStart($Parameter = '0'){
+    public static function SessionAutoStart($Parameter = 0){
 
 	ini_set('session.auto_start',$Parameter);
 	
@@ -167,7 +167,7 @@ class SkeletSessionConfig{
     }
 
     # Lifetime in seconds of cookie or, if 0, until browser is restarted.
-    public static function SessionCookieLifetime($Parameter = '0'){
+    public static function SessionCookieLifetime($Parameter = 0){
 
 	ini_set('session.cookie_lifetime',$Parameter);
 	
@@ -216,7 +216,7 @@ class SkeletSessionConfig{
     # Default Value: 1
     # Development Value: 1
     # Production Value: 1
-    public static function SessionGCProbability($Parameter = '1'){
+    public static function SessionGCProbability($Parameter = 1){
 
 	ini_set('session.gc_probability',$Parameter);
 	
@@ -234,7 +234,7 @@ class SkeletSessionConfig{
     # Default Value: 100
     # Development Value: 1000
     # Production Value: 1000
-    public static function SessionGCDivisor($Parameter = '1000'){
+    public static function SessionGCDivisor($Parameter = 1000){
 
 	ini_set('session.gc_divisor',$Parameter);
 	
@@ -243,7 +243,7 @@ class SkeletSessionConfig{
 
     # After this number of seconds, stored data will be seen as 'garbage' and
     # cleaned up by the garbage collection process.
-    public static function SessionGCMaxlifetime($Parameter = '1440'){
+    public static function SessionGCMaxlifetime($Parameter = 1440){
 
 	ini_set('session.gc_maxlifetime',$Parameter);
 	
@@ -277,7 +277,7 @@ class SkeletSessionConfig{
     }
 
     # Document expires after n minutes.
-    public static function SessionCacheExpire($Parameter = '180'){
+    public static function SessionCacheExpire($Parameter = 180){
 
 	ini_set('session.cache_expire',$Parameter);
 	
@@ -293,7 +293,7 @@ class SkeletSessionConfig{
     #   in publicly accessible computer.
     # - User may access your site with the same session ID
     #   always using URL stored in browser's history or bookmarks.
-    public static function SessionUseTransSid($Parameter = '0'){
+    public static function SessionUseTransSid($Parameter = 0){
 
 	ini_set('session.use_trans_sid',$Parameter);
 	
@@ -307,7 +307,7 @@ class SkeletSessionConfig{
     # Default Value: 32
     # Development Value: 26
     # Production Value: 26
-    public static function SessionSidLength($Parameter = '26'){
+    public static function SessionSidLength($Parameter = 26){
 
 	ini_set('session.sid_length',$Parameter);
 	
@@ -357,7 +357,7 @@ class SkeletSessionConfig{
     # Default Value: 4
     # Development Value: 5
     # Production Value: 5
-    public static function SessionSidBitsPerCharacter($Parameter = '5'){
+    public static function SessionSidBitsPerCharacter($Parameter = 5){
 
 	ini_set('session.sid_bits_per_characret',$Parameter);
 	
@@ -426,7 +426,7 @@ class SkeletSessionConfig{
     # Default Value: 1
     # Development Value: 1
     # Production Value: 1
-    public static function SessionUploadProgressMinFreq($Parameter = '1'){
+    public static function SessionUploadProgressMinFreq($Parameter = 1){
 
 	ini_set('session.upload_progress.min_freq',$Parameter);
 	

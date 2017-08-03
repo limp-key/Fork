@@ -217,7 +217,7 @@ class SkeletErrorConfig{
     }
 
     # Turn off normal error reporting and emit XML-RPC error XML
-    public static function XMLrpcErrors($Parameter = '0'){
+    public static function XMLrpcErrors($Parameter = 0){
 
 	ini_set('xmlrpc_errors',$Parameter);
 	
@@ -225,7 +225,7 @@ class SkeletErrorConfig{
     }
 
     # An XML-RPC faultCode
-    public static function XMLrpcErrorNumber($Parameter = '0'){
+    public static function XMLrpcErrorNumber($Parameter = 0){
 
 	ini_set('xmlrpc_error_number',$Parameter);
 	

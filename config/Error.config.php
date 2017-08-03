@@ -8,7 +8,7 @@ class ErrorConfig extends SkeletErrorConfig{
 
     public static $ErrorReporting = 'E_ALL & ~E_DEPRECATED & ~E_STRICT';
 
-    public static $DisplayErrors = 'Off';
+    public static $DisplayErrors = 'On';
 
     public static $DisplayStartupErrors = 'Off';
 

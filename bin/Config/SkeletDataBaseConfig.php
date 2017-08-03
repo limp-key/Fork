@@ -4,13 +4,13 @@ namespace Fork\Bin\Config;
 
 class SkeletDataBaseConfig {
     
-    public static $Host;
+    public static $Host = 'localhost';
 
-    public static $UserName;
+    public static $UserName = '';
 
-    public static $Password;
+    public static $Password = '';
     
-    public static $DataBase;
+    public static $DataBase = '';
 
     public function __construct(){
 	

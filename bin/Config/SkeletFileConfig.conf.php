@@ -42,7 +42,7 @@ class SkeletFileConfig{
     }
 
     # Maximum number of files that can be uploaded via a single request
-    public static function MaxFileUploads($Parameter = '20'){
+    public static function MaxFileUploads($Parameter = 20){
 
 	ini_set('max_file_uploads',$Parameter);
 	

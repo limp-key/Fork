@@ -59,7 +59,7 @@ class SkeletOtherConfig{
     public static $AutoDetectLineEndings;
 
     # The number of significant digits displayed in floating point numbers.
-    public static function Precision($Parameter = '14'){
+    public static function Precision($Parameter = 14){
 
 	ini_set('precision',$Parameter);
 	
@@ -87,7 +87,7 @@ class SkeletOtherConfig{
     # Default Value: Off
     # Development Value: 4096
     # Production Value: 4096
-    public static function OutputBuffering($Parameter = '4096'){
+    public static function OutputBuffering($Parameter = 4096){
 
 	ini_set('output_buffering',$Parameter);
 	
@@ -126,7 +126,7 @@ class SkeletOtherConfig{
     # The value is also used for json_encode when encoding double values.
     # If -1 is used, then dtoa mode 0 is used which automatically select the best
     # precision.
-    public static function SerializePrecision($Parameter = '-1'){
+    public static function SerializePrecision($Parameter = -1){
 
 	ini_set('serialize_precision',$Parameter);
 	
@@ -186,7 +186,7 @@ class SkeletOtherConfig{
     # Duration of time, in seconds for which to cache realpath information for a given
     # file or directory. For systems with rarely changing files, consider increasing this
     # value.
-    public static function RealPathCacheTTL($Parameter = '120'){
+    public static function RealPathCacheTTL($Parameter = 120){
 
 	ini_set('realpath_cache_ttl',$Parameter);
 	
