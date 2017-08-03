@@ -20,7 +20,6 @@ require_once 'Config/SkeletErrorConfig.php';
 require_once 'Config/SkeletFileConfig.conf.php';
 require_once 'Config/SkeletMailConfig.php';
 require_once 'Config/SkeletMainConfig.php';
-require_once 'Config/SkeletOtherConfig.php';
 require_once 'Config/SkeletPCREConfig.php';
 require_once 'Config/SkeletSessionConfig.php';
 require_once 'Config/SkeletSystemConfig.php';

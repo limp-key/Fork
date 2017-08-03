@@ -2,7 +2,7 @@
 
 namespace Fork\Bin\Config;
 
-class SkeletOtherConfig{
+class SkeletDefaultConfig{
 
     public static $Precision;
 

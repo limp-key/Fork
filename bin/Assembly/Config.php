@@ -31,7 +31,7 @@ class Config{
 
     public static function Defaults(){
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::ArgSeparatorOutput('parameter');
+/*	\Fork\Bin\Config\SkeletDefaultConfig::ArgSeparatorOutput('parameter');
 	
 	\Fork\Bin\Config\SkeletDefaultConfig::AutoDetectLineEndings('parameter');
 	
@@ -60,34 +60,35 @@ class Config{
 	\Fork\Bin\Config\SkeletDefaultConfig::ZendMultibyte('parameter');
 	
 	\Fork\Bin\Config\SkeletDefaultConfig::ZendScriptEncoding('parameter');
-	
+
+   # Other
+
+   \Fork\Config\OtherConfig::ArgSeparatorInput(\Fork\Config\OtherConfig::$ArgSeparatorInput);
+
+   \Fork\Config\OtherConfig::VariablesOrder(\Fork\Config\OtherConfig::$VariablesOrder);
+
+   \Fork\Config\OtherConfig::RequestOrder(\Fork\Config\OtherConfig::$RequestOrder);
+
+   \Fork\Config\OtherConfig::RegisterArgcArgv(\Fork\Config\OtherConfig::$RegisterArgcArgv);
+
+   \Fork\Config\OtherConfig::AutoGlobalsJit(\Fork\Config\OtherConfig::$AutoGlobalsJit);
+
+   \Fork\Config\OtherConfig::OutputBuffering(\Fork\Config\OtherConfig::$OutputBuffering);
+
+   #\Fork\Config\OtherConfig::OutputHandler(\Fork\Config\OtherConfig::$OutputHandler);
+
+   \Fork\Config\OtherConfig::UnserializeCallbackFunc(\Fork\Config\OtherConfig::$UnserializeCallbackFunc);
+
+   \Fork\Config\OtherConfig::SerializePrecision(\Fork\Config\OtherConfig::$SerializePrecision);
+
+   \Fork\Config\OtherConfig::RealPathCacheSize(\Fork\Config\OtherConfig::$RealPathCacheSize);
+
+   \Fork\Config\OtherConfig::RealPathCacheTTL(\Fork\Config\OtherConfig::$RealPathCacheTTL);
+
+ */
     }
 
     public static function Mains(){
-
-	# Other
-
-	\Fork\Config\OtherConfig::ArgSeparatorInput(\Fork\Config\OtherConfig::$ArgSeparatorInput);
-
-	\Fork\Config\OtherConfig::VariablesOrder(\Fork\Config\OtherConfig::$VariablesOrder);
-
-	\Fork\Config\OtherConfig::RequestOrder(\Fork\Config\OtherConfig::$RequestOrder);
-
-	\Fork\Config\OtherConfig::RegisterArgcArgv(\Fork\Config\OtherConfig::$RegisterArgcArgv);
-
-	\Fork\Config\OtherConfig::AutoGlobalsJit(\Fork\Config\OtherConfig::$AutoGlobalsJit);
-
-	\Fork\Config\OtherConfig::OutputBuffering(\Fork\Config\OtherConfig::$OutputBuffering);
-
-	#\Fork\Config\OtherConfig::OutputHandler(\Fork\Config\OtherConfig::$OutputHandler);
-
-	\Fork\Config\OtherConfig::UnserializeCallbackFunc(\Fork\Config\OtherConfig::$UnserializeCallbackFunc);
-
-	\Fork\Config\OtherConfig::SerializePrecision(\Fork\Config\OtherConfig::$SerializePrecision);
-
-	\Fork\Config\OtherConfig::RealPathCacheSize(\Fork\Config\OtherConfig::$RealPathCacheSize);
-
-	\Fork\Config\OtherConfig::RealPathCacheTTL(\Fork\Config\OtherConfig::$RealPathCacheTTL);
 
 	# System
 
