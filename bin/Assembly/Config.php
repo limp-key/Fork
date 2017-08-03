@@ -286,30 +286,6 @@ class Config{
     
     public static function Additionals($Config = 'Fork'){
 /*
-	# Other
-
-	\Fork\Config\$Config\OtherConfig::ArgSeparatorInput(\Fork\Config\$Config\OtherConfig::$ArgSeparatorInput);
-
-	\Fork\Config\$Config\OtherConfig::VariablesOrder(\Fork\Config\$Config\OtherConfig::$VariablesOrder);
-
-	\Fork\Config\$Config\OrherConfig::RequestOrder(\Fork\Config\$Config\OtherConfig::$RequestOrder);
-
-	\Fork\Config\$Config\OtherConfig::RegisterArgcArgv(\Fork\Config\$Config\OtherConfig::$RegisterArgcArgv);
-
-	\Fork\Config\$Config\OtherConfig::AutoGlobalsJit(\Fork\Config\$Config\OtherConfig::$AutoGlobalsJit);
-
-	\Fork\Config\$Config\OtherConfig::OutputBuffering(\Fork\Config\$Config\OtherConfig::$OutputBuffering);
-
-	\Fork\Config\$Config\OtherConfig::OutputHandler(\Fork\Config\$Config\OtherConfig::$OutputHandler);
-
-	\Fork\Config\$Config\OtherConfig::UnserializeCallbackFunc(\Fork\Config\$Config\OtherConfig::$UnserializeCallbackFunc);
-
-	\Fork\Config\$Config\OtherConfig::SerializePrecision(\Fork\Config\$Config\OtherConfig::$SerializePrecision);
-
-	\Fork\Config\$Config\OtherConfig::RealPathCacheSize(\Fork\Config\$Config\OtherConfig::$RealPathCacheSize);
-
-	\Fork\Config\$Config\OtherConfig::RealPathCacheTTL(\Fork\Config\$Config\OtherConfig::$RealPathCacheTTL);
-
 	# System
 
 	\Fork\Config\$Config\SystemConfig::IgnoreUserAbort(\Fork\Config\$Config\SystemConfig::$IgnoreUserAbort);

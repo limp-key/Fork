@@ -16,7 +16,7 @@ class Main{
 	#if (!empty($Config))
 	 #   \Fork\Bin\Assembly\Config::Additionals($Config);
 
-	phpinfo();
+	#phpinfo();
 	
 	# Load all enable modules
 	\Fork\Bin\Assembly\Modules::Start();
@@ -41,7 +41,7 @@ class Main{
 
 	#Create object Controller (depending on the request)
 	
-	$Controller = 'Fork\\Controllers\\'.$Class;
+	$Controller = sprintf('Fork\\Controllers\\%s',$Class);
 	
 	$AssemblyController = new $Controller();
 	
