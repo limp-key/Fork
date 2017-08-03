@@ -19,7 +19,6 @@ class SkeletFileConfig{
     # Whether to allow HTTP file uploads.
     public static function FileUploads($Parameter = 0){
 
-	echo $Parameter;
 	ini_set('file_uploads',$Parameter);
 	
 	return true;
