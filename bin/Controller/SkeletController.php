@@ -2,44 +2,15 @@
 
 namespace Fork\Bin\Controller;
 
-use \Fork\Bin\Modules\Assistant\Help;
-use \Fork\Bin\Request;
+include 'JSON.php';
+include 'View.php';
+include 'Redirect.php';
 
 class SkeletController{
 
-    public function json($Parameters = array()){
-	
-	if(!empty($Parameters))
-	    return json_encode($Parameters);
-	else
-	    return false;
-    }
+    use \Fork\Bin\Controller\JSON;
     
-    public function view($Path, $Parameters = array()){
-	
-	/*$Variables = array_keys(get_defined_vars());
-	for ($Interation = 0; $Interation < sizeOf($Variables); $Interation++){
-	    
-	    unset($$Variables[$Interation]);
-	}
-	   unset($Variables,$Interation);*/
-	
-	if(!empty($Parameters))
-	    extract($Parameters);
-	
-	$View = sprintf('%s/views/%s', \Fork\Config\MainConfig::$ProjectPath, $Path);
-	
-	require_once $View;
-	
-	return true;
-    }
-
-    public function redirect($Path = '/'){
-
-	$Redirect = sprintf('Location: %s', $Path);
-	
-	header($Redirect);
-	
-	return true;
-    }
+    use \Fork\Bin\Controller\View;
+    
+    use \Fork\Bin\Controller\Redirect;
 }

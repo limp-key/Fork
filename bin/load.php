@@ -17,7 +17,7 @@ require_once 'Config/SkeletDataBaseConfig.php';
 require_once 'Config/SkeletDateConfig.php';
 require_once 'Config/SkeletDefaultConfig.php';
 require_once 'Config/SkeletErrorConfig.php';
-require_once 'Config/SkeletFileConfig.conf.php';
+require_once 'Config/SkeletFileConfig.php';
 require_once 'Config/SkeletMailConfig.php';
 require_once 'Config/SkeletMainConfig.php';
 require_once 'Config/SkeletPCREConfig.php';
