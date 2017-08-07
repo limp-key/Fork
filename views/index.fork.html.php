@@ -19,6 +19,7 @@
 	     padding-right:100px;
 	     opacity:.8;
 	     margin-bottom:100px;
+	     transition:.4s;
 	 }
 	 .wrap h1:hover{
 	     opacity:.5;

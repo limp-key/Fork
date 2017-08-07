@@ -6,13 +6,25 @@ class Models{
 
     public static function Start(){
 	
-	$SearchingParameters = 'find ../models/ | grep ".php"';
-
-	exec($SearchingParameters,$Models);
+	$SearchingParameters = '../models/';
 	
-	if(!empty($Models))
-	    return $Models;
-	else
+	if(!is_dir($SearchingParameters)){
 	    return false;
+	}
+
+	if($DH = opendir($SearchingParameters)){
+	    while (($File = readdir($DH)) !== false) {
+		if ($File != '..' && $File != '.')
+		    $Models[] = sprintf('../models/%s',$File);
+            }
+	}
+	
+        closedir($DH);
+
+	if(!empty($Models)){
+	    return $Models;
+	}else{
+	    return false;
+	}
     }
 }

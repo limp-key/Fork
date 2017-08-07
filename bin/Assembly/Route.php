@@ -6,14 +6,23 @@ class Route{
 
     public static function Start(){
 	
-	$SearchingParameters = 'find ../route/ | grep ".php"';
+	$SearchingParameters = '../route/';
 	
-	exec($SearchingParameters,$Route);
-	
-	if(is_array($Route)){
-	    foreach($Route as $IncludeRoute){
-		require_once $IncludeRoute;
-	    }
+	if(!is_dir($SearchingParameters)){
+	    return false;
 	}
+
+	if($DH = opendir($SearchingParameters)){
+	    while (($File = readdir($DH)) !== false) {
+		if ($File != '..' && $File != '.'){
+		    $Route = sprintf('../route/%s',$File);
+		    include $Route;
+		}
+            }
+	}
+	
+        closedir($DH);
+
+	return true;
     }
 }

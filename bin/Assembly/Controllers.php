@@ -4,15 +4,27 @@ namespace Fork\Bin\Assembly;
 
 class Controllers{
 
-    public static function Start(){
+    public static function Start(){	 
+
+	$SearchingParameters = '../controllers/';
 	
-	$SearchingParameters = 'find ../controllers/ | grep ".php"';
+	if(!is_dir($SearchingParameters)){
+	    return false;
+	}
+
+	if($DH = opendir($SearchingParameters)){
+	    while (($File = readdir($DH)) !== false) {
+		if ($File != '..' && $File != '.')
+		    $Controllers[] = sprintf('../controllers/%s',$File);
+            }
+	}
 	
-	exec($SearchingParameters,$Controllers);
-	
-	if(!empty($Controllers))
+        closedir($DH);
+
+	if(!empty($Controllers)){
 	    return $Controllers;
-	else
-	    return false;	
+	}else{
+	    return false;
+	}
     }
 }
