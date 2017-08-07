@@ -284,203 +284,221 @@ class Config{
 
     }
     
-    public static function Additionals($Config = 'Fork'){
-/*
-	# System
+    public static function Additionals($Config){
 
-	\Fork\Config\$Config\SystemConfig::IgnoreUserAbort(\Fork\Config\$Config\SystemConfig::$IgnoreUserAbort);
+	# Assembly namespace
 
-	\Fork\Config\$Config\SystemConfig::MaxExecutionTime(\Fork\Config\$Config\SystemConfig::$MaxExecutionTime);
-
-	\Fork\Config\$Config\SystemConfig::MaxInputTime(\Fork\Config\$Config\SystemConfig::$MaxInputTime);
-
-	\Fork\Config\$Config\SystemConfig::MaxInputNestingLevel(\Fork\Config\$Config\SystemConfig::$MaxInputNestingLevel);
+	$System = sprintf('\\Fork\\Config\\%s\\System',$Config);
 	
-	\Fork\Config\$Config\SystemConfig::MaxInputVars(\Fork\Config\$Config\SystemConfig::$MaxInputVars);
+	$Zlib = sprintf('\\Fork\\Config\\%s\\Zlib',$Config);
+	
+	$Error = sprintf('\\Fork\\Config\\%s\\Error',$Config);
+	
+	$Cgi = sprintf('\\Fork\\Config\\%s\\Cgi',$Config);
+	
+	$File = sprintf('\\Fork\\Config\\%s\\File',$Config);
+	
+	$PCRE = sprintf('\\Fork\\Config\\%s\\PCRE',$Config);
 
-	\Fork\Config\$Config\SystemConfig::MemoryLimit(\Fork\Config\$Config\SystemConfig::$MemoryLimit);
+	$Date = sprintf('\\Fork\\Config\\%s\\Date',$Config);
 
-	\Fork\Config\$Config\SystemConfig::IgnoreRepeatedSource(\Fork\Config\$Config\SystemConfig::$IgnoreRepeatedSource);
+	$Session = sprintf('\\Fork\\Config\\%s\\Session',$Config);
+	
+	# System
+	
+	#$System::IgnoreUserAbort($System::$IgnoreUserAbort);
 
-	\Fork\Config\$Config\SystemConfig::ReportMemleaks(\Fork\Config\$Config\SystemConfig::$ReportMemleaks);
+	$System::MaxExecutionTime($System::$MaxExecutionTime);
 
-	\Fork\Config\$Config\SystemConfig::ReportZendDebug(\Fork\Config\$Config\SystemConfig::$ReportZendDebug);
+	$System::MaxInputTime($System::$MaxInputTime);
 
-	\Fork\Config\$Config\SystemConfig::EnablePostDataReading(\Fork\Config\$Config\SystemConfig::$EnablePostDataReading);
+	$System::MaxInputNestingLevel($System::$MaxInputNestingLevel);
+	
+	$System::MaxInputVars($System::$MaxInputVars);
 
-	\Fork\Config\$Config\SystemConfig::PostMaxSize(\Fork\Config\$Config\SystemConfig::$PostMaxSize);
+	$System::MemoryLimit($System::$MemoryLimit);
 
-	\Fork\Config\$Config\SystemConfig::DefaultMimetype(\Fork\Config\$Config\SystemConfig::$DefaultMimetype);
+	#$System::IgnoreRepeatedSource($System::$IgnoreRepeatedSource);
 
-	\Fork\Config\$Config\SystemConfig::DefaultCharset(\Fork\Config\$Config\SystemConfig::$DefaultCharset);
+	#$System::ReportMemleaks($System::$ReportMemleaks);
 
-	\Fork\Config\$Config\SystemConfig::InternalEncoding(\Fork\Config\$Config\SystemConfig::$InternalEncoding);
+	#$System::ReportZendDebug($System::$ReportZendDebug);
 
-	\Fork\Config\$Config\SystemConfig::InputEncoding(\Fork\Config\$Config\SystemConfig::$InputEncoding);
+	$System::EnablePostDataReading($System::$EnablePostDataReading);
 
-	\Fork\Config\$Config\SystemConfig::OutputEncoding(\Fork\Config\$Config\SystemConfig::$OutputEncoding);
+	$System::PostMaxSize($System::$PostMaxSize);
 
-	\Fork\Config\$Config\SystemConfig::ExtensionDir(\Fork\Config\$Config\SystemConfig::$ExtensionDir);
+	$System::DefaultMimetype($System::$DefaultMimetype);
 
-	\Fork\Config\$Config\SystemConfig::SysTempDir(\Fork\Config\$Config\SystemConfig::$SysTempDir);
+	$System::DefaultCharset($System::$DefaultCharset);
+
+	$System::InternalEncoding($System::$InternalEncoding);
+
+	$System::InputEncoding($System::$InputEncoding);
+
+	$System::OutputEncoding($System::$OutputEncoding);
+
+	#$System::ExtensionDir($System::$ExtensionDir);
+
+	#$System::SysTempDir($System::$SysTempDir);
 
 	# Zlib
 
-	\Fork\Config\$Config\ZlibConfig::ZlibOutputCompression(\Fork\Config\$Config\ZlibConfig::$ZlibOutputCompression);
+	$Zlib::ZlibOutputCompression($Zlib::$ZlibOutputCompression);
 
-	\Fork\Config\$Config\ZlibConfig::ZlibOutputCompressionLevel(\Fork\Config\$Config\ZlibConfig::$ZlibOutputCompressionLevel);
+	$Zlib::ZlibOutputCompressionLevel($Zlib::$ZlibOutputCompressionLevel);
 
-	\Fork\Config\$Config\ZlibConfig::ZlibOutputHandler(\Fork\Config\$Config\ZlibConfig::$ZlibOutputHandler);
+	$Zlib::ZlibOutputHandler($Zlib::$ZlibOutputHandler);
 	
 	# Error
-
-	\Fork\Config\$Config\ErrorConfig::HtmlErrors(\Fork\Config\$Config\ErrorConfig::$HtmlErrors);
-
-	\Fork\Config\$Config\ErrorConfig::ErrorPrependString(\Fork\Config\$Config\ErrorConfig::$ErrorPrependString);
-
-	\Fork\Config\$Config\ErrorConfig::ErrorAppendString(\Fork\Config\$Config\ErrorConfig::$ErrorAppendString);
-
-	\Fork\Config\$Config\ErrorConfig::ErrorLog(\Fork\Config\$Config\ErrorConfig::$ErrorLog);
-
-	\Fork\Config\$Config\ErrorConfig::ErrorReporting(\Fork\Config\$Config\ErrorConfig::$ErrorReporting);
-
-	\Fork\Config\$Config\ErrorConfig::DisplayErrors(\Fork\Config\$Config\ErrorConfig::$DisplayErrors);
-
-	\Fork\Config\$Config\ErrorConfig::DisplayStartupErrors(\Fork\Config\$Config\ErrorConfig::$DisplayStartupErrors);
-
-	\Fork\Config\$Config\ErrorConfig::LogErrors(\Fork\Config\$Config\ErrorConfig::$LogErrors);
-
-	\Fork\Config\$Config\ErrorConfig::LogErrorsMaxLen(\Fork\Config\$Config\ErrorConfig::$LogErrorsMaxLen);
-
-	\Fork\Config\$Config\ErrorConfig::IgnoreRepeatedErrors(\Fork\Config\$Config\ErrorConfig::$IgnoreRepeatedErrors);
 	
-	\Fork\Config\$Config\SystemConfig::XMLrpcErrors(\Fork\Config\$Config\ErrorConfig::$XMLrpcErrors);
+	$Error::HtmlErrors($Error::$HtmlErrors);
 
-	\Fork\Config\$Config\SystemConfig::XMLrpcErrorNumber(\Fork\Config\$Config\ErrorConfig::$XMLrpcErrorNumber);
+	$Error::ErrorPrependString($Error::$ErrorPrependString);
 
-	\Fork\Config\$Config\SystemConfig::TrackErrors(\Fork\Config\$Config\ErrorConfig::$TrackErrors);
+	$Error::ErrorAppendString($Error::$ErrorAppendString);
+
+	$Error::ErrorLog($Error::$ErrorLog);
+
+	$Error::ErrorReporting($Error::$ErrorReporting);
+
+	$Error::DisplayErrors($Error::$DisplayErrors);
+
+	$Error::DisplayStartupErrors($Error::$DisplayStartupErrors);
+
+	$Error::LogErrors($Error::$LogErrors);
+
+	$Error::LogErrorsMaxLen($Error::$LogErrorsMaxLen);
+
+	$Error::IgnoreRepeatedErrors($Error::$IgnoreRepeatedErrors);
 	
+	$Error::XMLrpcErrors($Error::$XMLrpcErrors);
+
+	$Error::XMLrpcErrorNumber($Error::$XMLrpcErrorNumber);
+
+	$Error::TrackErrors($Error::$TrackErrors);
+
 	# Cgi
 
-	\Fork\Config\$Config\CgiConfig::CgiForceRedirect(\Fork\Config\$Config\CgiConfig::$CgiForceRedirect);
+	$Cgi::CgiForceRedirect($Cgi::$CgiForceRedirect);
 
-	\Fork\Config\$Config\CgiConfig::CgiNPH(\Fork\Config\$Config\CgiConfig::$CgiNPH);
+	#$Cgi::CgiNPH($Cgi::$CgiNPH);
 
-	\Fork\Config\$Config\CgiConfig::CgiRedirectStatusEnv(\Fork\Config\$Config\CgiConfig::$CgiRedirectStatusEnv);
+	$Cgi::CgiRedirectStatusEnv($Cgi::$CgiRedirectStatusEnv);
 
-	\Fork\Config\$Config\CgiConfig::CgiFixPathinfo(\Fork\Config\$Config\CgiConfig::$CgiFixPathinfo);
+	$Cgi::CgiFixPathinfo($Cgi::$CgiFixPathinfo);
 
-	\Fork\Config\$Config\CgiConfig::CgiDiscardPath(\Fork\Config\$Config\CgiConfig::$CgiDiscardPath);
+	$Cgi::CgiDiscardPath($Cgi::$CgiDiscardPath);
 
-	\Fork\Config\$Config\CgiConfig::FastcgiImpersonate(\Fork\Config\$Config\CgiConfig::$FastcgiImpersonate);
+	$Cgi::FastcgiImpersonate($Cgi::$FastcgiImpersonate);
 
-	\Fork\Config\$Config\CgiConfig::FastcgiLogging(\Fork\Config\$Config\CgiConfig::$FastcgiLogging);
+	$Cgi::FastcgiLogging($Cgi::$FastcgiLogging);
 
-	\Fork\Config\$Config\CgiConfig::Cgirfc2616Headers(\Fork\Config\$Config\CgiConfig::$Cgirfc2616Headers);
+	#$Cgi::Cgirfc2616Headers($Cgi::$Cgirfc2616Headers);
 
-	\Fork\Config\$Config\CgiConfig::CgiCheckShebangLine(\Fork\Config\$Config\CgiConfig::$CgiCheckShebangLine);
+	$Cgi::CgiCheckShebangLine($Cgi::$CgiCheckShebangLine);
 
 	# File
 	
-	\Fork\Config\$Config\FileConfig::FileUploads(\Fork\Config\$Config\FileConfig::$FileUploads);
+	#$File::FileUploads($File::$FileUploads);
 
-	\Fork\Config\$Config\FileConfig::UploadTmpDir(\Fork\Config\$Config\FileConfig::$UploadTmpDir);
+	#$File::UploadTmpDir($File::$UploadTmpDir);
 
-	\Fork\Config\$Config\FileConfig::UploadMaxFilesize(\Fork\Config\$Config\FileConfig::$UploadMaxFilesize);
+	#$File::UploadMaxFilesize($File::$UploadMaxFilesize);
 
-	\Fork\Config\$Config\FileConfig::MaxFileUploads(\Fork\Config\$Config\FileConfig::$MaxFileUploads);
+	#$File::MaxFileUploads($File::$MaxFileUploads);
 
-	\Fork\Config\$Config\FileConfig::AllowURLFopen(\Fork\Config\$Config\FileConfig::$AllowURLFopen);
+	#$File::AllowURLFopen($File::$AllowURLFopen);
 
-	\Fork\Config\$Config\FileConfig::AllowURLInclude(\Fork\Config\$Config\FileConfig::$AllowURLInclude);
+	#$File::AllowURLInclude($File::$AllowURLInclude);
 
-	\Fork\Config\$Config\FileConfig::AutoPrependFile(\Fork\Config\$Config\FileConfig::$AutoPrependFile);
+	#$File::AutoPrependFile($File::$AutoPrependFile);
 
-	\Fork\Config\$Config\FileConfig::AutoAppendFile(\Fork\Config\$Config\FileConfig::$AutoAppendFile);
+	#$File::AutoAppendFile($File::$AutoAppendFile);
 	
 	# Date
 
-	\Fork\Config\$Config\DateConfig::DateTimezone(\Fork\Config\$Config\DateConfig::$DateTimezone);
+	$Date::DateTimezone($Date::$DateTimezone);
 
-	\Fork\Config\$Config\DateConfig::DateDefaultLatitude(\Fork\Config\$Config\DateConfig::$DateDefaultLatitude);
+	$Date::DateDefaultLatitude($Date::$DateDefaultLatitude);
 
-	\Fork\Config\$Config\DateConfig::DateDefaultLongitude(\Fork\Config\$Config\DateConfig::$DateDefaultLongitude);
+	$Date::DateDefaultLongitude($Date::$DateDefaultLongitude);
 
-	\Fork\Config\$Config\DateConfig::DateSunriseZenith(\Fork\Config\$Config\DateConfig::$DateSunriseZenith);
+	$Date::DateSunriseZenith($Date::$DateSunriseZenith);
 
-	\Fork\Config\$Config\DateConfig::DateSunsetZenith(\Fork\Config\$Config\DateConfig::$DateSunsetZenith);
+	$Date::DateSunsetZenith($Date::$DateSunsetZenith);
 
 	# PCRE
 
-	\Fork\Config\$Config\PCREConfig::PcreBacktrackLimit(\Fork\Config\$Config\PCREConfig::$PcreBacktrackLimit);
+	$PCRE::PcreBacktrackLimit($PCRE::$PcreBacktrackLimit);
 
-	\Fork\Config\$Config\PCREConfig::PcreRecursionLimit(\Fork\Config\$Config\PCREConfig::$PcreRecursionLimit);
+	$PCRE::PcreRecursionLimit($PCRE::$PcreRecursionLimit);
 
-	\Fork\Config\$Config\PCREConfig::PcreJit(\Fork\Config\$Config\PCREConfig::$PcreJit);
+	$PCRE::PcreJit($PCRE::$PcreJit);
 
 	# Session
 
-	\Fork\Config\$Config\SessionConfig::SessionSaveHandler(\Fork\Config\$Config\SessionConfig::$SessionSaveHandler);
+	$Session::SessionSaveHandler($Session::$SessionSaveHandler);
 
-	\Fork\Config\$Config\SessionConfig::SessionSavePath(\Fork\Config\$Config\SessionConfig::$SessionSavePath);
+	$Session::SessionSavePath($Session::$SessionSavePath);
 
-	\Fork\Config\$Config\SessionConfig::SessionUseStrictMode(\Fork\Config\$Config\SessionConfig::$SessionUseStrictMode);
+	$Session::SessionUseStrictMode($Session::$SessionUseStrictMode);
 
-	\Fork\Config\$Config\SessionConfig::SessionUseCookies(\Fork\Config\$Config\SessionConfig::$SessionUseCookies);
+	$Session::SessionUseCookies($Session::$SessionUseCookies);
 
-	\Fork\Config\$Config\SessionConfig::SessionCookieSecure(\Fork\Config\$Config\SessionConfig::$SessionCookieSecure);
+	$Session::SessionCookieSecure($Session::$SessionCookieSecure);
 
-	\Fork\Config\$Config\SessionConfig::SessionUseOnlyCookies(\Fork\Config\$Config\SessionConfig::$SessionUseOnlyCookies);
+	$Session::SessionUseOnlyCookies($Session::$SessionUseOnlyCookies);
 
-	\Fork\Config\$Config\SessionConfig::SessionName(\Fork\Config\$Config\SessionConfig::$SessionName);
+	$Session::SessionName($Session::$SessionName);
 
-	\Fork\Config\$Config\SessionConfig::SessionAutoStart(\Fork\Config\$Config\SessionConfig::$SessionAutoStart);
+	$Session::SessionAutoStart($Session::$SessionAutoStart);
 
-	\Fork\Config\$Config\SessionConfig::SessionCookieLifetime(\Fork\Config\$Config\SessionConfig::$SessionCookieLifetime);
+	$Session::SessionCookieLifetime($Session::$SessionCookieLifetime);
 
-	\Fork\Config\$Config\SessionConfig::SessionCookiePath(\Fork\Config\$Config\SessionConfig::$SessionCookiePath);
+	$Session::SessionCookiePath($Session::$SessionCookiePath);
 
-	\Fork\Config\$Config\SessionConfig::SessionCookieDomain(\Fork\Config\$Config\SessionConfig::$SessionCookieDomain);
+	$Session::SessionCookieDomain($Session::$SessionCookieDomain);
 
-	\Fork\Config\$Config\SessionConfig::SessionCookieHttponly(\Fork\Config\$Config\SessionConfig::$SessionCookieHttponly);
+	$Session::SessionCookieHttponly($Session::$SessionCookieHttponly);
 
-	\Fork\Config\$Config\SessionConfig::SessionSerializeHandler(\Fork\Config\$Config\SessionConfig::$SessionSerializeHandler);
+	$Session::SessionSerializeHandler($Session::$SessionSerializeHandler);
 
-	\Fork\Config\$Config\SessionConfig::SessionGCProbability(\Fork\Config\$Config\SessionConfig::$SessionGCProbability);
+	$Session::SessionGCProbability($Session::$SessionGCProbability);
 
-	\Fork\Config\$Config\SessionConfig::SessionGCDivisor(\Fork\Config\$Config\SessionConfig::$SessionGCDivisor);
+	$Session::SessionGCDivisor($Session::$SessionGCDivisor);
 
-	\Fork\Config\$Config\SessionConfig::SessionGCMaxlifetime(\Fork\Config\$Config\SessionConfig::$SessionGCMaxlifetime);
+	$Session::SessionGCMaxlifetime($Session::$SessionGCMaxlifetime);
 
-	\Fork\Config\$Config\SessionConfig::SessionRefererCheck(\Fork\Config\$Config\SessionConfig::$SessionRefererCheck);
+	$Session::SessionRefererCheck($Session::$SessionRefererCheck);
 
-	\Fork\Config\$Config\SessionConfig::SessionCacheLimiter(\Fork\Config\$Config\SessionConfig::$SessionCacheLimiter);
+	$Session::SessionCacheLimiter($Session::$SessionCacheLimiter);
 
-	\Fork\Config\$Config\SessionConfig::SessionCacheExpire(\Fork\Config\$Config\SessionConfig::$SessionCacheExpire);
+	$Session::SessionCacheExpire($Session::$SessionCacheExpire);
 
-	\Fork\Config\$Config\SessionConfig::SessionUseTransSid(\Fork\Config\$Config\SessionConfig::$SessionUseTransSid);
+	$Session::SessionUseTransSid($Session::$SessionUseTransSid);
 
-	\Fork\Config\$Config\SessionConfig::SessionSidLength(\Fork\Config\$Config\SessionConfig::$SessionSidLength);
+	$Session::SessionSidLength($Session::$SessionSidLength);
 
-	\Fork\Config\$Config\SessionConfig::SessionTransSidTags(\Fork\Config\$Config\SessionConfig::$SessionTransSidTags);
+	$Session::SessionTransSidTags($Session::$SessionTransSidTags);
 
-	\Fork\Config\$Config\SessionConfig::SessionTransSidHosts(\Fork\Config\$Config\SessionConfig::$SessionTransSidHosts);
+	$Session::SessionTransSidHosts($Session::$SessionTransSidHosts);
 
-	\Fork\Config\$Config\SessionConfig::SessionSidBitsPerCharacter(\Fork\Config\$Config\SessionConfig::$SessionSidBitsPerCharacter);
+	$Session::SessionSidBitsPerCharacter($Session::$SessionSidBitsPerCharacter);
 
-	\Fork\Config\$Config\SessionConfig::SessionUploadProgressEnabled(\Fork\Config\$Config\SessionConfig::$SessionUploadProgressEnabled);
+	$Session::SessionUploadProgressEnabled($Session::$SessionUploadProgressEnabled);
 
-	\Fork\Config\$Config\SessionConfig::SessionUploadProgressCleanup(\Fork\Config\$Config\SessionConfig::$SessionUploadProgressCleanup);
+	$Session::SessionUploadProgressCleanup($Session::$SessionUploadProgressCleanup);
 
-	\Fork\Config\$Config\SessionConfig::SessionUploadProgressPrefix(\Fork\Config\$Config\SessionConfig::$SessionUploadProgressPrefix);
+	$Session::SessionUploadProgressPrefix($Session::$SessionUploadProgressPrefix);
 
-	\Fork\Config\$Config\SessionConfig::SessionUploadProgressName(\Fork\Config\$Config\SessionConfig::$SessionUploadProgressName);
+	$Session::SessionUploadProgressName($Session::$SessionUploadProgressName);
 
-	\Fork\Config\$Config\SessionConfig::SessionUploadProgressFreq(\Fork\Config\$Config\SessionConfig::$SessionUploadProgressFreq);
+	$Session::SessionUploadProgressFreq($Session::$SessionUploadProgressFreq);
 
-	\Fork\Config\$Config\SessionConfig::SessionUploadProgressMinFreq(\Fork\Config\$Config\SessionConfig::$SessionUploadProgressMinFreq);
+	$Session::SessionUploadProgressMinFreq($Session::$SessionUploadProgressMinFreq);
 
-	\Fork\Config\$Config\SessionConfig::SessionLazyWrite(\Fork\Config\$Config\SessionConfig::$SessionLazyWrite);
-*/	
+	$Session::SessionLazyWrite($Session::$SessionLazyWrite);
+	
     }
 }

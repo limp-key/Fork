@@ -6,6 +6,7 @@ use \Fork\Config\CgiConfig;
 
 class Cgi extends CgiConfig{
 
+    
     public static $CgiForceRedirect = '1';
 
     public static $CgiNph = '1';

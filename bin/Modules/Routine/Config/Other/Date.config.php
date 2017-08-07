@@ -6,7 +6,7 @@ use \Fork\Config\DateConfig;
 
 class Date extends DateConfig{
 
-    public static $DateTimezone = '';
+    public static $DateTimezone = 'Europe/Kiev';
     
     public static $DateDefaultLatitude = '31_7667';
     
@@ -15,5 +15,4 @@ class Date extends DateConfig{
     public static $DateSunriseZenith = '90_583333';
     
     public static $DateSunsetZenith = '90_583333';
-    
 }

@@ -6,10 +6,10 @@ use \Fork\Bin\Config\SkeletPCREConfig;
 
 class PCREConfig extends SkeletPCREConfig{
 
-    public static $PcreBacktrackLimit='100000';
+    public static $PcreBacktrackLimit = 1000000;
 
-    public static $PcreRecursionLimit='100000';
+    public static $PcreRecursionLimit = 100000;
 
-    public static $PcreJit='0';
+    public static $PcreJit = 0;
 
 }

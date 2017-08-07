@@ -2,7 +2,7 @@
 
 namespace Fork\Config\__NAME__;
 
-use Fork\Config\DataBaseConfig;
+use \Fork\Config\DataBaseConfig;
 
 class DataBase extends DataBaseConfig {
 

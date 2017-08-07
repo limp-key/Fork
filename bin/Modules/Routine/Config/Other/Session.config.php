@@ -18,7 +18,7 @@ class Session extends SessionConfig{
 
     public static $SessionUseOnlyCookies = '1';
 
-    public static $SessionName = 'PHPSESSID';
+    public static $SessionName = 'UID';
 
     public static $SessionAutoStart = '0';
 

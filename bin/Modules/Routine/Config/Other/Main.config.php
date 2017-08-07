@@ -8,7 +8,7 @@ class Main extends MainConfig{
 
     // Parameter for framework
 
-    public static $ProjectPath;
+    public static $ProjectPath = '/var/www/limp-key/fork/';
 
     public static $URL;
 
