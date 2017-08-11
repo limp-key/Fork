@@ -1,11 +1,10 @@
 <?php
 
-namespace Fork\Bin\Assembly;
+namespace Assembly;
 
 class Main{
 
     public static function Start($Class, $Method, $Config = ''){
-	
 	# Load config
 	\Fork\Bin\Assembly\Config::Start($Config);
 

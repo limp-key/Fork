@@ -4,18 +4,15 @@ namespace bin\;
 
 class AutoLoad{
 
-    public static function Fork($ClassName){
-
-	$Assembly = sprintf('Assembly/%s.php',$ClassName);
-	
-	require_once $Assembly;
-
-	return true;
-    }
-
     public static function Load(){
 	
 	\Fork\Bin\Request\Parse::Start();
+	
+	spl_autoload_register('\Fork\Bin\ForkAutoload::Routes');
+
+	spl_autoload_register('\Fork\Bin\ForkAutoload::Config');
+
+	spl_autoload_register('\Fork\Bin\ForkAutoload::Assembly');
 
 	
 	# LEVEL 0 (Parse level)
@@ -32,15 +29,17 @@ class AutoLoad{
 	#          User's Controllers in controllers/
 
 
-	
-	\Fork\Bin\Assembly\Route::Start();
+	spl_autoload_register('Assembly\Controller::Start()');
+
+	spl_autoload_register('Assembly\Models::Start()');
+
+	spl_autoload_register('Assembly\Config::Start()');
+
+	spl_autoload_register('Assembly\Route::Start()');
+
+	#\Fork\Bin\Assembly\Route::Start();
     }
 }
 
-spl_autoload_register('\Fork\Bin\ForkAutoload::Routes');
-
-spl_autoload_register('\Fork\Bin\ForkAutoload::Config');
-
-spl_autoload_register('\Fork\Bin\ForkAutoload::Assembly');
-
-__NAMESPACE__\AutoLoad::Load();
+# Run Fork Framework
+AutoLoad::Load();
