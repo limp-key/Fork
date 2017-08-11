@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Assembly;
+namespace Assembly;
 
 class Config{
 

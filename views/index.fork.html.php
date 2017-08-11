@@ -69,7 +69,6 @@
 		<div class="link">
 		    <a href="https://github.com/limp-key/Fork">GitHub</a>
 		    <a href="https://github.com/limp-key/Fork">Documentation</a>
-		    <a href="https://github.com/limp-key/Fork">Site</a>
 		</div>
 	    </div>
 	</div>
