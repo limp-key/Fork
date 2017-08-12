@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Config;
+namespace Config;
 
 class SkeletCgiConfig{
     

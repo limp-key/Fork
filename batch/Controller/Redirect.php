@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Controller;
+namespace Controller;
 
 trait Redirect{
 
@@ -9,7 +9,7 @@ trait Redirect{
 	if(!empty($Parameters))
 	    extract($Parameters);
 	
-	$View = sprintf('%s/views/%s', \Fork\Config\MainConfig::$ProjectPath, $Path);
+	$View = sprintf('%s/views/%s', Config\MainConfig::$ProjectPath, $Path);
 	
 	require_once $View;
 	

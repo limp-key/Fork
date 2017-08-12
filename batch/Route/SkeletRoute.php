@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Bin\Route;
+namespace Route;
 
-use \Fork\Bin\Assembly\Main as AssemblyMain;
+use Assembly\Main as AssemblyMain;
 
 class SkeletRoute{
     

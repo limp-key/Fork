@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Model;
+namespace Model;
 
 trait Other{
 
@@ -66,16 +66,6 @@ trait Other{
 	    return true;
 	else
 	    return false;
-    }
-
-    public function create_database($TableName){
-  	$TableName = $this->MySQLi->escape_string($TableName);
-	$this->Query = "CREATE DATABASE $TableName";
-    }
-
-    public function drop_database($TableName){
-	$TableName = $this->MySQLi->escape_string($TableName);
-	$this->Query = "DROP DATABASE $TableName";
     }
 
     public function query($Request){

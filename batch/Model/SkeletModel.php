@@ -1,18 +1,17 @@
 <?php
 
-namespace Fork\Bin\Model;
+namespace Model;
 
-require_once 'Other.php';
-require_once 'CRUD.php';
-
-use \Fork\Bin\Model\CRUD;
-use \Fork\Bin\Model\Other;
-use \Fork\Config\DataBaseConfig;
-use \mysqli as MySQL;
+use \Model\CRUD;
+use \Model\Other;
+use \Model\DataBase;
+use \Config\DataBaseConfig;
 
 class SkeletModel{
 
-    use CRUD, Other;
+    use CRUD;
+    use Other;
+    use DataBase;
 
     public $Query = "";
 
@@ -20,7 +19,7 @@ class SkeletModel{
 
     public function __construct(){
 	
-	$this->MySQLi = new MySQL(DataBaseConfig::$Host,
+	$this->MySQLi = new mysqli(DataBaseConfig::$Host,
 				  DataBaseConfig::$User,
 				  DataBaseConfig::$Password,
 				  DataBaseConfig::$Database);

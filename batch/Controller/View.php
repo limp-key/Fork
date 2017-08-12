@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Controller;
+namespace Controller;
 
 trait View{
 

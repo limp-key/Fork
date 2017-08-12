@@ -10,8 +10,6 @@ class AutoLoad{
 	# and Include user's Config in this project
 	# and assay Route
 	\Fork\Bin\Request\Parse::Start();
-
-	# LEVEL 1 (Skelet level)
 	
 	# LEVEL 2 (Assembly level)
 	# Include:

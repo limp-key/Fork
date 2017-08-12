@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Modules\Cookie;
+namespace \Modules\Cookie;
 
 class Chief{
 

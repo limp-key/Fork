@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Modules\Session;
+namespace \Modules\Session;
 
 class Chief{
 

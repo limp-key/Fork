@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Model;
+namespace Model;
 
 trait CRUD{
     

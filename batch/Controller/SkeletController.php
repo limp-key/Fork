@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Controller;
+namespace Controller;
 
 include 'JSON.php';
 include 'View.php';
@@ -8,9 +8,9 @@ include 'Redirect.php';
 
 class SkeletController{
 
-    use \Fork\Bin\Controller\JSON;
+    use \Controller\JSON;
     
-    use \Fork\Bin\Controller\View;
+    use \Controller\View;
     
-    use \Fork\Bin\Controller\Redirect;
+    use \Controller\Redirect;
 }

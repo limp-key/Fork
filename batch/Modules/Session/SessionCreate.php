@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Modules\Session;
+namespace \Modules\Session;
 
 class SessionCreate{
     public function __construct($SessionName = null){

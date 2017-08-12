@@ -6,46 +6,25 @@ class Main{
 
     public static function Start($Class, $Method, $Config = ''){
 	# Load config
-	\Fork\Bin\Assembly\Config::Start($Config);
+	Assembly\Config::Start($Config);
 
-	\Fork\Bin\Assembly\Config::Defaults();
+	Assembly\Config::Defaults();
 
-	\Fork\Bin\Assembly\Config::Mains();
+	Assembly\Config::Mains();
 
 	if (!empty($Config))
-	    \Fork\Bin\Assembly\Config::Additionals($Config);
+	    Assembly\Config::Additionals($Config);
 
 	#phpinfo();
-	
-	# Load all enable modules
-	\Fork\Bin\Assembly\Modules::Start();
-	
-	# Load recurcive all Models in folder /models
-	$Models = \Fork\Bin\Assembly\Models::Start();
-	
-	if(is_array($Models)){
-	    foreach($Models as $IncludeModel){
-		require_once $IncludeModel;
-	    }
-	}
-	
-	# Load recurcive all Controllers in folder /controllers
-	$Controllers = \Fork\Bin\Assembly\Controllers::Start();
-	
-	if(is_array($Controllers)){
-	    foreach($Controllers as $IncludeController){
-		require_once $IncludeController;
-	    }   
-	}
 
 	#Create object Controller (depending on the request)
 	
-	$Controller = sprintf('Fork\\Controllers\\%s',$Class);
+	$Controller = sprintf('\\Controllers\\%s',$Class);
 	
 	$AssemblyController = new $Controller();
 	
 	if($AssemblyController->$Method() == null){
-	    \Fork\Bin\Assistant\Exception::errorURL();
+	    Assistant\Exception::errorURL();
 	}
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Bin\Request;
+namespace Request;
 
 class Parse{
 
