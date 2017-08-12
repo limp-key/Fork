@@ -3,4 +3,7 @@
 # This file load all files in Fork framework
 # and all client Controllers/Models/View/Route/Config
 
-require_once "../bin/AutoLoad.php";
+ini_set('display_errors',1);
+ini_set('error_reporting',E_ALL);
+
+require_once "../batch/AutoLoad.php";

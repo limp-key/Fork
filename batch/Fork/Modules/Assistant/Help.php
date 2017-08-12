@@ -29,4 +29,13 @@ class Help{
 
 	
     }
+
+    public static function View($File){
+
+	$Layout = sprintf('%s/%s',\Config\MainConfig::$ProjectPath,$File);
+
+	include $Layout;
+
+	return true;
+    }
 }
