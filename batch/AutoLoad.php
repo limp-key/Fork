@@ -30,16 +30,22 @@ class AutoLoad{
     }
 }
 
+# Load components in {path_to_project}/batch folder
 spl_autoload_register('AutoLoad::Components()');
-#
+
+# Load controllers in {path_to_project}/controllers folder
 spl_autoload_register('Assembly\Controller::Start()');
-#
+
+# Load models in {path_to_project}/models folder
 spl_autoload_register('Assembly\Models::Start()');
-#
+
+# Load config in {path_to_project}/config folder
 spl_autoload_register('Assembly\Config::Start()');
-#
+
+# Load route in {path_to_project}/route folder
 spl_autoload_register('Assembly\Route::Start()');
-#
+
+# 
 spl_autoload_register('Assembly\Main::Start()');
 
 # Run Fork Framework
