@@ -1,8 +1,8 @@
 <?php
 
-namespace Controller;
+namespace Fork/Controller;
 
-trait Redirect{
+trait View{
 
     public function view($Path, $Parameters = array()){
 	

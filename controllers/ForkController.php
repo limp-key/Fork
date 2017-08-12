@@ -1,12 +1,12 @@
 <?php 
 
-namespace Fork\Controllers;
+namespace Controllers;
 
-use \Fork\Bin\Controller\SkeletController;
-use \Fork\Bin\Modules\Session;
-use \Fork\Bin\Modules\Assay\Request;
+use \Fork\Controller\SkeletController;
+use \Fork\Modules\Session;
+use \Fork\Modules\Assay\Request;
 
-use \Fork\Models\BaseModel;
+use \Models\BaseModel;
 
 class ForkController extends SkeletController{
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace \Modules\Assistant;
+namespace Fork\Modules\Assistant;
 
 class Help{
 
@@ -32,7 +32,7 @@ class Help{
 
     public static function View($File){
 
-	$Layout = sprintf('%s/%s',\Config\MainConfig::$ProjectPath,$File);
+	$Layout = sprintf('%s/%s',\Fork\Config\MainConfig::$ProjectPath,$File);
 
 	include $Layout;
 

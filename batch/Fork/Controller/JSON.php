@@ -1,6 +1,6 @@
 <?php
 
-namespace Controller;
+namespace Fork/Controller;
 
 trait JSON{
 

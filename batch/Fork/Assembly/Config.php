@@ -1,6 +1,6 @@
 <?php
 
-namespace Assembly;
+namespace Fork/Assembly;
 
 class Config{
 
@@ -31,35 +31,35 @@ class Config{
 
     public static function Defaults(){
 	
-/*	\Fork\Bin\Config\SkeletDefaultConfig::ArgSeparatorOutput('parameter');
+/*	\Fork\Config\SkeletDefaultConfig::ArgSeparatorOutput('parameter');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::AutoDetectLineEndings('parameter');
+	\Fork\Config\SkeletDefaultConfig::AutoDetectLineEndings('parameter');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::DefaultSocketTimeout('parameter');
+	\Fork\Config\SkeletDefaultConfig::DefaultSocketTimeout('parameter');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::DisableClasses('parameter');
+	\Fork\Config\SkeletDefaultConfig::DisableClasses('parameter');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::DisableFunctions('parameter');
+	\Fork\Config\SkeletDefaultConfig::DisableFunctions('parameter');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::ExposePHP('Off');
+	\Fork\Config\SkeletDefaultConfig::ExposePHP('Off');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::ImplicitFlush('parameter');
+	\Fork\Config\SkeletDefaultConfig::ImplicitFlush('parameter');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::OpenBasedir('parameter');
+	\Fork\Config\SkeletDefaultConfig::OpenBasedir('parameter');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::Precision('15');
+	\Fork\Config\SkeletDefaultConfig::Precision('15');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::UrlRewriterHosts('parameter');
+	\Fork\Config\SkeletDefaultConfig::UrlRewriterHosts('parameter');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::UrlRewriterTags('parameter');
+	\Fork\Config\SkeletDefaultConfig::UrlRewriterTags('parameter');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::UserAgent('');
+	\Fork\Config\SkeletDefaultConfig::UserAgent('');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::ZendEnableGC('parameter');
+	\Fork\Config\SkeletDefaultConfig::ZendEnableGC('parameter');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::ZendMultibyte('parameter');
+	\Fork\Config\SkeletDefaultConfig::ZendMultibyte('parameter');
 	
-	\Fork\Bin\Config\SkeletDefaultConfig::ZendScriptEncoding('parameter');
+	\Fork\Config\SkeletDefaultConfig::ZendScriptEncoding('parameter');
 
    # Other
 

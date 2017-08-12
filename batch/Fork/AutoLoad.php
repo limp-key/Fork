@@ -1,5 +1,7 @@
 <?php
 
+namespace Fork;
+
 class AutoLoad{
 
     public static function Load(){
@@ -9,13 +11,13 @@ class AutoLoad{
 	# First parse client Request
 	# and Include user's Config in this project
 	# and assay Route
-	\Fork\Bin\Request\Parse::Start();
+	\Fork\Request\Parse::Start();
 	
 	# LEVEL 2 (Assembly level)
 	# Include:
 	#          User's Models      in models/
 	#          User's Controllers in controllers/
-	\Fork\Bin\Assembly\Route::Start();
+	\Fork\Assembly\Route::Start();
     }
 
     public static function Components($Class){
@@ -32,19 +34,19 @@ class AutoLoad{
 spl_autoload_register('\\AutoLoad::Components');
 
 # Load controllers in {path_to_project}/controllers folder
-spl_autoload_register('\Assembly\Controller::Start');
+spl_autoload_register('\\Assembly\\Controller::Start');
 
 # Load models in {path_to_project}/models folder
-spl_autoload_register('\Assembly\Models::Start');
+spl_autoload_register('\\Assembly\\Models::Start');
 
 # Load config in {path_to_project}/config folder
-spl_autoload_register('\Assembly\Config::Start');
+spl_autoload_register('\\Assembly\\Config::Start');
 
 # Load route in {path_to_project}/route folder
-spl_autoload_register('\Assembly\Route::Start');
+spl_autoload_register('\Assembly\\Route::Start');
 
 # 
-spl_autoload_register('\Assembly\Main::Start');
+spl_autoload_register('\Assembly\\Main::Start');
 
 # Run Fork Framework
 AutoLoad::Load();

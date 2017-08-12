@@ -1,6 +1,6 @@
 <?php
 
-namespace \Modules\Cookie;
+namespace Fork\Modules\Cookie;
 
 class CookieCreate{
 

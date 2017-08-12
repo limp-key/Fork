@@ -1,6 +1,6 @@
 <?php
 
-namespace Assembly;
+namespace Fork/Assembly;
 
 class Models{
 

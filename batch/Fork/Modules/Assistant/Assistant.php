@@ -1,6 +1,6 @@
 <?php
 
-namespace \Modules\Assistant;
+namespace Fork\Modules\Assistant;
 
 class Chief{
 

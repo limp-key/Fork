@@ -1,6 +1,6 @@
 <?php
 
-namespace \Modules\Assay;
+namespace Fork\Modules\Assay;
 
 class Chief{
 

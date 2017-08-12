@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Models;
+namespace Models;
 
-use Fork\Bin\Model\SkeletModel;
+use Fork\Model\SkeletModel;
 
 class ForkModel extends SkeletModel{
     

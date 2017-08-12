@@ -1,6 +1,6 @@
 <?php
 
-namespace Model;
+namespace Fork\Model;
 
 trait DataBase{
 

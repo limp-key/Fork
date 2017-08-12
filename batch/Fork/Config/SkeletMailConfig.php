@@ -1,6 +1,6 @@
 <?php
 
-namespace Config;
+namespace Fork/Config;
 
 class SkeletMailConfig {
 
