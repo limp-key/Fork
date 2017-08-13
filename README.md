@@ -1,8 +1,7 @@
 # Fork
-Framework for PHP  (Flexibility & Simplicity)
+Framework for PHP
+Many Configs and Many DataBases
+(Flexibility & Simplicity)
 
-This is framework for PHP. Simply a framework.
+This is framework for PHP. Simply a framework.<br>
 What would be the framework for configuring apache2 on a folder www
-
-
-if apache2 base configurate then look fork.apache.conf
