@@ -8,9 +8,9 @@ include 'Redirect.php';
 
 class SkeletController{
 
-    use \Controller\JSON;
+    use \Fork\Controller\JSON;
     
-    use \Controller\View;
+    use \Fork\Controller\View;
     
-    use \Controller\Redirect;
+    use \Fork\Controller\Redirect;
 }

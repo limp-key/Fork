@@ -1,5 +1,5 @@
 <?php
 
-use \Fork\Route\SkeletRoute as Route;
+use \Fork\Route\Route;
 
 Route::request('/','ForkController','index');
