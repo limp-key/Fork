@@ -1,10 +1,10 @@
 <?php
 
-namespace Fork/Assembly;
+namespace Fork\Assembly;
 
 class Models{
 
-    public static function ToPlug($NameSpace){
+    public static function ToPlug( $NameSpace ){
 	
 	
 	if(!is_dir($SearchingParameters)){

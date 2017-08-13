@@ -1,10 +1,10 @@
 <?php
 
-namespace Fork/Assembly;
+namespace Fork\Assembly;
 
 class Config{
 
-    public static function Start($AdditionalConfig){
+    public static function ToPlug($AdditionalConfig){
 
 	$SearchingParameters = sprintf('find ../config/ -maxdepth 1 | grep ".config.php"');
 	

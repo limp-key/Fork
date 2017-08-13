@@ -1,12 +1,12 @@
 <?php
 
-namespace Fork/Assembly;
+namespace Fork\Assembly;
 
 class Controllers{
 
-    public static function ToPlug($NameSpace){	 
+    public static function ToPlug( $NameSpace ){	 
 
-	preg_replace('\','/',$NameSpace);
+	preg_replace( '\\', '/', $NameSpace );
 
 	if(!is_dir($SearchingParameters)){
 	    return false;

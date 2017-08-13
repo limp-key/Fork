@@ -1,10 +1,10 @@
 <?php
 
-namespace Fork/Assembly;
+namespace Fork\Assembly;
 
 class Route{
 
-    public static function Start(){
+    public static function ToPlug(){
 	
 	$SearchingParameters = '../route/';
 	

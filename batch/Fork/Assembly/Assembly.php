@@ -20,11 +20,13 @@ class Assembly{
 	\Fork\Assembly\Route::Start();
     }
 
-    public static function Components($Class){
+    public static function Components( $Class ){
 
-	$File = sprintf('',$Class);
-	
-	require_once '';
+	$File = str_replace( '\\', '/', $Class );
+
+	$File = sprintf( '%s.php', $File );
+
+	require_once '/var/www/limp-key/fork/batch/'.$File;
 
 	return true;
     }
