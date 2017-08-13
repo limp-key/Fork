@@ -15,6 +15,26 @@ class SkeletRoute{
 	    return false;
 	}
 	
-	AssemblyMain::Start($Class, $Method, $Config);
+	# Load config
+	\Fork\Assembly\Config::Start($Config);
+
+	\Fork\Assembly\Config::Defaults();
+
+	\Fork\Assembly\Config::Mains();
+
+	if (!empty($Config))
+	    \Fork\Assembly\Config::Additionals($Config);
+
+	#phpinfo();
+
+	#Create object Controller (depending on the request)
+	
+	$Controller = sprintf('\\Controllers\\%s',$Class);
+	
+	$AssemblyController = new $Controller();
+	
+	if($AssemblyController->$Method() == null){
+	    \Fork\Assistant\Exception::errorURL();
+	}
     }
 }

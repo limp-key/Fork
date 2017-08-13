@@ -4,25 +4,18 @@ namespace Fork/Assembly;
 
 class Controllers{
 
-    public static function Start(){	 
+    public static function ToPlug($NameSpace){	 
 
-	$SearchingParameters = '../controllers/';
-	
+	preg_replace('\','/',$NameSpace);
+
 	if(!is_dir($SearchingParameters)){
 	    return false;
 	}
 
-	if($DH = opendir($SearchingParameters)){
-	    while (($File = readdir($DH)) !== false) {
-		if ($File != '..' && $File != '.')
-		    $Controllers[] = sprintf('../controllers/%s',$File);
-            }
-	}
+	$Include  = require_once $Controller;
 	
-        closedir($DH);
-
-	if(!empty($Controllers)){
-	    return $Controllers;
+	if( $Include ){
+	    return true;
 	}else{
 	    return false;
 	}

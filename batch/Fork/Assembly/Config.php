@@ -499,6 +499,5 @@ class Config{
 	$Session::SessionUploadProgressMinFreq($Session::$SessionUploadProgressMinFreq);
 
 	$Session::SessionLazyWrite($Session::$SessionLazyWrite);
-	
     }
 }

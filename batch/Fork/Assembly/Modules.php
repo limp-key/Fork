@@ -15,8 +15,6 @@ class Modules{
 	require_once \Config\MainConfig::$ProjectPath.'bin/Modules/Assistant/Help.php';
 	require_once \Config\MainConfig::$ProjectPath.'bin/Modules/Assistant/Exception.php';
 	
-	#require_once \Fork\Config\MainConfig::$ProjectPath.'bin/Modules/CMedia/ConvertMedia.php';
-	
 	/*
 	   $SearchingParameters = sprintf('find Modules/ | grep "^./[^#].*Chief\.php$"');
 	   exec($SearchingParameters,$Config);
