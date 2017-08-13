@@ -1,9 +1,9 @@
 <?php
 
-require_once 'Assembly/Assembly.php';
+require_once 'Assembly/Modules.php';
 
 # Load components in {path_to_project}/batch folder
-spl_autoload_register('\\Fork\\Assembly\\Assembly::Components');
+spl_autoload_register('\\Fork\\Assembly\\Modules::ToPlug');
 
 # Load controllers in {path_to_project}/controllers folder
 spl_autoload_register('\\Fork\\Assembly\\Controllers::ToPlug');
@@ -18,4 +18,4 @@ spl_autoload_register('\\Fork\\Assembly\\Configs::ToPlug');
 spl_autoload_register('\\Fork\\Assembly\\Routes::ToPlug');
 
 # Run Fork Framework
-\Fork\Assembly\Assembly::Load();
+\Fork\Assembly\Main::Load();

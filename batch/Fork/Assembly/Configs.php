@@ -2,36 +2,16 @@
 
 namespace Fork\Assembly;
 
-class Config{
+class Configs{
 
     public static function ToPlug($AdditionalConfig){
 
-	$SearchingParameters = sprintf('find ../config/ -maxdepth 1 | grep ".config.php"');
 	
-	exec($SearchingParameters,$Config);
-
-	if(is_array($Config)){
-	    foreach($Config as $IncludeConfig){
-		require_once $IncludeConfig;
-	    }
-	}
-	
-	if($AdditionalConfig){
-	    $SearchingParameters = sprintf('find ../config/%s | grep ".config.php"',$AdditionalConfig);
-
-	    exec($SearchingParameters,$Config);
-
-	    if(is_array($Config)){
-		foreach($Config as $IncludeConfig){
-		    require_once $IncludeConfig;
-		}
-	    }
-	}		
     }
 
     public static function Defaults(){
 	
-/*	\Fork\Config\SkeletDefaultConfig::ArgSeparatorOutput('parameter');
+	\Fork\Config\SkeletDefaultConfig::ArgSeparatorOutput('parameter');
 	
 	\Fork\Config\SkeletDefaultConfig::AutoDetectLineEndings('parameter');
 	
@@ -61,31 +41,26 @@ class Config{
 	
 	\Fork\Config\SkeletDefaultConfig::ZendScriptEncoding('parameter');
 
-   # Other
+	\Fork\Config\SkeletDefaultConfig::ArgSeparatorInput(\Fork\Config\SkeletDefaultConfig::$ArgSeparatorInput);
 
-   \Fork\Config\OtherConfig::ArgSeparatorInput(\Fork\Config\OtherConfig::$ArgSeparatorInput);
+	\Fork\Config\SkeletDefaultConfig::VariablesOrder(\Fork\Config\SkeletDefaultConfig::$VariablesOrder);
 
-   \Fork\Config\OtherConfig::VariablesOrder(\Fork\Config\OtherConfig::$VariablesOrder);
+	\Fork\Config\SkeletDefaultConfig::RequestOrder(\Fork\Config\SkeletDefaultConfig::$RequestOrder);
 
-   \Fork\Config\OtherConfig::RequestOrder(\Fork\Config\OtherConfig::$RequestOrder);
+	\Fork\Config\SkeletDefaultConfig::RegisterArgcArgv(\Fork\Config\SkeletDefaultConfig::$RegisterArgcArgv);
 
-   \Fork\Config\OtherConfig::RegisterArgcArgv(\Fork\Config\OtherConfig::$RegisterArgcArgv);
+	\Fork\Config\SkeletDefaultConfig::AutoGlobalsJit(\Fork\Config\SkeletDefaultConfig::$AutoGlobalsJit);
 
-   \Fork\Config\OtherConfig::AutoGlobalsJit(\Fork\Config\OtherConfig::$AutoGlobalsJit);
+	\Fork\Config\SkeletDefaultConfig::OutputBuffering(\Fork\Config\SkeletDefaultConfig::$OutputBuffering);
 
-   \Fork\Config\OtherConfig::OutputBuffering(\Fork\Config\OtherConfig::$OutputBuffering);
+	\Fork\Config\SkeletDefaultConfig::UnserializeCallbackFunc(\Fork\Config\SkeletDefaultConfig::$UnserializeCallbackFunc);
 
-   #\Fork\Config\OtherConfig::OutputHandler(\Fork\Config\OtherConfig::$OutputHandler);
+	\Fork\Config\SkeletDefaultConfig::SerializePrecision(\Fork\Config\SkeletDefaultConfig::$SerializePrecision);
 
-   \Fork\Config\OtherConfig::UnserializeCallbackFunc(\Fork\Config\OtherConfig::$UnserializeCallbackFunc);
+	\Fork\Config\SkeletDefaultConfig::RealPathCacheSize(\Fork\Config\SkeletDefaultConfig::$RealPathCacheSize);
 
-   \Fork\Config\OtherConfig::SerializePrecision(\Fork\Config\OtherConfig::$SerializePrecision);
+	\Fork\Config\SkeletDefaultConfig::RealPathCacheTTL(\Fork\Config\SkeletDefaultConfig::$RealPathCacheTTL);
 
-   \Fork\Config\OtherConfig::RealPathCacheSize(\Fork\Config\OtherConfig::$RealPathCacheSize);
-
-   \Fork\Config\OtherConfig::RealPathCacheTTL(\Fork\Config\OtherConfig::$RealPathCacheTTL);
-
- */
     }
 
     public static function Mains(){

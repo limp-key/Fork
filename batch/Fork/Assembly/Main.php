@@ -2,7 +2,7 @@
 
 namespace Fork\Assembly;
 
-class Assembly{
+class Main{
 
     public static function Load(){
 
@@ -17,21 +17,6 @@ class Assembly{
 	# Include:
 	#          User's Models      in models/
 	#          User's Controllers in controllers/
-	\Fork\Assembly\Route::Start();
-    }
-
-    public static function Components($Class){
-
-	$File = str_replace('\\', '/', $Class);
-
-	$File = sprintf('%s.php', $File);
-
-	if(!is_file($File)){
-	    return false;
-	}
-
-	require_once '/var/www/limp-key/fork/batch/'.$File;
-
-	return true;
+	\Fork\Assembly\Routes::ToPlug();
     }
 }

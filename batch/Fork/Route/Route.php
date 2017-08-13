@@ -4,7 +4,7 @@ namespace Fork\Route;
 
 use Fork\Assembly\Main as AssemblyMain;
 
-class SkeletRoute{
+class Route{
     
     public static function Request($Path, $Class, $Method, $Config){
 
