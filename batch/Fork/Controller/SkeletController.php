@@ -1,6 +1,6 @@
 <?php
 
-namespace Controller;
+namespace Fork\Controller;
 
 include 'JSON.php';
 include 'View.php';

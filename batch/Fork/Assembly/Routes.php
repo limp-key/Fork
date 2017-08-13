@@ -4,10 +4,16 @@ namespace Fork\Assembly;
 
 class Routes{
 
-    public static function ToPlug(){
+    public static function ToPlug( $NameSpace ){
 	
-	include '/var/www/limp-key/fork/routes/Route.php';
+	$File = str_replace( '\\', '/', $NameSpace );
+	
+	$File = sprintf( '%s.php', $File );
 
-	return true;
+	if(is_file('/var/www/limp-key/fork/'.$File)){
+
+	    require_once '/var/www/limp-key/fork/'.$File;
+	}
+
     }
 }

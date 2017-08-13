@@ -2,16 +2,13 @@
 
 namespace Fork\Controller;
 
-trait View{
+trait Redirect{
 
-    public function view($Path, $Parameters = array()){
+    public function redirect($Path = '/'){
+
+	$Redirect = sprintf('Location: %s', $Path);
 	
-	if(!empty($Parameters))
-	    extract($Parameters);
-	
-	$View = sprintf('%s/views/%s', Config\MainConfig::$ProjectPath, $Path);
-	
-	require_once $View;
+	header($Redirect);
 	
 	return true;
     }

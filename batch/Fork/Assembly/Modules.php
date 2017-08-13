@@ -11,8 +11,6 @@ class Modules{
 	$File = sprintf('%s.php', $File);
 	
 	if(is_file('/var/www/limp-key/fork/batch/'.$File)){
-	    echo '/var/www/limp-key/fork/batch/'.$File;
-	    echo '<br>';
 	    require_once '/var/www/limp-key/fork/batch/'.$File;
 	}
 	

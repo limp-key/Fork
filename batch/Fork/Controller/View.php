@@ -2,13 +2,17 @@
 
 namespace Fork\Controller;
 
-trait Redirect{
+trait View{
 
-    public function redirect($Path = '/'){
-
-	$Redirect = sprintf('Location: %s', $Path);
+    public function view($Path, $Parameters = array()){
 	
-	header($Redirect);
+	if(!empty($Parameters))
+	    extract($Parameters);
+	
+	#$View = sprintf('%s/views/%s', Config\MainConfig::$ProjectPath, $Path);
+	$View = sprintf('%s/views/%s', '/var/www/limp-key/fork/', $Path);
+	
+	require_once $View;
 	
 	return true;
     }
