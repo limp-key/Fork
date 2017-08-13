@@ -8,11 +8,6 @@ then
     echo '--create {Type} {Name}  - create Controller or Model or Route file'
     echo '--install               - install all packate and programme for Fork'
     echo '--migration             - migration in database'
-    echo
-    echo 'Module'
-    echo '--module           - show all module in Fork'
-    echo '--include {Module} - include module in Fork'
-    echo '--disable {Module} - disable module in Fork'
     exit;
 fi
 
@@ -32,7 +27,7 @@ then
     then
 	if [ $3 != '' ]
 	then
-	    cp bin/Modules/Routine/Controller/Controller.php controllers/
+	    cp batch/Fork/Routine/Controller/Controller.php controllers/
 	    mv controllers/Controller.php controllers/$3.php 
 	    sed -i "s/__Name__/$3/" controllers/$3.php
 	else
@@ -42,7 +37,7 @@ then
     then
 	if [ $3 != '' ]
 	then
-	    cp bin/Modules/Routine/Model/Model.php models/
+	    cp batch/Fork/Routine/Model/Model.php models/
 	    mv models/Model.php models/$3.php
 	    sed -i "s/__Name__/$3/" models/$3.php
 	else
@@ -52,7 +47,7 @@ then
     then
 	if [ $3 != '' ]
 	then
-	    cp bin/Modules/Routine/Route/Route.php route/
+	    cp batch/Fork/Routine/Route/Route.php route/
 	    mv route/Route.php route/$3.php
 	    sed -i "s/__Name__/$3/" route/$3.php
 	else
@@ -63,10 +58,10 @@ then
 	if [ $3 ] && [ $3 != '' ]
 	then
 	    mkdir config/$3
-	    cp bin/Modules/Routine/Config/Other/* config/$3
+	    cp batch/Fork/Routine/Config/Other/* config/$3
 	    sed -i "s/__NAME__/$3/" config/$3/*.php
 	else
-	    cp bin/Modules/Routine/Config/Main/* config/
+	    cp batch/Fork/Routine/Config/Main/* config/
 	fi
     else 
 	echo "Invalid create type"
@@ -77,28 +72,6 @@ then
 elif [ $1 == '--migration' ]
 then
     echo 'php'
-elif [ $1 == '--modules' ]
-then
-    echo
-    echo 'Fork modules:'
-    find bin/Modules -mindepth 1 -maxdepth 1 -type d  \( ! -iname ".*" \) | sed "s/bin\/Modules\/#/[Disable$] /" | sed "s/bin\/Modules\//[Enable]  /"
-    echo
-elif [ $1 == '--enable' ]
-then
-    if [ $2 != '' ]
-    then
-	mv bin/Modules/#$2 bin/Modules/$2
-    else
-	echo 'Invalid module name'
-    fi
-elif [ $1 == '--disable' ]
-then
-    if [ $2 != '' ]
-    then
-	mv bin/Modules/$2 bin/Modules/#$2
-    else
-	echo 'Invalid module name'
-    fi
 else
     echo 'Invalid command'
 fi

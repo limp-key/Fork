@@ -6,13 +6,15 @@ class Controllers{
 
     public static function ToPlug( $NameSpace ){	 
 
-	preg_replace( '\\', '/', $NameSpace );
+	$File = str_replace( '\\', '/', $NameSpace );
 
-	if(!is_dir($SearchingParameters)){
+	$File = sprintf( '%s.php', $File );
+	
+	if(!is_file($File)){
 	    return false;
 	}
-
-	$Include  = require_once $Controller;
+	
+	$Include  = require_once $File;
 	
 	if( $Include ){
 	    return true;
