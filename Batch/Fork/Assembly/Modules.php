@@ -10,8 +10,8 @@ class Modules{
 
 	$File = sprintf('%s.php', $File);
 	
-	if(is_file('/var/www/limp-key/fork/batch/'.$File)){
-	    require_once '/var/www/limp-key/fork/batch/'.$File;
+	if(is_file('/var/www/limp-key/Fork/Batch/'.$File)){
+	    require_once '/var/www/limp-key/Fork/Batch/'.$File;
 	}
 	
 

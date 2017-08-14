@@ -8,9 +8,8 @@ trait View{
 	
 	if(!empty($Parameters))
 	    extract($Parameters);
-	
-	#$View = sprintf('%s/views/%s', Config\MainConfig::$ProjectPath, $Path);
-	$View = sprintf('%s/views/%s', '/var/www/limp-key/fork/', $Path);
+
+	$View = sprintf('%s/Views/%s', \Configs\Project::$Path, $Path);
 	
 	require_once $View;
 	

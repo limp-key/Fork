@@ -2,7 +2,7 @@
 
 namespace Fork\Assembly;
 
-class Main{
+class Project{
 
     public static function Load(){
 
@@ -18,6 +18,6 @@ class Main{
 	#          User's Models      in models/
 	#          User's Controllers in controllers/
 	#\Fork\Assembly\Routes::ToPlug();
-	include '/var/www/limp-key/fork/routes/Route.php';
+	include '/var/www/limp-key/Fork/Routes/Route.php';
     }
 }

@@ -18,4 +18,4 @@ spl_autoload_register('\\Fork\\Assembly\\Configs::ToPlug');
 spl_autoload_register('\\Fork\\Assembly\\Routes::ToPlug');
 
 # Run Fork Framework
-\Fork\Assembly\Main::Load();
+\Fork\Assembly\Project::Load();

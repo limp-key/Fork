@@ -2,13 +2,11 @@
 
 namespace Fork\Config;
 
-use \Fork\Bin\Config\SkeletMainConfig;
-
-class MainConfig extends SkeletMainConfig{
-
+class SkeletProjectConfig{    
+    
     // Parameter for framework
 
-    public static $ProjectPath = '/var/www/limp-key/fork/';
+    public static $Path;
 
     public static $URL;
 
@@ -20,8 +18,23 @@ class MainConfig extends SkeletMainConfig{
 
     public static $Debug;
 
+    // Time zone UTC+2
+    
+    public static $TimeZone;
+
     public static $Locale;
 
     public static $Modules;
+
+    public function __construct(){
+	
+    }
     
+    public function Config(){
+	
+    }
+
+    public function System(){
+	
+    }
 }

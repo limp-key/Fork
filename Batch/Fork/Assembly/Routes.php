@@ -10,9 +10,9 @@ class Routes{
 	
 	$File = sprintf( '%s.php', $File );
 
-	if(is_file('/var/www/limp-key/fork/'.$File)){
+	if(is_file('/var/www/limp-key/Fork/'.$File)){
 
-	    require_once '/var/www/limp-key/fork/'.$File;
+	    require_once '/var/www/limp-key/Fork/'.$File;
 	}
 
     }
