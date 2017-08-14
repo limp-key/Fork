@@ -9,13 +9,15 @@ class Configs{
 	# Convert namespace to file path
 	$File = str_replace('\\', '/', $NameSpace);
 
+	$File = preg_replace('#^Configs#','configs',$File);
+	
 	# Add .php extension for file path
 	$File = sprintf('../%s.php', $File);
-
+	
 	# Assay file exists 
 	if(is_file($File)){
 
-	    # Include file in folder {path/to/project}/Configs/
+	    # Include file in folder {path/to/project}/configs/
 	    $Include = require_once $File;
 	}
 

@@ -9,6 +9,8 @@ class Controllers{
 	# Convert namespace to file path
 	$File = str_replace('\\', '/', $NameSpace);
 
+	$File = preg_replace('#^Controllers#','controllers',$File);
+	
 	# Add .php extension for file path
 	$File = sprintf('%s.php', $File);
 

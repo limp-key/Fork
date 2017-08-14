@@ -2,23 +2,20 @@
 
 namespace Fork\Assembly;
 
-class Models{
+class Modules{
 
-    public static function ToPlug($NameSpace){	 
+    public static function ToPlug($NameSpace){
 
 	# Convert namespace to file path
 	$File = str_replace('\\', '/', $NameSpace);
 
 	# Add .php extension for file path
-	$File = sprintf('%s.php', $File);
+	$File = sprintf('../batch/%s.php', $File);
 
-	# Add path project to file controller
-	$File = sprintf('%s/%s', \Configs\Project::$Path, $File);
-	
 	# Assay file exists 
 	if(is_file($File)){
-
-	    # Include file in folder {path/to/project}/Models/
+	    
+	    # Include file in folder {path/to/project}/Batch/Fork/
 	    $Include = require_once $File;
 	}
 	

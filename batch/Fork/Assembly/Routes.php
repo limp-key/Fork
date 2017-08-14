@@ -7,6 +7,8 @@ class Routes{
     public static function ToPlug( $NameSpace ){
 	
 	$File = str_replace( '\\', '/', $NameSpace );
+
+	$File = preg_replace('#^Routes#','routes',$File);
 	
 	$File = sprintf( '%s.php', $File );
 

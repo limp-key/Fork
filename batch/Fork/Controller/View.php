@@ -9,7 +9,7 @@ trait View{
 	if(!empty($Parameters))
 	    extract($Parameters);
 
-	$View = sprintf('%s/Views/%s', \Configs\Project::$Path, $Path);
+	$View = sprintf('%s/views/%s', \Configs\Project::$Path, $Path);
 	
 	require_once $View;
 	
