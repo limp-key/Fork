@@ -6,16 +6,27 @@ class Routes{
 
     public static function ToPlug( $NameSpace ){
 	
-	$File = str_replace( '\\', '/', $NameSpace );
+	# Convert namespace to file path
+	$File = str_replace('\\', '/', $NameSpace);
 
 	$File = preg_replace('#^Routes#','routes',$File);
-	
-	$File = sprintf( '%s.php', $File );
 
-	if(is_file('/var/www/limp-key/Fork/'.$File)){
+	# Add .php extension for file path
+	$File = sprintf('%s.php', $File);
 
-	    require_once '/var/www/limp-key/Fork/'.$File;
+	# Add path project to file controller
+	$File = sprintf('%s/%s', \Configs\Project::$Path, $File);
+
+	# Assay file exists 
+	if(is_file($File)){
+
+	    # Include file in folder {path/to/project}/Models/
+	    $Include = require_once $File;
 	}
 
+	if(isset($Include))
+	    return true;
+	else
+	    return false;
     }
 }

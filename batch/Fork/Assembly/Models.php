@@ -9,7 +9,7 @@ class Models{
 	# Convert namespace to file path
 	$File = str_replace('\\', '/', $NameSpace);
 
-	$File = preg_replace('#^Modelss#','models',$File);
+	$File = preg_replace('#^Models#','models',$File);
 
 	# Add .php extension for file path
 	$File = sprintf('%s.php', $File);

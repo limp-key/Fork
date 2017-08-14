@@ -17,7 +17,6 @@ class Project{
 	# Include:
 	#          User's Models      in models/
 	#          User's Controllers in controllers/
-	#\Fork\Assembly\Routes::ToPlug();
-	include '/var/www/limp-key/Fork/routes/Route.php';
+	include \Configs\Project::$Path.'routes/Route.php';
     }
 }
