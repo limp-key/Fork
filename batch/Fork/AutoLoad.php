@@ -1,7 +1,5 @@
 <?php
 
-$Begin = microtime();
-
 require_once 'Assembly/Modules.php';
 
 # Load components in {path_to_project}/batch/Fork folder
@@ -21,8 +19,3 @@ spl_autoload_register('\\Fork\\Assembly\\Routes::ToPlug');
 
 # Run Fork Framework
 \Fork\Assembly\Project::Load();
-
-$End = microtime();
-
-$Time = $End - $Begin;
-var_dump($Time);

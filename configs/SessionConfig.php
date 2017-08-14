@@ -1,10 +1,10 @@
 <?php
 
-namespace Fork\Config\ForkConfig;
+namespace Configs;
 
-use \Fork\Config\SessionConfig;
+use \Fork\Config\SkeletSessionConfig;
 
-class Session extends SessionConfig{
+class SessionConfig extends SkeletSessionConfig{
 
     public static $SessionSaveHandler = 'files';
 
@@ -18,7 +18,7 @@ class Session extends SessionConfig{
 
     public static $SessionUseOnlyCookies = '1';
 
-    public static $SessionName = 'PHPSESSID';
+    public static $SessionName = 'UID';
 
     public static $SessionAutoStart = '0';
 

@@ -6,7 +6,7 @@ use Fork\Assembly\Main as AssemblyMain;
 
 class Route{
     
-    public static function Request($Path, $Class, $Method, $Config = ''){
+    public static function Request($Path, $Class, $Method){
 
 	if( ( empty($_SERVER['REDIRECT_URL']) && $Path !== '/' ) ||
 	    $Path !== $_SERVER['REDIRECT_URL'] ||
@@ -16,16 +16,10 @@ class Route{
 	}
 	
 	# Load config
-	\Fork\Assembly\Configs::ToPlug($Config);
 
-	#\Fork\Assembly\Configs::Defaults();
+	\Fork\Assembly\Configs::Defaults();
 
-	#\Fork\Assembly\Configs::Mains();
-
-	if (!empty($Config))
-	    \Fork\Assembly\Configs::Additionals($Config);
-
-	#phpinfo();
+	\Fork\Assembly\Configs::Configs();
 
 	#Create object Controller (depending on the request)
 	

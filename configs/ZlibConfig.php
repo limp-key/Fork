@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Config;
+namespace Configs;
 
-use \Fork\Bin\Config\SkeletZlibConfig;
+use \Fork\Config\SkeletZlibConfig;
 
 class ZlibConfig extends SkeletZlibConfig{
 

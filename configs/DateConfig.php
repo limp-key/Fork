@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Config;
+namespace Configs;
 
-use \Fork\Bin\Config\SkeletDateConfig;
+use \Fork\Config\SkeletDateConfig;
 
 class DateConfig extends SkeletDateConfig{
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork/Config;
+namespace Fork\Config;
 
 class SkeletSessionConfig{
 
@@ -100,7 +100,6 @@ class SkeletSessionConfig{
     #
     # where MODE is the octal representation of the mode. Note that this
     # does not overwrite the process's umask.
-
     # RPM note : session directory must be owned by process owner
     # for mod_php, see /etc/httpd/conf.d/php.conf
     # for php-fpm, see /etc/php-fpm.d/*conf

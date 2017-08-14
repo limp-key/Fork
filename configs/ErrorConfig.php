@@ -1,10 +1,10 @@
 <?php
 
-namespace Fork\Config\ForkConfig;
+namespace Configs;
 
-use \Fork\Config\ErrorConfig;
+use \Fork\Config\SkeletErrorConfig;
 
-class Error extends ErrorConfig{
+class ErrorConfig extends SkeletErrorConfig{
 
     public static $ErrorReporting = 'E_ALL & ~E_DEPRECATED & ~E_STRICT';
 
