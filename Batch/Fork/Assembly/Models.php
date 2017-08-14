@@ -4,22 +4,27 @@ namespace Fork\Assembly;
 
 class Models{
 
-    public static function ToPlug( $NameSpace ){
+    public static function ToPlug($NameSpace){	 
 
-	$File = str_replace( '\\', '/', $NameSpace );
+	# Convert namespace to file path
+	$File = str_replace('\\', '/', $NameSpace);
 
-	$File = sprintf( '%s.php', $File );
+	# Add .php extension for file path
+	$File = sprintf('%s.php', $File);
+
+	# Add path project to file controller
+	$File = sprintf('%s/%s', \Configs\Project::$Path, $File);
 	
-	if(!is_file($File)){
-	    return false;
+	# Assay file exists 
+	if(is_file($File)){
+
+	    # Include file in folder {path/to/project}/Models/
+	    $Include = require_once $File;
 	}
 	
-	$Include  = require_once $File;
-	
-	if( $Include ){
+	if(isset($Include))
 	    return true;
-	}else{
+	else
 	    return false;
-	}
     }
 }

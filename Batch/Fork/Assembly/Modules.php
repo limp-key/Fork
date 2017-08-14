@@ -4,18 +4,24 @@ namespace Fork\Assembly;
 
 class Modules{
 
-    public static function ToPlug($Class){
+    public static function ToPlug($NameSpace){
 
-	$File = str_replace('\\', '/', $Class);
+	# Convert namespace to file path
+	$File = str_replace('\\', '/', $NameSpace);
 
-	$File = sprintf('%s.php', $File);
-	
-	if(is_file('/var/www/limp-key/Fork/Batch/'.$File)){
-	    require_once '/var/www/limp-key/Fork/Batch/'.$File;
+	# Add .php extension for file path
+	$File = sprintf('../Batch/%s.php', $File);
+
+	# Assay file exists 
+	if(is_file($File)){
+	    
+	    # Include file in folder {path/to/project}/Batch/Fork/
+	    $Include = require_once $File;
 	}
 	
-
-
-	return true;
+	if(isset($Include))
+	    return true;
+	else
+	    return false;
     }
 }

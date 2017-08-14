@@ -11,6 +11,8 @@ class SkeletModel{
     use Fork\Model\Other;
     
     use Fork\Model\DataBase;
+
+    use Fork\Model\Exec;
     
     public $Query = "";
 

@@ -4,22 +4,27 @@ namespace Fork\Assembly;
 
 class Controllers{
 
-    public static function ToPlug( $NameSpace ){	 
+    public static function ToPlug($NameSpace){	 
 
-	$File = str_replace( '\\', '/', $NameSpace );
+	# Convert namespace to file path
+	$File = str_replace('\\', '/', $NameSpace);
+
+	# Add .php extension for file path
+	$File = sprintf('%s.php', $File);
+
+	# Add path project to file controller
+	$File = sprintf('%s/%s', \Configs\Project::$Path, $File);
 	
-	$File = sprintf( '%s.php', $File );
+	# Assay file exists 
+	if(is_file($File)){
 
-	if(is_file('/var/www/limp-key/Fork/'.$File)){
-
-	    require_once '/var/www/limp-key/Fork/'.$File;
+	    # Include file in folder {path/to/project}/Controllers/
+	    $Include = require_once $File;
 	}
 	
-	/*if( $Include ){
+	if(isset($Include))
 	    return true;
-	}else{
+	else
 	    return false;
-	   }*/
-	return true;
     }
 }
