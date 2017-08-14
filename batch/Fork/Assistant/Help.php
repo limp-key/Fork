@@ -24,18 +24,4 @@ class Help{
 	
 	echo '</pre>';
     }
-
-    public static function Token(){
-
-	
-    }
-
-    public static function View($File){
-
-	$Layout = sprintf('%s/%s',\Fork\Config\MainConfig::$ProjectPath,$File);
-
-	include $Layout;
-
-	return true;
-    }
 }
