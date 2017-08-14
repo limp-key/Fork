@@ -1,10 +1,10 @@
 <?php
 
-namespace Fork\Config\__NAME__;
+namespace Fork\Config;
 
-use \Fork\Config\ZlibConfig;
+use \Fork\Config\SkeletZlibConfig;
 
-class Zlib extends ZlibConfig{
+class ZlibConfig extends SkeletZlibConfig{
 
     public static $ZlibOutputCompression = 'Off';
 

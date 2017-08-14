@@ -2,7 +2,7 @@
 
 namespace Fork\Config;
 
-use \Fork\Bin\Config\SkeletDateConfig;
+use \Fork\Config\SkeletDateConfig;
 
 class DateConfig extends SkeletDateConfig{
 

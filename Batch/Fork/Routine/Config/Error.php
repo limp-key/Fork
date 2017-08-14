@@ -2,7 +2,7 @@
 
 namespace Fork\Config;
 
-use \Fork\Bin\Config\SkeletErrorConfig;
+use \Fork\Config\SkeletErrorConfig;
 
 class ErrorConfig extends SkeletErrorConfig{
 

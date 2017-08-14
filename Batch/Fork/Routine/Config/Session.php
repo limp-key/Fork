@@ -1,10 +1,10 @@
 <?php
 
-namespace Fork\Config\__NAME__;
+namespace Fork\Config;
 
-use \Fork\Config\SessionConfig;
+use \Fork\Config\SkeletSessionConfig;
 
-class Session extends SessionConfig{
+class SessionConfig extends SkeletSessionConfig{
 
     public static $SessionSaveHandler = 'files';
 

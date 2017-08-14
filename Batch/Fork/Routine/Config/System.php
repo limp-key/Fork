@@ -1,10 +1,10 @@
 <?php
 
-namespace Fork\Config\__NAME__;
+namespace Fork\Config;
 
-use \Fork\Config\SystemConfig;
+use \Fork\Config\SkeletSystemConfig;
 
-class System extends SystemConfig{
+class SystemConfig extends SkeletSystemConfig{
 
     public static $MaxExecutionTime = '30';
 

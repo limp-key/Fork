@@ -2,7 +2,7 @@
 
 namespace Fork\Config;
 
-use \Fork\Bin\Config\SkeletMainConfig;
+use \Fork\Config\SkeletMainConfig;
 
 class MainConfig extends SkeletMainConfig{
 
