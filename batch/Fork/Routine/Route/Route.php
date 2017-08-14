@@ -1,5 +1,5 @@
 <?php
 
-use Fork\Bin\Route\Route;
+use Fork\Route\Route;
 
 #Route::request('/','TestController','index');

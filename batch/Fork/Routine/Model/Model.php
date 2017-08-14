@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Models;
+namespace Models;
 
 use Fork\Model\SkeletonModel;
 

@@ -31,9 +31,7 @@ class Route{
 	
 	$Controller = sprintf('\\Controllers\\%s',$Class);
 
-	#$AssemblyController = new $Controller();
-	#include '/var/www/limp-key/fork/Controllers/ForkController.php';
-	$AssemblyController = new \Controllers\ForkController();
+	$AssemblyController = new $Controller();
 	
 	if($AssemblyController->$Method() == null){
 	    \Fork\Assistant\Exception::errorURL();

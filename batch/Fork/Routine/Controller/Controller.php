@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Controllers;
+namespace Controllers;
 
 use Fork\Controller\SkeletonController;
 

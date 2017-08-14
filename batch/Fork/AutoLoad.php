@@ -2,7 +2,7 @@
 
 require_once 'Assembly/Modules.php';
 
-# Load components in {path_to_project}/batch folder
+# Load components in {path_to_project}/batch/Fork folder
 spl_autoload_register('\\Fork\\Assembly\\Modules::ToPlug');
 
 # Load controllers in {path_to_project}/controllers folder
