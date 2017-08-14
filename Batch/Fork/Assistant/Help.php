@@ -11,7 +11,8 @@ class Help{
     public $Token;
     
     public static function See($Parameter){
-	
+
+	# Ecraning and output $Parameter
 	echo htmlentities($Parameter);
     }
 

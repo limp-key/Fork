@@ -6,6 +6,7 @@ class Request{
 
     public function Post(){
 
+	# Assay request is post
 	if(!empty($_POST)){
 	    $Posts = $_POST;
 	    
@@ -20,6 +21,7 @@ class Request{
 
     public function Get(){
 
+	# Assay request is get
 	if(!empty($_GET)){
 	    $Gets = $_GET;
 
@@ -33,7 +35,8 @@ class Request{
     }
 
     public function File($Parameter){
-	
+
+	# File exists in request
 	if(empty($_FILES))
 	    return null;
 	
@@ -55,7 +58,8 @@ class Request{
     }
 
     public function Files(){
-	
+
+	# Files exists in request
 	if(empty($_FILES))
 	    return null;
 	    	
