@@ -11,10 +11,12 @@ class Help{
     public $Token;
     
     public static function See($Parameter){
+	
 	echo htmlentities($Parameter);
     }
 
     public static function Dump($Parameter,$Type = 1){
+	
 	echo '<pre>';
 
 	if ($Type == 1)
