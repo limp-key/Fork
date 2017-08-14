@@ -60,127 +60,126 @@ class Configs{
 
 	\Fork\Config\SkeletDefaultConfig::RealPathCacheTTL(\Fork\Config\SkeletDefaultConfig::$RealPathCacheTTL);
 
+	# Zlib
+
+	#\Configs\Zlib::ZlibOutputCompression(\Configs\Zlib::$ZlibOutputCompression);
+
+	#\Configs\Zlib::ZlibOutputCompressionLevel(\Configs\Zlib::$ZlibOutputCompressionLevel);
+
+	#\Configs\Zlib::ZlibOutputHandler(\Configs\Zlib::$ZlibOutputHandler);
     }
 
     public static function Configs(){
 
 	# System
 
-	\Configs\SystemConfig::DefaultMimetype(\Configs\SystemConfig::$DefaultMimetype);
+	\Configs\System::DefaultMimetype(\Configs\System::$DefaultMimetype);
 
-	\Configs\SystemConfig::DefaultCharset(\Configs\SystemConfig::$DefaultCharset);
-
-	# Zlib
-
-	\Configs\ZlibConfig::ZlibOutputCompression(\Configs\ZlibConfig::$ZlibOutputCompression);
-
-	\Configs\ZlibConfig::ZlibOutputCompressionLevel(\Configs\ZlibConfig::$ZlibOutputCompressionLevel);
-
-	\Configs\ZlibConfig::ZlibOutputHandler(\Configs\ZlibConfig::$ZlibOutputHandler);
+	\Configs\System::DefaultCharset(\Configs\System::$DefaultCharset);
 	
 	# Error
 
-	\Configs\ErrorConfig::HtmlErrors(\Configs\ErrorConfig::$HtmlErrors);
+	\Configs\Error::HtmlErrors(\Configs\Error::$HtmlErrors);
 
-	\Configs\ErrorConfig::ErrorPrependString(\Configs\ErrorConfig::$ErrorPrependString);
+	\Configs\Error::ErrorPrependString(\Configs\Error::$ErrorPrependString);
 
-	\Configs\ErrorConfig::ErrorAppendString(\Configs\ErrorConfig::$ErrorAppendString);
+	\Configs\Error::ErrorAppendString(\Configs\Error::$ErrorAppendString);
 
-	\Configs\ErrorConfig::ErrorLog(\Configs\ErrorConfig::$ErrorLog);
+	\Configs\Error::ErrorLog(\Configs\Error::$ErrorLog);
 
-	\Configs\ErrorConfig::ErrorReporting(\Configs\ErrorConfig::$ErrorReporting);
+	\Configs\Error::ErrorReporting(\Configs\Error::$ErrorReporting);
 
-	\Configs\ErrorConfig::DisplayErrors(\Configs\ErrorConfig::$DisplayErrors);
+	\Configs\Error::DisplayErrors(\Configs\Error::$DisplayErrors);
 
-	\Configs\ErrorConfig::DisplayStartupErrors(\Configs\ErrorConfig::$DisplayStartupErrors);
+	\Configs\Error::DisplayStartupErrors(\Configs\Error::$DisplayStartupErrors);
 
-	\Configs\ErrorConfig::LogErrors(\Configs\ErrorConfig::$LogErrors);
+	\Configs\Error::LogErrors(\Configs\Error::$LogErrors);
 
-	\Configs\ErrorConfig::LogErrorsMaxLen(\Configs\ErrorConfig::$LogErrorsMaxLen);
+	\Configs\Error::LogErrorsMaxLen(\Configs\Error::$LogErrorsMaxLen);
 
-	\Configs\ErrorConfig::IgnoreRepeatedErrors(\Configs\ErrorConfig::$IgnoreRepeatedErrors);
+	\Configs\Error::IgnoreRepeatedErrors(\Configs\Error::$IgnoreRepeatedErrors);
 	
-	\Configs\ErrorConfig::XMLrpcErrors(\Configs\ErrorConfig::$XMLrpcErrors);
+	\Configs\Error::XMLrpcErrors(\Configs\Error::$XMLrpcErrors);
 
-	\Configs\ErrorConfig::XMLrpcErrorNumber(\Configs\ErrorConfig::$XMLrpcErrorNumber);
+	\Configs\Error::XMLrpcErrorNumber(\Configs\Error::$XMLrpcErrorNumber);
 
-	\Configs\ErrorConfig::TrackErrors(\Configs\ErrorConfig::$TrackErrors);
+	\Configs\Error::TrackErrors(\Configs\Error::$TrackErrors);
 	
 	# Date
 
-	\Configs\DateConfig::DateTimezone(\Configs\DateConfig::$DateTimezone);
+	\Configs\Date::DateTimezone(\Configs\Date::$DateTimezone);
 
-	\Configs\DateConfig::DateDefaultLatitude(\Configs\DateConfig::$DateDefaultLatitude);
+	\Configs\Date::DateDefaultLatitude(\Configs\Date::$DateDefaultLatitude);
 
-	\Configs\DateConfig::DateDefaultLongitude(\Configs\DateConfig::$DateDefaultLongitude);
+	\Configs\Date::DateDefaultLongitude(\Configs\Date::$DateDefaultLongitude);
 
-	\Configs\DateConfig::DateSunriseZenith(\Configs\DateConfig::$DateSunriseZenith);
+	\Configs\Date::DateSunriseZenith(\Configs\Date::$DateSunriseZenith);
 
-	\Configs\DateConfig::DateSunsetZenith(\Configs\DateConfig::$DateSunsetZenith);
+	\Configs\Date::DateSunsetZenith(\Configs\Date::$DateSunsetZenith);
 
 	# Session
 
-	\Configs\SessionConfig::SessionSaveHandler(\Configs\SessionConfig::$SessionSaveHandler);
+	\Configs\Session::SessionSaveHandler(\Configs\Session::$SessionSaveHandler);
 
-	\Configs\SessionConfig::SessionSavePath(\Configs\SessionConfig::$SessionSavePath);
+	\Configs\Session::SessionSavePath(\Configs\Session::$SessionSavePath);
 
-	\Configs\SessionConfig::SessionUseStrictMode(\Configs\SessionConfig::$SessionUseStrictMode);
+	\Configs\Session::SessionUseStrictMode(\Configs\Session::$SessionUseStrictMode);
 
-	\Configs\SessionConfig::SessionUseCookies(\Configs\SessionConfig::$SessionUseCookies);
+	\Configs\Session::SessionUseCookies(\Configs\Session::$SessionUseCookies);
 
-	\Configs\SessionConfig::SessionCookieSecure(\Configs\SessionConfig::$SessionCookieSecure);
+	\Configs\Session::SessionCookieSecure(\Configs\Session::$SessionCookieSecure);
 
-	\Configs\SessionConfig::SessionUseOnlyCookies(\Configs\SessionConfig::$SessionUseOnlyCookies);
+	\Configs\Session::SessionUseOnlyCookies(\Configs\Session::$SessionUseOnlyCookies);
 
-	\Configs\SessionConfig::SessionName(\Configs\SessionConfig::$SessionName);
+	\Configs\Session::SessionName(\Configs\Session::$SessionName);
 
-	\Configs\SessionConfig::SessionAutoStart(\Configs\SessionConfig::$SessionAutoStart);
+	\Configs\Session::SessionAutoStart(\Configs\Session::$SessionAutoStart);
 
-	\Configs\SessionConfig::SessionCookieLifetime(\Configs\SessionConfig::$SessionCookieLifetime);
+	\Configs\Session::SessionCookieLifetime(\Configs\Session::$SessionCookieLifetime);
 
-	\Configs\SessionConfig::SessionCookiePath(\Configs\SessionConfig::$SessionCookiePath);
+	\Configs\Session::SessionCookiePath(\Configs\Session::$SessionCookiePath);
 
-	\Configs\SessionConfig::SessionCookieDomain(\Configs\SessionConfig::$SessionCookieDomain);
+	\Configs\Session::SessionCookieDomain(\Configs\Session::$SessionCookieDomain);
 
-	\Configs\SessionConfig::SessionCookieHttponly(\Configs\SessionConfig::$SessionCookieHttponly);
+	\Configs\Session::SessionCookieHttponly(\Configs\Session::$SessionCookieHttponly);
 
-	\Configs\SessionConfig::SessionSerializeHandler(\Configs\SessionConfig::$SessionSerializeHandler);
+	\Configs\Session::SessionSerializeHandler(\Configs\Session::$SessionSerializeHandler);
 
-	\Configs\SessionConfig::SessionGCProbability(\Configs\SessionConfig::$SessionGCProbability);
+	\Configs\Session::SessionGCProbability(\Configs\Session::$SessionGCProbability);
 
-	\Configs\SessionConfig::SessionGCDivisor(\Configs\SessionConfig::$SessionGCDivisor);
+	\Configs\Session::SessionGCDivisor(\Configs\Session::$SessionGCDivisor);
 
-	\Configs\SessionConfig::SessionGCMaxlifetime(\Configs\SessionConfig::$SessionGCMaxlifetime);
+	\Configs\Session::SessionGCMaxlifetime(\Configs\Session::$SessionGCMaxlifetime);
 
-	\Configs\SessionConfig::SessionRefererCheck(\Configs\SessionConfig::$SessionRefererCheck);
+	\Configs\Session::SessionRefererCheck(\Configs\Session::$SessionRefererCheck);
 
-	\Configs\SessionConfig::SessionCacheLimiter(\Configs\SessionConfig::$SessionCacheLimiter);
+	\Configs\Session::SessionCacheLimiter(\Configs\Session::$SessionCacheLimiter);
 
-	\Configs\SessionConfig::SessionCacheExpire(\Configs\SessionConfig::$SessionCacheExpire);
+	\Configs\Session::SessionCacheExpire(\Configs\Session::$SessionCacheExpire);
 
-	\Configs\SessionConfig::SessionUseTransSid(\Configs\SessionConfig::$SessionUseTransSid);
+	\Configs\Session::SessionUseTransSid(\Configs\Session::$SessionUseTransSid);
 
-	\Configs\SessionConfig::SessionSidLength(\Configs\SessionConfig::$SessionSidLength);
+	\Configs\Session::SessionSidLength(\Configs\Session::$SessionSidLength);
 
-	\Configs\SessionConfig::SessionTransSidTags(\Configs\SessionConfig::$SessionTransSidTags);
+	\Configs\Session::SessionTransSidTags(\Configs\Session::$SessionTransSidTags);
 
-	\Configs\SessionConfig::SessionTransSidHosts(\Configs\SessionConfig::$SessionTransSidHosts);
+	\Configs\Session::SessionTransSidHosts(\Configs\Session::$SessionTransSidHosts);
 
-	\Configs\SessionConfig::SessionSidBitsPerCharacter(\Configs\SessionConfig::$SessionSidBitsPerCharacter);
+	\Configs\Session::SessionSidBitsPerCharacter(\Configs\Session::$SessionSidBitsPerCharacter);
 
-	\Configs\SessionConfig::SessionUploadProgressEnabled(\Configs\SessionConfig::$SessionUploadProgressEnabled);
+	\Configs\Session::SessionUploadProgressEnabled(\Configs\Session::$SessionUploadProgressEnabled);
 
-	\Configs\SessionConfig::SessionUploadProgressCleanup(\Configs\SessionConfig::$SessionUploadProgressCleanup);
+	\Configs\Session::SessionUploadProgressCleanup(\Configs\Session::$SessionUploadProgressCleanup);
 
-	\Configs\SessionConfig::SessionUploadProgressPrefix(\Configs\SessionConfig::$SessionUploadProgressPrefix);
+	\Configs\Session::SessionUploadProgressPrefix(\Configs\Session::$SessionUploadProgressPrefix);
 
-	\Configs\SessionConfig::SessionUploadProgressName(\Configs\SessionConfig::$SessionUploadProgressName);
+	\Configs\Session::SessionUploadProgressName(\Configs\Session::$SessionUploadProgressName);
 
-	\Configs\SessionConfig::SessionUploadProgressFreq(\Configs\SessionConfig::$SessionUploadProgressFreq);
+	\Configs\Session::SessionUploadProgressFreq(\Configs\Session::$SessionUploadProgressFreq);
 
-	\Configs\SessionConfig::SessionUploadProgressMinFreq(\Configs\SessionConfig::$SessionUploadProgressMinFreq);
+	\Configs\Session::SessionUploadProgressMinFreq(\Configs\Session::$SessionUploadProgressMinFreq);
 
-	\Configs\SessionConfig::SessionLazyWrite(\Configs\SessionConfig::$SessionLazyWrite);
+	\Configs\Session::SessionLazyWrite(\Configs\Session::$SessionLazyWrite);
 
     }
 }

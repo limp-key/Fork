@@ -4,7 +4,7 @@ namespace Configs;
 
 use \Fork\Config\SkeletSessionConfig;
 
-class SessionConfig extends SkeletSessionConfig{
+class Session extends SkeletSessionConfig{
 
     public static $SessionSaveHandler = 'files';
 

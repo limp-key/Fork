@@ -2,7 +2,7 @@
 
 namespace Configs;
 
-class MailConfig {
+class Mail {
 
     // Connect to mail server
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Config;
+namespace Configs;
 
 use \Fork\Config\SkeletErrorConfig;
 

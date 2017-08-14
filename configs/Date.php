@@ -4,7 +4,7 @@ namespace Configs;
 
 use \Fork\Config\SkeletDateConfig;
 
-class DateConfig extends SkeletDateConfig{
+class Date extends SkeletDateConfig{
 
     public static $DateTimezone = 'Europe/Kiev';
     

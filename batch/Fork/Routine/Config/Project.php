@@ -1,27 +1,37 @@
 <?php
 
-namespace Fork\Config;
+namespace Configs;
 
-use \Fork\Config\SkeletMainConfig;
+use \Fork\Config\SkeletProjectConfig;
 
-class MainConfig extends SkeletMainConfig{
+class Project extends SkeletProjectConfig{
 
-    // Parameter for framework
+    # Hard path to project
+    public static $Path = '/var/www/limp-key/Fork/';
 
-    public static $ProjectPath = '/var/www/limp-key/fork/';
-
+    # URL project
     public static $URL;
 
+    #  
     public static $TypeKey;
 
+    # 
     public static $Key;
 
+    #
     public static $TypeProject;
 
-    public static $Debug;
+    # Show/Hide framework errors
+    #
+    # If Debug = 'On' show user errors for framework.
+    # If Debug = 'Off' show 
+    # Warning: Debug not enable/disable PHP errors
+    public static $Debug = 'Off';
 
+    #
     public static $Locale;
 
+    #
     public static $Modules;
     
 }

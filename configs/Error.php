@@ -4,7 +4,7 @@ namespace Configs;
 
 use \Fork\Config\SkeletErrorConfig;
 
-class ErrorConfig extends SkeletErrorConfig{
+class Error extends SkeletErrorConfig{
 
     public static $ErrorReporting = 'E_ALL & ~E_DEPRECATED & ~E_STRICT';
 

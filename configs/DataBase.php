@@ -2,7 +2,7 @@
 
 namespace Configs;
 
-class DataBaseConfig {
+class DataBase {
 
     # Connect to main database
 

@@ -4,7 +4,7 @@ namespace Configs;
 
 use \Fork\Config\SkeletSystemConfig;
 
-class SystemConfig extends SkeletSystemConfig{
+class System extends SkeletSystemConfig{
     
     public static $DefaultMimetype = "text/html";
 
