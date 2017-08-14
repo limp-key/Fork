@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Modules\Session;
+namespace Fork\Session;
 
 interface SessionHandlerInterface {
     

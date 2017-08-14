@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Modules\Assistant;
+namespace Fork\Assistant;
 
 class Help{
 

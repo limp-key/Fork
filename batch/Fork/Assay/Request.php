@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Modules\Assay;
+namespace Fork\Assay;
 
 class Request{
 
