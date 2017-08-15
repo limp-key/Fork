@@ -2,8 +2,6 @@
 
 namespace Fork\Route;
 
-use Fork\Assembly\Main as AssemblyMain;
-
 class Route{
     
     public static function Request($Path, $Class, $Method){
@@ -14,12 +12,6 @@ class Route{
 	    
 	    return false;
 	}
-	
-	# Load config
-
-	\Fork\Assembly\Configs::Defaults();
-
-	\Fork\Assembly\Configs::Configs();
 
 	#Create object Controller (depending on the request)
 	
@@ -28,7 +20,11 @@ class Route{
 	$AssemblyController = new $Controller();
 	
 	if($AssemblyController->$Method() == null){
-	    \Fork\Assistant\Exception::errorURL();
+	    \Fork\Exception\Exception::errorURL();
+
+	    return false;
 	}
+
+	return true;
     }
 }

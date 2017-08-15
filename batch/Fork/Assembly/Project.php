@@ -12,6 +12,18 @@ class Project{
 	# and Include user's Config in this project
 	# and assay Route
 	\Fork\Request\Parse::Start();
+
+	\Fork\Request\Clear::ENV();
+
+	\Fork\Request\Clear::GLOBALS();
+
+	\Fork\Request\Clear::REQUEST();
+
+	# Load config
+
+	\Fork\Assembly\Configs::Defaults();
+
+	\Fork\Assembly\Configs::Configs();
 	
 	# LEVEL 2 (Assembly level)
 	# Include:
