@@ -22,9 +22,9 @@ class Project{
 	# load all configs
 	# first load default config
 	# second load user configs
-	\Fork\Assembly\Configs::Defaults()
+	\Fork\Assembly\Configs::Defaults();
 	#
-	\Fork\Assembly\Configs::Configs()
+	\Fork\Assembly\Configs::Configs();
 	
 	
 	# LEVEL 2 (Route level)
