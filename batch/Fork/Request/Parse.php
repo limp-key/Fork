@@ -10,6 +10,8 @@ class Parse{
 	   empty($_SERVER['REDIRECT_URL'])){
 	    
 	    $_SERVER['REDIRECT_URL'] = substr_replace($_SERVER['REQUEST_URI'],'/',0);
-	}	
+	}
+
+	return true;
     }
 }

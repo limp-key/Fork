@@ -10,6 +10,8 @@ class Clear{
 	if(!empty($_ENV)){
 	    unset($_ENV);
 	}
+
+	return true;
     }
 
     public static function REQUEST(){
@@ -18,6 +20,8 @@ class Clear{
 	if(!empty($_REQUEST)){
 	    unset($_REQUEST);
 	}
+
+	return true;
     }
 
     public static function GLOBALS(){
@@ -26,5 +30,7 @@ class Clear{
 	if(!empty($_GLOBALS)){
 	    unset($_GLOBALS);
 	}
+
+	return true;
     }
 }
