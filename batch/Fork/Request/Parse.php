@@ -9,7 +9,7 @@ class Parse{
 	if(!empty($_SERVER) &&
 	   empty($_SERVER['REDIRECT_URL'])){
 	    
-	    $_SERVER['REDIRECT_URL'] = substr_replace($_SERVER['REQUEST_URI'],'/',0);
+	    $_SERVER['REDIRECT_URL'] = '/';
 	}
 
 	return true;

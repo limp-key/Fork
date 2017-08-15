@@ -2,7 +2,7 @@
 
 namespace Fork\Modules\Assistant;
 
-class Exception{
+class ForkException extends Exception{
     
     public static function errorURL(){
 	require_once '../bin/Helper/helper.html';

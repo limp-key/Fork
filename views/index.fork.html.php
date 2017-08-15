@@ -63,8 +63,6 @@
     </head>
     <body>
 	<div class="wrap">
-	    <?php \Fork\Assistant\Help::Vars(); ?>
-	    <?php \Fork\Assistant\Help::Dump($message); ?>
 	    <div class="center">
 		<h1>Fork</h1>
 		
