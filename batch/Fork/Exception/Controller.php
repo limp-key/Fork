@@ -2,7 +2,7 @@
 
 namespace Fork\Exception;
 
-class Controller{
+class ControllerException extends Exception{
 
     public static function NotFound(){
 	
