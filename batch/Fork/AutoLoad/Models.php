@@ -1,16 +1,16 @@
 <?php
 
-namespace Fork\Assembly;
+namespace Fork\AutoLoad;
 
-class Controllers{
+class Models{
 
     public static function ToPlug($NameSpace){	 
 
 	# Convert namespace to file path
 	$File = str_replace('\\', '/', $NameSpace);
 
-	$File = preg_replace('#^Controllers#','controllers',$File);
-	
+	$File = preg_replace('#^Models#','models',$File);
+
 	# Add .php extension for file path
 	$File = sprintf('%s.php', $File);
 
@@ -20,7 +20,7 @@ class Controllers{
 	# Assay file exists 
 	if(is_file($File)){
 
-	    # Include file in folder {path/to/project}/Controllers/
+	    # Include file in folder {path/to/project}/Models/
 	    $Include = require_once $File;
 	}
 	

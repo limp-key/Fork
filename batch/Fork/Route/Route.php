@@ -8,15 +8,15 @@ class Route{
 
 	try{
 	    
-	    #
 	    if( empty($_SERVER['REDIRECT_URL']) && $Path !== '/' ){
 
-		throw new \Exception('Invalid URL path Error 1');
+		# 
+		return false;
 		
 	    }else if( $Path !== $_SERVER['REDIRECT_URL'] ){
 
-		throw new \Exception('Invalid URL path Error 2');
-		
+		# 
+		return false;	
 	    }
 
 	    #Create object Controller (depending on the request)

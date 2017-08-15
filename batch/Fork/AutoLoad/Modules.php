@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Assembly;
+namespace Fork\AutoLoad;
 
 class Modules{
 
