@@ -2,53 +2,39 @@
 
 namespace Fork\Assay;
 
-class Request{
+class Request {
 
-    public function Post(){
+    public function VariableToHtmlEnTities($Variables) {
 
-	try {
+	# Assay request is post
+	if(!empty($Variables)){
 	    
-	    # Assay request is post
-	    if(!empty($_POST)){
-		$Posts = $_POST;
-		
-		foreach($Posts as &$Post){
-		    $Post = htmlentities($Post, ENT_QUOTES);
-		}
-		return $Posts;
-	    }else{
-		return null;
+	    foreach($Variables as &$Variable){
+		$Variable = htmlentities($Variable, ENT_QUOTES);
 	    }
-	    
-	} catch (\Exception $e) {
-
+	    return $Variables;
+	}else{
+	    return null;
 	}
     }
 
-    public function Get(){
+    public function POST(){
 
-	try {
-	    
-	    # Assay request is get
-	    if(!empty($_GET)){
-		$Gets = $_GET;
-		
-		foreach($Gets as &$Get){
-		    $Get = htmlentities($Get, ENT_QUOTES);
-		}
-		return $Gets;
-	    }else{
-		return null;
-	    }
-	    
-	} catch (\Exception $e) {
-	    
-	}
+	# Convert all applicable characters in
+	# GET var to HTML entities
+
+	$this->VariableToHtmlEnTities($_POST);
+    }
+
+    public function GET(){
+
+	# Convert all applicable characters in
+	# GET var to HTML entities
+
+	$this->VariableToHtmlEnTities($_GET);
     }
 
     public function File($Parameter){
-
-	try {
 	    
 	    # File exists in request
 	    if(empty($_FILES))
@@ -70,9 +56,6 @@ class Request{
 	    
 	    return $File;
 
-	} catch (\Exception $e) {
-	    
-	}
     }
 
     public function Files(){

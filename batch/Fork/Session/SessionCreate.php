@@ -2,7 +2,8 @@
 
 namespace Fork\Session;
 
-class SessionCreate{
+class SessionCreate {
+    
     public function __construct($SessionName = null){
 
 	if(!is_null($SessionName))
