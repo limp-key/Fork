@@ -6,25 +6,33 @@ trait View{
 
     public function view($Path, $Parameters = array()){
 
-	try {
-	
-	    if(!empty($Parameters))
-		extract($Parameters);
+	# Convert custom template path to full path for view
+	#
+	$View = sprintf('%sviews/%s', \Configs\Project::$Path, $Path);
+
+	# Include this view and
+	# assay file exists
+	#
+	$this->IncludeTemplate($View);
+
+	# For normal operation of the controller, we return true
+	#
+	return true;
+    }
+    
+    public function IncludeTemplate($View) {
+
+	# Check this layout exists
+	#
+	if (!is_file($View)) {
 	    
-	    $View = sprintf('%sviews/%s', \Configs\Project::$Path, $Path);
-
-	    if (!is_file($View)) {
-
-		throw new \Exception('Fork did not find the specified template');
-	    }
+	    $Info =  new \Exception('Fork did not find the specified template');
 	    
-	    require_once $View;
-	    
-	    return true;
-
-	} catch (\Exception $Info) {
-
 	    \Fork\Exception\ForkException::ExceptionView($Info);
 	}
+
+	# Plug view for controller request
+	#
+	require_once $View;
     }
 }

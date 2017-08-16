@@ -26,6 +26,6 @@ class Route extends SkeletRoute {
 	#
 	self::Method($Controller, $Method);
 
-	return true;
+	exit;
     }
 }

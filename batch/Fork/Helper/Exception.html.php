@@ -53,7 +53,7 @@
 
 	<div class="wrap">
 	    <div class="Exception">
-		<h2>Fork Exception # <?php echo $e->getCode() ?><h2>
+		<h2>Fork Exception # <?php echo $Info->getCode() ?><h2>
 	    </div>
 	    
 	    <div class="File">
@@ -61,7 +61,7 @@
 		    Info file and line
 		</div>
 		<div class="tail">
-		    In file <b><?php echo $e->getFile() ?></b> on line <b><?php echo $e->getLine() ?></b>
+		    In file <b><?php echo $Info->getFile() ?></b> on line <b><?php echo $Info->getLine() ?></b>
 		</div>
 	    </div>
 
@@ -70,7 +70,7 @@
 		    Info message
 		</div>
 		<div class="tail">
-		    <pre><?php echo $e->getMessage() ?></pre>
+		    <pre><?php echo $Info->getMessage() ?></pre>
 		</div>
 	    </div>
 
@@ -79,7 +79,7 @@
 		    Info trace as string
 		</div>
 		<div class="tail">
-		    <pre><?php echo $e->getTraceAsString() ?></pre>
+		    <pre><?php echo $Info->getTraceAsString() ?></pre>
 		</div>
 	    </div>
 
@@ -88,7 +88,7 @@
 		    Info trace
 		</div>
 		<div class="tail">
-		    <pre><?php var_dump($e->getTrace()) ?></pre>
+		    <pre><?php var_dump($Info->getTrace()) ?></pre>
 		</div>
 	    </div>
 	</div>
