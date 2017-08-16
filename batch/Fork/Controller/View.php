@@ -13,14 +13,17 @@ trait View{
 	# Include this view and
 	# assay file exists
 	#
-	$this->IncludeTemplate($View);
+	$this->IncludeTemplate($View, $Parameters);
 
 	# For normal operation of the controller, we return true
 	#
 	return true;
     }
     
-    public function IncludeTemplate($View) {
+    public function IncludeTemplate($View, $Parameters = array()) {
+
+	if (!empty($Parameters))
+	    extract($Parameters);
 
 	# Check this layout exists
 	#

@@ -26,6 +26,9 @@ class Route extends SkeletRoute {
 	#
 	self::Method($Controller, $Method);
 
+	# End of request processing
+	# End work of the framework and user code
+	#
 	exit;
     }
 }
