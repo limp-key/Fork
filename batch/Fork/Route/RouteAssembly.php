@@ -22,15 +22,22 @@ trait RouteAssembly {
     #
     public function Method($Controller, $Method) {
 
-	# Call custom method
-	#
-	$Return = $Controller->$Method();
-
-	if ($Return == null){
+	try {
 	    
-	    throw new \Exception('Controller undefined returned');
+	    # Call custom method
+	    #
+	    $Return = $Controller->$Method();
+	    
+	    if ($Return == null){
+		
+		throw new \Exception('Controller undefined returned');
+	    }
+	    
+	    return true;
+
+	} catch (\Exception $Info) {
+
+	    \Fork\Exception\ForkException::ExceptionView($Info);
 	}
-	
-	return true;
     }
 }

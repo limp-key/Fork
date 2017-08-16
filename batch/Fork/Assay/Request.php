@@ -25,7 +25,7 @@ class Request {
 	# Convert all applicable characters in
 	# GET var to HTML entities
 
-	$this->VariableToHtmlEnTities($_POST);
+	return $this->VariableToHtmlEnTities($_POST);
     }
 
     public function GET() {
@@ -33,7 +33,7 @@ class Request {
 	# Convert all applicable characters in
 	# GET var to HTML entities
 
-	$this->VariableToHtmlEnTities($_GET);
+	return $this->VariableToHtmlEnTities($_GET);
     }
 
     public function File($Parameter) {

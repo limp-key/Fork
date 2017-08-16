@@ -36,14 +36,6 @@ class Configs {
 
 	\Fork\Config\SkeletDefaultConfig::RealPathCacheTTL(\Fork\Config\SkeletDefaultConfig::$RealPathCacheTTL);
 
-	# Zlib
-
-	#\Configs\Zlib::ZlibOutputCompression(\Configs\Zlib::$ZlibOutputCompression);
-
-	#\Configs\Zlib::ZlibOutputCompressionLevel(\Configs\Zlib::$ZlibOutputCompressionLevel);
-
-	#\Configs\Zlib::ZlibOutputHandler(\Configs\Zlib::$ZlibOutputHandler);
-
 	return true;
     }
 
