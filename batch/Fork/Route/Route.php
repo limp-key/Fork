@@ -12,8 +12,9 @@ class Route extends SkeletRoute {
 	
 	if (!$Assay) {
 
-	    # If request not route path
-	    # skip this route
+	    # If request is not equal route
+	    # skip this route and run next custom route
+	    # if this is last route then fork create exception
 	    #
 	    return false;
 	}

@@ -29,14 +29,18 @@ trait RouteAssembly {
 	    $Return = $Controller->$Method();
 	    
 	    if ($Return == null){
-		
+
+		# If method not returned nothing
+		# create exception
+		#
 		throw new \Exception('Controller undefined returned');
 	    }
-	    
-	    return true;
 
 	} catch (\Exception $Info) {
 
+	    # Insert exception info in
+	    # fork exception template
+	    #
 	    \Fork\Exception\ForkException::ExceptionView($Info);
 	}
     }

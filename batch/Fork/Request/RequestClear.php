@@ -8,6 +8,7 @@ class RequestClear {
 
 	# Remove all parameters in $_ENV variable
 	if (!empty($_ENV)) {
+
 	    unset($_ENV);
 	}
 
@@ -18,6 +19,7 @@ class RequestClear {
 
 	# Remove all parameters in $_REQUEST variable
 	if (!empty($_REQUEST)) {
+
 	    unset($_REQUEST);
 	}
 
@@ -28,6 +30,7 @@ class RequestClear {
 	
 	# Remove all parameters in $_GLOBALS variable
 	if (!empty($_GLOBALS)) {
+
 	    unset($_GLOBALS);
 	}
 
