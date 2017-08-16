@@ -29,10 +29,10 @@ class SkeletModel{
 
 	    if (!$this->MySQLi){
 
-		throw new \Exception();
+		throw new \Exception('Fork did not connect to database');
 	    }
 
-	} catch (\Exception $e) {
+	} catch (\Exception $Info) {
 
 	    
 	}

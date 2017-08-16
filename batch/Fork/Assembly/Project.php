@@ -11,12 +11,13 @@ class Project{
 	    # LEVEL 0 (Parse level)
 	    # Include Parse
 	    # First parse client Request
+
 	    \Fork\Request\Parse::Start();
-	    #
+	    
 	    \Fork\Request\Clear::ENV();
-	    #
+	    
 	    \Fork\Request\Clear::GLOBALS();
-	    #
+	    
 	    \Fork\Request\Clear::REQUEST();
 	    
 	    
@@ -24,9 +25,13 @@ class Project{
 	    # load all configs
 	    # first load default config
 	    # second load user configs
+
 	    \Fork\Assembly\Configs::Defaults();
-	    #
-	    \Fork\Assembly\Configs::Configs();
+	    
+	    if (!\Fork\Assembly\Configs::Configs()) {
+
+		throw new \Exception('Error loading custom configs');
+	    }
 	    
 	    # LEVEL 2 (Route level)
 	    # Include:
@@ -35,6 +40,8 @@ class Project{
 	    $Route = sprintf('%s/routes/Route.php', \Configs\Project::$Path);
 	    
 	    require_once $Route;
+
+	    throw new \Exception('Fork can not find multiple request mappings with custom routers');
 
 	} catch (\Exception $Info) {
 
