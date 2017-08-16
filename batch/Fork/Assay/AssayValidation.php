@@ -2,7 +2,7 @@
 
 namespace Fork\Assay;
 
-class Validation{
+class AssayValidation{
     
     public function Email($Parameter){
 

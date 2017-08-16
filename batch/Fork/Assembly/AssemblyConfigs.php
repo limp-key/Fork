@@ -2,7 +2,7 @@
 
 namespace Fork\Assembly;
 
-class Configs {
+class AssemblyConfigs {
 
     public static function Defaults() {
 	
@@ -10,15 +10,7 @@ class Configs {
 	
 	\Fork\Config\SkeletDefaultConfig::ImplicitFlush('parameter');
 	
-	#\Fork\Configs\SkeletDefaultConfigs::OpenBasedir('/var/www/limp-key/Fork/');
-	
 	\Fork\Config\SkeletDefaultConfig::Precision('15');
-	
-	#\Fork\Configs\SkeletDefaultConfigs::UrlRewriterHosts('parameter');
-	
-	#\Fork\Configs\SkeletDefaultConfigs::UrlRewriterTags('parameter');
-	
-	#\Fork\Configs\SkeletDefaultConfigs::UserAgent('');
 	
 	\Fork\Config\SkeletDefaultConfig::RequestOrder(\Fork\Config\SkeletDefaultConfig::$RequestOrder);
 

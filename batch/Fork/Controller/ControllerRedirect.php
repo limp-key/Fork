@@ -2,7 +2,7 @@
 
 namespace Fork\Controller;
 
-trait Redirect{
+trait ControllerRedirect{
 
     public function redirect($Path = '/'){
 

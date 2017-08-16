@@ -2,7 +2,7 @@
 
 namespace Fork\Assay;
 
-class Request {
+class AssayRequest {
 
     public function VariableToHtmlEnTities($Variables) {
 

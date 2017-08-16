@@ -2,7 +2,7 @@
 
 namespace Fork\Controller;
 
-trait JSON{
+trait ControllerJSON{
 
     public function json($Parameters = array()){
 	

@@ -4,9 +4,9 @@ namespace Fork\Controller;
 
 class SkeletController{
 
-    use \Fork\Controller\JSON;
+    use \Fork\Controller\ControllerJSON;
     
-    use \Fork\Controller\View;
+    use \Fork\Controller\ControllerView;
     
-    use \Fork\Controller\Redirect;
+    use \Fork\Controller\ControllerRedirect;
 }

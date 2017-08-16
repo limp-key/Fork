@@ -2,7 +2,7 @@
 
 namespace Fork\Request;
 
-class Parse {
+class RequestParse {
 
     public static function Start() {
 

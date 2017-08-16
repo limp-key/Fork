@@ -2,7 +2,7 @@
 
 namespace Fork\Controller;
 
-trait View{
+trait ControllerView{
 
     public function view($Path, $Parameters = array()){
 

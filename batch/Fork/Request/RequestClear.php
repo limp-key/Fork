@@ -2,7 +2,7 @@
 
 namespace Fork\Request;
 
-class Clear {
+class RequestClear {
 
     public static function ENV() {
 

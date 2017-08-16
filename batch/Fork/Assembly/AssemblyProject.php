@@ -2,7 +2,7 @@
 
 namespace Fork\Assembly;
 
-class Project{
+class AssemblyProject{
 
     public static function Load(){
 
@@ -12,13 +12,13 @@ class Project{
 	    # Include Parse
 	    # First parse client Request
 
-	    \Fork\Request\Parse::Start();
+	    \Fork\Request\RequestParse::Start();
 	    
-	    \Fork\Request\Clear::ENV();
+	    \Fork\Request\RequestClear::ENV();
 	    
-	    \Fork\Request\Clear::GLOBALS();
+	    \Fork\Request\RequestClear::GLOBALS();
 	    
-	    \Fork\Request\Clear::REQUEST();
+	    \Fork\Request\RequestClear::REQUEST();
 	    
 	    
 	    # LEVEL 1 (Config level)
@@ -26,9 +26,9 @@ class Project{
 	    # first load default config
 	    # second load user configs
 
-	    \Fork\Assembly\Configs::Defaults();
+	    \Fork\Assembly\AssemblyConfigs::Defaults();
 	    
-	    if (!\Fork\Assembly\Configs::Configs()) {
+	    if (!\Fork\Assembly\AssemblyConfigs::Configs()) {
 
 		throw new \Exception('Error loading custom configs');
 	    }
