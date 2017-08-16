@@ -10,4 +10,6 @@ class System extends SkeletSystemConfig{
 
     public static $DefaultCharset = "UTF-8";
 
+    public static $DateTimezone = 'Europe/Kiev';
+
 }

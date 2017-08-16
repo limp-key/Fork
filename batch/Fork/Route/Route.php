@@ -8,9 +8,9 @@ class Route extends SkeletRoute {
     
     public static function Request($Path, $Class, $Method){
 
-	$Assay = $this->AssayCustomRedirect($Path);
-
-	if ($Assay) {
+	$Assay = self::AssayCustomRedirect($Path);
+	
+	if (!$Assay) {
 
 	    # If request not route path
 	    # skip this route
@@ -20,11 +20,11 @@ class Route extends SkeletRoute {
 
 	# Create custom object controller
 	#
-	$Controller = $this->AssemblyRouteController($Class);
+	$Controller = self::Controller($Class);
 
 	# Call method
 	#
-	$this->AssemblyRouteMethod($Controller, $Method);
+	self::Method($Controller, $Method);
 
 	return true;
     }

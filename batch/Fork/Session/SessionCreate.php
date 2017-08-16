@@ -3,6 +3,7 @@
 namespace Fork\Session;
 
 class SessionCreate {
+
     
     public function __construct($SessionName = null){
 

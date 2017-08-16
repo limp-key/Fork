@@ -1,29 +1,36 @@
 <?php
 
-namespace Fork\RouteAssembly;
+namespace Fork\Route;
 
 trait RouteAssembly {
 
     # Create object Controller (depending on the request)
     #
     public function Controller($Class) {
-	
+
+	# Convert custom class(controller) name
+	# to class(controller) namespace
+	#
 	$Controller = sprintf('\\Controllers\\%s',$Class);
 
+	# Return object controller
+	#
 	return new $Controller();
     }
 
     # Call methods of an existing controller object
     #
     public function Method($Controller, $Method) {
-	
-	if($AssemblyController->$Method() == null){
-	    \Fork\Exception\Exception::errorURL();
 
-	    throw new \Exception('Method dont existed');
+	# Call custom method
+	#
+	$Return = $Controller->$Method();
+
+	if ($Return == null){
+	    
+	    throw new \Exception('Controller undefined returned');
 	}
-
+	
 	return true;
-
     }
 }
