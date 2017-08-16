@@ -11,6 +11,8 @@ class ForkController extends SkeletController{
 
     public function index(){
 
+	phpinfo();
+	
 	\Fork\Assistant\Help::Dump($_SERVER);
 	
 	return $this->view('index.fork.html.php',['message' => 'World']);
