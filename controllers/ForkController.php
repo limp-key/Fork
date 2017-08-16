@@ -10,6 +10,8 @@ use \Models\BaseModel;
 class ForkController extends SkeletController{
 
     public function index(){
+
+	\Fork\Assistant\Help::Dump($_SERVER);
 	
 	return $this->view('index.fork.html.php',['message' => 'World']);
     }
