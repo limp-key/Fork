@@ -2,4 +2,4 @@
 
 use Fork\Route\Route;
 
-#Route::request('/','TestController','index');
+Route::request('/','TestController','index');

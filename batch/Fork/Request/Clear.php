@@ -2,32 +2,32 @@
 
 namespace Fork\Request;
 
-class Clear{
+class Clear {
 
-    public static function ENV(){
+    public static function ENV() {
 
 	# Remove all parameters in $_ENV variable
-	if(!empty($_ENV)){
+	if (!empty($_ENV)) {
 	    unset($_ENV);
 	}
 
 	return true;
     }
 
-    public static function REQUEST(){
+    public static function REQUEST() {
 
 	# Remove all parameters in $_REQUEST variable
-	if(!empty($_REQUEST)){
+	if (!empty($_REQUEST)) {
 	    unset($_REQUEST);
 	}
 
 	return true;
     }
 
-    public static function GLOBALS(){
+    public static function GLOBALS() {
 	
 	# Remove all parameters in $_GLOBALS variable
-	if(!empty($_GLOBALS)){
+	if (!empty($_GLOBALS)) {
 	    unset($_GLOBALS);
 	}
 

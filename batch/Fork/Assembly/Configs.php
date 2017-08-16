@@ -82,18 +82,6 @@ class Configs {
 	\Configs\Error::XMLrpcErrorNumber(\Configs\Error::$XMLrpcErrorNumber);
 
 	\Configs\Error::TrackErrors(\Configs\Error::$TrackErrors);
-	
-	# Date
-
-	\Configs\Date::DateTimezone(\Configs\Date::$DateTimezone);
-
-	\Configs\Date::DateDefaultLatitude(\Configs\Date::$DateDefaultLatitude);
-
-	\Configs\Date::DateDefaultLongitude(\Configs\Date::$DateDefaultLongitude);
-
-	\Configs\Date::DateSunriseZenith(\Configs\Date::$DateSunriseZenith);
-
-	\Configs\Date::DateSunsetZenith(\Configs\Date::$DateSunsetZenith);
 
 	# Session
 

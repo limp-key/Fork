@@ -7,18 +7,20 @@ class Request {
     public function VariableToHtmlEnTities($Variables) {
 
 	# Assay request is post
-	if(!empty($Variables)){
+	if (!empty($Variables)) {
 	    
-	    foreach($Variables as &$Variable){
+	    foreach ($Variables as &$Variable) {
+
 		$Variable = htmlentities($Variable, ENT_QUOTES);
 	    }
 	    return $Variables;
-	}else{
+	    
+	} else {
 	    return null;
 	}
     }
 
-    public function POST(){
+    public function POST() {
 
 	# Convert all applicable characters in
 	# GET var to HTML entities
@@ -26,7 +28,7 @@ class Request {
 	$this->VariableToHtmlEnTities($_POST);
     }
 
-    public function GET(){
+    public function GET() {
 
 	# Convert all applicable characters in
 	# GET var to HTML entities
@@ -34,10 +36,10 @@ class Request {
 	$this->VariableToHtmlEnTities($_GET);
     }
 
-    public function File($Parameter){
+    public function File($Parameter) {
 	    
 	    # File exists in request
-	    if(empty($_FILES))
+	    if (empty($_FILES))
 		return null;
 	    
 	    $Files = $_FILES;
@@ -58,26 +60,24 @@ class Request {
 
     }
 
-    public function Files(){
+    public function Files() {
 
-	try {
-	    
-	    # Files exists in request
-	    if(empty($_FILES))
-		return null;
-	    
-	    $Files = $_FILES;
-	    
-	    foreach($Files as &$FileProperties){
-		foreach($FileProperties as &$Property){
-		    $Property = htmlentities($Property, ENT_QUOTES);
-		}
-	    }
-	
-	    return $Files;
+	# Files exists in request
+	if (empty($_FILES)) {
 
-	} catch (\Exception $e) {
-	    
+	    return null;
 	}
+	
+	$Files = $_FILES;
+	
+	foreach($Files as &$FileProperties){
+	    
+	    foreach($FileProperties as &$Property){
+
+		$Property = htmlentities($Property, ENT_QUOTES);
+	    }
+	}
+	
+	return $Files;
     }
 }
