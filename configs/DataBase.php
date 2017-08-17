@@ -2,7 +2,9 @@
 
 namespace Configs;
 
-class DataBase {
+use \Fork\Config\Type\SkeletDataBaseConnection;
+
+class DataBase extends SkeletDataBaseConection {
 
     # Connection to database
     #

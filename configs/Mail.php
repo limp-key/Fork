@@ -2,7 +2,9 @@
 
 namespace Configs;
 
-class Mail {
+use \Fork\Config\Types\SkeletMailConfig;
+
+class Mail extends SkeletMailConfig {
 
     // Connect to mail server
 

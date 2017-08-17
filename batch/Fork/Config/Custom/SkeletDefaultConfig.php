@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Config;
+namespace Fork\Config\Custom;
 
 use \Fork\Config\SkeletConfig;
 
@@ -104,7 +104,7 @@ class SkeletDefaultConfig extends SkeletConfig{
     # Note: This directive is hardcoded to On for the CLI SAPI
     public static function ImplicitFlush($Parameter = 'Off'){
 
-	return self::ChangeConfigurePHP('implicit_flush', $Parameter);
+	#return self::ChangeConfigurePHP('implicit_flush', $Parameter);
 
     }
 

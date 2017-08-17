@@ -6,27 +6,27 @@ class AssemblyConfigs {
 
     public static function Defaults() {
 	
-	\Fork\Config\SkeletDefaultConfig::ExposePHP('Off');
+	\Fork\Config\Custom\SkeletDefaultConfig::ExposePHP('Off');
 	
-	\Fork\Config\SkeletDefaultConfig::ImplicitFlush('parameter');
+	\Fork\Config\Custom\SkeletDefaultConfig::ImplicitFlush('parameter');
 	
-	\Fork\Config\SkeletDefaultConfig::Precision('15');
+	\Fork\Config\Custom\SkeletDefaultConfig::Precision('15');
 	
-	\Fork\Config\SkeletDefaultConfig::RequestOrder(\Fork\Config\SkeletDefaultConfig::$RequestOrder);
+	\Fork\Config\Custom\SkeletDefaultConfig::RequestOrder(\Fork\Config\Custom\SkeletDefaultConfig::$RequestOrder);
 
-	\Fork\Config\SkeletDefaultConfig::RegisterArgcArgv(\Fork\Config\SkeletDefaultConfig::$RegisterArgcArgv);
+	\Fork\Config\Custom\SkeletDefaultConfig::RegisterArgcArgv(\Fork\Config\Custom\SkeletDefaultConfig::$RegisterArgcArgv);
 
-	\Fork\Config\SkeletDefaultConfig::AutoGlobalsJit(\Fork\Config\SkeletDefaultConfig::$AutoGlobalsJit);
+	\Fork\Config\Custom\SkeletDefaultConfig::AutoGlobalsJit(\Fork\Config\Custom\SkeletDefaultConfig::$AutoGlobalsJit);
 
-	\Fork\Config\SkeletDefaultConfig::OutputBuffering(\Fork\Config\SkeletDefaultConfig::$OutputBuffering);
+	\Fork\Config\Custom\SkeletDefaultConfig::OutputBuffering(\Fork\Config\Custom\SkeletDefaultConfig::$OutputBuffering);
 
-	\Fork\Config\SkeletDefaultConfig::UnserializeCallbackFunc(\Fork\Config\SkeletDefaultConfig::$UnserializeCallbackFunc);
+	\Fork\Config\Custom\SkeletDefaultConfig::UnserializeCallbackFunc(\Fork\Config\Custom\SkeletDefaultConfig::$UnserializeCallbackFunc);
 
-	\Fork\Config\SkeletDefaultConfig::SerializePrecision(\Fork\Config\SkeletDefaultConfig::$SerializePrecision);
+	\Fork\Config\Custom\SkeletDefaultConfig::SerializePrecision(\Fork\Config\Custom\SkeletDefaultConfig::$SerializePrecision);
 
-	\Fork\Config\SkeletDefaultConfig::RealPathCacheSize(\Fork\Config\SkeletDefaultConfig::$RealPathCacheSize);
+	\Fork\Config\Custom\SkeletDefaultConfig::RealPathCacheSize(\Fork\Config\Custom\SkeletDefaultConfig::$RealPathCacheSize);
 
-	\Fork\Config\SkeletDefaultConfig::RealPathCacheTTL(\Fork\Config\SkeletDefaultConfig::$RealPathCacheTTL);
+	\Fork\Config\Custom\SkeletDefaultConfig::RealPathCacheTTL(\Fork\Config\Custom\SkeletDefaultConfig::$RealPathCacheTTL);
 
 	return true;
     }

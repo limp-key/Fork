@@ -2,10 +2,14 @@
 
 namespace Fork\Route;
 
-use \Fork\Route\RouteAssy;
+use \Fork\Route\RouteAssay;
 use \Fork\Route\RouteAssembly;
 
 class SkeletRoute {
+
+    use RouteAssay;
+
+    use RouteAssembly;
 
     public static function Request($Path, $Class, $Method){
 

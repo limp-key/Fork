@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\AutoLoad;
+namespace Fork\AutoLoad\Types;
 
 use \Fork\AutoLoad\SkeletAutoLoad;
 

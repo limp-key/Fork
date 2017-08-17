@@ -2,12 +2,9 @@
 
 namespace Fork\Config;
 
-use \Fork\Config\ConfigRequest;
-use \Fork\Config\ConfigValidation;
+#use \Fork\Config\Custom\Config;
 
-class SkeletConfig() {
+class SkeletConfig {
 
-    use ConfigRequest;
-
-    use ConfigValidation;
+    #use Config;
 }

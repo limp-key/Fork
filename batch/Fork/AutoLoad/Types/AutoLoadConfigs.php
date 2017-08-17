@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\AutoLoad;
+namespace Fork\AutoLoad\Types;
 
 use \Fork\AutoLoad\SkeletAutoLoad;
 
@@ -16,7 +16,7 @@ class AutoLoadConfigs extends SkeletAutoLoad{
 	# Convert namespace to file path
 	#
 	$File = parent::NameSpaceToConfigsPath($NameSpace);
-
+	
 	# Include file for this NameSpace
 	#
 	parent::Hook($File);
