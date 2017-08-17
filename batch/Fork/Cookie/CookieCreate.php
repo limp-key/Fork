@@ -2,7 +2,11 @@
 
 namespace Fork\Cookie;
 
+use \Fork\Cookie\CookieManipulate;
+
 class CookieCreate{
+
+    use Manipulate;
 
     public $CookieName;
 
@@ -13,8 +17,6 @@ class CookieCreate{
     public $CookieDirectoryPath;
     
     public $CookieIsSecure;
-
-    use \Fork\Cookie\CookieManipulate;
     
     public function __construct($CookieName){
 	

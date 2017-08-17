@@ -4,6 +4,12 @@ namespace Fork\Assay;
 
 class AssayRequest {
 
+    protected $RequestPostVariable = array();
+
+    protected $RequestGetVariable = array();
+
+    protected $RequestFileVariable = array();
+
     public function VariableToHtmlEnTities($Variables) {
 
 	# Assay request is post
@@ -24,7 +30,7 @@ class AssayRequest {
     public function POST() {
 
 	# Convert all applicable characters in
-	# GET var to HTML entities
+	# POST var to HTML entities
 	#
 	return $this->VariableToHtmlEnTities($_POST);
     }

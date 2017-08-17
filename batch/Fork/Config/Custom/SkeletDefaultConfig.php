@@ -2,7 +2,9 @@
 
 namespace Fork\Config;
 
-class SkeletDefaultConfig{
+use \Fork\Config\SkeletConfig;
+
+class SkeletDefaultConfig extends SkeletConfig{
 
     public static $Precision;
 
@@ -102,9 +104,8 @@ class SkeletDefaultConfig{
     # Note: This directive is hardcoded to On for the CLI SAPI
     public static function ImplicitFlush($Parameter = 'Off'){
 
-	ini_set('implicit_flush',$Parameter);
-	
-	return true;
+	return self::ChangeConfigurePHP('implicit_flush', $Parameter);
+
     }
 
     # The unserialize callback function will be called (with the undefined class'

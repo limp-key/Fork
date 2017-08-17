@@ -2,9 +2,13 @@
 
 namespace Fork\Session;
 
-class Chief{
+use \Fork\Session\SessionFileCreate;
+use \Fork\Session\SessionDataBaseCreate;
 
-    public function __construct(){
+class Session{
 
-    }
+    use SessionFileCreate;
+
+    use SessionDataBaseCreate;
+    
 }

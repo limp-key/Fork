@@ -2,11 +2,15 @@
 
 namespace Fork\Controller;
 
+use \Fork\Controller\ControllerJSON;
+use \Fork\Controller\ControllerView;
+use \Fork\Controller\ControllerRedirect;
+
 class SkeletController{
 
-    use \Fork\Controller\ControllerJSON;
+    use ControllerJSON;
     
-    use \Fork\Controller\ControllerView;
+    use ControllerView;
     
-    use \Fork\Controller\ControllerRedirect;
+    use ControllerRedirect;
 }

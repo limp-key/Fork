@@ -2,19 +2,16 @@
 
 namespace Fork\View;
 
+use \Fork\View\ViewComponents;
+use \Fork\View\ViewGenerateToken;
+use \Fork\View\ViewTemplateManipulate;
+
 class View{
 
-    public static function Token(){
+    use ViewComponents;
 
-	
-    }
+    use ViewGenerateToken;
 
-    public static function Comprise($File){
+    use ViewTemplateManipulate;
 
-	$Layout = sprintf('%s/views/%s',\Configs\Project::$Path,$File);
-
-	include $Layout;
-
-	return true;
-    }
 }
