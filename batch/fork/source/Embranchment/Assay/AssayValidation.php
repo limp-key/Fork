@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Assay;
+namespace Embranchment\Assay;
 
 class AssayValidation{
     

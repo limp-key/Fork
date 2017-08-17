@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Assay;
+namespace Embranchment\Assay;
 
-use \Fork\Assay\SkeletAssay;
+use \Embranchment\Assay\SkeletAssay;
 
 # Front class in Assay module
 #

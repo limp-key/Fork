@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Assembly;
+namespace Embranchment\Assembly;
 
 class AssemblyProject{
 
@@ -12,13 +12,13 @@ class AssemblyProject{
 	    # Include Parse
 	    # First parse client Request
 
-	    \Fork\Request\RequestParse::Start();
+	    \Embranchment\Request\RequestParse::Start();
 	    
-	    \Fork\Request\RequestClear::ENV();
+	    \Embranchment\Request\RequestClear::ENV();
 	    
-	    \Fork\Request\RequestClear::GLOBALS();
+	    \Embranchment\Request\RequestClear::GLOBALS();
 	    
-	    \Fork\Request\RequestClear::REQUEST();
+	    \Embranchment\Request\RequestClear::REQUEST();
 	    
 	    
 	    # LEVEL 1 (Config level)
@@ -26,9 +26,9 @@ class AssemblyProject{
 	    # first load default config
 	    # second load user configs
 
-	    \Fork\Assembly\AssemblyConfigs::Defaults();
+	    \Embranchment\Assembly\AssemblyConfigs::Defaults();
 	    
-	    if (!\Fork\Assembly\AssemblyConfigs::Configs()) {
+	    if (!\Embranchment\Assembly\AssemblyConfigs::Configs()) {
 
 		throw new \Exception('Error loading custom configs');
 	    }
@@ -41,11 +41,11 @@ class AssemblyProject{
 	    
 	    require_once $Route;
 
-	    throw new \Exception('Fork can not find multiple request mappings with custom routers');
+	    throw new \Exception('Embranchment can not find multiple request mappings with custom routers');
 
 	} catch (\Exception $Info) {
 
-	    \Fork\Exception\ForkException::ExceptionView($Info);
+	    \Embranchment\Exception\ExceptionService::ExceptionView($Info);
 	}
     }
 }
