@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Model;
+namespace Fork\Model\SQLite;
 
 trait CRUD{
     
@@ -11,7 +11,9 @@ trait CRUD{
 
 	$quickQuery = "DESC $table";
 	$ColumnInTable = $this->MySQLi->query($quickQuery)->fetch_all(1);
+
 	$ColumnForInsert = array();
+
 	for($increment = 0; $increment < count($ColumnInTable); $increment++){
 	    $ColumnForInsert[$increment] = $ColumnInTable[$increment]['Field'];
 	}

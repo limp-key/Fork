@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Model;
+namespace Fork\Model\MySQL;
 
 use \Config\DataBaseConfig;
 
