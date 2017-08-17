@@ -1,7 +1,12 @@
 <?php
 
-namespace Fork\Bin\CMedia;
+namespace Fork\ConvertMedia;
 
-class ConvertMedia {
+use \Fork\ConvertMedia\SkeletConvertMedia;
+
+# Front class in ConvertMedia module
+#
+class ConvertMedia extends SkeletConvertMedia {
+
     
 }

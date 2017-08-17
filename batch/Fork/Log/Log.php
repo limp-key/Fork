@@ -2,7 +2,11 @@
 
 namespace Fork\Log;
 
-class Log{
+use \Fork\Log\SkeletLog;
+
+# Front class in Log module
+#
+class Log extends SkeletLog {
 
     
 }

@@ -2,7 +2,11 @@
 
 namespace Fork\Config;
 
+use \Fork\Config\SkeletConfig;
 
-class Config {
+# Front class in Config module
+#
+class Config extends SkeletConfig {
 
+    
 }
