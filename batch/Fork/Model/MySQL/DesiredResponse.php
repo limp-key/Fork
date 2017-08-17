@@ -5,18 +5,28 @@ namespace Fork\Model\MySQL;
 class Exec{
 
     public function exec(){
+
+	#
 	$returnQuery = $this->MySQLi->query($this->Query);
-	
+
+	# Returns the response
+	# The request was successful or not
+	#
 	return $returnQuery;
     }
 
     public function show(){
+	
 	$returnQuery = $this->MySQLi->query($this->Query);
 
-	if(!empty($returnQuery))
+	if (!empty($returnQuery)) {
+	    
 	    return $returnQuery->fetch_all(1);
-	else
+	    
+	} else {
+
 	    return false;
+	}
     }
 
     public function first(){
@@ -26,11 +36,16 @@ class Exec{
 	$returnQuery = $this->MySQLi->query($this->Query);
 
 	if(!empty($returnQuery)){
+	    
 	    $returnQuery = $returnQuery->fetch_all(1);
 	    $returnQuery = $returnQuery[0];
+
 	    return $returnQuery;
-	}else
-	return false;
+	    
+	} else {
+
+	    return false;
+	}
     }
 
     public function bool(){
@@ -39,9 +54,13 @@ class Exec{
 	
 	$returnQuery = $this->MySQLi->query($this->Query);
 	
-	if(!empty($returnQuery))
+	if (!empty($returnQuery)) {
+
 	    return true;
-	else
+
+	} else {
+
 	    return false;
+	}
     }
 }
