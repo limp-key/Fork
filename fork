@@ -47,24 +47,16 @@ then
     then
 	if [ $3 != '' ]
 	then
-<<<<<<< HEAD
 	    cp batch/Fork/Routine/Route/Route.php routes/
 	    mv routes/Route.php routes/$3.php
 	    sed -i "s/__Name__/$3/" routes/$3.php
-=======
-	    cp batch/Fork/Routine/Route/Route.php route/
-	    mv route/Route.php route/$3.php
-	    sed -i "s/__Name__/$3/" route/$3.php
->>>>>>> parent of 2a5056c... Structure
 	else
 	    echo "Invalid name"
 	fi
     elif [ $2 == '-config' ]
     then
-<<<<<<< HEAD
 	cp batch/Fork/Routine/Config/* configs/$3
 	sed -i "s/__NAME__/$3/" configs/$3/*.php
-=======
 	if [ $3 ] && [ $3 != '' ]
 	then
 	    mkdir config/$3
@@ -73,7 +65,6 @@ then
 	else
 	    cp batch/Fork/Routine/Config/Main/* config/
 	fi
->>>>>>> parent of 2a5056c... Structure
     else 
 	echo "Invalid create type"
     fi

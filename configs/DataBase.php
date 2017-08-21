@@ -2,11 +2,7 @@
 
 namespace Configs;
 
-<<<<<<< HEAD
 use \Fork\Config\Custom\SkeletDataBaseConnection;
-=======
-use \Fork\Config\Type\SkeletDataBaseConnection;
->>>>>>> parent of 2a5056c... Structure
 
 class DataBase extends SkeletDataBaseConection {
 

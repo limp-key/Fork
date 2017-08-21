@@ -2,11 +2,7 @@
 
 namespace Configs;
 
-<<<<<<< HEAD
 use \Fork\Config\Custom\SkeletProjectConfig;
-=======
-use \Fork\Config\Types\SkeletProjectConfig;
->>>>>>> parent of 2a5056c... Structure
 
 class Project extends SkeletProjectConfig {
 
@@ -22,17 +18,11 @@ class Project extends SkeletProjectConfig {
     #
     public static $TypeKey = 'sha512';
 
-<<<<<<< HEAD
     # 
     # Default: 10
     # Recomended: 13
     #
     public static $WeightKey = 10;
-=======
-    #
-    #
-    public static $Key = '';
->>>>>>> parent of 2a5056c... Structure
 
     # Fork supports three types of project work:
     #
@@ -53,11 +43,7 @@ class Project extends SkeletProjectConfig {
     #
     #
     public static $Modules = array(
-<<<<<<< HEAD
 	'ConvertMedia' => '\ConvertMedia\ConvertMedia',
-	    'Sockets' => '\Sockets\Sockets'
-=======
-	'ConvertMedia' => 
->>>>>>> parent of 2a5056c... Structure
+	'Sockets' => '\Sockets\Sockets'
     );    
 }

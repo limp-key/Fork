@@ -36,11 +36,7 @@
 	     width:678px;
 	     position:relative;
 	     color:#010019;
-<<<<<<< HEAD
 	     background-image: url(pictures/fork_opacity.png);
-=======
-	     background-image: url(picture/fork_opacity.png);
->>>>>>> parent of 2a5056c... Structure
 	     background-repeat:no-repeat;
 	     height:400px;
 	     text-align:right;

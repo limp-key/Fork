@@ -2,11 +2,7 @@
 
 namespace Configs;
 
-<<<<<<< HEAD
 use \Fork\Config\Custom\SkeletMailConfig;
-=======
-use \Fork\Config\Types\SkeletMailConfig;
->>>>>>> parent of 2a5056c... Structure
 
 class Mail extends SkeletMailConfig {
 
