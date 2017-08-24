@@ -1,5 +1,39 @@
 {
-    "name": "fork-framework/fork",
+    "name": "fork-set/framework",
     "version": "v0.9.1",
-    "description": "Simply framework"
+    "license": "GPL-3.0",
+    "description": "Simply framework",
+    "keywords": [
+	"fork",
+	"fork-set",
+	"framework"
+    ],
+    "author": {
+	"name": "Duz Valera"
+    },
+    "require": {
+	"php": ">=5.6",
+	"fork-set/socket": "*",
+	"fork-set/convert-media": "*"
+    },
+    "require-dev": {
+	"php": ">=5.6",
+	"fork-set/socket": "*",
+	"fork-set/convert-media": "*"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Embranchment\\": "source/Embranchment"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Trial\\": "trial/"
+        }
+    }
 }
