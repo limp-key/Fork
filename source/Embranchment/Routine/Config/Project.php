@@ -2,7 +2,7 @@
 
 namespace Configs;
 
-use \Fork\Config\Custom\SkeletProjectConfig;
+use \Embranchment\Config\Custom\SkeletProjectConfig;
 
 class Project extends SkeletProjectConfig {
 
@@ -39,11 +39,5 @@ class Project extends SkeletProjectConfig {
     # Warning: Debug not enable/disable PHP errors
     #
     public static $Debug = 'Off';
-    
-    #
-    #
-    public static $Modules = array(
-	'ConvertMedia' => '\ConvertMedia\ConvertMedia',
-	'Sockets' => '\Sockets\Sockets'
-    );    
+     
 }

@@ -2,7 +2,7 @@
 
 namespace Models;
 
-use Fork\Model\SkeletonModel;
+use \Embranchment\Model\SkeletonModel;
 
 class __Name__ extends SkeletonModel{
     

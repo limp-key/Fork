@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Exception;
+namespace Embranchment\Exception;
 
 class View{
 

@@ -2,7 +2,7 @@
 
 namespace Configs;
 
-use \Fork\Config\Custom\SkeletSystemConfig;
+use \Embranchment\Config\Custom\SkeletSystemConfig;
 
 class System extends SkeletSystemConfig{
 

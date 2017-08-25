@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Model\MySQL;
+namespace Embranchment\Model\MySQL;
 
 trait SecondaryFunctions{
 
@@ -10,7 +10,7 @@ trait SecondaryFunctions{
 
 	    for($i = 0; $i < count($parameters); $i++){
 
-		$parameters[$i] = $this->MySQLi->escape_string($parameters[$i]);
+		$parameters[$i] = $this->connection->escape_string($parameters[$i]);
 	    }
 	    
 	    if (count($parameters) == 1) {
@@ -23,7 +23,7 @@ trait SecondaryFunctions{
 	    }
 	}else{
 
-	    $parameters = $this->MySQLi->escape_string($parameters);
+	    $parameters = $this->connection->escape_string($parameters);
 
 	    return $parameters;
 	}
@@ -32,14 +32,14 @@ trait SecondaryFunctions{
     public function where($parameters){
 
 	$parameters = $this->param($parameters);
-	$this->Query .= " WHERE $parameters";
+	$this->query .= " WHERE $parameters";
 
 	return $this;
     }
 
     public function query($Request){
 
-	$this->Query = $Request;
+	$this->query = $Request;
 
 	return $this;
     }    

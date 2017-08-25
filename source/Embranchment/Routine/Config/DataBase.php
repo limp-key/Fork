@@ -2,7 +2,7 @@
 
 namespace Configs;
 
-use \Fork\Config\Custom\SkeletDataBaseConnection;
+use \Embranchment\Config\Custom\SkeletDataBaseConnection;
 
 class DataBase extends SkeletDataBaseConection {
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Fork\Model\MySQL;
+namespace Embranchment\Model\MySQL;
 
-class Exec{
+trait DesiredResponse{
 
     public function exec(){
 
 	#
-	$returnQuery = $this->MySQLi->query($this->Query);
+	$returnQuery = $this->connection->query($this->query);
 
 	# Returns the response
 	# The request was successful or not
@@ -17,7 +17,7 @@ class Exec{
 
     public function show(){
 	
-	$returnQuery = $this->MySQLi->query($this->Query);
+	$returnQuery = $this->connection->query($this->query);
 
 	if (!empty($returnQuery)) {
 	    
@@ -31,9 +31,9 @@ class Exec{
 
     public function first(){
 	
-	$this->Query .= "LIMIT 1";
+	$this->query .= "LIMIT 1";
 	
-	$returnQuery = $this->MySQLi->query($this->Query);
+	$returnQuery = $this->connection->query($this->query);
 
 	if(!empty($returnQuery)){
 	    
@@ -50,9 +50,9 @@ class Exec{
 
     public function bool(){
 
-	$this->Query .= "LIMIT 1";
+	$this->query .= "LIMIT 1";
 	
-	$returnQuery = $this->MySQLi->query($this->Query);
+	$returnQuery = $this->connection->query($this->query);
 	
 	if (!empty($returnQuery)) {
 

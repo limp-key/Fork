@@ -2,7 +2,7 @@
 
 namespace Configs;
 
-use \Fork\Config\Custom\SkeletSessionConfig;
+use \Embranchment\Config\Custom\SkeletSessionConfig;
 
 class Session extends SkeletSessionConfig{
 

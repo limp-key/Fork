@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Exception;
+namespace Embranchment\Exception;
 
-use \Fork\Exception\SkeletException;
+use \Embranchment\Exception\SkeletException;
 
 # Front class in Exception module
 #

@@ -2,7 +2,7 @@
 
 namespace Configs;
 
-use \Fork\Config\Custom\SkeletMailConfig;
+use \Embranchment\Config\Custom\SkeletMailConfig;
 
 class Mail extends SkeletMailConfig {
 

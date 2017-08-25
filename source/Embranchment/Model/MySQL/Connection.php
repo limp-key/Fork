@@ -1,25 +1,26 @@
 <?php
 
-namespace Fork\Model\MySQL;
+namespace Embranchment\Model\MySQL;
 
-use \Config\DataBaseConfig;
+use \Configs\DataBase;
+use \Embranchment\Model\MySQL\TraitCollector;
 
-class ConnectionToMySQL {
+class Connection extends TraitCollector {
     
     protected $query = "";
 
     protected $connection;
 
-    private function __construct(){
+    public function __construct(){
 
 	try {
 	    
-	    $this->connection = new mysqli(DataBase::$Host,
-				       DataBase::$User,
+	    $this->connection = new \mysqli(DataBase::$Host,
+				       DataBase::$UserName,
 				       DataBase::$Password,
-				       DataBase::$Database);
+				       DataBase::$DataBase);
 
-	    if (!$this->MySQLi){
+	    if (!$this->connection){
 
 		throw new \Exception('Fork did not connect to database');
 	    }

@@ -2,11 +2,7 @@
 
 namespace Embranchment\Cookie;
 
-use \Embranchment\Cookie\CookieManipulate;
-
-class CookieCreate{
-
-    use Manipulate;
+trait CookieCreate{
 
     public $CookieName;
 
@@ -18,16 +14,4 @@ class CookieCreate{
     
     public $CookieIsSecure;
     
-    public function __construct($CookieName){
-	
-	if(!empty($_COOKIE)){
-
-	    foreach ($_COOKIE as &$cookie) {
-
-		$cookie = htmlentities($cookie, ENT_QUOTES);
-	    }
-	}
-	
-	return $cookie;
-    }
 }

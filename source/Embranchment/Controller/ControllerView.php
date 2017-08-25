@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Controller;
+namespace Embranchment\Controller;
 
 trait ControllerView{
 
@@ -32,15 +32,15 @@ trait ControllerView{
 	    # Fork converted this array to variable
 	    #
 	    extract($this->ParametersForView);
-	}
-
+	}	
+	
 	# Check this layout exists
 	#
 	if (!is_file($View)) {
 	    
-	    $Info =  new \Exception('Embranchment did not find the specified template');
+	    $Info =  new \Exception('Fork did not find the specified template');
 	    
-	    \Embranchment\Exception\EmbranchmentException::ExceptionView($Info);
+	    \Embranchment\Exception\ForkException::ExceptionView($Info);
 	}
 
 	# Plug view for controller request

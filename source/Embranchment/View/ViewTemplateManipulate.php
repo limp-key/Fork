@@ -2,7 +2,7 @@
 
 namespace Embranchment\View;
 
-trait ViewManipulate {
+trait ViewTemplateManipulate {
 
     public static function Comprise($File){
 
