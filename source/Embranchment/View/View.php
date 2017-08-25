@@ -1,10 +1,10 @@
 <?php
 
-namespace Fork\View;
+namespace Embranchment\View;
 
-use \Fork\View\ViewComponents;
-use \Fork\View\ViewGenerateToken;
-use \Fork\View\ViewTemplateManipulate;
+use \Embranchment\View\ViewComponents;
+use \Embranchment\View\ViewGenerateToken;
+use \Embranchment\View\ViewTemplateManipulate;
 
 class View{
 

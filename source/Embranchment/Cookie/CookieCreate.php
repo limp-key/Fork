@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Cookie;
+namespace Embranchment\Cookie;
 
-use \Fork\Cookie\CookieManipulate;
+use \Embranchment\Cookie\CookieManipulate;
 
 class CookieCreate{
 

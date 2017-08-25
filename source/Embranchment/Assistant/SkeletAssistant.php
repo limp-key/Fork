@@ -1,10 +1,10 @@
 <?php
 
-namespace Fork\Assistant;
+namespace Embranchment\Assistant;
 
-use \Fork\Assistant\AssistantRequest;
-use \Fork\Assistant\AssistantResponse;
-use \Fork\Assistant\AssistantVariable;
+use \Embranchment\Assistant\AssistantRequest;
+use \Embranchment\Assistant\AssistantResponse;
+use \Embranchment\Assistant\AssistantVariable;
 
 class SkeletAssay() {
 

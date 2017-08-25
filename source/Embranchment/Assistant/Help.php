@@ -1,10 +1,10 @@
 <?php
 
-namespace Fork\Assistant;
+namespace Embranchment\Assistant;
 
-use \Fork\Assistant\AssistantVariables;
-use \Fork\Assistant\AssistantResponse;
-use \Fork\Assistant\AssistantRequest;
+use \Embranchment\Assistant\AssistantVariables;
+use \Embranchment\Assistant\AssistantResponse;
+use \Embranchment\Assistant\AssistantRequest;
 
 class Help{
 

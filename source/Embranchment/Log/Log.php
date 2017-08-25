@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Log;
+namespace Embranchment\Log;
 
-use \Fork\Log\SkeletLog;
+use \Embranchment\Log\SkeletLog;
 
 # Front class in Log module
 #

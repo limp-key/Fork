@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Route;
+namespace Embranchment\Route;
 
 trait RouteAssay {
 

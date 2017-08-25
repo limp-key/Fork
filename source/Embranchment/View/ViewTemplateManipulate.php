@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\View;
+namespace Embranchment\View;
 
 trait ViewManipulate {
 

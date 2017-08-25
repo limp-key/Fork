@@ -1,9 +1,9 @@
 <?php
 
-namespace Fork\Route;
+namespace Embranchment\Route;
 
-use \Fork\Route\RouteAssay;
-use \Fork\Route\RouteAssembly;
+use \Embranchment\Route\RouteAssay;
+use \Embranchment\Route\RouteAssembly;
 
 class SkeletRoute {
 

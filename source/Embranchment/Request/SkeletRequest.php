@@ -1,9 +1,9 @@
 <?php
 
-namespace Fork\Request;
+namespace Embranchment\Request;
 
-use \Fork\Request\RequestClear;
-use \Fork\Request\RequestParse;
+use \Embranchment\Request\RequestClear;
+use \Embranchment\Request\RequestParse;
 
 class SkeletRequest() {
 

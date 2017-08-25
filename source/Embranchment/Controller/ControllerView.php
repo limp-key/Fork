@@ -38,9 +38,9 @@ trait ControllerView{
 	#
 	if (!is_file($View)) {
 	    
-	    $Info =  new \Exception('Fork did not find the specified template');
+	    $Info =  new \Exception('Embranchment did not find the specified template');
 	    
-	    \Fork\Exception\ForkException::ExceptionView($Info);
+	    \Embranchment\Exception\EmbranchmentException::ExceptionView($Info);
 	}
 
 	# Plug view for controller request

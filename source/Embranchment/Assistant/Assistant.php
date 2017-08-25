@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Assistant;
+namespace Embranchment\Assistant;
 
-use \Fork\Assistant\SkeletAssistant;
+use \Embranchment\Assistant\SkeletAssistant;
 
 # Front class in Assistant module
 #

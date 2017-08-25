@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Route;
+namespace Embranchment\Route;
 
-use \Fork\Route\SkeletRoute;
+use \Embranchment\Route\SkeletRoute;
 
 class Route extends SkeletRoute {
         

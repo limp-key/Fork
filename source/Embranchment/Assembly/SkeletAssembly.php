@@ -1,9 +1,9 @@
 <?php
 
-namespace Fork\Assembly;
+namespace Embranchment\Assembly;
 
-use \Fork\Assembly\AssemblyConfig;
-use \Fork\Assembly\AssemblyProject;
+use \Embranchment\Assembly\AssemblyConfig;
+use \Embranchment\Assembly\AssemblyProject;
 
 class SkeletAssembly() {
 

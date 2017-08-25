@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Assembly;
+namespace Embranchment\Assembly;
 
-use \Fork\Assembly\SkeletAssembly;
+use \Embranchment\Assembly\SkeletAssembly;
 
 # Front class in Assembly module
 #

@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Controller;
+namespace Embranchment\Controller;
 
 trait ControllerRedirect{
 

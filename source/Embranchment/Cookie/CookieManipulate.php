@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Cookie;
+namespace Embranchment\Cookie;
 
 trait CookieManipulate{
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Fork\Session;
+namespace Embranchment\Session;
 
-use \Fork\Session\SessionFileCreate;
-use \Fork\Session\SessionDataBaseCreate;
+use \Embranchment\Session\SessionFileCreate;
+use \Embranchment\Session\SessionDataBaseCreate;
 
 class Session{
 
