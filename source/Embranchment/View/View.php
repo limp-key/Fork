@@ -2,16 +2,8 @@
 
 namespace Embranchment\View;
 
-use \Embranchment\View\ViewComponents;
-use \Embranchment\View\ViewGenerateToken;
-use \Embranchment\View\ViewTemplateManipulate;
+use \Embranchment\View\SkeletView;
 
-class View{
-
-    use ViewComponents;
-
-    use ViewGenerateToken;
-
-    use ViewTemplateManipulate;
+class View extends SkeletView {
 
 }

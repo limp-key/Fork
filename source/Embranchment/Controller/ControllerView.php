@@ -32,7 +32,14 @@ trait ControllerView{
 	    # Fork converted this array to variable
 	    #
 	    extract($this->ParametersForView);
-	}	
+	}
+
+	# Generate Token
+	#
+	/*if( !session_status() ) {
+	    session_start();
+	    $_SESSION['Token'] = hash('sha512',rand());
+	}*/
 	
 	# Check this layout exists
 	#

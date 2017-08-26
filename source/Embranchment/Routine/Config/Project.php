@@ -8,7 +8,7 @@ class Project extends SkeletProjectConfig {
 
     # Hard path to project
     #
-    public static $Path = '/var/www/limp-key/Fork/';
+    public static $Path = '/var/www/test-fork/';
 
     # URL project
     #
@@ -39,5 +39,11 @@ class Project extends SkeletProjectConfig {
     # Warning: Debug not enable/disable PHP errors
     #
     public static $Debug = 'Off';
-     
+    
+    #
+    #
+    public static $Modules = array(
+	'ConvertMedia' => '\ConvertMedia\ConvertMedia',
+	'Sockets' => '\Sockets\Sockets'
+    );    
 }

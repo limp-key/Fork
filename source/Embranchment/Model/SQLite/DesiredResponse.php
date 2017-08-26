@@ -1,13 +1,13 @@
 <?php
 
-namespace Embranchment\Model\MySQL;
+namespace Embranchment\Model\SQLite;
 
 trait DesiredResponse{
 
     public function exec(){
 
 	#
-	$returnQuery = $this->connection->query($this->query);
+	$returnQuery = $this->connection->exec($this->query);
 
 	# Returns the response
 	# The request was successful or not
@@ -21,7 +21,7 @@ trait DesiredResponse{
 
 	if (!empty($returnQuery)) {
 	    
-	    return $returnQuery->fetch_all(1);
+	    return $returnQuery->fetchArray(SQLITE3_ASSOC);
 	    
 	} else {
 
@@ -33,31 +33,12 @@ trait DesiredResponse{
 	
 	$this->query .= "LIMIT 1";
 	
-	$returnQuery = $this->connection->query($this->query);
+	$returnQuery = $this->connection->querySingle($this->query);
 
 	if(!empty($returnQuery)){
-	    
-	    $returnQuery = $returnQuery->fetch_all(1);
-	    $returnQuery = $returnQuery[0];
 
 	    return $returnQuery;
 	    
-	} else {
-
-	    return false;
-	}
-    }
-
-    public function bool(){
-
-	$this->query .= "LIMIT 1";
-	
-	$returnQuery = $this->connection->query($this->query);
-	
-	if (!empty($returnQuery)) {
-
-	    return true;
-
 	} else {
 
 	    return false;

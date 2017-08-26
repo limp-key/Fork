@@ -25,7 +25,7 @@ class AssemblyProject{
 	    # load all configs
 	    # first load default config
 	    # second load user configs
-
+	    
 	    \Embranchment\Assembly\AssemblyConfigs::Defaults();
 	    
 	    if (!\Embranchment\Assembly\AssemblyConfigs::Configs()) {
@@ -37,9 +37,8 @@ class AssemblyProject{
 	    # Include:
 	    #          User's Models      in models/
 	    #          User's Controllers in controllers/
-	    $Route = sprintf('%s/routes/Route.php', \Configs\Project::$Path);
 	    
-	    require_once $Route;
+	    \Embranchment\Assembly\AssemblyRoutes::Load();
 
 	    throw new \Exception('Fork can not find multiple request mappings with custom routers');
 

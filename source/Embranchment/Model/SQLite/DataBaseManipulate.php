@@ -1,6 +1,6 @@
 <?php
 
-namespace Embranchment\Model\MySQL;
+namespace Embranchment\Model\SQLite;
 
 trait DataBaseManipulate {
 

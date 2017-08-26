@@ -2,9 +2,9 @@
 
 namespace Configs;
 
-use \Embranchment\Config\Custom\SkeletDataBaseConnection;
+use \Embranchment\Config\Custom\SkeletDataBaseConfig;
 
-class DataBase extends SkeletDataBaseConection {
+class DataBase extends SkeletDataBaseConfig {
 
     # Connection to database
     #
@@ -27,24 +27,24 @@ class DataBase extends SkeletDataBaseConection {
     #
     # Host on which the database server is installed
     #
-    public static $Host = 'LocalHost';
+    public static $Host = 'localhost';
 
     # DataBase user
     #
     # Connection to the user on the database server
     #
-    public static $UserName = 'User';
+    public static $UserName = 'root';
 
     # DataBase password
     #
     # The password of the user you are connected to
     #
-    public static $Password = 'Password';
+    public static $Password = 'Lamp2comp!';
 
     # DataBase database
     #
     # Select database
     #
-    public static $DataBase = 'Database';
+    public static $DataBase = 'testfork';
     
 }

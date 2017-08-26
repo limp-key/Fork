@@ -23,11 +23,6 @@ trait RouteAssembly {
     public static function Method($Controller, $Method) {
 
 	try {
-
-	    # Generate Token
-	    #
-	    session_start();
-	    $_SESSION['Token'] = hash('sha512',rand());
 	    
 	    # Call custom method
 	    #
