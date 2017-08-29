@@ -1,13 +1,14 @@
 <?php
 
-namespace Fork\Cookie;
+namespace Embranchment\Cookie;
 
-use \Fork\Cookie\CookieCreate;
-use \Fork\Cookie\CookieManipulate;
+use \Embranchment\Cookie\CookieCreate;
+use \Embranchment\Cookie\CookieManipulate;
 
-class SkeletCookie() {
+class SkeletCookie {
 
     use CookieCreate;
 
     use CookieManipulate;
+    
 }

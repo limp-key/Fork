@@ -1,12 +1,11 @@
 <?php
 
-namespace Fork\Cookie;
+namespace Embranchment\Cookie;
 
-use \Fork\Cookie\SkeletCookie;
+use \Embranchment\Cookie\SkeletCookie;
 
 # Front class in Cookie module
 #
 class Cookie extends SkeletCookie {
-
     
 }

@@ -1,32 +1,32 @@
 <?php
 
-namespace Fork\Assembly;
+namespace Embranchment\Assembly;
 
 class AssemblyConfigs {
 
     public static function Defaults() {
 	
-	\Fork\Config\Custom\SkeletDefaultConfig::ExposePHP('Off');
+	\Embranchment\Config\Custom\SkeletDefaultConfig::ExposePHP('Off');
 	
-	\Fork\Config\Custom\SkeletDefaultConfig::ImplicitFlush('parameter');
+	\Embranchment\Config\Custom\SkeletDefaultConfig::ImplicitFlush('parameter');
 	
-	\Fork\Config\Custom\SkeletDefaultConfig::Precision('15');
+	\Embranchment\Config\Custom\SkeletDefaultConfig::Precision('15');
 	
-	\Fork\Config\Custom\SkeletDefaultConfig::RequestOrder(\Fork\Config\Custom\SkeletDefaultConfig::$RequestOrder);
+	\Embranchment\Config\Custom\SkeletDefaultConfig::RequestOrder(\Embranchment\Config\Custom\SkeletDefaultConfig::$RequestOrder);
 
-	\Fork\Config\Custom\SkeletDefaultConfig::RegisterArgcArgv(\Fork\Config\Custom\SkeletDefaultConfig::$RegisterArgcArgv);
+	\Embranchment\Config\Custom\SkeletDefaultConfig::RegisterArgcArgv(\Embranchment\Config\Custom\SkeletDefaultConfig::$RegisterArgcArgv);
 
-	\Fork\Config\Custom\SkeletDefaultConfig::AutoGlobalsJit(\Fork\Config\Custom\SkeletDefaultConfig::$AutoGlobalsJit);
+	\Embranchment\Config\Custom\SkeletDefaultConfig::AutoGlobalsJit(\Embranchment\Config\Custom\SkeletDefaultConfig::$AutoGlobalsJit);
 
-	\Fork\Config\Custom\SkeletDefaultConfig::OutputBuffering(\Fork\Config\Custom\SkeletDefaultConfig::$OutputBuffering);
+	\Embranchment\Config\Custom\SkeletDefaultConfig::OutputBuffering(\Embranchment\Config\Custom\SkeletDefaultConfig::$OutputBuffering);
 
-	\Fork\Config\Custom\SkeletDefaultConfig::UnserializeCallbackFunc(\Fork\Config\Custom\SkeletDefaultConfig::$UnserializeCallbackFunc);
+	\Embranchment\Config\Custom\SkeletDefaultConfig::UnserializeCallbackFunc(\Embranchment\Config\Custom\SkeletDefaultConfig::$UnserializeCallbackFunc);
 
-	\Fork\Config\Custom\SkeletDefaultConfig::SerializePrecision(\Fork\Config\Custom\SkeletDefaultConfig::$SerializePrecision);
+	\Embranchment\Config\Custom\SkeletDefaultConfig::SerializePrecision(\Embranchment\Config\Custom\SkeletDefaultConfig::$SerializePrecision);
 
-	\Fork\Config\Custom\SkeletDefaultConfig::RealPathCacheSize(\Fork\Config\Custom\SkeletDefaultConfig::$RealPathCacheSize);
+	\Embranchment\Config\Custom\SkeletDefaultConfig::RealPathCacheSize(\Embranchment\Config\Custom\SkeletDefaultConfig::$RealPathCacheSize);
 
-	\Fork\Config\Custom\SkeletDefaultConfig::RealPathCacheTTL(\Fork\Config\Custom\SkeletDefaultConfig::$RealPathCacheTTL);
+	\Embranchment\Config\Custom\SkeletDefaultConfig::RealPathCacheTTL(\Embranchment\Config\Custom\SkeletDefaultConfig::$RealPathCacheTTL);
 
 	return true;
     }

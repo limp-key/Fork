@@ -1,9 +1,9 @@
 <?php
 
-namespace Fork\Assay;
+namespace Embranchment\Assay;
 
-use \Fork\Assay\AssayRequest;
-use \Fork\Assay\AssayValidation;
+use \Embranchment\Assay\AssayRequest;
+use \Embranchment\Assay\AssayValidation;
 
 class SkeletAssay() {
 
