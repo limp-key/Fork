@@ -1,11 +1,10 @@
 {
-    "name": "fork-set/framework",
-    "version": "v0.10.0",
+    "name": "fork/framework",
+    "version": "v0.12.0",
     "license": "GPL-3.0",
     "description": "Simply framework",
     "keywords": [
 	"fork",
-	"fork-set",
 	"framework"
     ],
     "author": {
