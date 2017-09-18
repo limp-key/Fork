@@ -20,7 +20,7 @@ class AssayValidation{
     
     public function Password($Parameter,$Length = 8){
 
-	$RegularPassword = "/^[a-zA-Z0-9_@!+&^%$#()?]{".$Lenght.",}$/";
+	$RegularPassword = "/^[a-zA-Z0-9_@!+&^%$#()?]{".$Length.",}$/";
 
 	return preg_match($RegularPassword,$Parameter);
     }

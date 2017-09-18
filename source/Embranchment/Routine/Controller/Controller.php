@@ -2,8 +2,8 @@
 
 namespace Controllers;
 
-use Fork\Controller\SkeletonController;
+use \Embranchment\Controller\SkeletController;
 
-class __Name__ extends SkeletonController{
+class __Name__ extends SkeletController{
     
 }

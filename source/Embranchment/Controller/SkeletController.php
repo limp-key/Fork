@@ -1,10 +1,10 @@
 <?php
 
-namespace Fork\Controller;
+namespace Embranchment\Controller;
 
-use \Fork\Controller\ControllerJSON;
-use \Fork\Controller\ControllerView;
-use \Fork\Controller\ControllerRedirect;
+use \Embranchment\Controller\ControllerJSON;
+use \Embranchment\Controller\ControllerView;
+use \Embranchment\Controller\ControllerRedirect;
 
 class SkeletController{
 

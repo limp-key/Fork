@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Controller;
+namespace Embranchment\Controller;
 
 trait ControllerView{
 
@@ -34,13 +34,20 @@ trait ControllerView{
 	    extract($this->ParametersForView);
 	}
 
+	# Generate Token
+	#
+	/*if( !session_status() ) {
+	    session_start();
+	    $_SESSION['Token'] = hash('sha512',rand());
+	}*/
+	
 	# Check this layout exists
 	#
 	if (!is_file($View)) {
 	    
 	    $Info =  new \Exception('Fork did not find the specified template');
 	    
-	    \Fork\Exception\ForkException::ExceptionView($Info);
+	    \Embranchment\Exception\ForkException::ExceptionView($Info);
 	}
 
 	# Plug view for controller request

@@ -2,7 +2,7 @@
 
 namespace Configs;
 
-use \Fork\Config\Custom\SkeletLogConfig;
+use \Embranchment\Config\Custom\SkeletLogConfig;
 
 class Log extends SkeletLogConfig {
     

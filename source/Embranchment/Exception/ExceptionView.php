@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Exception;
+namespace Embranchment\Exception;
 
-class Model{
+class View{
 
     public static function NotFound(){
 

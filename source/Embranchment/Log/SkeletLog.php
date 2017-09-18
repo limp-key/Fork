@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Log;
+namespace Embranchment\Log;
 
 class SkeletLog() {
 

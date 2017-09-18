@@ -2,13 +2,13 @@
 
 namespace Configs;
 
-use \Fork\Config\Custom\SkeletProjectConfig;
+use \Embranchment\Config\Custom\SkeletProjectConfig;
 
 class Project extends SkeletProjectConfig {
 
     # Hard path to project
     #
-    public static $Path = '/var/www/limp-key/Fork/';
+    public static $Path = '/var/www/test-fork/';
 
     # URL project
     #

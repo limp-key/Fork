@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Exception;
+namespace Embranchment\Exception;
 
 class ForkException extends \Exception {
     
@@ -13,7 +13,7 @@ class ForkException extends \Exception {
 
 	# Include template for Fork Exception
 	#
-	include \Configs\Project::$Path.'/batch/Fork/Template/Exception.html.php';
+	include \Configs\Project::$Path.'/vendor/fork-set/framework/source/Embranchment/Template/Exception.html.php';
 
 	# Stop framework, because this is exception
 	#

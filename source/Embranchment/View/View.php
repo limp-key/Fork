@@ -1,17 +1,9 @@
 <?php
 
-namespace Fork\View;
+namespace Embranchment\View;
 
-use \Fork\View\ViewComponents;
-use \Fork\View\ViewGenerateToken;
-use \Fork\View\ViewTemplateManipulate;
+use \Embranchment\View\SkeletView;
 
-class View{
-
-    use ViewComponents;
-
-    use ViewGenerateToken;
-
-    use ViewTemplateManipulate;
+class View extends SkeletView {
 
 }

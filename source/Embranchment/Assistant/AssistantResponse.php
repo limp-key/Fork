@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Assistant;
+namespace Embranchment\Assistant;
 
 trait AssistantResponse {
 

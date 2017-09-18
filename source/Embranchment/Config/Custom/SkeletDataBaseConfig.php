@@ -1,8 +1,10 @@
 <?php
 
-namespace Fork\Config\Custom;
+namespace Embranchment\Config\Custom;
 
 class SkeletDataBaseConfig {
+
+    public static $Driver = '';
     
     public static $Host = 'localhost';
 

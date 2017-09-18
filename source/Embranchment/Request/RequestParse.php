@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Request;
+namespace Embranchment\Request;
 
 class RequestParse {
 

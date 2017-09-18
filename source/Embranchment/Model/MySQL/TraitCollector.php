@@ -1,11 +1,11 @@
 <?php
 
-namespace Fork\Model\MySQL;
+namespace Embranchment\Model\MySQL;
 
-use Fork\Model\CRUD;
-use Fork\Model\DesiredResponse;
-use Fork\Model\DataBaseManipulate;
-use Fork\Model\SecondaryFunctions;
+use Embranchment\Model\MySQL\CRUD;
+use Embranchment\Model\MySQL\DesiredResponse;
+use Embranchment\Model\MySQL\DataBaseManipulate;
+use Embranchment\Model\MySQL\SecondaryFunctions;
 
 class TraitCollector {
 

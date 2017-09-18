@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Model\SQLite;
+namespace Embranchment\Model\SQLite;
 
 trait CRUD{
     
@@ -10,7 +10,7 @@ trait CRUD{
 	$parameters = $this->param($parameters);
 
 	$quickQuery = "DESC $table";
-	$ColumnInTable = $this->MySQLi->query($quickQuery)->fetch_all(1);
+	$ColumnInTable = $this->connection->query($quickQuery)->fetchArray(SQLITE3_ASSOC);
 
 	$ColumnForInsert = array();
 
@@ -20,7 +20,7 @@ trait CRUD{
 	$ColumnForInsert = implode(',',$ColumnForInsert);
 
 	$parameters = implode(',',$parameters);
-	$this->Query = "INSERT INTO $table ($ColumnForInsert) VALUES (null,'test')";
+	$this->query = "INSERT INTO $table ($ColumnForInsert) VALUES (null,'test')";
 	return $this;
     }
     
@@ -29,7 +29,7 @@ trait CRUD{
 	$table = $this->param([$table]);
 	$parameters = $this->param($parameters);
 	
-	$this->Query = "SELECT $parameters FROM $table";
+	$this->query = "SELECT $parameters FROM $table";
 	return $this;
     }
 
@@ -37,7 +37,7 @@ trait CRUD{
 
 	$table = $this->param([$table]);
 
-	$this->Query = "DELETE FROM $table";
+	$this->query = "DELETE FROM $table";
 	return $this;
     }
 
@@ -46,7 +46,7 @@ trait CRUD{
 	$table = $this->param([$table]);
 	$parameters = $this->param($parameters);
 	
-	$this->Query = "UPDATE SET";
+	$this->query = "UPDATE SET";
 	return $this;
     }
 }

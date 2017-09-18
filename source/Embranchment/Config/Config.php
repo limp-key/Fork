@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Config;
+namespace Embranchment\Config;
 
-use \Fork\Config\SkeletConfig;
+use \Embranchment\Config\SkeletConfig;
 
 # Front class in Config module
 #

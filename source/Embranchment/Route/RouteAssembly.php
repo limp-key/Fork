@@ -1,6 +1,6 @@
 <?php
 
-namespace Fork\Route;
+namespace Embranchment\Route;
 
 trait RouteAssembly {
 
@@ -41,7 +41,7 @@ trait RouteAssembly {
 	    # Insert exception info in
 	    # fork exception template
 	    #
-	    \Fork\Exception\ForkException::ExceptionView($Info);
+	    \Embranchment\Exception\ForkException::ExceptionView($Info);
 	}
     }
 }

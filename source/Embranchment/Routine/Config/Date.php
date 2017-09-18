@@ -2,7 +2,7 @@
 
 namespace Configs;
 
-use \Fork\Config\Custom\SkeletDateConfig;
+use \Embranchment\Config\Custom\SkeletDateConfig;
 
 class DateConfig extends SkeletDateConfig{
 

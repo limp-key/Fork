@@ -2,7 +2,7 @@
 
 namespace Configs;
 
-use \Fork\Config\Custom\SkeletSessionConfig;
+use \Embranchment\Config\Custom\SkeletSessionConfig;
 
 class Session extends SkeletSessionConfig{
 
@@ -16,7 +16,7 @@ class Session extends SkeletSessionConfig{
 
     public static $SessionCookieSecure = '';
 
-    public static $SessionUseOnlyCookies = '1';
+    public static $SessionUseOnlyCookies = '0';
 
     public static $SessionName = 'UID';
 
@@ -32,7 +32,7 @@ class Session extends SkeletSessionConfig{
 
     public static $SessionSerializeHandler = 'php';
 
-    public static $SessionGCProbability = '1';
+    public static $SessionGCProbability = '0';
 
     public static $SessionGCDivisor = '1000';
 

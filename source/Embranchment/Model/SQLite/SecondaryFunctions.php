@@ -1,6 +1,6 @@
 <?php
 
-namespace Embranchment\Model\MySQL;
+namespace Embranchment\Model\SQLite;
 
 trait SecondaryFunctions{
 
@@ -10,7 +10,7 @@ trait SecondaryFunctions{
 
 	    for($i = 0; $i < count($parameters); $i++){
 
-		$parameters[$i] = $this->connection->escape_string($parameters[$i]);
+		$parameters[$i] = $this->connection->escapeString($parameters[$i]);
 	    }
 	    
 	    if (count($parameters) == 1) {
@@ -23,7 +23,7 @@ trait SecondaryFunctions{
 	    }
 	}else{
 
-	    $parameters = $this->connection->escape_string($parameters);
+	    $parameters = $this->connection->escapeString($parameters);
 
 	    return $parameters;
 	}

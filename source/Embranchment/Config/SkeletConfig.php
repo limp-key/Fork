@@ -1,8 +1,8 @@
 <?php
 
-namespace Fork\Config;
+namespace Embranchment\Config;
 
-#use \Fork\Config\Custom\Config;
+#use \Embranchment\Config\Custom\Config;
 
 class SkeletConfig {
 

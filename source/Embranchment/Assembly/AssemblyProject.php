@@ -25,9 +25,15 @@ class AssemblyProject{
 	    # load all configs
 	    # first load default config
 	    # second load user configs
+<<<<<<< HEAD
 
 	    \Embranchment\Assembly\AssemblyConfigs::Defaults();
 	    
+=======
+	    
+	    \Embranchment\Assembly\AssemblyConfigs::Defaults();
+	    
+>>>>>>> 17f3806bffb4fc57629f1d9266c204c9535dfdbc
 	    if (!\Embranchment\Assembly\AssemblyConfigs::Configs()) {
 
 		throw new \Exception('Error loading custom configs');
@@ -37,9 +43,8 @@ class AssemblyProject{
 	    # Include:
 	    #          User's Models      in models/
 	    #          User's Controllers in controllers/
-	    $Route = sprintf('%s/routes/Route.php', \Configs\Project::$Path);
 	    
-	    require_once $Route;
+	    \Embranchment\Assembly\AssemblyRoutes::Load();
 
 	    throw new \Exception('Embranchment can not find multiple request mappings with custom routers');
 
