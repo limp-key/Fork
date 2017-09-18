@@ -25,15 +25,9 @@ class AssemblyProject{
 	    # load all configs
 	    # first load default config
 	    # second load user configs
-<<<<<<< HEAD
-
-	    \Embranchment\Assembly\AssemblyConfigs::Defaults();
-	    
-=======
 	    
 	    \Embranchment\Assembly\AssemblyConfigs::Defaults();
 	    
->>>>>>> 17f3806bffb4fc57629f1d9266c204c9535dfdbc
 	    if (!\Embranchment\Assembly\AssemblyConfigs::Configs()) {
 
 		throw new \Exception('Error loading custom configs');
