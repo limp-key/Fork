@@ -4,7 +4,7 @@ namespace Embranchment\Session;
 
 use \Configs\Project;
 
-class SessionHandler {
+class SessionDataBase {
 
     private $DataBaseConnect;
 
