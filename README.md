@@ -1,6 +1,9 @@
-# Fork
-Framework for PHP <br>
-(Flexibility & Simplicity & Many DataBases)
-
-This is framework for PHP. Simply a framework only for unix system.<br>
-What would be the framework for configuring apache2 on a folder face/
+![Fork picture](https://github.com/valeriiduz/fork/blob/master/face/pictures/fork.png)
+## About
+Database-orientived framework for PHP. The framework works with such databases: **SQLite**, **MariaDB**, **MongoDB**, **CouchDB**. Working with the global network involves working with databases. Fork is the one that helps you make your web application run on multiple databases.
+## Installation
+Configuring your http server on a folder face/
+## Usage
+Before you use this framework, read the [documentation](https://github.com/valeriiduz/fork/blob/master/manual/Fork%20Documentation.pdf)
+## License
+The Fork is open-sourced software licensed under the GPLv3.
