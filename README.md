@@ -4,6 +4,6 @@ Database-orientived framework for PHP. The framework works with such databases: 
 ## Installation
 Configuring your http server on a folder face/
 ## Usage
-Before you use this framework, read the [documentation](https://github.com/valeriiduz/fork-framework/blob/master/Manual.pdf)
+Before you use this framework, read the [Documentation](https://github.com/valeriiduz/fork-framework/blob/stable/manual.pdf)
 ## License
 The Fork is open-sourced software licensed under the GPLv3.
