@@ -1,34 +1,45 @@
 <?php
 
-namespace Fork\Model\SQLite;
+namespace Embranchment\Model\SQLite;
 
-trait Other{
+trait SecondaryFunctions{
 
     public function param($parameters = array()){
+	
 	if(is_array($parameters)){
+
 	    for($i = 0; $i < count($parameters); $i++){
-		$parameters[$i] = $this->MySQLi->escape_string($parameters[$i]);
+
+		$parameters[$i] = $this->connection->escapeString($parameters[$i]);
 	    }
 	    
-	    if(count($parameters) == 1)
+	    if (count($parameters) == 1) {
+
 		return $parameters[0];
-	    else
+
+	    } else {
+
 		return $parameters;
+	    }
 	}else{
-	    $parameters = $this->MySQLi->escape_string($parameters);
+
+	    $parameters = $this->connection->escapeString($parameters);
+
 	    return $parameters;
 	}
     }
 
     public function where($parameters){
+
 	$parameters = $this->param($parameters);
-	$this->Query .= " WHERE $parameters";
+	$this->query .= " WHERE $parameters";
 
 	return $this;
     }
 
     public function query($Request){
-	$this->Query = $Request;
+
+	$this->query = $Request;
 
 	return $this;
     }    

@@ -2,7 +2,7 @@
 
 namespace \Embranchment\Model\SQLite;
 
-class Connection {
+class Connection extends TraitCollector {
 
     # Connection to database
     #

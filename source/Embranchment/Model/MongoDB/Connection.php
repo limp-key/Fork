@@ -2,7 +2,7 @@
 
 namespace \Embranchment\Model\MongoDB;
 
-class Connection {
+class Connection extends TraitCollector {
 
     # Connection to database
     #
