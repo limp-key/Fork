@@ -4,18 +4,9 @@ namespace Embranchment\Route;
 
 use \Embranchment\Route\SkeletRoute;
 
-class Route {
-
-    public $List = array();
-
-    public function Add($Path, $Class, $Method){
-	
-	$this->List[] = [$Path => ['Class' => $Class, 'Method' => $Method]];
-
-	return true;
-    }
-
-    public static function Run(){
+class Route extends SkeletRoute {
+        
+    public static function Request($Path, $Class, $Method){
 
 	$Assay = self::AssayCustomRedirect($Path);
 	
@@ -35,5 +26,10 @@ class Route {
 	# Call method
 	#
 	self::Method($Controller, $Method);
+
+	# End of request processing
+	# End work of the framework and user code
+	#
+	exit;
     }
 }

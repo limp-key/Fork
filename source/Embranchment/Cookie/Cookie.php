@@ -2,10 +2,13 @@
 
 namespace Embranchment\Cookie;
 
-use \Embranchment\Cookie\SkeletCookie;
+use \Embranchment\Cookie\CookieCreate;
+use \Embranchment\Cookie\CookieManipulate;
 
-# Front class in Cookie module
-#
-class Cookie extends SkeletCookie {
+class Cookie {
+
+    use CookieCreate;
+
+    use CookieManipulate;
     
 }

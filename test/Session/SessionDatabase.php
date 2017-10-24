@@ -6,28 +6,37 @@ use \Configs\Project;
 
 class SessionDataBase {
 
-    public $Path = '';
-
     private $DataBaseConnect;
 
-    public function __construct() {
+    public function __construct(){
 	
 	$DataBase = sprintf('%s/pantry/session/session.db', Project::$Path);
 
-	# Instantiate new SQLite3 object
-	# Start the session
-	#
+	// Instantiate new SQLite3 object
 	$this->DataBaseConnect = new \SQLite3($DataBase);
+
+	// Set handler to overide SESSION
+	session_set_save_handler(
+	    array($this, "open"),
+	    array($this, "close"),
+	    array($this, "read"),
+	    array($this, "write"),
+	    array($this, "destroy"),
+	    array($this, "gc")
+	);
+	
+	// Start the session
+	session_start();
 
 	return true;
     }
     
-    public function close() {
+    public function close(){
 
-	# If closed the database connection
-	# is successful, function will returned true
+	# Close the database connection
+	# If successful
 	#
-	if ($this->DataBaseConnect->close()) {
+	if($this->DataBaseConnect->close()){
 
 	    # Return True
 	    #
@@ -39,7 +48,7 @@ class SessionDataBase {
 	return false;
     }
 
-    public function destroy($SessionID) {
+    public function destroy( $SessionID){
 
 	# Set query
 	#
@@ -59,14 +68,11 @@ class SessionDataBase {
 	return false;
     }
 
-    public function gc ($MaxLifeTime) {
-
+    public function gc( $MaxLifeTime ){
 	# Calculate what is to be deemed old
-	#
 	$Old = time() - $MaxLifeTime;
 	
 	# Set query
-	#
 	$result = $this->DataBaseConnect->exec("DELETE FROM session WHERE Date < {$Old}");
 	
 	# If successful
@@ -83,7 +89,7 @@ class SessionDataBase {
 	return false;
     }
 
-    public function open ($SavePath, $SessionName) {
+    public function open( $SavePath, $SessionName ){
 
 	# If successful
 	#
@@ -129,7 +135,14 @@ class SessionDataBase {
 	
 	# Set query  
 	#
-	$result = $this->DataBaseConnect->query("INSERT INTO session (ID, Data, Date) VALUES ('{$SessionID}', '{$SessionData}', '{$Time}')");
+	$result = $this->DataBaseConnect->query("
+	       INSERT INTO session (
+                 ID, Data, Date
+               ) VALUES (
+                 '{$SessionID}', 
+                 '{$SessionData}', 
+                 '{$Time}'
+               )");
 
 	# If successful
 	#
