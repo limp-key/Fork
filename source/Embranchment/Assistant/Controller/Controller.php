@@ -2,7 +2,7 @@
 
 namespace Controllers;
 
-use \Embranchment\Controller\SkeletController;
+use \Embranchment\Request\;
 
 class __Name__ extends SkeletController{
     

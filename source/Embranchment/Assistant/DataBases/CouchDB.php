@@ -2,9 +2,7 @@
 
 namespace Configs;
 
-use \Embranchment\Config\Custom\SkeletDataBaseConfig;
-
-class DataBase extends SkeletDataBaseConfig {
+class CouchDB {
 
     # Connection to database
     #

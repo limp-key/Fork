@@ -1,24 +1,27 @@
 <?php
 
-namespace Embranchment\Model\MySQL;
+namespace Embranchment\Model;
 
 use \Configs\DataBase;
-use \Embranchment\Model\MySQL\TraitCollector;
 
-class Representative extends TraitCollector {
-    
+class Representative {
+
+    /*
+     * Query for the database
+     */
     protected $Query = "";
 
+    /*
+     * Object of the connection
+     */
     protected $Connection = false;
 
+    /*
+     *
+     */
     public function __construct(){
 
 	try {
-
-	    $this->Connection = new \mysqli(DataBase::$Host,
-					    DataBase::$UserName,
-					    DataBase::$Password,
-					    DataBase::$DataBase);
 	    
 	    if (!$this->Connection){
 

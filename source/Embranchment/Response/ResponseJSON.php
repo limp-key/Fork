@@ -13,10 +13,6 @@ trait ControllerJSON {
      */
     public function json($Parameters = array()) {
 
-	/* 
-	 * Because variable $Parameters empty
-	 * Fork create controller exception
-	 */
 	if (!empty($Parameters) and is_array($Parameters)) {
 	    
 	    return json_encode($Parameters);

@@ -10,7 +10,7 @@ class AssistantPassword {
      * @param Password
      * @param Cost
      */
-    public static function hashing($Password, $Cost = 10) {
+    public static function hashing($Password, $Cost) {
 
 	$Options = [
 	    'cost' => $Cost

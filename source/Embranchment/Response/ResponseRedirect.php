@@ -2,7 +2,7 @@
 
 namespace Embranchment\Controller;
 
-trait ControllerRedirect{
+trait ControllerRedirect {
 
     /*
      * Create redirect to other path

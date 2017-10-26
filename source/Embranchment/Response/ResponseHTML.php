@@ -2,7 +2,7 @@
 
 namespace Embranchment\Controller;
 
-trait ControllerView{
+trait ControllerView {
 
     protected $ParametersForView = array();
 
