@@ -4,36 +4,50 @@ namespace Embranchment\Request;
 
 class RequestClear {
 
+    /*
+     * Remove all parameters in $_ENV variable
+     *
+     * @return null
+     */
     public static function ENV() {
-
-	# Remove all parameters in $_ENV variable
+	
 	if (!empty($_ENV)) {
 
 	    unset($_ENV);
 	}
 
-	return true;
+	return null;
     }
 
+    /*
+     * Remove all parameters in $_REQUEST variable
+     *
+     * @return null
+     */
     public static function REQUEST() {
 
-	# Remove all parameters in $_REQUEST variable
+	
 	if (!empty($_REQUEST)) {
 
 	    unset($_REQUEST);
 	}
 
-	return true;
+	return null;
     }
 
+    /*
+     * Remove all parameters in $_GLOBALS variable
+     *
+     * @return null
+     */
     public static function GLOBALS() {
 	
-	# Remove all parameters in $_GLOBALS variable
+
 	if (!empty($_GLOBALS)) {
 
 	    unset($_GLOBALS);
 	}
 
-	return true;
+	return null;
     }
 }

@@ -7,20 +7,20 @@ use \Embranchment\Model\MySQL\TraitCollector;
 
 class Representative extends TraitCollector {
     
-    protected $query = "";
+    protected $Query = "";
 
-    protected $connection = false;
+    protected $Connection = false;
 
     public function __construct(){
 
 	try {
 
-	    $this->connection = new \mysqli(DataBase::$Host,
+	    $this->Connection = new \mysqli(DataBase::$Host,
 					    DataBase::$UserName,
 					    DataBase::$Password,
 					    DataBase::$DataBase);
 	    
-	    if (!$this->connection){
+	    if (!$this->Connection){
 
 		throw new \Exception('Fork did not connect to database');
 	    }

@@ -4,25 +4,31 @@ namespace Embranchment\Model\MySQL;
 
 trait DataBaseManipulate {
 
+    /*
+     * Create database
+     * 
+     * @param TableName
+     * 
+     * @return void
+     */
     public function create_database($TableName) {
 
-	# Assay variable $TableName
-	#
   	$TableName = $this->connection->escape_string($TableName);
 
-	# Create database for name $TableName
-	#
 	$this->query = "CREATE DATABASE $TableName";
     }
 
+    /*
+     * Delete database
+     *
+     * @param TableName
+     *
+     * @return void
+     */
     public function drop_database($TableName) {
 
-	# Assay variable $TableName
-	#
   	$TableName = $this->connection->escape_string($TableName);
-	
-	# Delete database for name $TableName
-	#
+
 	$this->query = "DROP DATABASE $TableName";
     }
 }

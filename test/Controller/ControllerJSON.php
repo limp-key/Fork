@@ -4,19 +4,24 @@ namespace Embranchment\Controller;
 
 trait ControllerJSON {
 
+    /*
+     * Convert Array to JSON and return JSON scring
+     *
+     * @param Parameters
+     *
+     * @return string
+     */
     public function json($Parameters = array()) {
 
+	/* 
+	 * Because variable $Parameters empty
+	 * Fork create controller exception
+	 */
 	if (!empty($Parameters) and is_array($Parameters)) {
-
-	    # Encode array to json
-	    #
+	    
 	    return json_encode($Parameters);
-
 	}
 
-	# Because variable $Parameters empty
-	# Fork create controller exception
-	#
 	return false;
     }
 }

@@ -6,11 +6,7 @@ use \Embranchment\Config\SkeletConfig;
 
 class SkeletDefaultConfig extends SkeletConfig{
 
-    public static $Precision;
-
     public static $OutputBuffering;
-
-    public static $OutputHandler;
 
     public static $UrlRewriterTags;
 
@@ -60,14 +56,6 @@ class SkeletDefaultConfig extends SkeletConfig{
 
     public static $AutoDetectLineEndings;
 
-    # The number of significant digits displayed in floating point numbers.
-    public static function Precision($Parameter = 14){
-
-	ini_set('precision',$Parameter);
-	
-	return true;
-    }
-
     # Output buffering is a mechanism for controlling how much output data
     # (excluding headers and cookies) PHP should keep internally before pushing that
     # data to the client. If your application's output exceeds this setting, PHP
@@ -94,18 +82,6 @@ class SkeletDefaultConfig extends SkeletConfig{
 	ini_set('output_buffering',$Parameter);
 	
 	return true;
-    }
-
-    # Implicit flush tells PHP to tell the output layer to flush itself
-    # automatically after every output block.  This is equivalent to calling the
-    # PHP function flush() after each and every call to print() or echo() and each
-    # and every HTML block.  Turning this option on has serious performance
-    # implications and is generally recommended for debugging purposes only.
-    # Note: This directive is hardcoded to On for the CLI SAPI
-    public static function ImplicitFlush($Parameter = 'Off'){
-
-	#return self::ChangeConfigurePHP('implicit_flush', $Parameter);
-
     }
 
     # The unserialize callback function will be called (with the undefined class'

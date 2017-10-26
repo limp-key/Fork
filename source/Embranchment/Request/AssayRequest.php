@@ -4,16 +4,26 @@ namespace Embranchment\Assay;
 
 class AssayRequest {
 
+    /* 
+     *
+     */
     protected $RequestPostVariable = array();
 
+    /* 
+     *
+     */
     protected $RequestGetVariable = array();
 
+    /* 
+     *
+     */
     protected $RequestFileVariable = array();
 
+    /* 
+     * 
+     */
     public function VariableToHtmlEnTities($Variables) {
 
-	# Assay request is post
-	#
 	if (!empty($Variables)) {
 	    
 	    foreach ($Variables as &$Variable) {
@@ -27,26 +37,30 @@ class AssayRequest {
 	}
     }
 
+    
+    /* 
+     * Convert all applicable characters in
+     * POST var to HTML entities  
+     */
     public function POST() {
-
-	# Convert all applicable characters in
-	# POST var to HTML entities
-	#
+	
 	return $this->VariableToHtmlEnTities($_POST);
     }
-
+    
+    /* 
+     * Convert all applicable characters in
+     * GET var to HTML entities
+     */
     public function GET() {
 
-	# Convert all applicable characters in
-	# GET var to HTML entities
-	#
 	return $this->VariableToHtmlEnTities($_GET);
     }
 
+    /* 
+     * Assay one file in request
+     */
     public function File($Parameter) {
-	    
-	# File exists in request
-	#
+
 	if (empty($_FILES))
 	    return null;
 	
@@ -68,10 +82,11 @@ class AssayRequest {
 
     }
 
+    /* 
+     * Assay many files in request
+     */
     public function Files() {
 	
-	# Files exists in request
-	#
 	if (empty($_FILES)) {
 	    
 	    return null;
