@@ -50,4 +50,17 @@ class RequestClear {
 
 	return null;
     }
+
+
+    /*
+     * Star clearing variables;
+     */
+    public static function Load() {
+
+	self::ENV();
+
+	self::REQUEST();
+
+	self::GLOBALS();
+    }
 }

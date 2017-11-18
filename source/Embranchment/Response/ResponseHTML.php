@@ -1,8 +1,8 @@
 <?php
 
-namespace Embranchment\Controller;
+namespace Embranchment\Response;
 
-trait ControllerView {
+trait ResponseHTML {
 
     protected $ParametersForView = array();
 
@@ -12,7 +12,8 @@ trait ControllerView {
 
 	# Convert custom template path to full path for view
 	#
-	$View = sprintf('%sviews/%s', \Configs\Project::$Path, $Path);
+	//$View = sprintf(__DIR__.'../../../../../views/%s', \Configs\Project::$Path, $Path);
+	$View = __DIR__.'/../../../../../../views/'.$Path;
 
 	# Include this view and
 	# assay file exists

@@ -1,8 +1,8 @@
 <?php
 
-namespace Embranchment\Controller;
+namespace Embranchment\Response;
 
-trait ControllerJSON {
+trait ResponseJSON {
 
     /*
      * Convert Array to JSON and return JSON scring

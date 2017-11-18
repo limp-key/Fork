@@ -1,12 +1,12 @@
 <?php
 
-namespace Embranchment\Controller;
-
-use \Embranchment\Controller\ControllerJSON;
-use \Embranchment\Controller\ControllerView;
-use \Embranchment\Controller\ControllerRedirect;
+namespace Embranchment\Response;
 
 class Conveyor {
 
+    use \Embranchment\Response\ResponseJSON;
     
+    use \Embranchment\Response\ResponseHTML;
+
+    use \Embranchment\Response\ResponseRedirect;
 }

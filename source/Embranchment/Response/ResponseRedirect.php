@@ -1,8 +1,8 @@
 <?php
 
-namespace Embranchment\Controller;
+namespace Embranchment\Response;
 
-trait ControllerRedirect {
+trait ResponseRedirect {
 
     /*
      * Create redirect to other path
