@@ -1,10 +1,10 @@
 <?php
 
-namespace Embranchment\Assembly;
+namespace Embranchment\Routing;
 
 use Embranchment\Routing\RouteList;
 
-class AssemblyRoutes {
+class CollectionRoutes {
 
     /*
      * Path to routes dir
@@ -34,5 +34,13 @@ class AssemblyRoutes {
 	}
 
 	$List->Execute();
+    }
+
+
+    public static function Start () {
+
+	$Routes = new \Embranchment\Routing\CollectionRoutes();
+
+	$Routes->Load();
     }
 }

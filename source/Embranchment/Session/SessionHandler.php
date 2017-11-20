@@ -61,7 +61,7 @@ class SessionDataBase {
      */
     public function destroy($SessionID) {
 	
-	return $Result = $this->DataBaseConnect->query("DELETE FROM session WHERE id = '{SessionID}'");
+	return $Result = $this->DataBaseConnect->query("DELETE FROM session WHERE id = '{$SessionID}'");
     }
 
     /*

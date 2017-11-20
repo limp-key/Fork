@@ -19,8 +19,8 @@ class RouteAssay {
 	    
 	    $Rule = "/^{$Route['URI']}$/";
 	    
-	    if((preg_match($Rule, $_SERVER['REDIRECT_URL'])) ||
-	       (empty($_SERVER['REDIRECT_URL']) && $Route['URI'] === '/')) {
+	    if ((empty($_SERVER['REDIRECT_URL']) && $Route['URI'] === '\/') ||
+		preg_match($Rule, $_SERVER['REDIRECT_URL'])) {
 		
 		return $Route;
 	    }
