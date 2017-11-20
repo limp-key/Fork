@@ -8,14 +8,14 @@ use Embranchment\Routing\RouteAssembly;
 class RouteList {
 
     /*
-     * 
+     * Project route list
      *
      * @var array
      */
     private $RouteList = array();
 
     /*
-     * 
+     * Adding route to routes list
      *
      * @param string or array
      * @param array or function
@@ -34,7 +34,8 @@ class RouteList {
     }
 
     /*
-     *
+     * Create object and call method in the object 
+     * or call symple function
      */
     public function Execute() {
 

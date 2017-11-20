@@ -5,7 +5,7 @@ namespace Embranchment\Routing;
 class RouteAssay {
 
     /*
-     * asdf
+     * Searching URI in routes list
      *
      * @param array
      *
@@ -30,7 +30,7 @@ class RouteAssay {
     }
 
     /*
-     * ss
+     * Replace variables in request URI to regex rules
      *
      * @param
      *

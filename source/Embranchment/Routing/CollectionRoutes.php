@@ -36,7 +36,9 @@ class CollectionRoutes {
 	$List->Execute();
     }
 
-
+    /*
+     * Starting load all routes in route dir
+     */
     public static function Start () {
 
 	$Routes = new \Embranchment\Routing\CollectionRoutes();
