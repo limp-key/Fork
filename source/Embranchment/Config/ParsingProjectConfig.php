@@ -2,7 +2,7 @@
 
 namespace Embranchment\Config;
 
-class Project {
+class ParsingProjectConfig {
 
     /*
      * Users configs in Config dir 
@@ -22,7 +22,7 @@ class Project {
      * 
      * @var string
      */
-    private $PathToProjectConfig = __DIR__.'/../../../../../../project.conf.json';
+    private $PathToProjectConfig = __DIR__.'/../../../../../../project.config.json';
     
     /*
      * Converting JSON string to Array
@@ -39,21 +39,20 @@ class Project {
 	}
     }
 
-    public static function Path() {
-
-	$Config = new \Embranchment\Config\Project();
-
-	return $Config->Run();
-    }
-
     /*
-     * Run config process
+     * Show option in project config
+     *
+     * @param string
+     *
+     * @return string
      */
-    public function Run(){
+    public static function Show($Parameter) {
+
+	$Config = new \Embranchment\Config\ParsingProjectConfig();
 	
-	$this->ParsingConfigsFile();
-	
-	return $this->ConfigsDecode['path'];
+	$Config->ParsingConfigsFile();
+
+	return $Config->ConfigsDecode[$Parameter];
     }
 }
 
