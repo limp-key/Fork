@@ -1,7 +1,7 @@
 <?php
 
 /*
- * 
+ * Include file for this template
  */
 function Comprise($File){
 
@@ -17,9 +17,21 @@ function Comprise($File){
  * 
  * @return bool
  */
-function Token(){
+function TokenCode(){
 
-    echo $_SESSION['Token'];
+    echo $_SESSION['token'];
+    
+    return true;
+}
+
+/*
+ * View input token in Session variable
+ * 
+ * @return bool
+ */
+function TokenInput(){
+
+    echo '<input name="token" type="hidden" value="'.$_SESSION['token'].'">';
     
     return true;
 }

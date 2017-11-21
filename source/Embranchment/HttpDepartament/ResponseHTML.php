@@ -2,6 +2,8 @@
 
 namespace Embranchment\HttpDepartament;
 
+use \Embranchment\Session\SessionToken;
+
 trait ResponseHTML {
 
     /*
@@ -21,6 +23,8 @@ trait ResponseHTML {
      */
     public function view($Path, $Parameters = array()){
 
+	SessionToken::Generate();
+	
 	$this->ParametersForView = $Parameters;
 	
 	$View = __DIR__.'/../../../../../../views/'.$Path;
@@ -43,11 +47,7 @@ trait ResponseHTML {
 
 	    extract($this->ParametersForView);
 	}
-
-	/*if( !session_status() ) {
-	    session_start();
-	    $_SESSION['Token'] = hash('sha512',rand());
-	   }*/
+	
 	include 'ViewTemplateFunction.php';
 	
 	if (!is_file($View)) {

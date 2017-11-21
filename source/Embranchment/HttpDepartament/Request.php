@@ -2,6 +2,8 @@
 
 namespace Embranchment\HttpDepartament;
 
+use \Embranchment\Session\SessionVerification as Session;
+
 class Request {
 
     /* 
@@ -33,7 +35,24 @@ class Request {
      */
     public function POST() {
 	
-	return $this->VariableToHtmlEnTities($_POST);
+	if ($this->VerifyTokenPOST()) {
+	
+	    return $this->VariableToHtmlEnTities($_POST);
+	}
+
+	return false;
+    }
+
+    public function VerifyTokenPOST() {
+
+	if (!Session::IsStarted()) session_start();
+	
+	if  (!empty($_POST['token']) && ($_POST['token'] == $_SESSION['token'])) {
+
+	    return true;
+	}
+
+	return false;
     }
     
     /* 
@@ -44,7 +63,14 @@ class Request {
      */
     public function GET() {
 
-	return $this->VariableToHtmlEnTities($_GET);
+	if (!Session::IsStarted()) session_start();
+	
+	if (!empty($_GET['token']) && ($_GET['token'] == $_SESSION['token'])) {
+	    
+	    return $this->VariableToHtmlEnTities($_GET);
+	}
+
+	return false;
     }
 
     /* 
@@ -71,7 +97,13 @@ class Request {
 	
 	$File[$Parameter]['error']    = htmlentities($Files[$Parameter]['error'], ENT_QUOTES);
 	
-	return $File;
+
+	if ($this->VerifyTokenPOST()) {
+
+	    return $File;
+	}
+	
+	return false;
     }
 
     /* 
@@ -96,6 +128,11 @@ class Request {
 	    }
 	}
 	
-	return $Files;
+	if ($this->VerifyTokenPOST()) {
+
+	    return $Files;
+	}
+	
+	return false;
     }
 }
