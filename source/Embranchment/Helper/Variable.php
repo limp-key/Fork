@@ -2,7 +2,7 @@
 
 namespace Embranchment\Helper;
 
-trait AssistantVariable {
+class Variable {
 
     /*
      * 	Ecraning and output variable

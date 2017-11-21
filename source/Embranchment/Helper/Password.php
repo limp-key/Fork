@@ -1,8 +1,8 @@
 <?php
 
-namespace \Embranchment\Assistant;
+namespace \Embranchment\Helper;
 
-class AssistantPassword {
+class Password {
 
     /* 
      * Hashing password 

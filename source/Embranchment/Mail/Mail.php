@@ -1,15 +1,24 @@
 <?php
 
-namespace \Embranchment\Mail;
+namespace Embranchment\Mail;
+
+use \Embranchment\Helper\File;
 
 class Mail{
     
     /* 
-     * Variable 
+     * Information to who sent mail
      *
      * @var string
      */
     public $To;
+
+    /* 
+     * Information from who sent mail
+     *
+     * @var string
+     */
+    public $From;
     
     /* 
      * Subject of message email
@@ -25,6 +34,13 @@ class Mail{
      */
     public $Message;
 
+    /* 
+     * Path to pantry dir
+     *
+     * @var string
+     */
+    public $PantryDir =__DIR__.'/../../../../../../pantry/';
+
     /*
      * Send email
      *
@@ -32,9 +48,15 @@ class Mail{
      */
     public function Send() {
 
+	$Header[] = "Content-type: text/html; charset=iso-8859-1";
+	$Header[] = "From: {$this->From}";
+
+	$Header = implode("\r\n", $Header);
+	
 	mail($this->To,
 	     $this->Subject,
-	     $this->Message);
+	     $this->Message,
+	     $Header);
     }
 
     /*
@@ -59,14 +81,13 @@ class Mail{
      * 
      * @return this
      */
-    public function Template($Template, $Resourse = false) {
+    public function Template($Template, $Parameters = array()) {
 
-	if (!$Resourse) {
+	$PathToFile = $this->PantryDir.$Template;
+	
+	$Content = File::GetIncludeContents($PathToFile, $Parameters);
 
-	    $Template = file_get_contents($Template);
-	}
-
-	$this->Message = $Template;
+	$this->Message = $Content;
 	
 	return $this;
     }
