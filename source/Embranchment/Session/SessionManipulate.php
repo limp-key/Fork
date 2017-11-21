@@ -2,6 +2,8 @@
 
 namespace Embranchment\Session;
 
+use \Embranchment\Session\SessionVerification as Session;
+
 class SessionManipulate {
 
     /*
@@ -9,7 +11,7 @@ class SessionManipulate {
      */
     public function __construct(){
 
-	session_start();
+	if (!Session::IsStarted()) session_start();
     }
 
     /*
