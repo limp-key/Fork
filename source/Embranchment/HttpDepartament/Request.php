@@ -1,26 +1,13 @@
 <?php
 
-namespace Embranchment\Assay;
+namespace Embranchment\HttpDepartament;
 
-class AssayRequest {
+class Request {
 
     /* 
+     * Assay variables in array
      *
-     */
-    protected $RequestPostVariable = array();
-
-    /* 
-     *
-     */
-    protected $RequestGetVariable = array();
-
-    /* 
-     *
-     */
-    protected $RequestFileVariable = array();
-
-    /* 
-     * 
+     * @return array or null
      */
     public function VariableToHtmlEnTities($Variables) {
 
@@ -40,7 +27,9 @@ class AssayRequest {
     
     /* 
      * Convert all applicable characters in
-     * POST var to HTML entities  
+     * POST var to HTML entities
+     *
+     * @return array or null
      */
     public function POST() {
 	
@@ -50,6 +39,8 @@ class AssayRequest {
     /* 
      * Convert all applicable characters in
      * GET var to HTML entities
+     *
+     * @return array or null
      */
     public function GET() {
 
@@ -58,6 +49,8 @@ class AssayRequest {
 
     /* 
      * Assay one file in request
+     *
+     * @return array or null
      */
     public function File($Parameter) {
 
@@ -79,11 +72,12 @@ class AssayRequest {
 	$File[$Parameter]['error']    = htmlentities($Files[$Parameter]['error'], ENT_QUOTES);
 	
 	return $File;
-
     }
 
     /* 
      * Assay many files in request
+     *
+     * @return array or null
      */
     public function Files() {
 	

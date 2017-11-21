@@ -2,10 +2,10 @@
 
 namespace Embranchment\Routing;
 
-use Embranchment\Routing\RouteAssay;
-use Embranchment\Routing\RouteAssembly;
+use Embranchment\Routing\VerificationRoute;
+use Embranchment\Routing\CollectionRouteController;
 
-class RouteList {
+class RoutingLists {
 
     /*
      * Project route list
@@ -25,7 +25,7 @@ class RouteList {
 
 	if (is_array($URI)) {
 	    
-	    $URI = RouteAssay::ConvertRouteRule($URI);
+	    $URI = VerificationRoute::ConvertRouteRule($URI);
 	}
 
 	$this->RouteList[] = ['Name' => $Name,
@@ -39,11 +39,11 @@ class RouteList {
      */
     public function Execute() {
 
-	$CallBack = RouteAssay::AssayCustomRedirect($this->RouteList);
+	$CallBack = VerificationRoute::AssayCustomRedirect($this->RouteList);
 
 	if ($CallBack && is_array($CallBack['Action'])) {
 	    
-	    RouteAssembly::Convert($CallBack['Action']);
+	    CollectionRouteController::Convert($CallBack['Action']);
 	    
 	} else if ($CallBack) {
 	    

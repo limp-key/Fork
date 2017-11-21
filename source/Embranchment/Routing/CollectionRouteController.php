@@ -2,7 +2,7 @@
 
 namespace Embranchment\Routing;
 
-class RouteAssembly {
+class CollectionRouteController {
 
     /*
      * Create object Controller (depending on the request)
@@ -51,8 +51,8 @@ class RouteAssembly {
 	$Class = array_shift($Action);
 	$Method = array_shift($Action);
 	
-	$Controller = RouteAssembly::Controller($Class);
+	$Controller = CollectionRouteController::Controller($Class);
 	
-	RouteAssembly::Method($Controller, $Method);
+	CollectionRouteController::Method($Controller, $Method);
     }
 }

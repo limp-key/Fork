@@ -1,6 +1,6 @@
 <?php
 
-namespace Embranchment\Assistant;
+namespace Embranchment\Helper;
 
 trait AssistantVariable {
 
@@ -9,7 +9,7 @@ trait AssistantVariable {
      *
      *  @param Parameter
      */
-    public static function See($Parameter){
+    public static function See($Parameter) {
 
 	echo htmlentities($Parameter);
     }
@@ -20,7 +20,7 @@ trait AssistantVariable {
      * @param Parameter
      * @param Type
      */
-    public static function Dump($Parameter,$Type = 1){
+    public static function Dump($Parameter, $Type = 1) {
 
 	if ($Type == 1) {
 	    $Var = var_dump($Parameter);
@@ -35,7 +35,7 @@ trait AssistantVariable {
                             box-shadow: 0 0 1px #bababa;
                             color:#2f2f2f;
                             word-spacing:6px;
-                            line-height:16px;">%s</pre>',$Var);
+                            line-height:16px;">%s</pre>', $Var);
     }
 
     /*
@@ -58,6 +58,6 @@ trait AssistantVariable {
                             box-shadow: 0 0 1px #bababa;
                             color:#2f2f2f;
                             word-spacing:6px;
-                            line-height:16px;">%s</pre>',$Var);
+                            line-height:16px;">%s</pre>', $Var);
     }
 }

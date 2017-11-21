@@ -2,7 +2,7 @@
 
 namespace Embranchment\Routing;
 
-class RouteAssay {
+class VerificationRoute {
 
     /*
      * Searching URI in routes list

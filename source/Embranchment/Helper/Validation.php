@@ -1,14 +1,14 @@
 <?php
 
-namespace Embranchment\Assay;
+namespace Embranchment\Helper;
 
-class AssayValidation{
+class Validation {
     
     public function Email($Parameter){
 
 	$RegularEmail = "/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+$/";
 
-	return preg_match_all($RegularEmail,$Parameter);
+	return preg_match($RegularEmail,$Parameter);
     }
     
     public function Login($Parameter){

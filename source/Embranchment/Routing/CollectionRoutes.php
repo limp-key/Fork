@@ -2,7 +2,7 @@
 
 namespace Embranchment\Routing;
 
-use Embranchment\Routing\RouteList;
+use Embranchment\Routing\RoutingLists;
 
 class CollectionRoutes {
 
@@ -18,7 +18,7 @@ class CollectionRoutes {
      */
     public function Load() {
 
-	$List = new RouteList();
+	$List = new RoutingLists();
 	
 	if ($Dir = opendir($this->RouteDir)) {
 	    

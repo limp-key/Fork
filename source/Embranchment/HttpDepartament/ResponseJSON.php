@@ -1,6 +1,6 @@
 <?php
 
-namespace Embranchment\Response;
+namespace Embranchment\HttpDepartament;
 
 trait ResponseJSON {
 

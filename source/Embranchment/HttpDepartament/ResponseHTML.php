@@ -1,49 +1,55 @@
 <?php
 
-namespace Embranchment\Response;
+namespace Embranchment\HttpDepartament;
 
 trait ResponseHTML {
 
+    /*
+     * Array variables for view
+     *
+     * @var array
+     */
     protected $ParametersForView = array();
 
+    /*
+     * Convert custom template path to full path for view
+     *
+     * @param string
+     * @param array
+     *
+     * @return resource
+     */
     public function view($Path, $Parameters = array()){
 
 	$this->ParametersForView = $Parameters;
-
-	# Convert custom template path to full path for view
-	#
-	//$View = sprintf(__DIR__.'../../../../../views/%s', \Configs\Project::$Path, $Path);
+	
 	$View = __DIR__.'/../../../../../../views/'.$Path;
 
-	# Include this view and
-	# assay file exists
-	#
 	$this->IncludeTemplate($View);
 
-	# For normal operation of the controller, we return true
-	#
 	return true;
     }
-    
+
+    /*
+     * Including template and extracting array to variables
+     *
+     * @param resource
+     *
+     * @return resource
+     */
     public function IncludeTemplate($View) {
 
 	if (!empty($this->ParametersForView)) {
 
-	    # If the layouts are passed to array variables
-	    # Fork converted this array to variable
-	    #
 	    extract($this->ParametersForView);
 	}
 
-	# Generate Token
-	#
 	/*if( !session_status() ) {
 	    session_start();
 	    $_SESSION['Token'] = hash('sha512',rand());
-	}*/
+	   }*/
+	include 'ViewTemplateFunction.php';
 	
-	# Check this layout exists
-	#
 	if (!is_file($View)) {
 	    
 	    $Info =  new \Exception('Fork did not find the specified template');
@@ -51,8 +57,6 @@ trait ResponseHTML {
 	    \Embranchment\Exception\ForkException::ExceptionView($Info);
 	}
 
-	# Plug view for controller request
-	#
 	require_once $View;
     }
 }
