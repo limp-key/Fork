@@ -93,7 +93,7 @@ class Request {
 	
 	$File[$Parameter]['tmp_name'] = htmlentities($Files[$Parameter]['tmp_name'], ENT_QUOTES);
 	
-	$File[$Parameter]['byte']     = htmlentities(file_get_contents($Files['userfile']['tmp_name']), ENT_QUOTES);
+	$File[$Parameter]['byte']     = file_get_contents($Files[$Parameter]['tmp_name']);
 	
 	$File[$Parameter]['error']    = htmlentities($Files[$Parameter]['error'], ENT_QUOTES);
 	
@@ -126,6 +126,8 @@ class Request {
 		
 		$Property = htmlentities($Property, ENT_QUOTES);
 	    }
+
+	    $FileProperties['byte'] = file_get_contents($FileProperties['tmp_name']);
 	}
 	
 	if ($this->VerifyTokenPOST()) {
