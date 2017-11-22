@@ -47,9 +47,12 @@ class Request {
 
 	if (!Session::IsStarted()) session_start();
 	
-	if  (!empty($_POST['token']) && ($_POST['token'] == $_SESSION['token'])) {
-
-	    return true;
+	if (!empty($_POST['token']) && !empty($_SESSION['token'])) {
+	    
+	    if ($_POST['token'] == $_SESSION['token']) {
+		
+		return true;
+	    }
 	}
 
 	return false;
@@ -93,7 +96,7 @@ class Request {
 	
 	$File[$Parameter]['tmp_name'] = htmlentities($Files[$Parameter]['tmp_name'], ENT_QUOTES);
 	
-	$File[$Parameter]['byte']     = file_get_contents($Files[$Parameter]['tmp_name']);
+	$File[$Parameter]['byte']     = !empty($Files[$Parameter]['tmp_name']) ? file_get_contents($Files[$Parameter]['tmp_name']) : '';
 	
 	$File[$Parameter]['error']    = htmlentities($Files[$Parameter]['error'], ENT_QUOTES);
 	
@@ -127,7 +130,7 @@ class Request {
 		$Property = htmlentities($Property, ENT_QUOTES);
 	    }
 
-	    $FileProperties['byte'] = file_get_contents($FileProperties['tmp_name']);
+	    $FileProperties['byte']     = !empty($FileProperties['tmp_name']) ? file_get_contents($FileProperties['tmp_name']) : '';
 	}
 	
 	if ($this->VerifyTokenPOST()) {
