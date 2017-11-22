@@ -50,8 +50,13 @@ class SessionManipulate {
      * @return mix
      */
     public function read($ParametersInSession){
-	
-	return $_SESSION[$ParametersInSession];
+
+	if (!empty($_SESSION[$ParametersInSession])) {
+	    
+	    return $_SESSION[$ParametersInSession];
+	}
+
+	return false;
     }
 
     /*

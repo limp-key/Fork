@@ -1,8 +1,8 @@
 <?php
 
-namespace Embranchment\Model\MySQL;
+namespace Embranchment\Databases\DepartamentMariaDB;
 
-use \Embranchment\Model\MySQL\TraitCollector;
+use \Embranchment\Databases\DepartamentMariaDB\TraitCollector;
 
 class Connection extends TraitCollector {
     
@@ -14,7 +14,7 @@ class Connection extends TraitCollector {
     /*
      *
      */
-    protected $Connected;
+    protected $Connection;
 
     /*
      *
@@ -23,12 +23,12 @@ class Connection extends TraitCollector {
 
 	try {
 	    
-	    $this->connection = new \mysqli(DataBase::$Host,
-					    DataBase::$UserName,
-					    DataBase::$Password,
-					    DataBase::$DataBase);
+	    $this->Connection = new \mysqli($this->Host,
+					    $this->UserName,
+					    $this->Password,
+					    $this->DataBase);
 
-	    if (!$this->connection){
+	    if (!$this->Connection){
 
 		throw new \Exception('Fork did not connect to database');
 	    }

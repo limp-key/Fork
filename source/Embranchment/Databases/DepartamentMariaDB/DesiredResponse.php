@@ -1,6 +1,6 @@
 <?php
 
-namespace Embranchment\Model\MySQL;
+namespace Embranchment\Databases\DepartamentMariaDB;
 
 trait DesiredResponse{
 

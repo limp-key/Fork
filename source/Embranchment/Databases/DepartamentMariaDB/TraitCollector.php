@@ -1,11 +1,11 @@
 <?php
 
-namespace Embranchment\Model\MySQL;
+namespace Embranchment\Databases\DepartamentMariaDB;
 
-use Embranchment\Model\MySQL\CRUD;
-use Embranchment\Model\MySQL\DesiredResponse;
-use Embranchment\Model\MySQL\DataBaseManipulate;
-use Embranchment\Model\MySQL\SecondaryFunctions;
+use Embranchment\Databases\DepartamentMariaDB\CRUD;
+use Embranchment\Databases\DepartamentMariaDB\DesiredResponse;
+use Embranchment\Databases\DepartamentMariaDB\DataBaseManipulate;
+use Embranchment\Databases\DepartamentMariaDB\SecondaryFunctions;
 
 class TraitCollector {
 
