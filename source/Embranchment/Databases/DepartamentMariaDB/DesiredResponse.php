@@ -46,8 +46,8 @@ trait DesiredResponse{
 	
 	$ReturnQuery = $this->Connection;
 	$ReturnQuery = $ReturnQuery->query($this->Query);
-
-	if(!empty($returnQuery)){
+	
+	if(!empty($ReturnQuery->num_rows)){
 	    
 	    $ReturnQuery = $ReturnQuery->fetch_all(1);
 	    $ReturnQuery = $ReturnQuery[0];

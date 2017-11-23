@@ -1,6 +1,6 @@
 <?php
 
-namespace \Embranchment\Helper;
+namespace Embranchment\Helper;
 
 class Password {
 
@@ -10,7 +10,7 @@ class Password {
      * @param Password
      * @param Cost
      */
-    public static function hashing($Password, $Cost) {
+    public static function hashing($Password, $Cost = 13) {
 
 	$Options = [
 	    'cost' => $Cost
