@@ -1,6 +1,6 @@
 <?php
 
-namespace Embranchment\Model\SQLite;
+namespace Embranchment\Databases\DepartamentSQLite;
 
 trait SecondaryFunctions{
 
@@ -37,9 +37,16 @@ trait SecondaryFunctions{
 	return $this;
     }
 
+    /*
+     * Create request string to database
+     *
+     * @param Request
+     *
+     * @return this
+     */
     public function query($Request){
 
-	$this->query = $Request;
+	$this->Query = $Request;
 
 	return $this;
     }    

@@ -1,6 +1,6 @@
 <?php
 
-namespace Embranchment\Databases\DepartamentSQLite;
+namespace Embranchment\Databases\DepartamentMariaDB;
 
 trait CRUD{
     
@@ -10,7 +10,7 @@ trait CRUD{
 	$parameters = $this->param($parameters);
 
 	$quickQuery = "DESC $table";
-	$ColumnInTable = $this->connection->query($quickQuery)->fetchArray(SQLITE3_ASSOC);
+	$ColumnInTable = $this->connection->query($quickQuery)->fetch_all(1);
 
 	$ColumnForInsert = array();
 

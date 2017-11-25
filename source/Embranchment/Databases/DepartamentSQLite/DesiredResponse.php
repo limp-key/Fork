@@ -1,47 +1,46 @@
 <?php
 
-namespace Embranchment\Model\SQLite;
+namespace Embranchment\Databases\DepartamentSQLite;
 
-trait DesiredResponse{
+trait DesiredResponse {
 
+    /*
+     *
+     */
     public function exec(){
-
-	#
-	$returnQuery = $this->connection->exec($this->query);
-
-	# Returns the response
-	# The request was successful or not
-	#
-	return $returnQuery;
+	
+	return $this->Connection->exec($this->Query);
     }
 
+    /*
+     *
+     */
     public function show(){
 	
-	$returnQuery = $this->connection->query($this->query);
+	$returnQuery = $this->Connection->query($this->query);
 
 	if (!empty($returnQuery)) {
 	    
-	    return $returnQuery->fetchArray(SQLITE3_ASSOC);
-	    
-	} else {
-
-	    return false;
+	    return $returnQuery->fetchArray(SQLITE3_ASSOC);   
 	}
+
+	return false;
     }
 
+    /*
+     *
+     */
     public function first(){
 	
 	$this->query .= "LIMIT 1";
 	
-	$returnQuery = $this->connection->querySingle($this->query);
+	$returnQuery = $this->Connection->querySingle($this->query);
 
 	if(!empty($returnQuery)){
-
-	    return $returnQuery;
 	    
-	} else {
-
-	    return false;
+	    return $returnQuery;    
 	}
+	
+	return false;
     }
 }

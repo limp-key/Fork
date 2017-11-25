@@ -2,7 +2,7 @@
 
 namespace Embranchment\Cookie;
 
-trait CookieManipulate{
+class CookieManipulate {
 
     /*
      * Write new properies to Cookie variable
@@ -21,19 +21,17 @@ trait CookieManipulate{
 			  $CookieSubDomain     = '',
 			  $CookieIsSecure      = false) {
 	
-	$Make = setcookie ($CookieName,
-			   $CookieProperties,
-			   $Expire = 0,
-			   $CookieDirectoryPath = "",
-			   $CookieSubDomain = "",
-			   $CookieIsSecure,
-			   $HttpOnly = false);
+	$MakeNewCookie = setcookie ($CookieName,
+				    $CookieProperties,
+				    $Expire = 0,
+				    $CookieDirectoryPath = "",
+				    $CookieSubDomain = "",
+				    $CookieIsSecure,
+				    $HttpOnly = false);
 	
-	if($Make){
-	    
+	if ($MakeNewCookie)	    
 	    return true;   
-	}
-	    
+   
 	return false;
     }
 

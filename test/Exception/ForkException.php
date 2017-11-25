@@ -13,7 +13,7 @@ class ForkException extends \Exception {
 
 	# Include template for Fork Exception
 	#
-	include \Configs\Project::$Path.'/vendor/fork-set/framework/source/Embranchment/Template/Exception.html.php';
+	include __DIR__.'/../../../../../../vendor/fork/framework/source/Embranchment/Exception/TemplateException.html.php';
 
 	# Stop framework, because this is exception
 	#

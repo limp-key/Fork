@@ -1,11 +1,11 @@
 <?php
 
-namespace Embranchment\Model\SQLite;
+namespace Embranchment\Databases\DepartamentSQLite;
 
-use Embranchment\Model\SQLite\CRUD;
-use Embranchment\Model\SQLite\DesiredResponse;
-use Embranchment\Model\SQLite\DataBaseManipulate;
-use Embranchment\Model\SQLite\SecondaryFunctions;
+use Embranchment\Databases\DepartamentSQLite\CRUD;
+use Embranchment\Databases\DepartamentSQLite\DesiredResponse;
+use Embranchment\Databases\DepartamentSQLite\DataBaseManipulate;
+use Embranchment\Databases\DepartamentSQLite\SecondaryFunctions;
 
 class TraitCollector {
 

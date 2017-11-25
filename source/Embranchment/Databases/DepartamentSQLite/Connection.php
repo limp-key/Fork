@@ -1,20 +1,31 @@
 <?php
 
-namespace \Embranchment\Model\SQLite;
+namespace Embranchment\Databases\DepartamentSQLite;
+
+use \Embranchment\Databases\DepartamentSQLite\TraitCollector;
 
 class Connection extends TraitCollector {
+    
+    protected $Query = "";
 
-    # Connection to database
-    #
-    # Fork supported poly-database connection
-    # But you can create default connection
-    #
-    # If the model does not accept the parameters,
-    # then the connection will be made according to these settings
+    protected $Connection = false;
 
-    # DataBase location
-    #
-    # Host on which the database server is installed
-    #
-    public static $Path = '/path/to/database.db';
+    public function __construct(){
+
+	$DataBase = $this->DataBase;
+
+	try {
+
+	    $this->Connection = new \SQLite3(__DIR__.'/../../../../../../../pantry/database/'.$DataBase.'.db');
+	    
+	    if (!$this->Connection){
+
+		throw new \Exception('Fork did not connect to database');
+	    }
+
+	} catch (\Exception $Info) {
+
+	    
+	}
+    }
 }
