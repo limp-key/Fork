@@ -1,47 +1,25 @@
 <?php
 
-namespace Embranchment\Model\SQLite;
+namespace Embranchment\Databases\DepartamentMongoDB;
+
+use \MongoDB\Driver\BulkWrite;
+use \MongoDB\Driver\Query;
 
 trait DesiredResponse{
 
-    public function exec(){
+    public function exec($Collection){
 
-	#
-	$returnQuery = $this->connection->exec($this->query);
-
-	# Returns the response
-	# The request was successful or not
-	#
-	return $returnQuery;
+	$From = $this->DataBase.'.'.$Collection;
+	var_dump($this->Bulk);
+	return $this->Connection->executeBulkWrite($From,
+						   $this->Bulk);
     }
 
-    public function show(){
+    public function show($Collection){
+
+	$From = $this->DataBase.'.'.$Collection;
 	
-	$returnQuery = $this->connection->query($this->query);
-
-	if (!empty($returnQuery)) {
-	    
-	    return $returnQuery->fetchArray(SQLITE3_ASSOC);
-	    
-	} else {
-
-	    return false;
-	}
-    }
-
-    public function first(){
-	
-	$this->query .= "LIMIT 1";
-	
-	$returnQuery = $this->connection->querySingle($this->query);
-
-	if(!empty($returnQuery)){
-
-	    return $returnQuery;
-	    
-	} else {
-
-	    return false;
-	}
+	return $this->Connection->executeQuery($From,
+					       $this->Query);
     }
 }

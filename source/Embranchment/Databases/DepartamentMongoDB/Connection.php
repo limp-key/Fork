@@ -1,36 +1,44 @@
 <?php
 
-namespace \Embranchment\Model\MongoDB;
+namespace Embranchment\Databases\DepartamentMongoDB;
+
+use \Embranchment\Databases\DepartamentMongoDB\TraitCollector;
+use \MongoDB\Driver\Manager as MongoDB;
 
 class Connection extends TraitCollector {
+    
+    /*
+     *
+     */
+    protected $Bulk = "";
 
-    # Connection to database
-    #
-    # Fork supported poly-database connection
-    # But you can create default connection
-    #
-    # If the model does not accept the parameters,
-    # then the connection will be made according to these settings
+    /*
+     *
+     */
+    protected $Query = "";
+    
+    /*
+     *
+     */
+    protected $Connection;
 
-    # Fork supports NoSQL servers:
-    #
-    public static $Port = '0000';
+    /*
+     *
+     */
+    public function __construct(){
 
-    # DataBase host
-    #
-    # Host on which the database server is installed
-    #
-    public static $Host = 'localhost';
-
-    # DataBase user
-    #
-    # Connection to the user on the database server
-    #
-    public static $UserName = 'root';
-
-    # DataBase password
-    #
-    # The password of the user you are connected to
-    #
-    public static $Password = 'password';
+	$Options = array();
+	
+	try {
+	    
+	    $this->Connection = new MongoDB("mongodb://{$this->Host}:{$this->Port}",
+					    $Options);
+	    
+	    if (!$this->Connection) throw new \Exception('Fork did not connect to database');
+	    
+	} catch (\Exception $Info) {
+	    
+	    
+	}
+    }
 }

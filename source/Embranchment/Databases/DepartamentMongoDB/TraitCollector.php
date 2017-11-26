@@ -1,19 +1,15 @@
 <?php
 
-namespace Embranchment\Model\SQLite;
+namespace Embranchment\Databases\DepartamentMongoDB;
 
-use Embranchment\Model\SQLite\CRUD;
-use Embranchment\Model\SQLite\DesiredResponse;
-use Embranchment\Model\SQLite\DataBaseManipulate;
-use Embranchment\Model\SQLite\SecondaryFunctions;
+use Embranchment\Databases\DepartamentMongoDB\CRUD;
+use Embranchment\Databases\DepartamentMongoDB\DesiredResponse;
+use Embranchment\Databases\DepartamentMongoDB\DataBaseManipulate;
+use Embranchment\Databases\DepartamentMongoDB\SecondaryFunctions;
 
 class TraitCollector {
 
     use CRUD;
     
     use DesiredResponse;
-
-    use DataBaseManipulate;
-
-    use SecondaryFunctions;
 }

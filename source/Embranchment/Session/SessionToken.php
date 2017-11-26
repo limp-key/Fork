@@ -2,6 +2,8 @@
 
 namespace Embranchment\Session;
 
+use \Embranchment\Session\SessionVerification as Session;
+
 class SessionToken {
 
     /*
@@ -9,7 +11,7 @@ class SessionToken {
      */
     public static function Generate() {
 	
-	if (!session_status()) session_start();
+	if (!SESSION::IsStarted()) session_start();
 
 	$_SESSION['token'] = hash('sha512',rand());
     }

@@ -1,52 +1,53 @@
 <?php
 
-namespace Embranchment\Model\SQLite;
+namespace Embranchment\Databases\DepartamentMongoDB;
+
+use \MongoDB\Driver\BulkWrite;
+use \MongoDB\Driver\Query;
 
 trait CRUD{
     
-    public function insert($table, $parameters = array()){
+    public function insert($Parameters = array()){
+
+	$Bulk = new BulkWrite();
+
+	$Bulk->insert($Parameters);
 	
-	$table = $this->param([$table]);
-	$parameters = $this->param($parameters);
+	$this->Bulk = $Bulk;
 
-	$quickQuery = "DESC $table";
-	$ColumnInTable = $this->connection->query($quickQuery)->fetchArray(SQLITE3_ASSOC);
-
-	$ColumnForInsert = array();
-
-	for($increment = 0; $increment < count($ColumnInTable); $increment++){
-	    $ColumnForInsert[$increment] = $ColumnInTable[$increment]['Field'];
-	}
-	$ColumnForInsert = implode(',',$ColumnForInsert);
-
-	$parameters = implode(',',$parameters);
-	$this->query = "INSERT INTO $table ($ColumnForInsert) VALUES (null,'test')";
 	return $this;
     }
     
-    public function select($table, $parameters = array()){
+    public function select($Filter = array(),
+			   $Options = array()){
 	
-	$table = $this->param([$table]);
-	$parameters = $this->param($parameters);
-	
-	$this->query = "SELECT $parameters FROM $table";
+	$this->Query = new Query($Filter, $Options);
+
 	return $this;
     }
 
-    public function delete($table){
+    public function delete($Parameters = array(),
+			   $Options = array()){
 
-	$table = $this->param([$table]);
+	$Bulk = new BulkWrite();
 
-	$this->query = "DELETE FROM $table";
+	$Bulk->delete($Parameters, $Options);
+	
+	$this->Bulk = $Bulk;
+
 	return $this;
     }
 
-    public function update($table, $parameters = array()){
+    public function update($Filter = array(),
+			   $Date = array(),
+			   $Options = array()){
 	
-	$table = $this->param([$table]);
-	$parameters = $this->param($parameters);
+	$Bulk = new BulkWrite();
+
+	$Bulk->update($Filter, $Date, $Options);
 	
-	$this->query = "UPDATE SET";
+	$this->Bulk = $Bulk;
+
 	return $this;
     }
 }
