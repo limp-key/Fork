@@ -1,5 +1,3 @@
-  GNU nano 2.7.4                                                                                    File: vendor/fork/framework/source/Embranchment/Routing/VerificationRoute.php                                                                                               
-
 <?php
 
 namespace Embranchment\Routing;
