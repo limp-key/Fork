@@ -1,3 +1,5 @@
+  GNU nano 2.7.4                                                                                    File: vendor/fork/framework/source/Embranchment/Routing/VerificationRoute.php                                                                                               
+
 <?php
 
 namespace Embranchment\Routing;
@@ -11,22 +13,28 @@ class VerificationRoute {
      *
      * @return array or false
      */
-    public static function AssayCustomRedirect($RouteList) {
+     public static function AssayCustomRedirect($RouteList) {
 
-	foreach ($RouteList as $Route) {
+     	$Request = $_SERVER['REQUEST_URI'];
 
-	    $Route['URI'] = str_replace('/','\/',$Route['URI']);
-	    
-	    $Rule = "/^{$Route['URI']}$/";
-	    
-	    if ((empty($_SERVER['REDIRECT_URL']) && $Route['URI'] === '\/') ||
-		preg_match($Rule, $_SERVER['REDIRECT_URL'])) {
-		
-		return $Route;
-	    }
-	}
+     	if (!empty($_SERVER['QUERY_STRING'])){
+       	    $Request = str_replace( '?' . $_SERVER['QUERY_STRING'], '', $_SERVER['REQUEST_URI']);
+     	}       
 
-	return false;
+     	foreach ($RouteList as $Route) {
+
+            $Route['URI'] = str_replace('/','\/',$Route['URI']);
+
+            $Rule = "/^{$Route['URI']}$/";
+
+            if ((empty($_SERVER['REQUEST_URI']) && $Route['URI'] === '\/') ||
+                preg_match($Rule, $Request)) {
+
+                return $Route;
+            }
+        }
+
+        return false;
     }
 
     /*
@@ -38,16 +46,17 @@ class VerificationRoute {
      */
     public static function ConvertRouteRule ($Route) {
 
-	$URI = key($Route);
+        $URI = key($Route);
 
-	$Rules = $Route[$URI];
+        $Rules = $Route[$URI];
 
-	foreach ($Rules as $Key => $Option) {
+        foreach ($Rules as $Key => $Option) {
 
-	    $Replace = '/{'.$Key.'}/';
-	    
-	    $URI = preg_replace($Replace,$Option,$URI);
-	}
-	return $URI;
+            $Replace = '/{'.$Key.'}/';
+
+            $URI = preg_replace($Replace,$Option,$URI);
+        }
+        return $URI;
     }
 }
+
