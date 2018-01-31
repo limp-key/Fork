@@ -1,7 +1,7 @@
 {
     "name": "fork/framework",
     "version": "v0.12.4",
-    "license": "GPL-3.0",
+    "license": "MIT",
     "description": "Simply framework",
     "keywords": [
 	"fork",
